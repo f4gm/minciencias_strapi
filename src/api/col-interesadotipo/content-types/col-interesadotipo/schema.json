@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_interesadotipos",
+  "info": {
+    "singularName": "col-interesadotipo",
+    "pluralName": "col-interesadotipos",
+    "displayName": "COL_InteresadoTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true,
+      "unique": true
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

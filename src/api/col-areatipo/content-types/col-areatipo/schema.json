@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_areatipos",
+  "info": {
+    "singularName": "col-areatipo",
+    "pluralName": "col-areatipos",
+    "displayName": "COL_AreaTipo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "maxLength": 250,
+      "private": true,
+      "required": true,
+      "unique": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    }
+  }
+}

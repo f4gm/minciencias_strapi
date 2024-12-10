@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_fuenteadministrativatipos",
+  "info": {
+    "singularName": "col-fuenteadministrativatipo",
+    "pluralName": "col-fuenteadministrativatipos",
+    "displayName": "COL_FuenteAdministrativaTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "private": true,
+      "maxLength": 250
+    },
+    "descripcion": {
+      "type": "text",
+      "required": false,
+      "private": true,
+      "maxLength": 1024
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250,
+      "unique": true
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

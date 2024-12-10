@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_relacionsuperficietipos",
+  "info": {
+    "singularName": "col-relacionsuperficietipo",
+    "pluralName": "col-relacionsuperficietipos",
+    "displayName": "COL_RelacionSuperficieTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250,
+      "private": true,
+      "unique": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

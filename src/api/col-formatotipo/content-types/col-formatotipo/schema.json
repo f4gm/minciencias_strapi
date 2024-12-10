@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_formatotipos",
+  "info": {
+    "singularName": "col-formatotipo",
+    "pluralName": "col-formatotipos",
+    "displayName": "COL_FormatoTipo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true,
+      "unique": true,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true,
+      "unique": true
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}
