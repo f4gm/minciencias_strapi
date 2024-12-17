@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_autoreconocimientoetnicotipos",
+  "info": {
+    "singularName": "cr-autoreconocimientoetnicotipo",
+    "pluralName": "cr-autoreconocimientoetnicotipos",
+    "displayName": "CR_AutoreconocimientoEtnicoTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": false,
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "required": false,
+      "maxLength": 1024
+    }
+  }
+}

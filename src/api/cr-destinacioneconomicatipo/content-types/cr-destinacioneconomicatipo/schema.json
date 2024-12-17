@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_destinacioneconomicatipos",
+  "info": {
+    "singularName": "cr-destinacioneconomicatipo",
+    "pluralName": "cr-destinacioneconomicatipos",
+    "displayName": "CR_DestinacionEconomicaTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

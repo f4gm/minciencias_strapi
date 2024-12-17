@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_construccionplantatipos",
+  "info": {
+    "singularName": "cr-construccionplantatipo",
+    "pluralName": "cr-construccionplantatipos",
+    "displayName": "CR_ConstruccionPlantaTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "private": true,
+      "maxLength": 250,
+      "required": true,
+      "unique": true
+    },
+    "descripcion": {
+      "type": "text",
+      "private": true,
+      "maxLength": 1024
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "required": false,
+      "maxLength": 1024
+    }
+  }
+}

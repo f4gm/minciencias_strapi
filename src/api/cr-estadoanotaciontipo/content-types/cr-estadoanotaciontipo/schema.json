@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estadoanotaciontipos",
+  "info": {
+    "singularName": "cr-estadoanotaciontipo",
+    "pluralName": "cr-estadoanotaciontipos",
+    "displayName": "CR_EstadoAnotacionTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

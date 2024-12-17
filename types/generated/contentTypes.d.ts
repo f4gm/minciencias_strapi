@@ -1016,6 +1016,313 @@ export interface ApiColUnidadadministrativabasicatipoColUnidadadministrativabasi
   };
 }
 
+export interface ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo
+  extends Schema.CollectionType {
+  collectionName: 'cr_autoreconocimientoetnicotipos';
+  info: {
+    displayName: 'CR_AutoreconocimientoEtnicoTipo';
+    pluralName: 'cr-autoreconocimientoetnicotipos';
+    singularName: 'cr-autoreconocimientoetnicotipo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrCondicionprediotipoCrCondicionprediotipo
+  extends Schema.CollectionType {
+  collectionName: 'cr_condicionprediotipos';
+  info: {
+    description: '';
+    displayName: 'CR_CondicionPredioTipo';
+    pluralName: 'cr-condicionprediotipos';
+    singularName: 'cr-condicionprediotipo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-condicionprediotipo.cr-condicionprediotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-condicionprediotipo.cr-condicionprediotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrConstruccionplantatipoCrConstruccionplantatipo
+  extends Schema.CollectionType {
+  collectionName: 'cr_construccionplantatipos';
+  info: {
+    displayName: 'CR_ConstruccionPlantaTipo';
+    pluralName: 'cr-construccionplantatipos';
+    singularName: 'cr-construccionplantatipo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-construccionplantatipo.cr-construccionplantatipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-construccionplantatipo.cr-construccionplantatipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrDerechotipoCrDerechotipo extends Schema.CollectionType {
+  collectionName: 'cr_derechotipos';
+  info: {
+    displayName: 'CR_DerechoTipo';
+    pluralName: 'cr-derechotipos';
+    singularName: 'cr-derechotipo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-derechotipo.cr-derechotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-derechotipo.cr-derechotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo
+  extends Schema.CollectionType {
+  collectionName: 'cr_destinacioneconomicatipos';
+  info: {
+    displayName: 'CR_DestinacionEconomicaTipo';
+    pluralName: 'cr-destinacioneconomicatipos';
+    singularName: 'cr-destinacioneconomicatipo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrEstadoanotaciontipoCrEstadoanotaciontipo
+  extends Schema.CollectionType {
+  collectionName: 'cr_estadoanotaciontipos';
+  info: {
+    displayName: 'CR_EstadoAnotacionTipo';
+    pluralName: 'cr-estadoanotaciontipos';
+    singularName: 'cr-estadoanotaciontipo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estadoanotaciontipo.cr-estadoanotaciontipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estadoanotaciontipo.cr-estadoanotaciontipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -1465,6 +1772,12 @@ declare module '@strapi/types' {
       'api::col-puntotipo.col-puntotipo': ApiColPuntotipoColPuntotipo;
       'api::col-relacionsuperficietipo.col-relacionsuperficietipo': ApiColRelacionsuperficietipoColRelacionsuperficietipo;
       'api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo': ApiColUnidadadministrativabasicatipoColUnidadadministrativabasicatipo;
+      'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo': ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo;
+      'api::cr-condicionprediotipo.cr-condicionprediotipo': ApiCrCondicionprediotipoCrCondicionprediotipo;
+      'api::cr-construccionplantatipo.cr-construccionplantatipo': ApiCrConstruccionplantatipoCrConstruccionplantatipo;
+      'api::cr-derechotipo.cr-derechotipo': ApiCrDerechotipoCrDerechotipo;
+      'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo': ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo;
+      'api::cr-estadoanotaciontipo.cr-estadoanotaciontipo': ApiCrEstadoanotaciontipoCrEstadoanotaciontipo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
