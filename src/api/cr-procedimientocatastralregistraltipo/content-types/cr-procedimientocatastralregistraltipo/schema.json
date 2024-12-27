@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_procedimientocatastralregistraltipos",
+  "info": {
+    "singularName": "cr-procedimientocatastralregistraltipo",
+    "pluralName": "cr-procedimientocatastralregistraltipos",
+    "displayName": "CR_ProcedimientoCatastralRegistralTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": false,
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

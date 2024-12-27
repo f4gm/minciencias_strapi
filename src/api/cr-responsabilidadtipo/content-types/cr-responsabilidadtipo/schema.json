@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_responsabilidadtipos",
+  "info": {
+    "singularName": "cr-responsabilidadtipo",
+    "pluralName": "cr-responsabilidadtipos",
+    "displayName": "CR_ResponsabilidadTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

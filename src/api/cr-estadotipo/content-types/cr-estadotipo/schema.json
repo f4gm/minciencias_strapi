@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estadotipos",
+  "info": {
+    "singularName": "cr-estadotipo",
+    "pluralName": "cr-estadotipos",
+    "displayName": "CR_EstadoTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

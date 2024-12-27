@@ -5,7 +5,7 @@ const config = {
     // 'cs',
     // 'de',
     // 'dk',
-    // 'es',
+    'es',
     // 'he',
     // 'id',
     // 'it',
@@ -45,6 +45,8 @@ const config = {
         alternative500: '#fabb00',
         alternative200: '#fff885',
         alternative100: '#fffbc5',
+        buttonPrimary600: '#007acb',
+        buttonPrimary500: '#0a9bed',
       }
     }
   }

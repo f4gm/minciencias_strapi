@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_restricciontipos",
+  "info": {
+    "singularName": "cr-restricciontipo",
+    "pluralName": "cr-restricciontipos",
+    "displayName": "CR_RestriccionTipo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}
