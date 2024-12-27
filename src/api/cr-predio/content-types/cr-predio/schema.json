@@ -1,0 +1,131 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_predios",
+  "info": {
+    "singularName": "cr-predio",
+    "pluralName": "cr-predios",
+    "displayName": "CR_Predio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "departamento": {
+      "type": "string",
+      "required": true,
+      "maxLength": 2
+    },
+    "municipio": {
+      "type": "string",
+      "required": true,
+      "maxLength": 3
+    },
+    "codigo_orip": {
+      "type": "string",
+      "required": false,
+      "maxLength": 4
+    },
+    "matricula_inmobiliaria": {
+      "type": "integer",
+      "required": false
+    },
+    "estado_fmi": {
+      "type": "relation",
+      "required": false,
+      "relation": "oneToOne",
+      "target": "api::cr-estadofmitipo.cr-estadofmitipo"
+    },
+    "fecha_apertura_fmi": {
+      "type": "date",
+      "required": false
+    },
+    "numero_predial_nacional": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "codigo_homologado": {
+      "type": "string",
+      "required": true,
+      "maxLength": 11
+    },
+    "nupre": {
+      "type": "string",
+      "required": false,
+      "maxLength": 11
+    },
+    "fecha_inscripcion_catastral": {
+      "type": "date",
+      "required": false
+    },
+    "tipo_predio": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-prediotipo.cr-prediotipo"
+    },
+    "condicion_predio": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-condicionprediotipo.cr-condicionprediotipo"
+    },
+    "destinacion_economica": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo"
+    },
+    "area_catastral_terreno": {
+      "type": "decimal",
+      "required": true,
+      "max": 1e+22
+    },
+    "area_registral_m2": {
+      "type": "decimal",
+      "required": false,
+      "max": 1e+22
+    },
+    "vigencia_actualizacion_catastral": {
+      "type": "date",
+      "required": true
+    },
+    "estado": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-estadotipo.cr-estadotipo"
+    },
+    "nombre": {
+      "type": "string",
+      "required": false,
+      "maxLength": 255
+    },
+    "tipo": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo"
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime",
+      "required": false
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    }
+  }
+}

@@ -1576,6 +1576,133 @@ export interface ApiCrMutaciontipoCrMutaciontipo extends Schema.CollectionType {
   };
 }
 
+export interface ApiCrPredioCrPredio extends Schema.CollectionType {
+  collectionName: 'cr_predios';
+  info: {
+    description: '';
+    displayName: 'CR_Predio';
+    pluralName: 'cr-predios';
+    singularName: 'cr-predio';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    area_catastral_terreno: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 1e22;
+        },
+        number
+      >;
+    area_registral_m2: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 1e22;
+        },
+        number
+      >;
+    codigo_homologado: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 11;
+      }>;
+    codigo_orip: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 4;
+      }>;
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    condicion_predio: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'api::cr-condicionprediotipo.cr-condicionprediotipo'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    departamento: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
+    destinacion_economica: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo'
+    > &
+      Attribute.Required;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    estado: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'api::cr-estadotipo.cr-estadotipo'
+    > &
+      Attribute.Required;
+    estado_fmi: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'api::cr-estadofmitipo.cr-estadofmitipo'
+    >;
+    fecha_apertura_fmi: Attribute.Date;
+    fecha_inscripcion_catastral: Attribute.Date;
+    fin_vida_util_version: Attribute.DateTime;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    matricula_inmobiliaria: Attribute.Integer;
+    municipio: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 3;
+      }>;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    numero_predial_nacional: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 30;
+      }>;
+    nupre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 11;
+      }>;
+    tipo: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo'
+    > &
+      Attribute.Required;
+    tipo_predio: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'api::cr-prediotipo.cr-prediotipo'
+    > &
+      Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    vigencia_actualizacion_catastral: Attribute.Date & Attribute.Required;
+  };
+}
+
 export interface ApiCrPrediotipoCrPrediotipo extends Schema.CollectionType {
   collectionName: 'cr_prediotipos';
   info: {
@@ -2493,6 +2620,7 @@ declare module '@strapi/types' {
       'api::cr-fotoidentificaciontipo.cr-fotoidentificaciontipo': ApiCrFotoidentificaciontipoCrFotoidentificaciontipo;
       'api::cr-informalidadtipo.cr-informalidadtipo': ApiCrInformalidadtipoCrInformalidadtipo;
       'api::cr-mutaciontipo.cr-mutaciontipo': ApiCrMutaciontipoCrMutaciontipo;
+      'api::cr-predio.cr-predio': ApiCrPredioCrPredio;
       'api::cr-prediotipo.cr-prediotipo': ApiCrPrediotipoCrPrediotipo;
       'api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo': ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastralregistraltipo;
       'api::cr-publicidadtipo.cr-publicidadtipo': ApiCrPublicidadtipoCrPublicidadtipo;
