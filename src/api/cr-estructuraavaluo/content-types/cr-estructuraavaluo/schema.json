@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estructuraavaluos",
+  "info": {
+    "singularName": "cr-estructuraavaluo",
+    "pluralName": "cr-estructuraavaluos",
+    "displayName": "CR_EstructuraAvaluo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha_avaluo": {
+      "type": "date",
+      "required": true
+    },
+    "valor_comercial": {
+      "type": "decimal",
+      "required": false,
+      "max": 10000000000000000
+    },
+    "avaluo_catastral": {
+      "type": "decimal",
+      "required": true,
+      "max": 10000000000000000
+    },
+    "valor_comercial_terreno": {
+      "type": "decimal",
+      "required": false,
+      "max": 10000000000000000
+    },
+    "avaluo_catastral_terreno": {
+      "type": "decimal",
+      "required": false,
+      "max": 10000000000000000
+    },
+    "valor_comercial_total_unidadesconstruccion": {
+      "type": "decimal",
+      "required": false,
+      "max": 10000000000000000
+    },
+    "avaluo_catastral_total_unidadesconstruccion": {
+      "type": "decimal",
+      "required": false,
+      "max": 10000000000000000
+    },
+    "autoestimacion": {
+      "type": "boolean",
+      "required": true
+    },
+    "incremento": {
+      "type": "boolean"
+    },
+    "cr_predio_avaluo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

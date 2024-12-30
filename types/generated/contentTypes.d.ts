@@ -1170,6 +1170,97 @@ export interface ApiCrConstruccionplantatipoCrConstruccionplantatipo
   };
 }
 
+export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
+  collectionName: 'cr_datosmatrizs';
+  info: {
+    description: '';
+    displayName: 'CR_DatosMatriz';
+    pluralName: 'cr-datosmatrizs';
+    singularName: 'cr-datosmatriz';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    area_total_construida: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000000;
+        },
+        number
+      >;
+    area_total_construida_comun: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000000;
+        },
+        number
+      >;
+    area_total_construida_privada: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000000;
+        },
+        number
+      >;
+    area_total_terreno: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000000;
+        },
+        number
+      >;
+    area_total_terreno_comun: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000000;
+        },
+        number
+      >;
+    area_total_terreno_privada: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000000;
+        },
+        number
+      >;
+    cr_predio: Attribute.Relation<
+      'api::cr-datosmatriz.cr-datosmatriz',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-datosmatriz.cr-datosmatriz',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    numero_torres: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          max: 1000;
+        },
+        number
+      >;
+    total_unidades_privadas: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          max: 100000000;
+        },
+        number
+      >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-datosmatriz.cr-datosmatriz',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCrDerechotipoCrDerechotipo extends Schema.CollectionType {
   collectionName: 'cr_derechotipos';
   info: {
@@ -1417,6 +1508,173 @@ export interface ApiCrEstadotipoCrEstadotipo extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-estadotipo.cr-estadotipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrEstructuraalertapredioCrEstructuraalertapredio
+  extends Schema.CollectionType {
+  collectionName: 'cr_estructuraalertapredios';
+  info: {
+    description: '';
+    displayName: 'CR_EstructuraAlertaPredio';
+    pluralName: 'cr-estructuraalertapredios';
+    singularName: 'cr-estructuraalertapredio';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cr_predio_alerta_predio: Attribute.Relation<
+      'api::cr-estructuraalertapredio.cr-estructuraalertapredio',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estructuraalertapredio.cr-estructuraalertapredio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion_alerta: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    entidad_emisora_alerta: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fecha_apertura_alerta: Attribute.Date & Attribute.Required;
+    fecha_cierre_alerta: Attribute.Date;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estructuraalertapredio.cr-estructuraalertapredio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrEstructuraavaluoCrEstructuraavaluo
+  extends Schema.CollectionType {
+  collectionName: 'cr_estructuraavaluos';
+  info: {
+    description: '';
+    displayName: 'CR_EstructuraAvaluo';
+    pluralName: 'cr-estructuraavaluos';
+    singularName: 'cr-estructuraavaluo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    autoestimacion: Attribute.Boolean & Attribute.Required;
+    avaluo_catastral: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    avaluo_catastral_terreno: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    avaluo_catastral_total_unidadesconstruccion: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    cr_predio_avaluo: Attribute.Relation<
+      'api::cr-estructuraavaluo.cr-estructuraavaluo',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estructuraavaluo.cr-estructuraavaluo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fecha_avaluo: Attribute.Date & Attribute.Required;
+    incremento: Attribute.Boolean;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estructuraavaluo.cr-estructuraavaluo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    valor_comercial: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    valor_comercial_terreno: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    valor_comercial_total_unidadesconstruccion: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+  };
+}
+
+export interface ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr
+  extends Schema.CollectionType {
+  collectionName: 'cr_estructuraprocedimientocrs';
+  info: {
+    displayName: 'CR_EstructuraProcedimientoCatastralRegistral';
+    pluralName: 'cr-estructuraprocedimientocrs';
+    singularName: 'cr-estructuraprocedimientocr';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cr_predio_procedimientocr: Attribute.Relation<
+      'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    procedimientocr: Attribute.Relation<
+      'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr',
+      'oneToOne',
+      'api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr',
       'oneToOne',
       'admin::user'
     > &
@@ -2612,11 +2870,15 @@ declare module '@strapi/types' {
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo': ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo;
       'api::cr-condicionprediotipo.cr-condicionprediotipo': ApiCrCondicionprediotipoCrCondicionprediotipo;
       'api::cr-construccionplantatipo.cr-construccionplantatipo': ApiCrConstruccionplantatipoCrConstruccionplantatipo;
+      'api::cr-datosmatriz.cr-datosmatriz': ApiCrDatosmatrizCrDatosmatriz;
       'api::cr-derechotipo.cr-derechotipo': ApiCrDerechotipoCrDerechotipo;
       'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo': ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo;
       'api::cr-estadoanotaciontipo.cr-estadoanotaciontipo': ApiCrEstadoanotaciontipoCrEstadoanotaciontipo;
       'api::cr-estadofmitipo.cr-estadofmitipo': ApiCrEstadofmitipoCrEstadofmitipo;
       'api::cr-estadotipo.cr-estadotipo': ApiCrEstadotipoCrEstadotipo;
+      'api::cr-estructuraalertapredio.cr-estructuraalertapredio': ApiCrEstructuraalertapredioCrEstructuraalertapredio;
+      'api::cr-estructuraavaluo.cr-estructuraavaluo': ApiCrEstructuraavaluoCrEstructuraavaluo;
+      'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr': ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr;
       'api::cr-fotoidentificaciontipo.cr-fotoidentificaciontipo': ApiCrFotoidentificaciontipoCrFotoidentificaciontipo;
       'api::cr-informalidadtipo.cr-informalidadtipo': ApiCrInformalidadtipoCrInformalidadtipo;
       'api::cr-mutaciontipo.cr-mutaciontipo': ApiCrMutaciontipoCrMutaciontipo;

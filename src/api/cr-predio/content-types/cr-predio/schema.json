@@ -81,12 +81,12 @@
     "area_catastral_terreno": {
       "type": "decimal",
       "required": true,
-      "max": 1e+22
+      "max": 10000000000000000000000
     },
     "area_registral_m2": {
       "type": "decimal",
       "required": false,
-      "max": 1e+22
+      "max": 10000000000000000000000
     },
     "vigencia_actualizacion_catastral": {
       "type": "date",

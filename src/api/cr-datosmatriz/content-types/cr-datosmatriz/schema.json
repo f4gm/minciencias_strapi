@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_datosmatrizs",
+  "info": {
+    "singularName": "cr-datosmatriz",
+    "pluralName": "cr-datosmatrizs",
+    "displayName": "CR_DatosMatriz",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "area_total_terreno": {
+      "type": "decimal",
+      "required": false,
+      "max": 100000000000000
+    },
+    "area_total_terreno_privada": {
+      "type": "decimal",
+      "required": false,
+      "max": 100000000000000
+    },
+    "area_total_terreno_comun": {
+      "type": "decimal",
+      "required": false,
+      "max": 100000000000000
+    },
+    "area_total_construida": {
+      "type": "decimal",
+      "required": false,
+      "max": 100000000000000
+    },
+    "area_total_construida_privada": {
+      "type": "decimal",
+      "required": false,
+      "max": 100000000000000
+    },
+    "area_total_construida_comun": {
+      "type": "decimal",
+      "required": false,
+      "max": 100000000000000
+    },
+    "numero_torres": {
+      "type": "integer",
+      "max": 1000
+    },
+    "total_unidades_privadas": {
+      "type": "integer",
+      "max": 100000000
+    },
+    "cr_predio": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

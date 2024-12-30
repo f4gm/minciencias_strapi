@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estructuraprocedimientocrs",
+  "info": {
+    "singularName": "cr-estructuraprocedimientocr",
+    "pluralName": "cr-estructuraprocedimientocrs",
+    "displayName": "CR_EstructuraProcedimientoCatastralRegistral"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "procedimientocr": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo"
+    },
+    "cr_predio_procedimientocr": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}
