@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_caracteristicasucs",
+  "info": {
+    "singularName": "cr-caracteristicasuc",
+    "pluralName": "cr-caracteristicasucs",
+    "displayName": "CR_CaracteristicasUnidadConstruccion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "identificador": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20
+    },
+    "tipo_unidad_construccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo",
+      "required": true
+    },
+    "total_plantas": {
+      "type": "integer",
+      "required": true,
+      "max": 150
+    },
+    "uso": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-usouconstipo.cr-usouconstipo",
+      "required": true
+    },
+    "anio_construccion": {
+      "type": "integer",
+      "required": true,
+      "max": 2500,
+      "min": 1512
+    },
+    "area_construida": {
+      "type": "decimal",
+      "required": true,
+      "max": 1000000000000000,
+      "min": 0
+    },
+    "estado_conservacion": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "observaciones": {
+      "type": "text"
+    }
+  }
+}

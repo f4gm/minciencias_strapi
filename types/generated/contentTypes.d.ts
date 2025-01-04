@@ -1067,6 +1067,85 @@ export interface ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo
   };
 }
 
+export interface ApiCrCaracteristicasucCrCaracteristicasuc
+  extends Schema.CollectionType {
+  collectionName: 'cr_caracteristicasucs';
+  info: {
+    description: '';
+    displayName: 'CR_CaracteristicasUnidadConstruccion';
+    pluralName: 'cr-caracteristicasucs';
+    singularName: 'cr-caracteristicasuc';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    anio_construccion: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 2500;
+          min: 1512;
+        },
+        number
+      >;
+    area_construida: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 1000000000000000;
+          min: 0;
+        },
+        number
+      >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-caracteristicasuc.cr-caracteristicasuc',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    estado_conservacion: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 30;
+      }>;
+    identificador: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    observaciones: Attribute.Text;
+    tipo_unidad_construccion: Attribute.Relation<
+      'api::cr-caracteristicasuc.cr-caracteristicasuc',
+      'oneToOne',
+      'api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo'
+    > &
+      Attribute.Required;
+    total_plantas: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 150;
+        },
+        number
+      >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-caracteristicasuc.cr-caracteristicasuc',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    uso: Attribute.Relation<
+      'api::cr-caracteristicasuc.cr-caracteristicasuc',
+      'oneToOne',
+      'api::cr-usouconstipo.cr-usouconstipo'
+    > &
+      Attribute.Required;
+  };
+}
+
 export interface ApiCrCondicionprediotipoCrCondicionprediotipo
   extends Schema.CollectionType {
   collectionName: 'cr_condicionprediotipos';
@@ -1777,6 +1856,95 @@ export interface ApiCrInformalidadtipoCrInformalidadtipo
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-informalidadtipo.cr-informalidadtipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
+  collectionName: 'cr_interesados';
+  info: {
+    displayName: 'CR_Interesado';
+    pluralName: 'cr-interesados';
+    singularName: 'cr-interesado';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-interesado.cr-interesado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    tipo_documento: Attribute.Relation<
+      'api::cr-interesado.cr-interesado',
+      'oneToOne',
+      'api::col-documentotipo.col-documentotipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-interesado.cr-interesado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrLinderoCrLindero extends Schema.CollectionType {
+  collectionName: 'cr_linderos';
+  info: {
+    description: '';
+    displayName: 'CR_Lindero';
+    pluralName: 'cr-linderos';
+    singularName: 'cr-lindero';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-lindero.cr-lindero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fin_vida_util_version: Attribute.DateTime;
+    geometria: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<'plugin::postgis.map'>;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    localizacion_textual: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    longitud: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 100000000000;
+        },
+        number
+      >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-lindero.cr-lindero',
       'oneToOne',
       'admin::user'
     > &
@@ -2868,6 +3036,7 @@ declare module '@strapi/types' {
       'api::col-relacionsuperficietipo.col-relacionsuperficietipo': ApiColRelacionsuperficietipoColRelacionsuperficietipo;
       'api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo': ApiColUnidadadministrativabasicatipoColUnidadadministrativabasicatipo;
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo': ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo;
+      'api::cr-caracteristicasuc.cr-caracteristicasuc': ApiCrCaracteristicasucCrCaracteristicasuc;
       'api::cr-condicionprediotipo.cr-condicionprediotipo': ApiCrCondicionprediotipoCrCondicionprediotipo;
       'api::cr-construccionplantatipo.cr-construccionplantatipo': ApiCrConstruccionplantatipoCrConstruccionplantatipo;
       'api::cr-datosmatriz.cr-datosmatriz': ApiCrDatosmatrizCrDatosmatriz;
@@ -2881,6 +3050,8 @@ declare module '@strapi/types' {
       'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr': ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr;
       'api::cr-fotoidentificaciontipo.cr-fotoidentificaciontipo': ApiCrFotoidentificaciontipoCrFotoidentificaciontipo;
       'api::cr-informalidadtipo.cr-informalidadtipo': ApiCrInformalidadtipoCrInformalidadtipo;
+      'api::cr-interesado.cr-interesado': ApiCrInteresadoCrInteresado;
+      'api::cr-lindero.cr-lindero': ApiCrLinderoCrLindero;
       'api::cr-mutaciontipo.cr-mutaciontipo': ApiCrMutaciontipoCrMutaciontipo;
       'api::cr-predio.cr-predio': ApiCrPredioCrPredio;
       'api::cr-prediotipo.cr-prediotipo': ApiCrPrediotipoCrPrediotipo;
