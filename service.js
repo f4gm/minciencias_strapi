@@ -8,12 +8,14 @@ const svc = new Service({
   logpath: path.join(__dirname, 'servicelog')
 });
 
-svc.on('install',function(){
+svc.on('install', function() {
+  console.log('Installing service...');
   svc.start();
 });
 
 
 svc.on('uninstall', function() {
+  console.log('Uninstalling service...');
   svc.uninstall();
 });
 
@@ -22,4 +24,13 @@ svc.on('error', function(error) {
   console.error(error);
 })
 
-svc.install();
+// svc.install();
+const args = process.argv;
+
+if (args[2] == 'install') {
+  svc.install();
+} else if (args[2] == 'uninstall') {
+  svc.uninstall();
+} else {
+  console.log('Enter a valid action: install, uninstall.')
+}
