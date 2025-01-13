@@ -14,11 +14,12 @@ svc.on('install',function(){
 
 
 svc.on('uninstall', function() {
-  // nothing
+  svc.uninstall();
 });
 
 svc.on('error', function(error) {
-  console.error(error)
+  console.error("Error");
+  console.error(error);
 })
 
 svc.install();
