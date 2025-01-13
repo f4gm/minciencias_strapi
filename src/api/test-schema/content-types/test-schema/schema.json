@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_schemas",
+  "info": {
+    "singularName": "test-schema",
+    "pluralName": "test-schemas",
+    "displayName": "test-schema"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test": {
+      "type": "string"
+    }
+  }
+}
