@@ -2586,35 +2586,6 @@ export interface ApiCrUsouconstipoCrUsouconstipo extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestSchemaTestSchema extends Schema.CollectionType {
-  collectionName: 'test_schemas';
-  info: {
-    displayName: 'test-schema';
-    pluralName: 'test-schemas';
-    singularName: 'test-schema';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::test-schema.test-schema',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    test: Attribute.String;
-    updatedAt: Attribute.DateTime;
-    updatedBy: Attribute.Relation<
-      'api::test-schema.test-schema',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -3092,7 +3063,6 @@ declare module '@strapi/types' {
       'api::cr-sexotipo.cr-sexotipo': ApiCrSexotipoCrSexotipo;
       'api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo': ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo;
       'api::cr-usouconstipo.cr-usouconstipo': ApiCrUsouconstipoCrUsouconstipo;
-      'api::test-schema.test-schema': ApiTestSchemaTestSchema;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
