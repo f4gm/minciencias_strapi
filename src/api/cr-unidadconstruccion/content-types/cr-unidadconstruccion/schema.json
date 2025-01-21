@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_unidadconstruccions",
+  "info": {
+    "singularName": "cr-unidadconstruccion",
+    "pluralName": "cr-unidadconstruccions",
+    "displayName": "CR_UnidadConstruccion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_planta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-construccionplantatipo.cr-construccionplantatipo",
+      "required": true
+    },
+    "planta_ubicacion": {
+      "type": "integer",
+      "required": true,
+      "max": 300,
+      "min": 0
+    },
+    "altura": {
+      "type": "integer",
+      "max": 1000,
+      "min": 0
+    },
+    "geometria": {
+      "required": true,
+      "columnType": {
+        "type": "specificType",
+        "args": [
+          "geometry(MULTIPOLYGON,9377)"
+        ]
+      },
+      "type": "customField",
+      "customField": "plugin::postgis.map",
+      "isSpatial": true,
+      "srid": 9377,
+      "coord_dimension": 2,
+      "f_table_schema": "public",
+      "geoType": "MULTIPOLYGON"
+    },
+    "cr_caracteristicasuc": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-caracteristicasuc.cr-caracteristicasuc"
+    },
+    "etiqueta": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "relacion_superficie": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-relacionsuperficietipo.col-relacionsuperficietipo"
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    }
+  }
+}

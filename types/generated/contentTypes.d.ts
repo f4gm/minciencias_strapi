@@ -1866,6 +1866,7 @@ export interface ApiCrInformalidadtipoCrInformalidadtipo
 export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
   collectionName: 'cr_interesados';
   info: {
+    description: '';
     displayName: 'CR_Interesado';
     pluralName: 'cr-interesados';
     singularName: 'cr-interesado';
@@ -1874,6 +1875,13 @@ export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
+    autoreconocimientocampesino: Attribute.Boolean;
+    autoreconocimientoetnico: Attribute.Relation<
+      'api::cr-interesado.cr-interesado',
+      'oneToOne',
+      'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
+    >;
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::cr-interesado.cr-interesado',
@@ -1881,10 +1889,61 @@ export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fin_vida_util_version: Attribute.DateTime;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    numero_documento: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    primer_apellido: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    primer_nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    razon_social: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    segundo_apellido: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    segundo_nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    sexo: Attribute.Relation<
+      'api::cr-interesado.cr-interesado',
+      'oneToOne',
+      'api::cr-sexotipo.cr-sexotipo'
+    > &
+      Attribute.Required;
     tipo_documento: Attribute.Relation<
       'api::cr-interesado.cr-interesado',
       'oneToOne',
       'api::col-documentotipo.col-documentotipo'
+    > &
+      Attribute.Required;
+    tipo_interesado: Attribute.Relation<
+      'api::cr-interesado.cr-interesado',
+      'oneToOne',
+      'api::col-interesadotipo.col-interesadotipo'
     >;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
@@ -2484,6 +2543,140 @@ export interface ApiCrSexotipoCrSexotipo extends Schema.CollectionType {
   };
 }
 
+export interface ApiCrTerrenoCrTerreno extends Schema.CollectionType {
+  collectionName: 'cr_terrenos';
+  info: {
+    displayName: 'CR_Terreno';
+    pluralName: 'cr-terrenos';
+    singularName: 'cr-terreno';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-terreno.cr-terreno',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    etiqueta: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fin_vida_util_version: Attribute.DateTime;
+    geometria: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<'plugin::postgis.map'>;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    relacion_superficie: Attribute.Relation<
+      'api::cr-terreno.cr-terreno',
+      'oneToOne',
+      'api::col-relacionsuperficietipo.col-relacionsuperficietipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-terreno.cr-terreno',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrUnidadconstruccionCrUnidadconstruccion
+  extends Schema.CollectionType {
+  collectionName: 'cr_unidadconstruccions';
+  info: {
+    description: '';
+    displayName: 'CR_UnidadConstruccion';
+    pluralName: 'cr-unidadconstruccions';
+    singularName: 'cr-unidadconstruccion';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    altura: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          max: 1000;
+          min: 0;
+        },
+        number
+      >;
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    cr_caracteristicasuc: Attribute.Relation<
+      'api::cr-unidadconstruccion.cr-unidadconstruccion',
+      'oneToOne',
+      'api::cr-caracteristicasuc.cr-caracteristicasuc'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-unidadconstruccion.cr-unidadconstruccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    espacio_de_nombres: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    etiqueta: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fin_vida_util_version: Attribute.DateTime;
+    geometria: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<'plugin::postgis.map'>;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    planta_ubicacion: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 300;
+          min: 0;
+        },
+        number
+      >;
+    relacion_superficie: Attribute.Relation<
+      'api::cr-unidadconstruccion.cr-unidadconstruccion',
+      'oneToOne',
+      'api::col-relacionsuperficietipo.col-relacionsuperficietipo'
+    >;
+    tipo_planta: Attribute.Relation<
+      'api::cr-unidadconstruccion.cr-unidadconstruccion',
+      'oneToOne',
+      'api::cr-construccionplantatipo.cr-construccionplantatipo'
+    > &
+      Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-unidadconstruccion.cr-unidadconstruccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo
   extends Schema.CollectionType {
   collectionName: 'cr_unidadconstrucciontipos';
@@ -3061,6 +3254,8 @@ declare module '@strapi/types' {
       'api::cr-responsabilidadtipo.cr-responsabilidadtipo': ApiCrResponsabilidadtipoCrResponsabilidadtipo;
       'api::cr-restricciontipo.cr-restricciontipo': ApiCrRestricciontipoCrRestricciontipo;
       'api::cr-sexotipo.cr-sexotipo': ApiCrSexotipoCrSexotipo;
+      'api::cr-terreno.cr-terreno': ApiCrTerrenoCrTerreno;
+      'api::cr-unidadconstruccion.cr-unidadconstruccion': ApiCrUnidadconstruccionCrUnidadconstruccion;
       'api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo': ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo;
       'api::cr-usouconstipo.cr-usouconstipo': ApiCrUsouconstipoCrUsouconstipo;
       'plugin::content-releases.release': PluginContentReleasesRelease;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-interesado",
     "pluralName": "cr-interesados",
-    "displayName": "CR_Interesado"
+    "displayName": "CR_Interesado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -14,7 +15,72 @@
     "tipo_documento": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-documentotipo.col-documentotipo"
+      "target": "api::col-documentotipo.col-documentotipo",
+      "required": true
+    },
+    "primer_nombre": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "segundo_nombre": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "primer_apellido": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "segundo_apellido": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "sexo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-sexotipo.cr-sexotipo",
+      "required": true
+    },
+    "autoreconocimientoetnico": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo"
+    },
+    "autoreconocimientocampesino": {
+      "type": "boolean"
+    },
+    "razon_social": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "nombre": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "tipo_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-interesadotipo.col-interesadotipo"
+    },
+    "numero_documento": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
     }
   }
 }
