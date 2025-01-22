@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estrucpredmatrinpns",
+  "info": {
+    "singularName": "cr-estrucpredmatrinpn",
+    "pluralName": "cr-estrucpredmatrinpns",
+    "displayName": "CR_EstructuraPredioMatrizNPN"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_predial_nacional": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "area_catastral_terreno": {
+      "type": "decimal",
+      "max": 1e+25
+    },
+    "cr_predmatrinpn": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estructuramatriculamatrizs",
+  "info": {
+    "singularName": "cr-estructuramatriculamatriz",
+    "pluralName": "cr-estructuramatriculamatrizs",
+    "displayName": "CR_EstructuraMatriculaMatriz"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codigo_orip": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "matricula_inmobiliaria": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "cr_predmatrimatriz": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

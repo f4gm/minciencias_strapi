@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estrucavalcaracs",
+  "info": {
+    "singularName": "cr-estrucavalcarac",
+    "pluralName": "cr-estrucavalcaracs",
+    "displayName": "CR_EstructuraAvaluoCaracterizacion"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha_avaluo": {
+      "type": "date"
+    },
+    "valor_comercial": {
+      "type": "integer",
+      "max": 1e+16
+    },
+    "avaluo_catastral": {
+      "type": "integer",
+      "max": 1e+16,
+      "required": true
+    },
+    "cr_crctrstcdcnstrccion_aval_caract": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-caracteristicasuc.cr-caracteristicasuc"
+    }
+  }
+}

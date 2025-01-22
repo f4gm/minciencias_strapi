@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estrucavalinters",
+  "info": {
+    "singularName": "cr-estrucavalinter",
+    "pluralName": "cr-estrucavalinters",
+    "displayName": "CR_EstructuraAvaluoInterseccion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "avaluo_catastral_interseccion_terreno": {
+      "type": "integer",
+      "required": true,
+      "max": 1e+16
+    },
+    "avaluo_catastral_interseccion_unidades_construccion": {
+      "type": "integer",
+      "max": 1e+16
+    },
+    "avaluo_catastral_interseccion_total": {
+      "type": "integer",
+      "required": true,
+      "max": 1e+16
+    },
+    "cr_pred_infor_aval_catas_inter": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predioinformalidad.cr-predioinformalidad"
+    }
+  }
+}

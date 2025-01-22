@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_predioinformalidads",
+  "info": {
+    "singularName": "cr-predioinformalidad",
+    "pluralName": "cr-predioinformalidads",
+    "displayName": "CR_Predio_Informalidad"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cr_predio_formal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "cr_predio_informal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "area_terreno_interseccion": {
+      "type": "decimal",
+      "required": true,
+      "max": 1e+25
+    },
+    "area_construida_interseccion": {
+      "type": "decimal",
+      "max": 1e+25
+    }
+  }
+}

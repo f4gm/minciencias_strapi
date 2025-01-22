@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estrucmatrisegres",
+  "info": {
+    "singularName": "cr-estrucmatrisegre",
+    "pluralName": "cr-estrucmatrisegres",
+    "displayName": "CR_EstructuraMatriculaSegregados"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codigo_orip": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "matricula_inmobiliaria": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "cr_predmatrisegre": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

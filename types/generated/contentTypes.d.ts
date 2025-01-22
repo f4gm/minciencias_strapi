@@ -1594,6 +1594,243 @@ export interface ApiCrEstadotipoCrEstadotipo extends Schema.CollectionType {
   };
 }
 
+export interface ApiCrEstrucavalcaracCrEstrucavalcarac
+  extends Schema.CollectionType {
+  collectionName: 'cr_estrucavalcaracs';
+  info: {
+    displayName: 'CR_EstructuraAvaluoCaracterizacion';
+    pluralName: 'cr-estrucavalcaracs';
+    singularName: 'cr-estrucavalcarac';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    avaluo_catastral: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    cr_crctrstcdcnstrccion_aval_caract: Attribute.Relation<
+      'api::cr-estrucavalcarac.cr-estrucavalcarac',
+      'oneToOne',
+      'api::cr-caracteristicasuc.cr-caracteristicasuc'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estrucavalcarac.cr-estrucavalcarac',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fecha_avaluo: Attribute.Date;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estrucavalcarac.cr-estrucavalcarac',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    valor_comercial: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+  };
+}
+
+export interface ApiCrEstrucavalinterCrEstrucavalinter
+  extends Schema.CollectionType {
+  collectionName: 'cr_estrucavalinters';
+  info: {
+    description: '';
+    displayName: 'CR_EstructuraAvaluoInterseccion';
+    pluralName: 'cr-estrucavalinters';
+    singularName: 'cr-estrucavalinter';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    avaluo_catastral_interseccion_terreno: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    avaluo_catastral_interseccion_total: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    avaluo_catastral_interseccion_unidades_construccion: Attribute.Integer &
+      Attribute.SetMinMax<
+        {
+          max: 10000000000000000;
+        },
+        number
+      >;
+    cr_pred_infor_aval_catas_inter: Attribute.Relation<
+      'api::cr-estrucavalinter.cr-estrucavalinter',
+      'oneToOne',
+      'api::cr-predioinformalidad.cr-predioinformalidad'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estrucavalinter.cr-estrucavalinter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estrucavalinter.cr-estrucavalinter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrEstrucmatrisegreCrEstrucmatrisegre
+  extends Schema.CollectionType {
+  collectionName: 'cr_estrucmatrisegres';
+  info: {
+    displayName: 'CR_EstructuraMatriculaSegregados';
+    pluralName: 'cr-estrucmatrisegres';
+    singularName: 'cr-estrucmatrisegre';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    codigo_orip: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    cr_predmatrisegre: Attribute.Relation<
+      'api::cr-estrucmatrisegre.cr-estrucmatrisegre',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estrucmatrisegre.cr-estrucmatrisegre',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    matricula_inmobiliaria: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estrucmatrisegre.cr-estrucmatrisegre',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrEstrucpredmatrinpnCrEstrucpredmatrinpn
+  extends Schema.CollectionType {
+  collectionName: 'cr_estrucpredmatrinpns';
+  info: {
+    displayName: 'CR_EstructuraPredioMatrizNPN';
+    pluralName: 'cr-estrucpredmatrinpns';
+    singularName: 'cr-estrucpredmatrinpn';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    area_catastral_terreno: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 1e25;
+        },
+        number
+      >;
+    cr_predmatrinpn: Attribute.Relation<
+      'api::cr-estrucpredmatrinpn.cr-estrucpredmatrinpn',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estrucpredmatrinpn.cr-estrucpredmatrinpn',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    numero_predial_nacional: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 30;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estrucpredmatrinpn.cr-estrucpredmatrinpn',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrEstrucpredorinpnCrEstrucpredorinpn
+  extends Schema.CollectionType {
+  collectionName: 'cr_estrucpredorinpns';
+  info: {
+    description: '';
+    displayName: 'CR_EstructuraPredioOrigenNPN';
+    pluralName: 'cr-estrucpredorinpns';
+    singularName: 'cr-estrucpredorinpn';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cr_predorinpn: Attribute.Relation<
+      'api::cr-estrucpredorinpn.cr-estrucpredorinpn',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estrucpredorinpn.cr-estrucpredorinpn',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fecha_cambio_npn: Attribute.Date & Attribute.Required;
+    numero_predial_nacional: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 30;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estrucpredorinpn.cr-estrucpredorinpn',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCrEstructuraalertapredioCrEstructuraalertapredio
   extends Schema.CollectionType {
   collectionName: 'cr_estructuraalertapredios';
@@ -1719,6 +1956,48 @@ export interface ApiCrEstructuraavaluoCrEstructuraavaluo
         },
         number
       >;
+  };
+}
+
+export interface ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz
+  extends Schema.CollectionType {
+  collectionName: 'cr_estructuramatriculamatrizs';
+  info: {
+    displayName: 'CR_EstructuraMatriculaMatriz';
+    pluralName: 'cr-estructuramatriculamatrizs';
+    singularName: 'cr-estructuramatriculamatriz';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    codigo_orip: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    cr_predmatrimatriz: Attribute.Relation<
+      'api::cr-estructuramatriculamatriz.cr-estructuramatriculamatriz',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-estructuramatriculamatriz.cr-estructuramatriculamatriz',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    matricula_inmobiliaria: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-estructuramatriculamatriz.cr-estructuramatriculamatriz',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
   };
 }
 
@@ -2185,6 +2464,60 @@ export interface ApiCrPredioCrPredio extends Schema.CollectionType {
     > &
       Attribute.Private;
     vigencia_actualizacion_catastral: Attribute.Date & Attribute.Required;
+  };
+}
+
+export interface ApiCrPredioinformalidadCrPredioinformalidad
+  extends Schema.CollectionType {
+  collectionName: 'cr_predioinformalidads';
+  info: {
+    displayName: 'CR_Predio_Informalidad';
+    pluralName: 'cr-predioinformalidads';
+    singularName: 'cr-predioinformalidad';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    area_construida_interseccion: Attribute.Decimal &
+      Attribute.SetMinMax<
+        {
+          max: 1e25;
+        },
+        number
+      >;
+    area_terreno_interseccion: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 1e25;
+        },
+        number
+      >;
+    cr_predio_formal: Attribute.Relation<
+      'api::cr-predioinformalidad.cr-predioinformalidad',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    cr_predio_informal: Attribute.Relation<
+      'api::cr-predioinformalidad.cr-predioinformalidad',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-predioinformalidad.cr-predioinformalidad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-predioinformalidad.cr-predioinformalidad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
   };
 }
 
@@ -3238,8 +3571,14 @@ declare module '@strapi/types' {
       'api::cr-estadoanotaciontipo.cr-estadoanotaciontipo': ApiCrEstadoanotaciontipoCrEstadoanotaciontipo;
       'api::cr-estadofmitipo.cr-estadofmitipo': ApiCrEstadofmitipoCrEstadofmitipo;
       'api::cr-estadotipo.cr-estadotipo': ApiCrEstadotipoCrEstadotipo;
+      'api::cr-estrucavalcarac.cr-estrucavalcarac': ApiCrEstrucavalcaracCrEstrucavalcarac;
+      'api::cr-estrucavalinter.cr-estrucavalinter': ApiCrEstrucavalinterCrEstrucavalinter;
+      'api::cr-estrucmatrisegre.cr-estrucmatrisegre': ApiCrEstrucmatrisegreCrEstrucmatrisegre;
+      'api::cr-estrucpredmatrinpn.cr-estrucpredmatrinpn': ApiCrEstrucpredmatrinpnCrEstrucpredmatrinpn;
+      'api::cr-estrucpredorinpn.cr-estrucpredorinpn': ApiCrEstrucpredorinpnCrEstrucpredorinpn;
       'api::cr-estructuraalertapredio.cr-estructuraalertapredio': ApiCrEstructuraalertapredioCrEstructuraalertapredio;
       'api::cr-estructuraavaluo.cr-estructuraavaluo': ApiCrEstructuraavaluoCrEstructuraavaluo;
+      'api::cr-estructuramatriculamatriz.cr-estructuramatriculamatriz': ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz;
       'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr': ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr;
       'api::cr-fotoidentificaciontipo.cr-fotoidentificaciontipo': ApiCrFotoidentificaciontipoCrFotoidentificaciontipo;
       'api::cr-informalidadtipo.cr-informalidadtipo': ApiCrInformalidadtipoCrInformalidadtipo;
@@ -3247,6 +3586,7 @@ declare module '@strapi/types' {
       'api::cr-lindero.cr-lindero': ApiCrLinderoCrLindero;
       'api::cr-mutaciontipo.cr-mutaciontipo': ApiCrMutaciontipoCrMutaciontipo;
       'api::cr-predio.cr-predio': ApiCrPredioCrPredio;
+      'api::cr-predioinformalidad.cr-predioinformalidad': ApiCrPredioinformalidadCrPredioinformalidad;
       'api::cr-prediotipo.cr-prediotipo': ApiCrPrediotipoCrPrediotipo;
       'api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo': ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastralregistraltipo;
       'api::cr-publicidadtipo.cr-publicidadtipo': ApiCrPublicidadtipoCrPublicidadtipo;

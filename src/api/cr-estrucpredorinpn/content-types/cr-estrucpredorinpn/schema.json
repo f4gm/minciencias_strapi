@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_estrucpredorinpns",
+  "info": {
+    "singularName": "cr-estrucpredorinpn",
+    "pluralName": "cr-estrucpredorinpns",
+    "displayName": "CR_EstructuraPredioOrigenNPN",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_predial_nacional": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30
+    },
+    "fecha_cambio_npn": {
+      "type": "date",
+      "required": true
+    },
+    "cr_predorinpn": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}
