@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_fuenteespacials",
+  "info": {
+    "singularName": "cr-fuenteespacial",
+    "pluralName": "cr-fuenteespacials",
+    "displayName": "CR_FuenteEspacial"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-fuenteespacialtipo.col-fuenteespacialtipo"
+    },
+    "metadato": {
+      "type": "blocks"
+    },
+    "estado_disponibilidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo"
+    },
+    "tipo_formato": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-formatotipo.col-formatotipo"
+    },
+    "fecha_documento_fuente": {
+      "type": "date"
+    },
+    "nombre": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "descripcion": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "url": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "local_id": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    }
+  }
+}

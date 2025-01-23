@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_agrupacioninteresados",
+  "info": {
+    "singularName": "cr-agrupacioninteresado",
+    "pluralName": "cr-agrupacioninteresados",
+    "displayName": "CR_AgrupacionInteresados"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-grupointeresadotipo.col-grupointeresadotipo"
+    },
+    "nombre": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "tipo_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-interesadotipo.col-interesadotipo"
+    },
+    "tipo_documento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-documentotipo.col-documentotipo"
+    },
+    "numero_documento": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    }
+  }
+}

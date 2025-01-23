@@ -1016,6 +1016,70 @@ export interface ApiColUnidadadministrativabasicatipoColUnidadadministrativabasi
   };
 }
 
+export interface ApiCrAgrupacioninteresadoCrAgrupacioninteresado
+  extends Schema.CollectionType {
+  collectionName: 'cr_agrupacioninteresados';
+  info: {
+    displayName: 'CR_AgrupacionInteresados';
+    pluralName: 'cr-agrupacioninteresados';
+    singularName: 'cr-agrupacioninteresado';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fin_vida_util_version: Attribute.DateTime;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    numero_documento: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    tipo: Attribute.Relation<
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
+      'oneToOne',
+      'api::col-grupointeresadotipo.col-grupointeresadotipo'
+    >;
+    tipo_documento: Attribute.Relation<
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
+      'oneToOne',
+      'api::col-documentotipo.col-documentotipo'
+    >;
+    tipo_interesado: Attribute.Relation<
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
+      'oneToOne',
+      'api::col-interesadotipo.col-interesadotipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo
   extends Schema.CollectionType {
   collectionName: 'cr_autoreconocimientoetnicotipos';
@@ -2091,6 +2155,151 @@ export interface ApiCrFotoidentificaciontipoCrFotoidentificaciontipo
   };
 }
 
+export interface ApiCrFuenteadministrativaCrFuenteadministrativa
+  extends Schema.CollectionType {
+  collectionName: 'cr_fuenteadministrativas';
+  info: {
+    displayName: 'CR_FuenteAdministrativa';
+    pluralName: 'cr-fuenteadministrativas';
+    singularName: 'cr-fuenteadministrativa';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    ciudad_origen: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    ente_emisor: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    estado_disponibilidad: Attribute.Relation<
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
+      'oneToOne',
+      'api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo'
+    >;
+    fecha_documento_fuente: Attribute.Date;
+    fecha_fin: Attribute.Date;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    oficina_origen: Attribute.Integer;
+    tipo: Attribute.Relation<
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
+      'oneToOne',
+      'api::col-fuenteadministrativatipo.col-fuenteadministrativatipo'
+    >;
+    tipo_formato: Attribute.Relation<
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
+      'oneToOne',
+      'api::col-formatotipo.col-formatotipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    url: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2000;
+      }>;
+  };
+}
+
+export interface ApiCrFuenteespacialCrFuenteespacial
+  extends Schema.CollectionType {
+  collectionName: 'cr_fuenteespacials';
+  info: {
+    displayName: 'CR_FuenteEspacial';
+    pluralName: 'cr-fuenteespacials';
+    singularName: 'cr-fuenteespacial';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-fuenteespacial.cr-fuenteespacial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    estado_disponibilidad: Attribute.Relation<
+      'api::cr-fuenteespacial.cr-fuenteespacial',
+      'oneToOne',
+      'api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo'
+    >;
+    fecha_documento_fuente: Attribute.Date;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    metadato: Attribute.Blocks;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    tipo: Attribute.Relation<
+      'api::cr-fuenteespacial.cr-fuenteespacial',
+      'oneToOne',
+      'api::col-fuenteespacialtipo.col-fuenteespacialtipo'
+    >;
+    tipo_formato: Attribute.Relation<
+      'api::cr-fuenteespacial.cr-fuenteespacial',
+      'oneToOne',
+      'api::col-formatotipo.col-formatotipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-fuenteespacial.cr-fuenteespacial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    url: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2000;
+      }>;
+  };
+}
+
 export interface ApiCrInformalidadtipoCrInformalidadtipo
   extends Schema.CollectionType {
   collectionName: 'cr_informalidadtipos';
@@ -2666,6 +2875,92 @@ export interface ApiCrPublicidadtipoCrPublicidadtipo
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-publicidadtipo.cr-publicidadtipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
+  collectionName: 'cr_puntocontrols';
+  info: {
+    description: '';
+    displayName: 'CR_PuntoControl';
+    pluralName: 'cr-puntocontrols';
+    singularName: 'cr-puntocontrol';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    exactitud_horizontal: Attribute.Float &
+      Attribute.SetMinMax<
+        {
+          max: 100000;
+        },
+        number
+      >;
+    fin_vida_util_version: Attribute.DateTime;
+    geometria: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<'plugin::postgis.map'>;
+    id_punto_control: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    metodoproduccion: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'api::col-metodoproducciontipo.col-metodoproducciontipo'
+    >;
+    posicion_interpolacion: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'api::col-interpolaciontipo.col-interpolaciontipo'
+    >;
+    puntotipo: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'api::col-puntotipo.col-puntotipo'
+    >;
+    tipo_punto_control: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'api::cr-puntocontroltipo.cr-puntocontroltipo'
+    >;
+    ue_cr_terreno: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    ue_cr_unidadconstruccion: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-puntocontrol.cr-puntocontrol',
       'oneToOne',
       'admin::user'
     > &
@@ -3561,6 +3856,7 @@ declare module '@strapi/types' {
       'api::col-puntotipo.col-puntotipo': ApiColPuntotipoColPuntotipo;
       'api::col-relacionsuperficietipo.col-relacionsuperficietipo': ApiColRelacionsuperficietipoColRelacionsuperficietipo;
       'api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo': ApiColUnidadadministrativabasicatipoColUnidadadministrativabasicatipo;
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado': ApiCrAgrupacioninteresadoCrAgrupacioninteresado;
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo': ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo;
       'api::cr-caracteristicasuc.cr-caracteristicasuc': ApiCrCaracteristicasucCrCaracteristicasuc;
       'api::cr-condicionprediotipo.cr-condicionprediotipo': ApiCrCondicionprediotipoCrCondicionprediotipo;
@@ -3581,6 +3877,8 @@ declare module '@strapi/types' {
       'api::cr-estructuramatriculamatriz.cr-estructuramatriculamatriz': ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz;
       'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr': ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr;
       'api::cr-fotoidentificaciontipo.cr-fotoidentificaciontipo': ApiCrFotoidentificaciontipoCrFotoidentificaciontipo;
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa': ApiCrFuenteadministrativaCrFuenteadministrativa;
+      'api::cr-fuenteespacial.cr-fuenteespacial': ApiCrFuenteespacialCrFuenteespacial;
       'api::cr-informalidadtipo.cr-informalidadtipo': ApiCrInformalidadtipoCrInformalidadtipo;
       'api::cr-interesado.cr-interesado': ApiCrInteresadoCrInteresado;
       'api::cr-lindero.cr-lindero': ApiCrLinderoCrLindero;
@@ -3590,6 +3888,7 @@ declare module '@strapi/types' {
       'api::cr-prediotipo.cr-prediotipo': ApiCrPrediotipoCrPrediotipo;
       'api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo': ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastralregistraltipo;
       'api::cr-publicidadtipo.cr-publicidadtipo': ApiCrPublicidadtipoCrPublicidadtipo;
+      'api::cr-puntocontrol.cr-puntocontrol': ApiCrPuntocontrolCrPuntocontrol;
       'api::cr-puntocontroltipo.cr-puntocontroltipo': ApiCrPuntocontroltipoCrPuntocontroltipo;
       'api::cr-responsabilidadtipo.cr-responsabilidadtipo': ApiCrResponsabilidadtipoCrResponsabilidadtipo;
       'api::cr-restricciontipo.cr-restricciontipo': ApiCrRestricciontipoCrRestricciontipo;

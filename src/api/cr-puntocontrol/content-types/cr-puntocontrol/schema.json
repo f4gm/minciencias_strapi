@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_puntocontrols",
+  "info": {
+    "singularName": "cr-puntocontrol",
+    "pluralName": "cr-puntocontrols",
+    "displayName": "CR_PuntoControl",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_punto_control": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "puntotipo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-puntotipo.col-puntotipo"
+    },
+    "tipo_punto_control": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-puntocontroltipo.cr-puntocontroltipo"
+    },
+    "exactitud_horizontal": {
+      "type": "float",
+      "max": 100000
+    },
+    "posicion_interpolacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-interpolaciontipo.col-interpolaciontipo"
+    },
+    "metodoproduccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-metodoproducciontipo.col-metodoproducciontipo"
+    },
+    "geometria": {
+      "required": true,
+      "columnType": {
+        "type": "specificType",
+        "args": [
+          "geometry(POINT,9377)"
+        ]
+      },
+      "type": "customField",
+      "customField": "plugin::postgis.map",
+      "isSpatial": true,
+      "srid": 9377,
+      "coord_dimension": 2,
+      "f_table_schema": "public",
+      "geoType": "POINT"
+    },
+    "ue_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    },
+    "ue_cr_terreno": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    }
+  }
+}
