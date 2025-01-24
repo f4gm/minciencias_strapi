@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extinteresados",
+  "info": {
+    "singularName": "extinteresado",
+    "pluralName": "extinteresados",
+    "displayName": "ExtInteresado"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "huella_dactilar": {
+      "type": "text",
+      "maxLength": 2000
+    },
+    "nombre": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "fotografia": {
+      "type": "text",
+      "maxLength": 2000
+    },
+    "firma": {
+      "type": "text",
+      "maxLength": 2000
+    },
+    "documento_escaneado": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "cr_agrupacionintersdos_ext_pid": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "cr_interesado_ext_pid": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    }
+  }
+}

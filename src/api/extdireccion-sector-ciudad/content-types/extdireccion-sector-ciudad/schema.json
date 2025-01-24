@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extdireccion_sector_ciudads",
+  "info": {
+    "singularName": "extdireccion-sector-ciudad",
+    "pluralName": "extdireccion-sector-ciudads",
+    "displayName": "extdireccion_sector_ciudad"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250
+    }
+  }
+}

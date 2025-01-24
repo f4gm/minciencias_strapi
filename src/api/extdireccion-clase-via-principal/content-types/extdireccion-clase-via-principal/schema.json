@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extdireccion_clase_via_principals",
+  "info": {
+    "singularName": "extdireccion-clase-via-principal",
+    "pluralName": "extdireccion-clase-via-principals",
+    "displayName": "extdireccion_clase_via_principal"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

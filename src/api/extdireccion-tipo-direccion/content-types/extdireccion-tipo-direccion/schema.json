@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extdireccion_tipo_direccions",
+  "info": {
+    "singularName": "extdireccion-tipo-direccion",
+    "pluralName": "extdireccion-tipo-direccions",
+    "displayName": "extdireccion_tipo_direccion"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

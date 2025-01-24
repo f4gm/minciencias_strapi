@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extarchivos",
+  "info": {
+    "singularName": "extarchivo",
+    "pluralName": "extarchivos",
+    "displayName": "ExtArchivo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha_aceptacion": {
+      "type": "date"
+    },
+    "datos": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "extraccion": {
+      "type": "date"
+    },
+    "fecha_grabacion": {
+      "type": "date"
+    },
+    "fecha_entrega": {
+      "type": "date"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "cr_fuenteespacial_ext_archivo_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+    },
+    "cr_fuenteadministrtiva_ext_archivo_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+    }
+  }
+}

@@ -3019,6 +3019,171 @@ export interface ApiCrPuntocontroltipoCrPuntocontroltipo
   };
 }
 
+export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
+  collectionName: 'cr_puntolinderos';
+  info: {
+    description: '';
+    displayName: 'CR_PuntoLindero';
+    pluralName: 'cr-puntolinderos';
+    singularName: 'cr-puntolindero';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    desacuerdo: Attribute.Boolean & Attribute.Required;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    exactitud_horizontal: Attribute.Float &
+      Attribute.SetMinMax<
+        {
+          max: 100000;
+        },
+        number
+      >;
+    fin_vida_util_version: Attribute.DateTime;
+    fotoidentificacion: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'api::cr-fotoidentificaciontipo.cr-fotoidentificaciontipo'
+    >;
+    geometria: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<'plugin::postgis.map'>;
+    id_punto_lindero: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    metodoproduccion: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'api::col-metodoproducciontipo.col-metodoproducciontipo'
+    >;
+    posicion_interpolacion: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'api::col-interpolaciontipo.col-interpolaciontipo'
+    >;
+    puntotipo: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'api::col-puntotipo.col-puntotipo'
+    >;
+    ue_cr_terreno: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    ue_cr_unidadconstruccion: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-puntolindero.cr-puntolindero',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrResponsabilidadCrResponsabilidad
+  extends Schema.CollectionType {
+  collectionName: 'cr_responsabilidads';
+  info: {
+    displayName: 'CR_Responsabilidad';
+    pluralName: 'cr-responsabilidads';
+    singularName: 'cr-responsabilidad';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    codigo_naturaleza_juridica: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 5;
+      }>;
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-responsabilidad.cr-responsabilidad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fecha_anotacion: Attribute.Date;
+    fin_vida_util_version: Attribute.DateTime;
+    interesado_cr_agrupacioninteresados: Attribute.Relation<
+      'api::cr-responsabilidad.cr-responsabilidad',
+      'oneToOne',
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
+    >;
+    interesado_cr_interesado: Attribute.Relation<
+      'api::cr-responsabilidad.cr-responsabilidad',
+      'oneToOne',
+      'api::cr-interesado.cr-interesado'
+    >;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    naturaleza_complemento: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    naturaleza_juridica: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    tipo: Attribute.Relation<
+      'api::cr-responsabilidad.cr-responsabilidad',
+      'oneToOne',
+      'api::cr-responsabilidadtipo.cr-responsabilidadtipo'
+    >;
+    unidad: Attribute.Relation<
+      'api::cr-responsabilidad.cr-responsabilidad',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-responsabilidad.cr-responsabilidad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
   extends Schema.CollectionType {
   collectionName: 'cr_responsabilidadtipos';
@@ -3063,6 +3228,83 @@ export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-responsabilidadtipo.cr-responsabilidadtipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
+  collectionName: 'cr_restriccions';
+  info: {
+    displayName: 'CR_Restriccion';
+    pluralName: 'cr-restriccions';
+    singularName: 'cr-restriccion';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    codigo_naturaleza_juridica: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 5;
+      }>;
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-restriccion.cr-restriccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fecha_anotacion: Attribute.Date;
+    fin_vida_util_version: Attribute.DateTime;
+    interesado_cr_agrupacioninteresados: Attribute.Relation<
+      'api::cr-restriccion.cr-restriccion',
+      'oneToOne',
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
+    >;
+    interesado_cr_interesado: Attribute.Relation<
+      'api::cr-restriccion.cr-restriccion',
+      'oneToOne',
+      'api::cr-interesado.cr-interesado'
+    >;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    naturaleza_complemento: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    naturaleza_juridica: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    tipo: Attribute.Relation<
+      'api::cr-restriccion.cr-restriccion',
+      'oneToOne',
+      'api::cr-restricciontipo.cr-restricciontipo'
+    >;
+    unidad: Attribute.Relation<
+      'api::cr-restriccion.cr-restriccion',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-restriccion.cr-restriccion',
       'oneToOne',
       'admin::user'
     > &
@@ -3400,6 +3642,416 @@ export interface ApiCrUsouconstipoCrUsouconstipo extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-usouconstipo.cr-usouconstipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtarchivoExtarchivo extends Schema.CollectionType {
+  collectionName: 'extarchivos';
+  info: {
+    displayName: 'ExtArchivo';
+    pluralName: 'extarchivos';
+    singularName: 'extarchivo';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cr_fuenteadministrtiva_ext_archivo_id: Attribute.Relation<
+      'api::extarchivo.extarchivo',
+      'oneToOne',
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa'
+    >;
+    cr_fuenteespacial_ext_archivo_id: Attribute.Relation<
+      'api::extarchivo.extarchivo',
+      'oneToOne',
+      'api::cr-fuenteespacial.cr-fuenteespacial'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extarchivo.extarchivo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    datos: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    espacio_de_nombres: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    extraccion: Attribute.Date;
+    fecha_aceptacion: Attribute.Date;
+    fecha_entrega: Attribute.Date;
+    fecha_grabacion: Attribute.Date;
+    local_id: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extarchivo.extarchivo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtdireccionClaseViaPrincipalExtdireccionClaseViaPrincipal
+  extends Schema.CollectionType {
+  collectionName: 'extdireccion_clase_via_principals';
+  info: {
+    displayName: 'extdireccion_clase_via_principal';
+    pluralName: 'extdireccion-clase-via-principals';
+    singularName: 'extdireccion-clase-via-principal';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extdireccion-clase-via-principal.extdireccion-clase-via-principal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extdireccion-clase-via-principal.extdireccion-clase-via-principal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtdireccionSectorCiudadExtdireccionSectorCiudad
+  extends Schema.CollectionType {
+  collectionName: 'extdireccion_sector_ciudads';
+  info: {
+    displayName: 'extdireccion_sector_ciudad';
+    pluralName: 'extdireccion-sector-ciudads';
+    singularName: 'extdireccion-sector-ciudad';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extdireccion-sector-ciudad.extdireccion-sector-ciudad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extdireccion-sector-ciudad.extdireccion-sector-ciudad',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtdireccionSectorPredioExtdireccionSectorPredio
+  extends Schema.CollectionType {
+  collectionName: 'extdireccion_sector_predios';
+  info: {
+    displayName: 'extdireccion_sector_predio';
+    pluralName: 'extdireccion-sector-predios';
+    singularName: 'extdireccion-sector-predio';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extdireccion-sector-predio.extdireccion-sector-predio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extdireccion-sector-predio.extdireccion-sector-predio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtdireccionTipoDireccionExtdireccionTipoDireccion
+  extends Schema.CollectionType {
+  collectionName: 'extdireccion_tipo_direccions';
+  info: {
+    displayName: 'extdireccion_tipo_direccion';
+    pluralName: 'extdireccion-tipo-direccions';
+    singularName: 'extdireccion-tipo-direccion';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
+  collectionName: 'extdireccions';
+  info: {
+    description: '';
+    displayName: 'ExtDireccion';
+    pluralName: 'extdireccions';
+    singularName: 'extdireccion';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    clase_via_principal: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::extdireccion-clase-via-principal.extdireccion-clase-via-principal'
+    >;
+    codigo_postal: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 6;
+      }>;
+    complemento: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    cr_predio_direccion: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    cr_terreno_ext_direccion_id: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    cr_uc_ext_direccion_id: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    es_direccion_principal: Attribute.Boolean;
+    extinteresado_ext_direccion_id: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::extinteresado.extinteresado'
+    >;
+    letra_via_generadora: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    letra_via_principal: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    localizacion: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<'plugin::postgis.map'>;
+    nombre_predio: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    numero_predio: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    sector_ciudad: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::extdireccion-sector-ciudad.extdireccion-sector-ciudad'
+    >;
+    sector_predio: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::extdireccion-sector-predio.extdireccion-sector-predio'
+    >;
+    tipo_direccion: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extdireccion.extdireccion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    valor_via_generadora: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    valor_via_principal: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+  };
+}
+
+export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
+  collectionName: 'extinteresados';
+  info: {
+    displayName: 'ExtInteresado';
+    pluralName: 'extinteresados';
+    singularName: 'extinteresado';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cr_agrupacionintersdos_ext_pid: Attribute.Relation<
+      'api::extinteresado.extinteresado',
+      'oneToOne',
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
+    >;
+    cr_interesado_ext_pid: Attribute.Relation<
+      'api::extinteresado.extinteresado',
+      'oneToOne',
+      'api::cr-interesado.cr-interesado'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::extinteresado.extinteresado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    documento_escaneado: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    firma: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2000;
+      }>;
+    fotografia: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2000;
+      }>;
+    huella_dactilar: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2000;
+      }>;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::extinteresado.extinteresado',
       'oneToOne',
       'admin::user'
     > &
@@ -3890,13 +4542,23 @@ declare module '@strapi/types' {
       'api::cr-publicidadtipo.cr-publicidadtipo': ApiCrPublicidadtipoCrPublicidadtipo;
       'api::cr-puntocontrol.cr-puntocontrol': ApiCrPuntocontrolCrPuntocontrol;
       'api::cr-puntocontroltipo.cr-puntocontroltipo': ApiCrPuntocontroltipoCrPuntocontroltipo;
+      'api::cr-puntolindero.cr-puntolindero': ApiCrPuntolinderoCrPuntolindero;
+      'api::cr-responsabilidad.cr-responsabilidad': ApiCrResponsabilidadCrResponsabilidad;
       'api::cr-responsabilidadtipo.cr-responsabilidadtipo': ApiCrResponsabilidadtipoCrResponsabilidadtipo;
+      'api::cr-restriccion.cr-restriccion': ApiCrRestriccionCrRestriccion;
       'api::cr-restricciontipo.cr-restricciontipo': ApiCrRestricciontipoCrRestricciontipo;
       'api::cr-sexotipo.cr-sexotipo': ApiCrSexotipoCrSexotipo;
       'api::cr-terreno.cr-terreno': ApiCrTerrenoCrTerreno;
       'api::cr-unidadconstruccion.cr-unidadconstruccion': ApiCrUnidadconstruccionCrUnidadconstruccion;
       'api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo': ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo;
       'api::cr-usouconstipo.cr-usouconstipo': ApiCrUsouconstipoCrUsouconstipo;
+      'api::extarchivo.extarchivo': ApiExtarchivoExtarchivo;
+      'api::extdireccion-clase-via-principal.extdireccion-clase-via-principal': ApiExtdireccionClaseViaPrincipalExtdireccionClaseViaPrincipal;
+      'api::extdireccion-sector-ciudad.extdireccion-sector-ciudad': ApiExtdireccionSectorCiudadExtdireccionSectorCiudad;
+      'api::extdireccion-sector-predio.extdireccion-sector-predio': ApiExtdireccionSectorPredioExtdireccionSectorPredio;
+      'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion': ApiExtdireccionTipoDireccionExtdireccionTipoDireccion;
+      'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
+      'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "extdireccions",
+  "info": {
+    "singularName": "extdireccion",
+    "pluralName": "extdireccions",
+    "displayName": "ExtDireccion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_direccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::extdireccion-tipo-direccion.extdireccion-tipo-direccion"
+    },
+    "es_direccion_principal": {
+      "type": "boolean"
+    },
+    "localizacion": {
+      "required": true,
+      "columnType": {
+        "type": "specificType",
+        "args": [
+          "geometry(POINT,9377)"
+        ]
+      },
+      "type": "customField",
+      "customField": "plugin::postgis.map",
+      "isSpatial": true,
+      "srid": 9377,
+      "coord_dimension": 2,
+      "f_table_schema": "public",
+      "geoType": "POINT"
+    },
+    "codigo_postal": {
+      "type": "string",
+      "maxLength": 6
+    },
+    "clase_via_principal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::extdireccion-clase-via-principal.extdireccion-clase-via-principal"
+    },
+    "valor_via_principal": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "letra_via_principal": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "sector_ciudad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::extdireccion-sector-ciudad.extdireccion-sector-ciudad"
+    },
+    "valor_via_generadora": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "letra_via_generadora": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "numero_predio": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "sector_predio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::extdireccion-sector-predio.extdireccion-sector-predio"
+    },
+    "complemento": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "nombre_predio": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "extinteresado_ext_direccion_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::extinteresado.extinteresado"
+    },
+    "cr_terreno_ext_direccion_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    },
+    "cr_uc_ext_direccion_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    },
+    "cr_predio_direccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}
