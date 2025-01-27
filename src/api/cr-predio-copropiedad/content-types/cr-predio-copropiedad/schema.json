@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_predio_copropiedads",
+  "info": {
+    "singularName": "cr-predio-copropiedad",
+    "pluralName": "cr-predio-copropiedads",
+    "displayName": "cr_predio_copropiedad"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unidad_predial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "matriz": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "coeficiente": {
+      "type": "float",
+      "required": true,
+      "max": 1,
+      "min": 0
+    },
+    "area_catastral_terreno_coeficiente": {
+      "type": "decimal",
+      "required": true,
+      "max": 1e+16,
+      "min": 0
+    },
+    "area_privada_terreno": {
+      "type": "decimal",
+      "max": 1e+27,
+      "min": 0
+    },
+    "area_privada_construida": {
+      "type": "decimal",
+      "max": 1e+27,
+      "min": 0
+    },
+    "area_privada_libre": {
+      "type": "decimal",
+      "max": 1e+27,
+      "min": 0
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_informalidads",
+  "info": {
+    "singularName": "cr-informalidad",
+    "pluralName": "cr-informalidads",
+    "displayName": "CR_Informalidad"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-informalidadtipo.cr-informalidadtipo"
+    },
+    "descripcion": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "interesado_cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    },
+    "inte_cr_agrup": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "unidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "local_id": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    }
+  }
+}

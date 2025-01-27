@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_anotacionregistros",
+  "info": {
+    "singularName": "cr-anotacionregistro",
+    "pluralName": "cr-anotacionregistros",
+    "displayName": "CR_AnotacionRegistro"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_radicacion": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "fecha_radicacion": {
+      "type": "date"
+    },
+    "numero_anotacion": {
+      "type": "integer",
+      "max": 10000000000,
+      "min": 0
+    },
+    "estado_anotacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-estadoanotaciontipo.cr-estadoanotaciontipo"
+    },
+    "valor_transaccion": {
+      "type": "decimal",
+      "max": 10000000000000000,
+      "min": 0
+    },
+    "cr_fuenteadministrativa": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+    }
+  }
+}

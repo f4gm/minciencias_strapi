@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_predio_tramitecatastrals",
+  "info": {
+    "singularName": "cr-predio-tramitecatastral",
+    "pluralName": "cr-predio-tramitecatastrals",
+    "displayName": "cr_predio_tramitecatastral"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cr_predio": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "cr_tramite_catastral": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-tramitecatastral.cr-tramitecatastral"
+    }
+  }
+}

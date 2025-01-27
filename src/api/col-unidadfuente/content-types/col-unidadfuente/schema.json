@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_unidadfuentes",
+  "info": {
+    "singularName": "col-unidadfuente",
+    "pluralName": "col-unidadfuentes",
+    "displayName": "colunidadFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fuente_administrativa": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+    },
+    "unidad": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

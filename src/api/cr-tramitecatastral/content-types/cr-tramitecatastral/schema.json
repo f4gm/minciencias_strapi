@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_tramitecatastrals",
+  "info": {
+    "singularName": "cr-tramitecatastral",
+    "pluralName": "cr-tramitecatastrals",
+    "displayName": "CR_TramiteCatastral",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clasificacion_mutacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-mutaciontipo.cr-mutaciontipo",
+      "required": true
+    },
+    "numero_resolucion": {
+      "type": "string",
+      "maxLength": 30,
+      "required": true
+    },
+    "fecha_resolucion": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_radicacion": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_inscripcion": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

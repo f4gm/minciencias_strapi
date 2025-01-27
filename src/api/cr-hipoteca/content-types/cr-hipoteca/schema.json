@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_hipotecas",
+  "info": {
+    "singularName": "cr-hipoteca",
+    "pluralName": "cr-hipotecas",
+    "displayName": "CR_Hipoteca"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-restricciontipo.cr-restricciontipo"
+    },
+    "naturaleza_juridica": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "codigo_naturaleza_juridica": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "naturaleza_complemento": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "fecha_anotacion": {
+      "type": "date"
+    },
+    "descripcion": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "interesado_cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    },
+    "inte_cr_agrup": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "unidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    },
+    "comienzo_vida_util_version": {
+      "type": "datetime",
+      "required": true
+    },
+    "fin_vida_util_version": {
+      "type": "datetime"
+    },
+    "espacio_de_nombres": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "local_id": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    }
+  }
+}

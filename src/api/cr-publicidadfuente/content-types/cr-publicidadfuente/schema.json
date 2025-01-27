@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_publicidadfuentes",
+  "info": {
+    "singularName": "cr-publicidadfuente",
+    "pluralName": "cr-publicidadfuentes",
+    "displayName": "cr_publicidadFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cr_publicidad": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-publicidad.cr-publicidad"
+    },
+    "col_fuente": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_publicidads",
+  "info": {
+    "singularName": "cr-publicidad",
+    "pluralName": "cr-publicidads",
+    "displayName": "CR_Publicidad"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_publicidad": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-publicidadtipo.cr-publicidadtipo"
+    },
+    "naturaleza_juridica": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "codigo_naturaleza_juridica": {
+      "type": "string",
+      "maxLength": 5
+    },
+    "naturaleza_complemento": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "fecha_anotacion": {
+      "type": "date"
+    },
+    "col_interesado_cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    },
+    "col_inte_cr_agrup": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "cr_baunit": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

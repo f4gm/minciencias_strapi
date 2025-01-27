@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_hipotecaderechos",
+  "info": {
+    "singularName": "cr-hipotecaderecho",
+    "pluralName": "cr-hipotecaderechos",
+    "displayName": "cr_hipotecaDerecho"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cr_hipoteca": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-hipoteca.cr-hipoteca"
+    },
+    "cr_derecho": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-derecho.cr-derecho"
+    }
+  }
+}

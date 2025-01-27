@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_puntofuentes",
+  "info": {
+    "singularName": "col-puntofuente",
+    "pluralName": "col-puntofuentes",
+    "displayName": "col_puntoFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fuente_espacial": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+    },
+    "punto_cr_puntolindero": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-puntolindero.cr-puntolindero"
+    },
+    "punto_cr_puntocontrol": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-puntocontrol.cr-puntocontrol"
+    }
+  }
+}

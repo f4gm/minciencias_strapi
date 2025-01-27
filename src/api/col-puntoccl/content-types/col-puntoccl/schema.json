@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_puntoccls",
+  "info": {
+    "singularName": "col-puntoccl",
+    "pluralName": "col-puntoccls",
+    "displayName": "col_puntoCcl"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "punto_cr_puntolindero": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-puntolindero.cr-puntolindero"
+    },
+    "punto_cr_puntocontrol": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-puntocontrol.cr-puntocontrol"
+    },
+    "ccl": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-lindero.cr-lindero"
+    }
+  }
+}

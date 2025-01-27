@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_responsablefuentes",
+  "info": {
+    "singularName": "col-responsablefuente",
+    "pluralName": "col-responsablefuentes",
+    "displayName": "col_responsableFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fuente_administrativa": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+    },
+    "interesado_cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    },
+    "inte_cr_agrup": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    }
+  }
+}
