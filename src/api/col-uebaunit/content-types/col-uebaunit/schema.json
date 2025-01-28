@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_uebaunits",
+  "info": {
+    "singularName": "col-uebaunit",
+    "pluralName": "col-uebaunits",
+    "displayName": "col_ueBaUnit"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ue_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    },
+    "ue_cr_terreno": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    },
+    "baunit": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

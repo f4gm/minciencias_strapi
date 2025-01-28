@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_errsas",
+  "info": {
+    "singularName": "cr-errsa",
+    "pluralName": "cr-errsas",
+    "displayName": "CR_ERRSA"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_referencia": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia"
+    },
+    "oficina": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "libro": {
+      "type": "string",
+      "maxLength": 1
+    },
+    "tomo": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "pagina": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "numero": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "dia": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "mes": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "anio": {
+      "type": "string",
+      "maxLength": 2
+    },
+    "matricula": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "cr_predio_rrsa": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

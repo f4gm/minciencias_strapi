@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_baunitfuentes",
+  "info": {
+    "singularName": "col-baunitfuente",
+    "pluralName": "col-baunitfuentes",
+    "displayName": "col_baunitFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fuente_espacial": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+    },
+    "unidad": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-predio.cr-predio"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_menosccls",
+  "info": {
+    "singularName": "col-menosccl",
+    "pluralName": "col-menosccls",
+    "displayName": "col_menosCcl"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ccl_menos": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-lindero.cr-lindero"
+    },
+    "ue_menos_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    },
+    "ue_menos_cr_terreno": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    }
+  }
+}

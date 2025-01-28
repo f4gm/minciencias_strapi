@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_areavalors",
+  "info": {
+    "singularName": "col-areavalor",
+    "pluralName": "col-areavalors",
+    "displayName": "COL_AreaValor"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::col-areatipo.col-areatipo"
+    },
+    "area": {
+      "type": "decimal",
+      "max": 1000000000000000,
+      "required": true
+    },
+    "datos_proyeccion": {
+      "type": "blocks"
+    },
+    "cr_terreno_area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    },
+    "cr_unidadconstruccion_area": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    }
+  }
+}

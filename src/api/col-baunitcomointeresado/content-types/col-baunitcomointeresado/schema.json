@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_baunitcomointeresados",
+  "info": {
+    "singularName": "col-baunitcomointeresado",
+    "pluralName": "col-baunitcomointeresados",
+    "displayName": "col_baUnitComointeresado"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "interesado_cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    },
+    "inte_cr_agrupinte": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "unidad": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::col-areatipo.col-areatipo"
+    }
+  }
+}

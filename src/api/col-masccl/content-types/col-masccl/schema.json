@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_masccls",
+  "info": {
+    "singularName": "col-masccl",
+    "pluralName": "col-masccls",
+    "displayName": "col_masCcl"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ccl_mas": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-lindero.cr-lindero"
+    },
+    "ue_mas_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    },
+    "ue_mas_cr_terreno": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cr_errsa_tipo_referencias",
+  "info": {
+    "singularName": "cr-errsa-tipo-referencia",
+    "pluralName": "cr-errsa-tipo-referencias",
+    "displayName": "CR_ERRSA_Tipo_Referencia"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250,
+      "private": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": false,
+      "maxLength": 1024,
+      "private": true
+    },
+    "nombre_vista": {
+      "type": "string",
+      "required": true,
+      "maxLength": 250
+    },
+    "descripcion_vista": {
+      "type": "text",
+      "maxLength": 1024
+    }
+  }
+}

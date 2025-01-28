@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_uefuentes",
+  "info": {
+    "singularName": "col-uefuente",
+    "pluralName": "col-uefuentes",
+    "displayName": "col_ueFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ue_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+    },
+    "ue_cr_terreno": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno"
+    },
+    "fuente_espacial": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+    }
+  }
+}

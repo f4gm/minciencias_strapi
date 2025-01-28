@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_rrrfuentes",
+  "info": {
+    "singularName": "col-rrrfuente",
+    "pluralName": "col-rrrfuentes",
+    "displayName": "col_rrrFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fuente_administrativa": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+    },
+    "rrr_cr_informalidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-informalidad.cr-informalidad"
+    },
+    "rrr_cr_restriccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-restriccion.cr-restriccion"
+    },
+    "rrr_cr_derecho": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-derecho.cr-derecho"
+    },
+    "rrr_cr_responsabilidad": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-responsabilidad.cr-responsabilidad"
+    },
+    "rrr_cr_hipoteca": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-hipoteca.cr-hipoteca"
+    }
+  }
+}

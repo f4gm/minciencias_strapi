@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_cclfuentes",
+  "info": {
+    "singularName": "col-cclfuente",
+    "pluralName": "col-cclfuentes",
+    "displayName": "col_cclFuente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ccl": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-lindero.cr-lindero"
+    },
+    "fuente_espacial": {
+      "type": "relation",
+      "required": true,
+      "relation": "oneToOne",
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+    }
+  }
+}

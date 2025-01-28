@@ -403,6 +403,184 @@ export interface ApiColAreatipoColAreatipo extends Schema.CollectionType {
   };
 }
 
+export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
+  collectionName: 'col_areavalors';
+  info: {
+    displayName: 'COL_AreaValor';
+    pluralName: 'col-areavalors';
+    singularName: 'col-areavalor';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    area: Attribute.Decimal &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 1000000000000000;
+        },
+        number
+      >;
+    cr_terreno_area: Attribute.Relation<
+      'api::col-areavalor.col-areavalor',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    cr_unidadconstruccion_area: Attribute.Relation<
+      'api::col-areavalor.col-areavalor',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-areavalor.col-areavalor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    datos_proyeccion: Attribute.Blocks;
+    tipo: Attribute.Relation<
+      'api::col-areavalor.col-areavalor',
+      'oneToOne',
+      'api::col-areatipo.col-areatipo'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-areavalor.col-areavalor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
+  extends Schema.CollectionType {
+  collectionName: 'col_baunitcomointeresados';
+  info: {
+    displayName: 'col_baUnitComointeresado';
+    pluralName: 'col-baunitcomointeresados';
+    singularName: 'col-baunitcomointeresado';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-baunitcomointeresado.col-baunitcomointeresado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    inte_cr_agrupinte: Attribute.Relation<
+      'api::col-baunitcomointeresado.col-baunitcomointeresado',
+      'oneToOne',
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
+    >;
+    interesado_cr_interesado: Attribute.Relation<
+      'api::col-baunitcomointeresado.col-baunitcomointeresado',
+      'oneToOne',
+      'api::cr-interesado.cr-interesado'
+    >;
+    unidad: Attribute.Relation<
+      'api::col-baunitcomointeresado.col-baunitcomointeresado',
+      'oneToOne',
+      'api::col-areatipo.col-areatipo'
+    > &
+      Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-baunitcomointeresado.col-baunitcomointeresado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColBaunitfuenteColBaunitfuente
+  extends Schema.CollectionType {
+  collectionName: 'col_baunitfuentes';
+  info: {
+    displayName: 'col_baunitFuente';
+    pluralName: 'col-baunitfuentes';
+    singularName: 'col-baunitfuente';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-baunitfuente.col-baunitfuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fuente_espacial: Attribute.Relation<
+      'api::col-baunitfuente.col-baunitfuente',
+      'oneToOne',
+      'api::cr-fuenteespacial.cr-fuenteespacial'
+    > &
+      Attribute.Required;
+    unidad: Attribute.Relation<
+      'api::col-baunitfuente.col-baunitfuente',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    > &
+      Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-baunitfuente.col-baunitfuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColCclfuenteColCclfuente extends Schema.CollectionType {
+  collectionName: 'col_cclfuentes';
+  info: {
+    displayName: 'col_cclFuente';
+    pluralName: 'col-cclfuentes';
+    singularName: 'col-cclfuente';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    ccl: Attribute.Relation<
+      'api::col-cclfuente.col-cclfuente',
+      'oneToOne',
+      'api::cr-lindero.cr-lindero'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-cclfuente.col-cclfuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fuente_espacial: Attribute.Relation<
+      'api::col-cclfuente.col-cclfuente',
+      'oneToOne',
+      'api::cr-fuenteespacial.cr-fuenteespacial'
+    > &
+      Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-cclfuente.col-cclfuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiColDocumentotipoColDocumentotipo
   extends Schema.CollectionType {
   collectionName: 'col_documentotipos';
@@ -814,6 +992,94 @@ export interface ApiColInterpolaciontipoColInterpolaciontipo
   };
 }
 
+export interface ApiColMascclColMasccl extends Schema.CollectionType {
+  collectionName: 'col_masccls';
+  info: {
+    displayName: 'col_masCcl';
+    pluralName: 'col-masccls';
+    singularName: 'col-masccl';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    ccl_mas: Attribute.Relation<
+      'api::col-masccl.col-masccl',
+      'oneToOne',
+      'api::cr-lindero.cr-lindero'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-masccl.col-masccl',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    ue_mas_cr_terreno: Attribute.Relation<
+      'api::col-masccl.col-masccl',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    ue_mas_cr_unidadconstruccion: Attribute.Relation<
+      'api::col-masccl.col-masccl',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-masccl.col-masccl',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColMenoscclColMenosccl extends Schema.CollectionType {
+  collectionName: 'col_menosccls';
+  info: {
+    displayName: 'col_menosCcl';
+    pluralName: 'col-menosccls';
+    singularName: 'col-menosccl';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    ccl_menos: Attribute.Relation<
+      'api::col-menosccl.col-menosccl',
+      'oneToOne',
+      'api::cr-lindero.cr-lindero'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-menosccl.col-menosccl',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    ue_menos_cr_terreno: Attribute.Relation<
+      'api::col-menosccl.col-menosccl',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    ue_menos_cr_unidadconstruccion: Attribute.Relation<
+      'api::col-menosccl.col-menosccl',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-menosccl.col-menosccl',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiColMetodoproducciontipoColMetodoproducciontipo
   extends Schema.CollectionType {
   collectionName: 'col_metodoproducciontipos';
@@ -1092,6 +1358,153 @@ export interface ApiColResponsablefuenteColResponsablefuente
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::col-responsablefuente.col-responsablefuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColRrrfuenteColRrrfuente extends Schema.CollectionType {
+  collectionName: 'col_rrrfuentes';
+  info: {
+    displayName: 'col_rrrFuente';
+    pluralName: 'col-rrrfuentes';
+    singularName: 'col-rrrfuente';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fuente_administrativa: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'api::cr-fuenteadministrativa.cr-fuenteadministrativa'
+    > &
+      Attribute.Required;
+    rrr_cr_derecho: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'api::cr-derecho.cr-derecho'
+    >;
+    rrr_cr_hipoteca: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'api::cr-hipoteca.cr-hipoteca'
+    >;
+    rrr_cr_informalidad: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'api::cr-informalidad.cr-informalidad'
+    >;
+    rrr_cr_responsabilidad: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'api::cr-responsabilidad.cr-responsabilidad'
+    >;
+    rrr_cr_restriccion: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'api::cr-restriccion.cr-restriccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-rrrfuente.col-rrrfuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColUebaunitColUebaunit extends Schema.CollectionType {
+  collectionName: 'col_uebaunits';
+  info: {
+    displayName: 'col_ueBaUnit';
+    pluralName: 'col-uebaunits';
+    singularName: 'col-uebaunit';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    baunit: Attribute.Relation<
+      'api::col-uebaunit.col-uebaunit',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    > &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-uebaunit.col-uebaunit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    ue_cr_terreno: Attribute.Relation<
+      'api::col-uebaunit.col-uebaunit',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    ue_cr_unidadconstruccion: Attribute.Relation<
+      'api::col-uebaunit.col-uebaunit',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-uebaunit.col-uebaunit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiColUefuenteColUefuente extends Schema.CollectionType {
+  collectionName: 'col_uefuentes';
+  info: {
+    displayName: 'col_ueFuente';
+    pluralName: 'col-uefuentes';
+    singularName: 'col-uefuente';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-uefuente.col-uefuente',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    fuente_espacial: Attribute.Relation<
+      'api::col-uefuente.col-uefuente',
+      'oneToOne',
+      'api::cr-fuenteespacial.cr-fuenteespacial'
+    > &
+      Attribute.Required;
+    ue_cr_terreno: Attribute.Relation<
+      'api::col-uefuente.col-uefuente',
+      'oneToOne',
+      'api::cr-terreno.cr-terreno'
+    >;
+    ue_cr_unidadconstruccion: Attribute.Relation<
+      'api::col-uefuente.col-uefuente',
+      'oneToOne',
+      'api::cr-unidadconstruccion.cr-unidadconstruccion'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-uefuente.col-uefuente',
       'oneToOne',
       'admin::user'
     > &
@@ -1821,6 +2234,129 @@ export interface ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrErrsaTipoReferenciaCrErrsaTipoReferencia
+  extends Schema.CollectionType {
+  collectionName: 'cr_errsa_tipo_referencias';
+  info: {
+    displayName: 'CR_ERRSA_Tipo_Referencia';
+    pluralName: 'cr-errsa-tipo-referencias';
+    singularName: 'cr-errsa-tipo-referencia';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    descripcion: Attribute.Text &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCrErrsaCrErrsa extends Schema.CollectionType {
+  collectionName: 'cr_errsas';
+  info: {
+    displayName: 'CR_ERRSA';
+    pluralName: 'cr-errsas';
+    singularName: 'cr-errsa';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    anio: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
+    cr_predio_rrsa: Attribute.Relation<
+      'api::cr-errsa.cr-errsa',
+      'oneToOne',
+      'api::cr-predio.cr-predio'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cr-errsa.cr-errsa',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    dia: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
+    libro: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1;
+      }>;
+    matricula: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 20;
+      }>;
+    mes: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
+    numero: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 4;
+      }>;
+    oficina: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
+    pagina: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 4;
+      }>;
+    tipo_referencia: Attribute.Relation<
+      'api::cr-errsa.cr-errsa',
+      'oneToOne',
+      'api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia'
+    >;
+    tomo: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 2;
+      }>;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::cr-errsa.cr-errsa',
       'oneToOne',
       'admin::user'
     > &
@@ -5271,6 +5807,10 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::col-areatipo.col-areatipo': ApiColAreatipoColAreatipo;
+      'api::col-areavalor.col-areavalor': ApiColAreavalorColAreavalor;
+      'api::col-baunitcomointeresado.col-baunitcomointeresado': ApiColBaunitcomointeresadoColBaunitcomointeresado;
+      'api::col-baunitfuente.col-baunitfuente': ApiColBaunitfuenteColBaunitfuente;
+      'api::col-cclfuente.col-cclfuente': ApiColCclfuenteColCclfuente;
       'api::col-documentotipo.col-documentotipo': ApiColDocumentotipoColDocumentotipo;
       'api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo': ApiColEstadodisponibilidadtipoColEstadodisponibilidadtipo;
       'api::col-formatotipo.col-formatotipo': ApiColFormatotipoColFormatotipo;
@@ -5279,12 +5819,17 @@ declare module '@strapi/types' {
       'api::col-grupointeresadotipo.col-grupointeresadotipo': ApiColGrupointeresadotipoColGrupointeresadotipo;
       'api::col-interesadotipo.col-interesadotipo': ApiColInteresadotipoColInteresadotipo;
       'api::col-interpolaciontipo.col-interpolaciontipo': ApiColInterpolaciontipoColInterpolaciontipo;
+      'api::col-masccl.col-masccl': ApiColMascclColMasccl;
+      'api::col-menosccl.col-menosccl': ApiColMenoscclColMenosccl;
       'api::col-metodoproducciontipo.col-metodoproducciontipo': ApiColMetodoproducciontipoColMetodoproducciontipo;
       'api::col-puntoccl.col-puntoccl': ApiColPuntocclColPuntoccl;
       'api::col-puntofuente.col-puntofuente': ApiColPuntofuenteColPuntofuente;
       'api::col-puntotipo.col-puntotipo': ApiColPuntotipoColPuntotipo;
       'api::col-relacionsuperficietipo.col-relacionsuperficietipo': ApiColRelacionsuperficietipoColRelacionsuperficietipo;
       'api::col-responsablefuente.col-responsablefuente': ApiColResponsablefuenteColResponsablefuente;
+      'api::col-rrrfuente.col-rrrfuente': ApiColRrrfuenteColRrrfuente;
+      'api::col-uebaunit.col-uebaunit': ApiColUebaunitColUebaunit;
+      'api::col-uefuente.col-uefuente': ApiColUefuenteColUefuente;
       'api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo': ApiColUnidadadministrativabasicatipoColUnidadadministrativabasicatipo;
       'api::col-unidadfuente.col-unidadfuente': ApiColUnidadfuenteColUnidadfuente;
       'api::cr-agrupacioninteresado.cr-agrupacioninteresado': ApiCrAgrupacioninteresadoCrAgrupacioninteresado;
@@ -5297,6 +5842,8 @@ declare module '@strapi/types' {
       'api::cr-derecho.cr-derecho': ApiCrDerechoCrDerecho;
       'api::cr-derechotipo.cr-derechotipo': ApiCrDerechotipoCrDerechotipo;
       'api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo': ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo;
+      'api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia': ApiCrErrsaTipoReferenciaCrErrsaTipoReferencia;
+      'api::cr-errsa.cr-errsa': ApiCrErrsaCrErrsa;
       'api::cr-estadoanotaciontipo.cr-estadoanotaciontipo': ApiCrEstadoanotaciontipoCrEstadoanotaciontipo;
       'api::cr-estadofmitipo.cr-estadofmitipo': ApiCrEstadofmitipoCrEstadofmitipo;
       'api::cr-estadotipo.cr-estadotipo': ApiCrEstadotipoCrEstadotipo;
