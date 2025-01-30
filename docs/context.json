@@ -1,0 +1,112 @@
+{
+  "types": {
+    "text": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Número natural que indica la cantidad de caracteres máxima. [1 - ...]",
+      "lenght": 2
+    },
+    "number": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica el conjunto numérico al cual pertenece. ['natural', 'integer', 'real']",
+      "type": "natural",
+      "_comment": "Indica el número mínimo permitido. [..., ...]",
+      "min": 0,
+      "_comment": "Indica el número máximo permitido. [..., ...]",
+      "max": 100,
+      "_comment": "Indica la cantidad de decimales, en el caso de que el número sea de tipo “real”, de lo contrario, null.",
+      "precision": null
+    },
+    "checkbox": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica las opciones de selección del checkbox, mínimo una. [...]",
+      "options": ["item 1", "item 2"]
+    },
+    "date": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true
+    },
+    "datetime": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true
+    },
+    "email": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica los proveedores de correo electrónico permitidos. Por defecto: ['@gmail.com', '@outlook.com', '@hotmail.com', '@yahoo.com']",
+      "allowed_providers": ["@gmail.com", "@outlook.com", "@hotmail.com", "@yahoo.com"]
+    },
+    "file": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica las extensiones de los archivos permitidas. Por defecto: ['.pdf', '.zip'].",
+      "allowed_extensions": [".pdf", ".zip"],
+      "_comment": "Indica el endpoint en el cual debe ser cargado el documento.",
+      "endpoint": "host/api/upload",
+      "_comment": "Indica el tamaño máximo del archivo, expresado en megabytes.",
+      "max_file_size": "2000"
+    },
+    "image": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica las extensiones de los archivos permitidas. Por defecto: ['.jpg', '.png'].",
+      "allowed_extensions": [".jpg", ".png"],
+      "_comment": "Indica el endpoint en el cual debe ser cargado el documento.",
+      "endpoint": "host/api/upload",
+      "_comment": "Indica el tamaño máximo del archivo, expresado en megabytes.",
+      "max_file_size": "2000"
+    },
+    "radio": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica las opciones de selección del radio, mínimo dos. [...]",
+      "options": ["item 1", "item 2"]
+    },
+    "select": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica las opciones de selección del select, mínimo dos. [...]",
+      "options": ["item 1", "item 2"]
+    },
+    "range": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica el intervalo entre un número y el siguiente.",
+      "step": 1,
+      "_comment": "Indica el número mínimo permitido. [..., ...]",
+      "min": 0,
+      "_comment": "Indica el número máximo permitido. [..., ...]",
+      "max": 100
+    },
+    "password": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Expresión regular para validar la contraseña digitada. Por defecto, mínimo 8 caracteres, al menos uno de ellos una letra y un número ^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$.",
+      "regex": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+    },
+    "map": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica el tipo de geometría que se capturará con el mapa. Esta geometría debe estar en formato GeoJSON y con sistema de referencia EPSG:9377 (Origen Nacional). Los tipos de geometría permitidos son [“Point”, 'LineString', 'Polygon']",
+      "geometry": "LineString"
+    },
+    "camera": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Indica qué recurso se captura con la cámara, si una imagen o un vídeo. ['image', 'video']",
+      "type": "video"
+    },
+    "gps": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true,
+      "_comment": "Precisión mínima requerida, expresada en metros, para tomar el punto.",
+      "min_precision": 9.5
+    },
+    "address": {
+      "_comment": "Indica si la entrada es requerida o no. [true, false]",
+      "required": true
+    }
+  }
+}

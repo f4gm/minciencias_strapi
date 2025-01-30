@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "formularios",
+  "info": {
+    "singularName": "formulario",
+    "pluralName": "formularios",
+    "displayName": "Formulario"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "creation_date": {
+      "type": "date",
+      "required": true
+    },
+    "inputs": {
+      "type": "component",
+      "required": true,
+      "repeatable": true,
+      "component": "formulario.entrada"
+    }
+  }
+}

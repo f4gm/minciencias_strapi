@@ -5370,6 +5370,39 @@ export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
   };
 }
 
+export interface ApiFormularioFormulario extends Schema.SingleType {
+  collectionName: 'formularios';
+  info: {
+    displayName: 'Formulario';
+    pluralName: 'formularios';
+    singularName: 'formulario';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::formulario.formulario',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    creation_date: Attribute.Date & Attribute.Required;
+    inputs: Attribute.Component<'formulario.entrada', true> &
+      Attribute.Required;
+    name: Attribute.String & Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::formulario.formulario',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    version: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -5895,6 +5928,7 @@ declare module '@strapi/types' {
       'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion': ApiExtdireccionTipoDireccionExtdireccionTipoDireccion;
       'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
       'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
+      'api::formulario.formulario': ApiFormularioFormulario;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
