@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solicitudes",
+  "info": {
+    "singularName": "solicitud",
+    "pluralName": "solicitudes",
+    "displayName": "Solicitud"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test": {
+      "type": "string"
+    }
+  }
+}

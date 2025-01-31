@@ -5403,6 +5403,35 @@ export interface ApiFormularioFormulario extends Schema.SingleType {
   };
 }
 
+export interface ApiSolicitudSolicitud extends Schema.CollectionType {
+  collectionName: 'solicitudes';
+  info: {
+    displayName: 'Solicitud';
+    pluralName: 'solicitudes';
+    singularName: 'solicitud';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::solicitud.solicitud',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    test: Attribute.String;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::solicitud.solicitud',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -5783,9 +5812,15 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
+    autoreconocimientocampesino: Attribute.Boolean & Attribute.Required;
+    autoreconocimientoetnico: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
+    > &
+      Attribute.Required;
     blocked: Attribute.Boolean & Attribute.DefaultTo<false>;
     confirmationToken: Attribute.String & Attribute.Private;
     confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
@@ -5801,18 +5836,65 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    numero_documento: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
     password: Attribute.Password &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    primer_apellido: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    primer_nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
     provider: Attribute.String;
+    razon_social: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
     resetPasswordToken: Attribute.String & Attribute.Private;
     role: Attribute.Relation<
       'plugin::users-permissions.user',
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    segundo_apellido: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    segundo_nombre: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    sexo: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::cr-sexotipo.cr-sexotipo'
+    > &
+      Attribute.Required;
+    tipo_documento: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::col-documentotipo.col-documentotipo'
+    > &
+      Attribute.Required;
+    tipo_interesado: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::col-interesadotipo.col-interesadotipo'
+    > &
+      Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'plugin::users-permissions.user',
@@ -5929,6 +6011,7 @@ declare module '@strapi/types' {
       'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
       'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
       'api::formulario.formulario': ApiFormularioFormulario;
+      'api::solicitud.solicitud': ApiSolicitudSolicitud;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

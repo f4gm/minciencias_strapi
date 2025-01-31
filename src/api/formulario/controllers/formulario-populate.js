@@ -8,7 +8,13 @@ const { createCoreController } = require('@strapi/strapi').factories;
 
 module.exports = createCoreController('api::formulario.formulario', ({ strapi }) => ({
   async find(ctx) {
+
     const { data, meta } = await super.find(ctx);
+
+    // Skip if the query not contains inputs
+    if (!("inputs" in data.attributes)) {
+      return { data, meta }
+    }
 
     const targetInputs = ["checkbox", "radio", "select"];
 
