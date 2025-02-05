@@ -8,9 +8,12 @@ export interface FormularioEntrada extends Schema.Component {
     icon: 'pencil';
   };
   attributes: {
-    category: Attribute.Enumeration<['fisica', 'juridica', 'economica']>;
+    category: Attribute.Enumeration<
+      ['fisica', 'juridica', 'economica', 'registro_actualizacion']
+    >;
     collection: Attribute.Enumeration<
       [
+        'no-definido',
         'col-areatipo',
         'col-areavalor',
         'col-baunitcomointeresado',
@@ -103,13 +106,14 @@ export interface FormularioEntrada extends Schema.Component {
       ]
     >;
     context: Attribute.JSON & Attribute.Required;
-    help: Attribute.Blocks;
+    help: Attribute.RichText;
     identifier: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     type: Attribute.Enumeration<
       [
         'text',
         'number',
+        'boolean',
         'checkbox',
         'date',
         'datetime',

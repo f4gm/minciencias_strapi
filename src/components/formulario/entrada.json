@@ -16,13 +16,14 @@
       "required": true
     },
     "help": {
-      "type": "blocks"
+      "type": "richtext"
     },
     "type": {
       "type": "enumeration",
       "enum": [
         "text",
         "number",
+        "boolean",
         "checkbox",
         "date",
         "datetime",
@@ -50,12 +51,14 @@
       "enum": [
         "fisica",
         "juridica",
-        "economica"
+        "economica",
+        "registro_actualizacion"
       ]
     },
     "collection": {
       "type": "enumeration",
       "enum": [
+        "no-definido",
         "col-areatipo",
         "col-areavalor",
         "col-baunitcomointeresado",

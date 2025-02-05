@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "formulario_registros",
+  "info": {
+    "singularName": "formulario-registro",
+    "pluralName": "formulario-registros",
+    "displayName": "Formulario registro"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "required": true
+    },
+    "creation_date": {
+      "type": "date"
+    },
+    "inputs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "formulario.entrada"
+    }
+  }
+}

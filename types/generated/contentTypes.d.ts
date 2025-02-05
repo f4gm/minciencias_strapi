@@ -5370,6 +5370,39 @@ export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
   };
 }
 
+export interface ApiFormularioRegistroFormularioRegistro
+  extends Schema.SingleType {
+  collectionName: 'formulario_registros';
+  info: {
+    displayName: 'Formulario registro';
+    pluralName: 'formulario-registros';
+    singularName: 'formulario-registro';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::formulario-registro.formulario-registro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    creation_date: Attribute.Date;
+    inputs: Attribute.Component<'formulario.entrada', true>;
+    name: Attribute.String & Attribute.Required;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::formulario-registro.formulario-registro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    version: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface ApiFormularioFormulario extends Schema.SingleType {
   collectionName: 'formularios';
   info: {
@@ -6010,6 +6043,7 @@ declare module '@strapi/types' {
       'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion': ApiExtdireccionTipoDireccionExtdireccionTipoDireccion;
       'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
       'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
+      'api::formulario-registro.formulario-registro': ApiFormularioRegistroFormularioRegistro;
       'api::formulario.formulario': ApiFormularioFormulario;
       'api::solicitud.solicitud': ApiSolicitudSolicitud;
       'plugin::content-releases.release': PluginContentReleasesRelease;
