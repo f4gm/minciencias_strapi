@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkminciencias_strapi=self.webpackChunkminciencias_strapi||[]).push([[372],{80372:s=>{s.exports=JSON.parse('{"components.duplicate.button":"\u0414\u0443\u0431\u043B\u044E\u0432\u0430\u0442\u0438"}')}}]);
