@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * formulario router
+ * form router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::formulario.formulario');
+module.exports = createCoreRouter('api::form.form');

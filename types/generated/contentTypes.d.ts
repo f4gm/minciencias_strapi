@@ -5370,67 +5370,27 @@ export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
   };
 }
 
-export interface ApiFormularioRegistroFormularioRegistro
-  extends Schema.SingleType {
-  collectionName: 'formulario_registros';
+export interface ApiFormForm extends Schema.CollectionType {
+  collectionName: 'forms';
   info: {
-    displayName: 'Formulario registro';
-    pluralName: 'formulario-registros';
-    singularName: 'formulario-registro';
+    description: '';
+    displayName: 'Form';
+    pluralName: 'forms';
+    singularName: 'form';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
     createdAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::formulario-registro.formulario-registro',
-      'oneToOne',
-      'admin::user'
-    > &
+    createdBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-    creation_date: Attribute.Date;
+    description: Attribute.Text & Attribute.Required;
+    identifier: Attribute.UID<'api::form.form', 'name'> & Attribute.Required;
     inputs: Attribute.Component<'formulario.entrada', true>;
     name: Attribute.String & Attribute.Required;
     updatedAt: Attribute.DateTime;
-    updatedBy: Attribute.Relation<
-      'api::formulario-registro.formulario-registro',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    version: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface ApiFormularioFormulario extends Schema.SingleType {
-  collectionName: 'formularios';
-  info: {
-    displayName: 'Formulario';
-    pluralName: 'formularios';
-    singularName: 'formulario';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::formulario.formulario',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    creation_date: Attribute.Date & Attribute.Required;
-    inputs: Attribute.Component<'formulario.entrada', true> &
-      Attribute.Required;
-    name: Attribute.String & Attribute.Required;
-    updatedAt: Attribute.DateTime;
-    updatedBy: Attribute.Relation<
-      'api::formulario.formulario',
-      'oneToOne',
-      'admin::user'
-    > &
+    updatedBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     version: Attribute.String & Attribute.Required;
   };
@@ -6043,8 +6003,7 @@ declare module '@strapi/types' {
       'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion': ApiExtdireccionTipoDireccionExtdireccionTipoDireccion;
       'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
       'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
-      'api::formulario-registro.formulario-registro': ApiFormularioRegistroFormularioRegistro;
-      'api::formulario.formulario': ApiFormularioFormulario;
+      'api::form.form': ApiFormForm;
       'api::solicitud.solicitud': ApiSolicitudSolicitud;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,10 +1,11 @@
 {
-  "kind": "singleType",
-  "collectionName": "formularios",
+  "kind": "collectionType",
+  "collectionName": "forms",
   "info": {
-    "singularName": "formulario",
-    "pluralName": "formularios",
-    "displayName": "Formulario"
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,17 +16,21 @@
       "type": "string",
       "required": true
     },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "identifier": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
     "version": {
       "type": "string",
       "required": true
     },
-    "creation_date": {
-      "type": "date",
-      "required": true
-    },
     "inputs": {
       "type": "component",
-      "required": true,
       "repeatable": true,
       "component": "formulario.entrada"
     }
