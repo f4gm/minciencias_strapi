@@ -149,6 +149,10 @@
         "extdireccion-tipo-direccion",
         "extinteresado"
       ]
+    },
+    "field": {
+      "type": "string",
+      "required": false
     }
   }
 }

@@ -106,6 +106,7 @@ export interface FormularioEntrada extends Schema.Component {
       ]
     >;
     context: Attribute.JSON & Attribute.Required;
+    field: Attribute.String;
     help: Attribute.RichText;
     identifier: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;

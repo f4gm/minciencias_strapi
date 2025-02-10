@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "node scripts/syncRequest.js && strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
+    "build": "node scripts/syncRequest.js && strapi build",
     "strapi": "strapi",
     "deploy": "strapi deploy",
     "install-service": "node ./service.js install",
