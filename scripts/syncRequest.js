@@ -52,7 +52,6 @@ const requestBase = {
       relation: "oneToOne",
       target: "api::cr-unidadconstruccion.cr-unidadconstruccion"
     },
-
   }
 }
 
