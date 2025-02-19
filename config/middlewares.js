@@ -6,8 +6,14 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'img-src': ["'self'", 'data:', 'blob:', '*.tile.openstreetmap.org'],
-          upgradeInsecureRequests: null,
+          "img-src": [
+            "'self'", "data:", "blob:",
+            "https://tile.openstreetmap.org",
+            "https://a.tile.openstreetmap.org",
+            "https://b.tile.openstreetmap.org",
+            "https://c.tile.openstreetmap.org",
+          ],
+          "script-src": ["'self'", "https://unpkg.com"],
         },
       },
     },

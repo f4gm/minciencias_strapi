@@ -1,51 +1,25 @@
-# 🚀 Getting started with Strapi
+# SCVIG
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+El Sistema de captura y visualización de información geográfica **(SCVIG)** para el monitoreo continuo del catastro mediante métodos declarativos y colaborativos, es una propuesta aprobada y financiada por la convocatoria 1047 de Minciencias.
 
-### `develop`
+Busca un cambio de enfoque en el cual los propietarios de los predios tomen un rol activo en la actualización de información catastral con enfoque multipropósito.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+# Repositorios asociados
 
-```
-npm run develop
-# or
-yarn develop
-```
+- [API + Aplicación web](https://github.com/f4gm/minciencias_strapi)
+- [Aplicación Móvil](https://github.com/santicusi/micasahoy)
 
-### `start`
+# API + Aplicación web
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+Para desvincular los datos del cliente que los va a consumir, se emplea el concepto de API con arquitectura REST. Para facilitar el desarrollo se emplea la tecnología [Strapi](https://strapi.io/) en su versión 4. Esta nos provee de la API-REST mediante los esquemas creados y un panel de administración o Aplicación web, que será empleado para la gestión de la información por el gestor catastral que emplee el sistema SCVIG. Para facilitar la realización de algunas tareas, se están desarrollando los plugins "asignacion" para asignar predios a los reconocedores prediales y "revision" para la revisión de la información por parte de los reconocedores prediales enviada por los propietarios.
 
-```
-npm run start
-# or
-yarn start
-```
+## Despliegue
 
-### `build`
+De forma temporal, el despliegue se crea automáticamente en el siguiente [enlace](https://minciencias-strapi.onrender.com/), este se genera a partir del último commit del presente repositorio.
 
-Build your admin panel.
+Para realizar un despliegue ejecutar los siguientes comandos:
 
 ```
 npm run build
-# or
-yarn build
+npm run start
 ```
-
-## ⚙️ Deployment
-
-### Create a docker image
-Add the .env file with the next variables:
-- NODE_ENV
-- DATABASE_CLIENT
-- DATABASE_CLIENT
-- DATABASE_PORT
-- DATABASE_NAME
-- DATABASE_USERNAME
-- DATABASE_PASSWORD
-- JWT_SECRET
-- ADMIN_JWT_SECRET
-- APP_KEYS
----
-docker build -t strapi_minciencias:latest .
----

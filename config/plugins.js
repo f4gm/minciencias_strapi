@@ -17,5 +17,9 @@ module.exports = ({ env }) => ({
         ]
       }
     }
-  }
+  },
+  "asignacion": {
+    enabled: true,
+    resolve: "./src/plugins/asignacion", // path to the plugin folder
+  },
 });
