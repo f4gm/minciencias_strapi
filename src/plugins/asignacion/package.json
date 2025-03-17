@@ -3,23 +3,27 @@
   "version": "0.0.0",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "asignacion",
+    "name": "Asignacion",
     "description": "Description of Asignacion plugin",
     "kind": "plugin",
-    "displayName": "Asignacion"
+    "displayName": "Asignación"
   },
   "dependencies": {
-    "@strapi/design-system": "^1.6.3",
+    "@geoman-io/leaflet-geoman-free": "^2.18.3",
+    "@strapi/design-system": "^1.19.0",
     "@strapi/helper-plugin": "^4.6.0",
-    "@strapi/icons": "^1.6.3",
+    "@strapi/icons": "^1.19.0",
+    "@turf/turf": "^7.2.0",
+    "@types/leaflet": "^1.9.16",
     "leaflet": "^1.9.4",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^5.3.4",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.11"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
