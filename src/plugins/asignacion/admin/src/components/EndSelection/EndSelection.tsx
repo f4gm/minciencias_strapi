@@ -1,41 +1,34 @@
 import { Button } from "@strapi/design-system";
 
-import { geoJson } from "leaflet";
-import { union, featureCollection } from "@turf/turf";
+import { geoJSON } from "leaflet";
 
 import { useLandEdit } from "../../store/useLandEdit";
 import { useMap } from "../../store/useMap";
 
+import { unionGeomanLayers } from "../../utils/geometryUtils/unionGeomanLayers";
+import { selectFeatures } from "../../utils/geometryUtils/selectFeatures";
+
+import { LandhighlightFeatureStyle } from "../Map/Layers/Lands/Lands";
+
 const EndSelection = () => {
-  const { map } = useMap((state) => state);
+  const { map, lands } = useMap((state) => state);
   const { activeEdit, deactive } = useLandEdit((state) => state);
 
   const clickHandler = () => {
     deactive();
 
-    const layers = map.pm.getGeomanLayers();
+    const landsGeoJSON = lands.geojson;
+    const areaGeoJSON = unionGeomanLayers(map);
 
-    const features = [];
-    let area;
+    const selectedLands = selectFeatures(landsGeoJSON, areaGeoJSON);
 
-    if (layers.length != 0) {
-      for (let layer of layers) {
-        map.removeLayer(layer);
-        features.push(layer.toGeoJSON());
-      }
+    const selectedLandsLayer = geoJSON(selectedLands, {
+      style: LandhighlightFeatureStyle,
+    });
 
-      if (features.length == 1) {
-        area = geoJson(featureCollection(features));
-      } else {
-        area = geoJson(union(featureCollection(features)));
-      }
+    console.log(selectedLands);
 
-      area.addTo(map);
-
-      console.log(area);
-    }
-
-    console.log(layers);
+    map.addLayer(selectedLandsLayer);
   };
 
   return (
