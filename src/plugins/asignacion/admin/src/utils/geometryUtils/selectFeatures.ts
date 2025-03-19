@@ -1,4 +1,4 @@
-import { Feature, FeatureCollection } from "@types/geojson";
+import { Feature, FeatureCollection } from "geojson";
 import { booleanIntersects, featureCollection, featureEach } from "@turf/turf";
 
 export const selectFeatures = (geojson: FeatureCollection, mask: Feature) => {

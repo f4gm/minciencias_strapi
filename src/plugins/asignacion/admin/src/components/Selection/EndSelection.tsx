@@ -1,18 +1,16 @@
 import { Button } from "@strapi/design-system";
 
-import { geoJSON } from "leaflet";
-
 import { useLandEdit } from "../../store/useLandEdit";
+import { useLandSelection } from "../../store/useLandSelection";
 import { useMap } from "../../store/useMap";
 
 import { unionGeomanLayers } from "../../utils/geometryUtils/unionGeomanLayers";
 import { selectFeatures } from "../../utils/geometryUtils/selectFeatures";
 
-import { LandhighlightFeatureStyle } from "../Map/Layers/Lands/Lands";
-
 const EndSelection = () => {
   const { map, lands } = useMap((state) => state);
   const { activeEdit, deactive } = useLandEdit((state) => state);
+  const { updateSelection } = useLandSelection((state) => state);
 
   const clickHandler = () => {
     deactive();
@@ -22,18 +20,14 @@ const EndSelection = () => {
 
     const selectedLands = selectFeatures(landsGeoJSON, areaGeoJSON);
 
-    const selectedLandsLayer = geoJSON(selectedLands, {
-      style: LandhighlightFeatureStyle,
-    });
+    updateSelection(selectedLands);
 
     console.log(selectedLands);
-
-    map.addLayer(selectedLandsLayer);
   };
 
   return (
     <Button onClick={clickHandler} disabled={!activeEdit}>
-      End selection
+      Seleccionar
     </Button>
   );
 };

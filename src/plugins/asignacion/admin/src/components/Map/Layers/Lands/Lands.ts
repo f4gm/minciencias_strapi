@@ -32,7 +32,7 @@ const LandDefaultStyle = {
   fillOpacity: 0.75,
 };
 
-export const LandhighlightFeatureStyle = {
+export const LandHighlightFeatureStyle = {
   fillColor: "#ffff00",
   fillOpacity: 0.75,
   stroke: true,
