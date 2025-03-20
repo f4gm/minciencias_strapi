@@ -4,15 +4,12 @@ import "leaflet/dist/leaflet.css";
 import "@geoman-io/leaflet-geoman-free";
 import "@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css";
 
-import { useMap } from "../../store/useMap";
-
 import { mapConfig } from "./config.map";
 
 import RegisterLayers from "./Layers/RegisterLayers";
 import RegisterMapEvents from "./Events/RegisterMapEvents";
 
 export const InitializeMap = async (container) => {
-  const { setMap } = useMap.getState();
 
   const map_ = map(container, mapConfig);
 
@@ -47,8 +44,6 @@ export const InitializeMap = async (container) => {
   markerPane.style.zIndex = "-400";
   tooltipPane.style.zIndex = "-300";
   popupPane.style.zIndex = "-200";
-
-  setMap(map_);
 
   return map_;
 };

@@ -5,6 +5,7 @@ import { useMap } from "../../../../store/useMap";
 
 // @ts-ignore
 import dummy from "../../../../assets/predios_origen.json" assert { type: "json" };
+import RegisterLandsEvents from "./Events/RegisterLandsEvents";
 
 const Lands = async (map: Map) => {
   const { setLands } = useMap.getState();
@@ -13,6 +14,8 @@ const Lands = async (map: Map) => {
 
   const geojson = toWGS84(dummy, epsg_9377);
   const layer = geoJSON(geojson, LandsConfig);
+
+  RegisterLandsEvents(layer);
 
   setLands(geojson, layer);
 
