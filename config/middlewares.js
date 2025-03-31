@@ -12,8 +12,10 @@ module.exports = [
             "https://a.tile.openstreetmap.org",
             "https://b.tile.openstreetmap.org",
             "https://c.tile.openstreetmap.org",
+            "https://tiles.openfreemap.org"
           ],
           "script-src": ["'self'", "https://unpkg.com"],
+          "worker-src": ["'self'", "blob:"]
         },
       },
     },

@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 
 import "@geoman-io/leaflet-geoman-free";
 import "@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css";
+import "@maplibre/maplibre-gl-leaflet/leaflet-maplibre-gl";
 
 import { mapConfig } from "./config.map";
 
@@ -10,7 +11,6 @@ import RegisterLayers from "./Layers/RegisterLayers";
 import RegisterMapEvents from "./Events/RegisterMapEvents";
 
 export const InitializeMap = async (container) => {
-
   const map_ = map(container, mapConfig);
 
   map_.pm.addControls({
@@ -22,6 +22,18 @@ export const InitializeMap = async (container) => {
     drawText: false,
     cutPolygon: false,
     rotateMode: false,
+    dragMode: false,
+    editMode: false,
+    removalMode: false,
+  });
+
+  map_.pm.setPathOptions({
+    fillColor: "#FCDE70",
+    fillOpacity: 0.4,
+    stroke: true,
+    weight: 0.5,
+    color: "#EB8317",
+    opacity: 0.4,
   });
 
   await RegisterLayers(map_);

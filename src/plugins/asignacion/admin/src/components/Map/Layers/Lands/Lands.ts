@@ -27,21 +27,21 @@ const Lands = async (map: Map) => {
 export default Lands;
 
 const LandDefaultStyle = {
-  color: "#004386",
+  fillColor: "#F2EFE7",
+  fillOpacity: 1,
   stroke: true,
-  weight: 1,
-  opacity: 1.0,
-  fillColor: "#91f6ff",
-  fillOpacity: 0.75,
+  weight: 0.5,
+  color: "#727D73",
+  opacity: 1.0
 };
 
 export const LandHighlightFeatureStyle = {
-  fillColor: "#ffff00",
-  fillOpacity: 0.75,
+  fillColor: "#FCDE70",
+  fillOpacity: 1,
   stroke: true,
-  weight: 1,
-  opacity: 1.0,
-  color: "#7a7a00",
+  weight: 0.5,
+  color: "#EB8317",
+  opacity: 1.0
 };
 
 export const LandsConfig: GeoJSONOptions = {

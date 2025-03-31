@@ -1,32 +1,29 @@
 import { create } from "zustand";
 
-import { Feature, FeatureCollection, Polygon } from "geojson";
+import { FeatureCollection, Polygon } from "geojson";
 
 import { Layer, geoJSON } from "leaflet";
 
-import { featureCollection, union } from "@turf/turf";
+import { featureCollection } from "@turf/turf";
 
 import { useMap } from "./useMap";
+import { useControlKeyStore } from "./useControlKey";
 
 import { LandHighlightFeatureStyle } from "../components/Map/Layers/Lands/Lands";
-import { featureInCollection } from "../utils/geometryUtils/featureInCollection";
 
 interface State {
   geojson: FeatureCollection<Polygon>;
   layer: Layer;
-  updateSelection: (
-    geojson: FeatureCollection<Polygon>,
-    replace: boolean
-  ) => void;
-  selectFeature: (feature: Feature<Polygon>) => void;
+  updateSelection: (geojson: FeatureCollection<Polygon>) => void;
   clearSelection: () => void;
 }
 
 export const useLandSelection = create<State>((set, get) => ({
   geojson: undefined,
   layer: undefined,
-  updateSelection: (geojson, replace) => {
+  updateSelection: (geojson) => {
     const { layer: oldLayer, geojson: oldGeojson } = get();
+    const { isControlPressed } = useControlKeyStore.getState();
 
     if (JSON.stringify(geojson) != JSON.stringify(oldGeojson)) {
       const { map } = useMap.getState();
@@ -36,15 +33,10 @@ export const useLandSelection = create<State>((set, get) => ({
         console.warn("Cannot remove old layer.", error);
       }
 
-      if (replace) {
-        const layer = geoJSON(geojson, {
-          style: LandHighlightFeatureStyle,
-          pmIgnore: true,
-        });
-        map.addLayer(layer);
-        set({ geojson: geojson, layer: layer });
-      } else {
-        const features = [...geojson.features, ...oldGeojson.features];
+      if (isControlPressed) {
+        const features = oldGeojson
+          ? [...geojson.features, ...oldGeojson.features]
+          : [...geojson.features];
         const newGeojson = featureCollection(features);
         const layer = geoJSON(newGeojson, {
           style: LandHighlightFeatureStyle,
@@ -52,36 +44,14 @@ export const useLandSelection = create<State>((set, get) => ({
         });
         map.addLayer(layer);
         set({ geojson: newGeojson, layer: layer });
-      }
-    }
-  },
-  selectFeature: (feature) => {
-    const { layer: oldLayer, geojson: oldGeojson } = get();
-    const { map } = useMap.getState();
-
-    console.log(oldGeojson)
-
-    if (oldGeojson) {
-      if (!featureInCollection(oldGeojson, feature)) {
-        const newGeojson = structuredClone(oldGeojson);
-        newGeojson.features.push(feature);
-
-        const newLayer = geoJSON(newGeojson, {
+      } else {
+        const layer = geoJSON(geojson, {
           style: LandHighlightFeatureStyle,
           pmIgnore: true,
         });
-        map.removeLayer(oldLayer);
-        map.addLayer(newLayer);
-        set({ layer: newLayer, geojson: newGeojson });
+        map.addLayer(layer);
+        set({ geojson: geojson, layer: layer });
       }
-    } else {
-      const newGeojson = featureCollection([feature]);
-      const newLayer = geoJSON(newGeojson, {
-        style: LandHighlightFeatureStyle,
-        pmIgnore: true,
-      });
-      map.addLayer(newLayer);
-      set({ layer: newLayer, geojson: newGeojson });
     }
   },
   clearSelection: () => {

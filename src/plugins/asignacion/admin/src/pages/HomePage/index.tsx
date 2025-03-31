@@ -16,6 +16,8 @@ import EndSelection from "../../components/Selection/EndSelection";
 import ClearSelection from "../../components/Selection/ClearSelection";
 import FeatureInfo from "../../components/FeatureInfo/FeatureInfo";
 
+import { useControlKeyListener } from "../../hooks/useControlKeyListener";
+
 const ControlStyle: CSSProperties = {
   position: "absolute",
   zIndex: "10",
@@ -29,6 +31,7 @@ const ControlStyle: CSSProperties = {
 };
 
 const HomePage = () => {
+  useControlKeyListener();
   return (
     <>
       <Map />

@@ -1,9 +1,14 @@
-import { tileLayer, Map, TileLayerOptions } from "leaflet";
+import { tileLayer, Map, TileLayerOptions, maplibreGL } from "leaflet";
 
 const Tiles = async (map: Map) => {
-  const url = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+  // const url = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-  const layer = tileLayer(url, TilesConfig);
+  // const layer = tileLayer(url, TilesConfig);
+
+  const url = "https://tiles.openfreemap.org/styles/liberty";
+  const layer = maplibreGL({
+    style: url,
+  });
 
   layer.addTo(map);
 

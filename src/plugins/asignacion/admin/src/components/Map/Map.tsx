@@ -7,7 +7,7 @@ import { InitializeMap } from "./InitializeMap";
 const Map = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-    
+
   const { setMap } = useMap.getState();
 
   useEffect(() => {

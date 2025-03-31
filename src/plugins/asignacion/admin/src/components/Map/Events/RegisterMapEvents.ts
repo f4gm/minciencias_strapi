@@ -1,6 +1,6 @@
 import { Map } from "leaflet";
 
-import GeomanEvents from "./GeomanEvents";
+import GeomanEvents from "./Geoman/GeomanEvents";
 
 const RegisterMapEvents = (map: Map) => {
   GeomanEvents(map);

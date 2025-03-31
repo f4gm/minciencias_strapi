@@ -4,7 +4,7 @@ import { useLandEdit } from "../../store/useLandEdit";
 import { useLandSelection } from "../../store/useLandSelection";
 import { useMap } from "../../store/useMap";
 
-import { unionGeomanLayers } from "../../utils/geometryUtils/unionGeomanLayers";
+import { getGeomanMask } from "../../utils/geometryUtils/getGeomanMask";
 import { selectFeatures } from "../../utils/geometryUtils/selectFeatures";
 
 const EndSelection = () => {
@@ -16,7 +16,7 @@ const EndSelection = () => {
     deactive();
 
     const landsGeoJSON = lands.geojson;
-    const areaGeoJSON = unionGeomanLayers(map);
+    const areaGeoJSON = getGeomanMask(map);
 
     const selectedLands = selectFeatures(landsGeoJSON, areaGeoJSON);
 
