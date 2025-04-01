@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_uebaunits",
+  "collectionName": "col_uebaunit",
   "info": {
     "singularName": "col-uebaunit",
     "pluralName": "col-uebaunits",

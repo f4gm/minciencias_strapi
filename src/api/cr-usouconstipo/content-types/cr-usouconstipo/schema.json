@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_usouconstipos",
+  "collectionName": "cr_usouconstipo",
   "info": {
     "singularName": "cr-usouconstipo",
     "pluralName": "cr-usouconstipos",

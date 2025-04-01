@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estructuraprocedimientocrs",
+  "collectionName": "cr_estructuraprocedimientocr",
   "info": {
     "singularName": "cr-estructuraprocedimientocr",
     "pluralName": "cr-estructuraprocedimientocrs",

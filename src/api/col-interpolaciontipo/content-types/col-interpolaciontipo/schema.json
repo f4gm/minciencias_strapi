@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_interpolaciontipos",
+  "collectionName": "col_interpolaciontipo",
   "info": {
     "singularName": "col-interpolaciontipo",
     "pluralName": "col-interpolaciontipos",

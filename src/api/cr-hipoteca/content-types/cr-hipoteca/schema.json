@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_hipotecas",
+  "collectionName": "cr_hipoteca",
   "info": {
     "singularName": "cr-hipoteca",
     "pluralName": "cr-hipotecas",

@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_datosmatrizs",
+  "collectionName": "cr_datosmatriz",
   "info": {
     "singularName": "cr-datosmatriz",
     "pluralName": "cr-datosmatrizs",

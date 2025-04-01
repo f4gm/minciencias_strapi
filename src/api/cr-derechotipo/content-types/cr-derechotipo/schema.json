@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_derechotipos",
+  "collectionName": "cr_derechotipo",
   "info": {
     "singularName": "cr-derechotipo",
     "pluralName": "cr-derechotipos",

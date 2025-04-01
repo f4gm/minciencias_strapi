@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_predios",
+  "collectionName": "cr_predio",
   "info": {
     "singularName": "cr-predio",
     "pluralName": "cr-predios",

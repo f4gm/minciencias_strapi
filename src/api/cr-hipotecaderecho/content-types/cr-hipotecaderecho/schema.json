@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_hipotecaderechos",
+  "collectionName": "cr_hipotecaderecho",
   "info": {
     "singularName": "cr-hipotecaderecho",
     "pluralName": "cr-hipotecaderechos",

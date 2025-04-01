@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estrucpredorinpns",
+  "collectionName": "cr_estrucpredorinpn",
   "info": {
     "singularName": "cr-estrucpredorinpn",
     "pluralName": "cr-estrucpredorinpns",

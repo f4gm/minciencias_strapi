@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "colgrupo_interesadotipos",
+  "collectionName": "colgrupo_interesadotipo",
   "info": {
     "singularName": "col-grupointeresadotipo",
     "pluralName": "colgrupo-interesadotipos",

@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_sexotipos",
+  "collectionName": "cr_sexotipo",
   "info": {
     "singularName": "cr-sexotipo",
     "pluralName": "cr-sexotipos",

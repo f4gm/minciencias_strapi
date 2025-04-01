@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_responsablefuentes",
+  "collectionName": "col_responsablefuente",
   "info": {
     "singularName": "col-responsablefuente",
     "pluralName": "col-responsablefuentes",

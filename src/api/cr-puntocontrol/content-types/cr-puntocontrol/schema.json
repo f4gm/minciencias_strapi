@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_puntocontrols",
+  "collectionName": "cr_puntocontrol",
   "info": {
     "singularName": "cr-puntocontrol",
     "pluralName": "cr-puntocontrols",

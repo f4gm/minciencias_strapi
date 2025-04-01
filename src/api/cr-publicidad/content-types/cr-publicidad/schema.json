@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_publicidads",
+  "collectionName": "cr_publicidad",
   "info": {
     "singularName": "cr-publicidad",
     "pluralName": "cr-publicidads",

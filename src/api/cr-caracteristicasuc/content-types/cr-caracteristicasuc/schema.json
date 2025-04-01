@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_caracteristicasucs",
+  "collectionName": "cr_caracteristicasuc",
   "info": {
     "singularName": "cr-caracteristicasuc",
     "pluralName": "cr-caracteristicasucs",

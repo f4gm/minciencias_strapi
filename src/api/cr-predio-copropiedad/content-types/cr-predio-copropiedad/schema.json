@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_predio_copropiedads",
+  "collectionName": "cr_predio_copropiedad",
   "info": {
     "singularName": "cr-predio-copropiedad",
     "pluralName": "cr-predio-copropiedads",

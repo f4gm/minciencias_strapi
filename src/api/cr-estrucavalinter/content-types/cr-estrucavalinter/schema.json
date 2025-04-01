@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estrucavalinters",
+  "collectionName": "cr_estrucavalinter",
   "info": {
     "singularName": "cr-estrucavalinter",
     "pluralName": "cr-estrucavalinters",

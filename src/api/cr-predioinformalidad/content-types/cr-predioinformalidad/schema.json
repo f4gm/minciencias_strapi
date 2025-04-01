@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_predioinformalidads",
+  "collectionName": "cr_predioinformalidad",
   "info": {
     "singularName": "cr-predioinformalidad",
     "pluralName": "cr-predioinformalidads",

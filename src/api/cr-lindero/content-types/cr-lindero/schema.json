@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_linderos",
+  "collectionName": "cr_lindero",
   "info": {
     "singularName": "cr-lindero",
     "pluralName": "cr-linderos",

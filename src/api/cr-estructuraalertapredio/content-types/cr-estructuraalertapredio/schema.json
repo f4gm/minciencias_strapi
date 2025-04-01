@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estructuraalertapredios",
+  "collectionName": "cr_estructuraalertapredio",
   "info": {
     "singularName": "cr-estructuraalertapredio",
     "pluralName": "cr-estructuraalertapredios",

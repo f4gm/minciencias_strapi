@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_unidadadministrativabasicatipos",
+  "collectionName": "col_unidadadministrativabasicatipo",
   "info": {
     "singularName": "col-unidadadministrativabasicatipo",
     "pluralName": "col-unidadadministrativabasicatipos",

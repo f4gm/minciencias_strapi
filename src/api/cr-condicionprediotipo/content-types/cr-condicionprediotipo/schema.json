@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_condicionprediotipos",
+  "collectionName": "cr_condicionprediotipo",
   "info": {
     "singularName": "cr-condicionprediotipo",
     "pluralName": "cr-condicionprediotipos",

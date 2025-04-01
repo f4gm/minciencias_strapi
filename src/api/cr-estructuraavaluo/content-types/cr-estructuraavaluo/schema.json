@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estructuraavaluos",
+  "collectionName": "cr_estructuraavaluo",
   "info": {
     "singularName": "cr-estructuraavaluo",
     "pluralName": "cr-estructuraavaluos",

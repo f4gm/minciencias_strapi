@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_procedimientocatastralregistraltipos",
+  "collectionName": "cr_procedimientocatastralregistraltipo",
   "info": {
     "singularName": "cr-procedimientocatastralregistraltipo",
     "pluralName": "cr-procedimientocatastralregistraltipos",

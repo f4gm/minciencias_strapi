@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_restriccions",
+  "collectionName": "cr_restriccion",
   "info": {
     "singularName": "cr-restriccion",
     "pluralName": "cr-restriccions",

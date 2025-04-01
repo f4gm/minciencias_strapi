@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_metodoproducciontipos",
+  "collectionName": "col_metodoproducciontipo",
   "info": {
     "singularName": "col-metodoproducciontipo",
     "pluralName": "col-metodoproducciontipos",

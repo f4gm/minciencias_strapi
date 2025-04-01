@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_terrenos",
+  "collectionName": "cr_terreno",
   "info": {
     "singularName": "cr-terreno",
     "pluralName": "cr-terrenos",

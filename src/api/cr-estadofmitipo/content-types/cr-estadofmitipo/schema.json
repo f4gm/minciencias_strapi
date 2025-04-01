@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estadofmitipos",
+  "collectionName": "cr_estadofmitipo",
   "info": {
     "singularName": "cr-estadofmitipo",
     "pluralName": "cr-estadofmitipos",

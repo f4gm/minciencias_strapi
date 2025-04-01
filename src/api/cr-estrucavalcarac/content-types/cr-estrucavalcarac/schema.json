@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estrucavalcaracs",
+  "collectionName": "cr_estrucavalcarac",
   "info": {
     "singularName": "cr-estrucavalcarac",
     "pluralName": "cr-estrucavalcaracs",

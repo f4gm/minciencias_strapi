@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "extdireccion_clase_via_principals",
+  "collectionName": "extdireccion_clase_via_principal",
   "info": {
     "singularName": "extdireccion-clase-via-principal",
     "pluralName": "extdireccion-clase-via-principals",

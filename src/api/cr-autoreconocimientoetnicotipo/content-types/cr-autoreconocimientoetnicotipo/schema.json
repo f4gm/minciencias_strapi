@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_autoreconocimientoetnicotipos",
+  "collectionName": "cr_autoreconocimientoetnicotipo",
   "info": {
     "singularName": "cr-autoreconocimientoetnicotipo",
     "pluralName": "cr-autoreconocimientoetnicotipos",

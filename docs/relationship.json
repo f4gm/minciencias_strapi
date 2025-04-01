@@ -1,0 +1,54 @@
+{
+  "admin_permissions": {
+    "model_name": null
+  },
+  "admin_roles": {
+    "model_name": null
+  },
+  "admin_users": {
+    "model_name": null
+  },
+  "col_areatipo": {
+    "model_name": "col_areatipo"
+  },
+  "col_areavalor": {
+    "model_name": "col_areavalor"
+  },
+  "col_baunitcomointeresado": {
+    "model_name": "col_baunitcomointeresado"
+  },
+  "col_baunitfuente": {
+    "model_name": "col_baunitfuente",
+    "relations": [
+      {
+        "name": "fuente_espacial",
+        "type": "oneToOne",
+        "target": "cr_fuenteespacial"
+      },
+      {
+        "name": "unidad",
+        "type": "oneToOne",
+        "target": "cr_predio"
+      }
+    ]
+  },
+  "col_cclfuente": {
+    "model_name": "col_cclfuente",
+    "relations": [
+      {
+        "name": "ccl",
+        "type": "oneToOne",
+        "target": "cr_lindero"
+      },
+      {
+        "name": "fuente_espacial",
+        "relation": "oneToOne",
+        "target": "cr_fuenteespacial"
+      }
+    ]
+  },
+  "col_documentotipo": {
+    "model_name": "col_documentotipo"
+  },
+  ""
+}

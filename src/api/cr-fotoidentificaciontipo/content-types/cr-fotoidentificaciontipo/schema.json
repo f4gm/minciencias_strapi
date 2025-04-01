@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_fotoidentificaciontipos",
+  "collectionName": "cr_fotoidentificaciontipo",
   "info": {
     "singularName": "cr-fotoidentificaciontipo",
     "pluralName": "cr-fotoidentificaciontipos",

@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_interesados",
+  "collectionName": "cr_interesado",
   "info": {
     "singularName": "cr-interesado",
     "pluralName": "cr-interesados",

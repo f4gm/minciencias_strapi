@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_fuenteespacials",
+  "collectionName": "cr_fuenteespacial",
   "info": {
     "singularName": "cr-fuenteespacial",
     "pluralName": "cr-fuenteespacials",

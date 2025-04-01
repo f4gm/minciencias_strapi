@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_estadodisponibilidadtipos",
+  "collectionName": "col_estadodisponibilidadtipo",
   "info": {
     "singularName": "col-estadodisponibilidadtipo",
     "pluralName": "col-estadodisponibilidadtipos",

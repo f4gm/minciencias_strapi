@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_errsa_tipo_referencias",
+  "collectionName": "cr_errsa_tipo_referencia",
   "info": {
     "singularName": "cr-errsa-tipo-referencia",
     "pluralName": "cr-errsa-tipo-referencias",

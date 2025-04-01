@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "extdireccion_sector_predios",
+  "collectionName": "extdireccion_sector_predio",
   "info": {
     "singularName": "extdireccion-sector-predio",
     "pluralName": "extdireccion-sector-predios",

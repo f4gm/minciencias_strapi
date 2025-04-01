@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estadoanotaciontipos",
+  "collectionName": "cr_estadoanotaciontipo",
   "info": {
     "singularName": "cr-estadoanotaciontipo",
     "pluralName": "cr-estadoanotaciontipos",

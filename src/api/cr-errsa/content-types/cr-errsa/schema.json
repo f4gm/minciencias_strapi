@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_errsas",
+  "collectionName": "cr_errsa",
   "info": {
     "singularName": "cr-errsa",
     "pluralName": "cr-errsas",

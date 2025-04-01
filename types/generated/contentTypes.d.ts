@@ -363,7 +363,7 @@ export interface AdminUser extends Schema.CollectionType {
 }
 
 export interface ApiColAreatipoColAreatipo extends Schema.CollectionType {
-  collectionName: 'col_areatipos';
+  collectionName: 'col_areatipo';
   info: {
     description: '';
     displayName: 'COL_AreaTipo';
@@ -404,7 +404,7 @@ export interface ApiColAreatipoColAreatipo extends Schema.CollectionType {
 }
 
 export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
-  collectionName: 'col_areavalors';
+  collectionName: 'col_areavalor';
   info: {
     displayName: 'COL_AreaValor';
     pluralName: 'col-areavalors';
@@ -457,7 +457,7 @@ export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
 
 export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
   extends Schema.CollectionType {
-  collectionName: 'col_baunitcomointeresados';
+  collectionName: 'col_baunitcomointeresado';
   info: {
     displayName: 'col_baUnitComointeresado';
     pluralName: 'col-baunitcomointeresados';
@@ -502,7 +502,7 @@ export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
 
 export interface ApiColBaunitfuenteColBaunitfuente
   extends Schema.CollectionType {
-  collectionName: 'col_baunitfuentes';
+  collectionName: 'col_baunitfuente';
   info: {
     displayName: 'col_baunitFuente';
     pluralName: 'col-baunitfuentes';
@@ -542,7 +542,7 @@ export interface ApiColBaunitfuenteColBaunitfuente
 }
 
 export interface ApiColCclfuenteColCclfuente extends Schema.CollectionType {
-  collectionName: 'col_cclfuentes';
+  collectionName: 'col_cclfuente';
   info: {
     displayName: 'col_cclFuente';
     pluralName: 'col-cclfuentes';
@@ -583,7 +583,7 @@ export interface ApiColCclfuenteColCclfuente extends Schema.CollectionType {
 
 export interface ApiColDocumentotipoColDocumentotipo
   extends Schema.CollectionType {
-  collectionName: 'col_documentotipos';
+  collectionName: 'col_documentotipo';
   info: {
     description: '';
     displayName: 'COL_DocumentoTipo';
@@ -635,7 +635,7 @@ export interface ApiColDocumentotipoColDocumentotipo
 
 export interface ApiColEstadodisponibilidadtipoColEstadodisponibilidadtipo
   extends Schema.CollectionType {
-  collectionName: 'col_estadodisponibilidadtipos';
+  collectionName: 'col_estadodisponibilidadtipo';
   info: {
     description: '';
     displayName: 'COL_EstadoDisponibilidadTipo';
@@ -687,7 +687,7 @@ export interface ApiColEstadodisponibilidadtipoColEstadodisponibilidadtipo
 }
 
 export interface ApiColFormatotipoColFormatotipo extends Schema.CollectionType {
-  collectionName: 'col_formatotipos';
+  collectionName: 'col_formatotipo';
   info: {
     description: '';
     displayName: 'COL_FormatoTipo';
@@ -739,7 +739,7 @@ export interface ApiColFormatotipoColFormatotipo extends Schema.CollectionType {
 
 export interface ApiColFuenteadministrativatipoColFuenteadministrativatipo
   extends Schema.CollectionType {
-  collectionName: 'col_fuenteadministrativatipos';
+  collectionName: 'col_fuenteadministrativatipo';
   info: {
     displayName: 'COL_FuenteAdministrativaTipo';
     pluralName: 'col-fuenteadministrativatipos';
@@ -790,7 +790,7 @@ export interface ApiColFuenteadministrativatipoColFuenteadministrativatipo
 
 export interface ApiColFuenteespacialtipoColFuenteespacialtipo
   extends Schema.CollectionType {
-  collectionName: 'col_fuenteespacialtipos';
+  collectionName: 'col_fuenteespacialtipo';
   info: {
     displayName: 'COL_FuenteEspacialTipo';
     pluralName: 'col-fuenteespacialtipos';
@@ -841,7 +841,7 @@ export interface ApiColFuenteespacialtipoColFuenteespacialtipo
 
 export interface ApiColGrupointeresadotipoColGrupointeresadotipo
   extends Schema.CollectionType {
-  collectionName: 'colgrupo_interesadotipos';
+  collectionName: 'colgrupo_interesadotipo';
   info: {
     displayName: 'COL_GrupoInteresadoTipo';
     pluralName: 'colgrupo-interesadotipos';
@@ -892,7 +892,7 @@ export interface ApiColGrupointeresadotipoColGrupointeresadotipo
 
 export interface ApiColInteresadotipoColInteresadotipo
   extends Schema.CollectionType {
-  collectionName: 'col_interesadotipos';
+  collectionName: 'col_interesadotipo';
   info: {
     displayName: 'COL_InteresadoTipo';
     pluralName: 'col-interesadotipos';
@@ -943,7 +943,7 @@ export interface ApiColInteresadotipoColInteresadotipo
 
 export interface ApiColInterpolaciontipoColInterpolaciontipo
   extends Schema.CollectionType {
-  collectionName: 'col_interpolaciontipos';
+  collectionName: 'col_interpolaciontipo';
   info: {
     displayName: 'COL_InterpolacionTipo';
     pluralName: 'col-interpolaciontipos';
@@ -993,7 +993,7 @@ export interface ApiColInterpolaciontipoColInterpolaciontipo
 }
 
 export interface ApiColMascclColMasccl extends Schema.CollectionType {
-  collectionName: 'col_masccls';
+  collectionName: 'col_masccl';
   info: {
     displayName: 'col_masCcl';
     pluralName: 'col-masccls';
@@ -1037,7 +1037,7 @@ export interface ApiColMascclColMasccl extends Schema.CollectionType {
 }
 
 export interface ApiColMenoscclColMenosccl extends Schema.CollectionType {
-  collectionName: 'col_menosccls';
+  collectionName: 'col_menosccl';
   info: {
     displayName: 'col_menosCcl';
     pluralName: 'col-menosccls';
@@ -1082,7 +1082,7 @@ export interface ApiColMenoscclColMenosccl extends Schema.CollectionType {
 
 export interface ApiColMetodoproducciontipoColMetodoproducciontipo
   extends Schema.CollectionType {
-  collectionName: 'col_metodoproducciontipos';
+  collectionName: 'col_metodoproducciontipo';
   info: {
     displayName: 'COL_MetodoProduccionTipo';
     pluralName: 'col-metodoproducciontipos';
@@ -1132,7 +1132,7 @@ export interface ApiColMetodoproducciontipoColMetodoproducciontipo
 }
 
 export interface ApiColPuntocclColPuntoccl extends Schema.CollectionType {
-  collectionName: 'col_puntoccls';
+  collectionName: 'col_puntoccl';
   info: {
     displayName: 'col_puntoCcl';
     pluralName: 'col-puntoccls';
@@ -1176,7 +1176,7 @@ export interface ApiColPuntocclColPuntoccl extends Schema.CollectionType {
 }
 
 export interface ApiColPuntofuenteColPuntofuente extends Schema.CollectionType {
-  collectionName: 'col_puntofuentes';
+  collectionName: 'col_puntofuente';
   info: {
     displayName: 'col_puntoFuente';
     pluralName: 'col-puntofuentes';
@@ -1220,7 +1220,7 @@ export interface ApiColPuntofuenteColPuntofuente extends Schema.CollectionType {
 }
 
 export interface ApiColPuntotipoColPuntotipo extends Schema.CollectionType {
-  collectionName: 'col_puntotipos';
+  collectionName: 'col_puntotipo';
   info: {
     displayName: 'COL_PuntoTipo';
     pluralName: 'col-puntotipos';
@@ -1271,7 +1271,7 @@ export interface ApiColPuntotipoColPuntotipo extends Schema.CollectionType {
 
 export interface ApiColRelacionsuperficietipoColRelacionsuperficietipo
   extends Schema.CollectionType {
-  collectionName: 'col_relacionsuperficietipos';
+  collectionName: 'col_relacionsuperficietipo';
   info: {
     displayName: 'COL_RelacionSuperficieTipo';
     pluralName: 'col-relacionsuperficietipos';
@@ -1322,7 +1322,7 @@ export interface ApiColRelacionsuperficietipoColRelacionsuperficietipo
 
 export interface ApiColResponsablefuenteColResponsablefuente
   extends Schema.CollectionType {
-  collectionName: 'col_responsablefuentes';
+  collectionName: 'col_responsablefuente';
   info: {
     displayName: 'col_responsableFuente';
     pluralName: 'col-responsablefuentes';
@@ -1366,7 +1366,7 @@ export interface ApiColResponsablefuenteColResponsablefuente
 }
 
 export interface ApiColRrrfuenteColRrrfuente extends Schema.CollectionType {
-  collectionName: 'col_rrrfuentes';
+  collectionName: 'col_rrrfuente';
   info: {
     displayName: 'col_rrrFuente';
     pluralName: 'col-rrrfuentes';
@@ -1425,7 +1425,7 @@ export interface ApiColRrrfuenteColRrrfuente extends Schema.CollectionType {
 }
 
 export interface ApiColUebaunitColUebaunit extends Schema.CollectionType {
-  collectionName: 'col_uebaunits';
+  collectionName: 'col_uebaunit';
   info: {
     displayName: 'col_ueBaUnit';
     pluralName: 'col-uebaunits';
@@ -1469,7 +1469,7 @@ export interface ApiColUebaunitColUebaunit extends Schema.CollectionType {
 }
 
 export interface ApiColUefuenteColUefuente extends Schema.CollectionType {
-  collectionName: 'col_uefuentes';
+  collectionName: 'col_uefuente';
   info: {
     displayName: 'col_ueFuente';
     pluralName: 'col-uefuentes';
@@ -1514,7 +1514,7 @@ export interface ApiColUefuenteColUefuente extends Schema.CollectionType {
 
 export interface ApiColUnidadadministrativabasicatipoColUnidadadministrativabasicatipo
   extends Schema.CollectionType {
-  collectionName: 'col_unidadadministrativabasicatipos';
+  collectionName: 'col_unidadadministrativabasicatipo';
   info: {
     displayName: 'COL_UnidadAdministrativaBasicaTipo';
     pluralName: 'col-unidadadministrativabasicatipos';
@@ -1564,7 +1564,7 @@ export interface ApiColUnidadadministrativabasicatipoColUnidadadministrativabasi
 
 export interface ApiColUnidadfuenteColUnidadfuente
   extends Schema.CollectionType {
-  collectionName: 'col_unidadfuentes';
+  collectionName: 'col_unidadfuente';
   info: {
     displayName: 'colunidadFuente';
     pluralName: 'col-unidadfuentes';
@@ -1669,7 +1669,7 @@ export interface ApiCrAgrupacioninteresadoCrAgrupacioninteresado
 
 export interface ApiCrAnotacionregistroCrAnotacionregistro
   extends Schema.CollectionType {
-  collectionName: 'cr_anotacionregistros';
+  collectionName: 'cr_anotacionregistro';
   info: {
     displayName: 'CR_AnotacionRegistro';
     pluralName: 'cr-anotacionregistros';
@@ -1730,7 +1730,7 @@ export interface ApiCrAnotacionregistroCrAnotacionregistro
 
 export interface ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo
   extends Schema.CollectionType {
-  collectionName: 'cr_autoreconocimientoetnicotipos';
+  collectionName: 'cr_autoreconocimientoetnicotipo';
   info: {
     displayName: 'CR_AutoreconocimientoEtnicoTipo';
     pluralName: 'cr-autoreconocimientoetnicotipos';
@@ -1781,7 +1781,7 @@ export interface ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo
 
 export interface ApiCrCaracteristicasucCrCaracteristicasuc
   extends Schema.CollectionType {
-  collectionName: 'cr_caracteristicasucs';
+  collectionName: 'cr_caracteristicasuc';
   info: {
     description: '';
     displayName: 'CR_CaracteristicasUnidadConstruccion';
@@ -1860,7 +1860,7 @@ export interface ApiCrCaracteristicasucCrCaracteristicasuc
 
 export interface ApiCrCondicionprediotipoCrCondicionprediotipo
   extends Schema.CollectionType {
-  collectionName: 'cr_condicionprediotipos';
+  collectionName: 'cr_condicionprediotipo';
   info: {
     description: '';
     displayName: 'CR_CondicionPredioTipo';
@@ -1912,7 +1912,7 @@ export interface ApiCrCondicionprediotipoCrCondicionprediotipo
 
 export interface ApiCrConstruccionplantatipoCrConstruccionplantatipo
   extends Schema.CollectionType {
-  collectionName: 'cr_construccionplantatipos';
+  collectionName: 'cr_construccionplantatipo';
   info: {
     displayName: 'CR_ConstruccionPlantaTipo';
     pluralName: 'cr-construccionplantatipos';
@@ -1962,7 +1962,7 @@ export interface ApiCrConstruccionplantatipoCrConstruccionplantatipo
 }
 
 export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
-  collectionName: 'cr_datosmatrizs';
+  collectionName: 'cr_datosmatriz';
   info: {
     description: '';
     displayName: 'CR_DatosMatriz';
@@ -2053,7 +2053,7 @@ export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
 }
 
 export interface ApiCrDerechoCrDerecho extends Schema.CollectionType {
-  collectionName: 'cr_derechos';
+  collectionName: 'cr_derecho';
   info: {
     displayName: 'CR_Derecho';
     pluralName: 'cr-derechos';
@@ -2140,7 +2140,7 @@ export interface ApiCrDerechoCrDerecho extends Schema.CollectionType {
 }
 
 export interface ApiCrDerechotipoCrDerechotipo extends Schema.CollectionType {
-  collectionName: 'cr_derechotipos';
+  collectionName: 'cr_derechotipo';
   info: {
     displayName: 'CR_DerechoTipo';
     pluralName: 'cr-derechotipos';
@@ -2191,7 +2191,7 @@ export interface ApiCrDerechotipoCrDerechotipo extends Schema.CollectionType {
 
 export interface ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo
   extends Schema.CollectionType {
-  collectionName: 'cr_destinacioneconomicatipos';
+  collectionName: 'cr_destinacioneconomicatipo';
   info: {
     displayName: 'CR_DestinacionEconomicaTipo';
     pluralName: 'cr-destinacioneconomicatipos';
@@ -2243,7 +2243,7 @@ export interface ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo
 
 export interface ApiCrErrsaTipoReferenciaCrErrsaTipoReferencia
   extends Schema.CollectionType {
-  collectionName: 'cr_errsa_tipo_referencias';
+  collectionName: 'cr_errsa_tipo_referencia';
   info: {
     displayName: 'CR_ERRSA_Tipo_Referencia';
     pluralName: 'cr-errsa-tipo-referencias';
@@ -2291,7 +2291,7 @@ export interface ApiCrErrsaTipoReferenciaCrErrsaTipoReferencia
 }
 
 export interface ApiCrErrsaCrErrsa extends Schema.CollectionType {
-  collectionName: 'cr_errsas';
+  collectionName: 'cr_errsa';
   info: {
     displayName: 'CR_ERRSA';
     pluralName: 'cr-errsas';
@@ -2366,7 +2366,7 @@ export interface ApiCrErrsaCrErrsa extends Schema.CollectionType {
 
 export interface ApiCrEstadoanotaciontipoCrEstadoanotaciontipo
   extends Schema.CollectionType {
-  collectionName: 'cr_estadoanotaciontipos';
+  collectionName: 'cr_estadoanotaciontipo';
   info: {
     displayName: 'CR_EstadoAnotacionTipo';
     pluralName: 'cr-estadoanotaciontipos';
@@ -2417,7 +2417,7 @@ export interface ApiCrEstadoanotaciontipoCrEstadoanotaciontipo
 
 export interface ApiCrEstadofmitipoCrEstadofmitipo
   extends Schema.CollectionType {
-  collectionName: 'cr_estadofmitipos';
+  collectionName: 'cr_estadofmitipo';
   info: {
     displayName: 'CR_EstadoFMITipo';
     pluralName: 'cr-estadofmitipos';
@@ -2467,7 +2467,7 @@ export interface ApiCrEstadofmitipoCrEstadofmitipo
 }
 
 export interface ApiCrEstadotipoCrEstadotipo extends Schema.CollectionType {
-  collectionName: 'cr_estadotipos';
+  collectionName: 'cr_estadotipo';
   info: {
     displayName: 'CR_EstadoTipo';
     pluralName: 'cr-estadotipos';
@@ -2518,7 +2518,7 @@ export interface ApiCrEstadotipoCrEstadotipo extends Schema.CollectionType {
 
 export interface ApiCrEstrucavalcaracCrEstrucavalcarac
   extends Schema.CollectionType {
-  collectionName: 'cr_estrucavalcaracs';
+  collectionName: 'cr_estrucavalcarac';
   info: {
     displayName: 'CR_EstructuraAvaluoCaracterizacion';
     pluralName: 'cr-estrucavalcaracs';
@@ -2568,7 +2568,7 @@ export interface ApiCrEstrucavalcaracCrEstrucavalcarac
 
 export interface ApiCrEstrucavalinterCrEstrucavalinter
   extends Schema.CollectionType {
-  collectionName: 'cr_estrucavalinters';
+  collectionName: 'cr_estrucavalinter';
   info: {
     description: '';
     displayName: 'CR_EstructuraAvaluoInterseccion';
@@ -2626,7 +2626,7 @@ export interface ApiCrEstrucavalinterCrEstrucavalinter
 
 export interface ApiCrEstrucmatrisegreCrEstrucmatrisegre
   extends Schema.CollectionType {
-  collectionName: 'cr_estrucmatrisegres';
+  collectionName: 'cr_estrucmatrisegre';
   info: {
     displayName: 'CR_EstructuraMatriculaSegregados';
     pluralName: 'cr-estrucmatrisegres';
@@ -2668,7 +2668,7 @@ export interface ApiCrEstrucmatrisegreCrEstrucmatrisegre
 
 export interface ApiCrEstrucpredmatrinpnCrEstrucpredmatrinpn
   extends Schema.CollectionType {
-  collectionName: 'cr_estrucpredmatrinpns';
+  collectionName: 'cr_estrucpredmatrinpn';
   info: {
     displayName: 'CR_EstructuraPredioMatrizNPN';
     pluralName: 'cr-estrucpredmatrinpns';
@@ -2714,7 +2714,7 @@ export interface ApiCrEstrucpredmatrinpnCrEstrucpredmatrinpn
 
 export interface ApiCrEstrucpredorinpnCrEstrucpredorinpn
   extends Schema.CollectionType {
-  collectionName: 'cr_estrucpredorinpns';
+  collectionName: 'cr_estrucpredorinpn';
   info: {
     description: '';
     displayName: 'CR_EstructuraPredioOrigenNPN';
@@ -2755,7 +2755,7 @@ export interface ApiCrEstrucpredorinpnCrEstrucpredorinpn
 
 export interface ApiCrEstructuraalertapredioCrEstructuraalertapredio
   extends Schema.CollectionType {
-  collectionName: 'cr_estructuraalertapredios';
+  collectionName: 'cr_estructuraalertapredio';
   info: {
     description: '';
     displayName: 'CR_EstructuraAlertaPredio';
@@ -2802,7 +2802,7 @@ export interface ApiCrEstructuraalertapredioCrEstructuraalertapredio
 
 export interface ApiCrEstructuraavaluoCrEstructuraavaluo
   extends Schema.CollectionType {
-  collectionName: 'cr_estructuraavaluos';
+  collectionName: 'cr_estructuraavaluo';
   info: {
     description: '';
     displayName: 'CR_EstructuraAvaluo';
@@ -2883,7 +2883,7 @@ export interface ApiCrEstructuraavaluoCrEstructuraavaluo
 
 export interface ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz
   extends Schema.CollectionType {
-  collectionName: 'cr_estructuramatriculamatrizs';
+  collectionName: 'cr_estructuramatriculamatriz';
   info: {
     displayName: 'CR_EstructuraMatriculaMatriz';
     pluralName: 'cr-estructuramatriculamatrizs';
@@ -2925,7 +2925,7 @@ export interface ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz
 
 export interface ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr
   extends Schema.CollectionType {
-  collectionName: 'cr_estructuraprocedimientocrs';
+  collectionName: 'cr_estructuraprocedimientocr';
   info: {
     displayName: 'CR_EstructuraProcedimientoCatastralRegistral';
     pluralName: 'cr-estructuraprocedimientocrs';
@@ -2964,7 +2964,7 @@ export interface ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr
 
 export interface ApiCrFotoidentificaciontipoCrFotoidentificaciontipo
   extends Schema.CollectionType {
-  collectionName: 'cr_fotoidentificaciontipos';
+  collectionName: 'cr_fotoidentificaciontipo';
   info: {
     displayName: 'CR_FotoidentificacionTipo';
     pluralName: 'cr-fotoidentificaciontipos';
@@ -3015,7 +3015,7 @@ export interface ApiCrFotoidentificaciontipoCrFotoidentificaciontipo
 
 export interface ApiCrFuenteadministrativaCrFuenteadministrativa
   extends Schema.CollectionType {
-  collectionName: 'cr_fuenteadministrativas';
+  collectionName: 'cr_fuenteadministrativa';
   info: {
     displayName: 'CR_FuenteAdministrativa';
     pluralName: 'cr-fuenteadministrativas';
@@ -3092,7 +3092,7 @@ export interface ApiCrFuenteadministrativaCrFuenteadministrativa
 
 export interface ApiCrFuenteespacialCrFuenteespacial
   extends Schema.CollectionType {
-  collectionName: 'cr_fuenteespacials';
+  collectionName: 'cr_fuenteespacial';
   info: {
     displayName: 'CR_FuenteEspacial';
     pluralName: 'cr-fuenteespacials';
@@ -3159,7 +3159,7 @@ export interface ApiCrFuenteespacialCrFuenteespacial
 }
 
 export interface ApiCrHipotecaCrHipoteca extends Schema.CollectionType {
-  collectionName: 'cr_hipotecas';
+  collectionName: 'cr_hipoteca';
   info: {
     displayName: 'CR_Hipoteca';
     pluralName: 'cr-hipotecas';
@@ -3237,7 +3237,7 @@ export interface ApiCrHipotecaCrHipoteca extends Schema.CollectionType {
 
 export interface ApiCrHipotecaderechoCrHipotecaderecho
   extends Schema.CollectionType {
-  collectionName: 'cr_hipotecaderechos';
+  collectionName: 'cr_hipotecaderecho';
   info: {
     displayName: 'cr_hipotecaDerecho';
     pluralName: 'cr-hipotecaderechos';
@@ -3277,7 +3277,7 @@ export interface ApiCrHipotecaderechoCrHipotecaderecho
 }
 
 export interface ApiCrInformalidadCrInformalidad extends Schema.CollectionType {
-  collectionName: 'cr_informalidads';
+  collectionName: 'cr_informalidad';
   info: {
     displayName: 'CR_Informalidad';
     pluralName: 'cr-informalidads';
@@ -3343,7 +3343,7 @@ export interface ApiCrInformalidadCrInformalidad extends Schema.CollectionType {
 
 export interface ApiCrInformalidadtipoCrInformalidadtipo
   extends Schema.CollectionType {
-  collectionName: 'cr_informalidadtipos';
+  collectionName: 'cr_informalidadtipo';
   info: {
     displayName: 'CR_InformalidadTipo';
     pluralName: 'cr-informalidadtipos';
@@ -3393,7 +3393,7 @@ export interface ApiCrInformalidadtipoCrInformalidadtipo
 }
 
 export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
-  collectionName: 'cr_interesados';
+  collectionName: 'cr_interesado';
   info: {
     description: '';
     displayName: 'CR_Interesado';
@@ -3485,7 +3485,7 @@ export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
 }
 
 export interface ApiCrLinderoCrLindero extends Schema.CollectionType {
-  collectionName: 'cr_linderos';
+  collectionName: 'cr_lindero';
   info: {
     description: '';
     displayName: 'CR_Lindero';
@@ -3541,7 +3541,7 @@ export interface ApiCrLinderoCrLindero extends Schema.CollectionType {
 }
 
 export interface ApiCrMutaciontipoCrMutaciontipo extends Schema.CollectionType {
-  collectionName: 'cr_mutaciontipos';
+  collectionName: 'cr_mutaciontipo';
   info: {
     displayName: 'CR_MutacionTipo';
     pluralName: 'cr-mutaciontipos';
@@ -3592,7 +3592,7 @@ export interface ApiCrMutaciontipoCrMutaciontipo extends Schema.CollectionType {
 
 export interface ApiCrPredioCopropiedadCrPredioCopropiedad
   extends Schema.CollectionType {
-  collectionName: 'cr_predio_copropiedads';
+  collectionName: 'cr_predio_copropiedad';
   info: {
     displayName: 'cr_predio_copropiedad';
     pluralName: 'cr-predio-copropiedads';
@@ -3673,7 +3673,7 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
 
 export interface ApiCrPredioTramitecatastralCrPredioTramitecatastral
   extends Schema.CollectionType {
-  collectionName: 'cr_predio_tramitecatastrals';
+  collectionName: 'cr_predio_tramitecatastral';
   info: {
     displayName: 'cr_predio_tramitecatastral';
     pluralName: 'cr-predio-tramitecatastrals';
@@ -3713,7 +3713,7 @@ export interface ApiCrPredioTramitecatastralCrPredioTramitecatastral
 }
 
 export interface ApiCrPredioCrPredio extends Schema.CollectionType {
-  collectionName: 'cr_predios';
+  collectionName: 'cr_predio';
   info: {
     description: '';
     displayName: 'CR_Predio';
@@ -3841,7 +3841,7 @@ export interface ApiCrPredioCrPredio extends Schema.CollectionType {
 
 export interface ApiCrPredioinformalidadCrPredioinformalidad
   extends Schema.CollectionType {
-  collectionName: 'cr_predioinformalidads';
+  collectionName: 'cr_predioinformalidad';
   info: {
     displayName: 'CR_Predio_Informalidad';
     pluralName: 'cr-predioinformalidads';
@@ -3894,7 +3894,7 @@ export interface ApiCrPredioinformalidadCrPredioinformalidad
 }
 
 export interface ApiCrPrediotipoCrPrediotipo extends Schema.CollectionType {
-  collectionName: 'cr_prediotipos';
+  collectionName: 'cr_prediotipo';
   info: {
     displayName: 'CR_PredioTipo';
     pluralName: 'cr-prediotipos';
@@ -3945,7 +3945,7 @@ export interface ApiCrPrediotipoCrPrediotipo extends Schema.CollectionType {
 
 export interface ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastralregistraltipo
   extends Schema.CollectionType {
-  collectionName: 'cr_procedimientocatastralregistraltipos';
+  collectionName: 'cr_procedimientocatastralregistraltipo';
   info: {
     displayName: 'CR_ProcedimientoCatastralRegistralTipo';
     pluralName: 'cr-procedimientocatastralregistraltipos';
@@ -3995,7 +3995,7 @@ export interface ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastra
 }
 
 export interface ApiCrPublicidadCrPublicidad extends Schema.CollectionType {
-  collectionName: 'cr_publicidads';
+  collectionName: 'cr_publicidad';
   info: {
     displayName: 'CR_Publicidad';
     pluralName: 'cr-publicidads';
@@ -4059,7 +4059,7 @@ export interface ApiCrPublicidadCrPublicidad extends Schema.CollectionType {
 
 export interface ApiCrPublicidadfuenteCrPublicidadfuente
   extends Schema.CollectionType {
-  collectionName: 'cr_publicidadfuentes';
+  collectionName: 'cr_publicidadfuente';
   info: {
     displayName: 'cr_publicidadFuente';
     pluralName: 'cr-publicidadfuentes';
@@ -4100,7 +4100,7 @@ export interface ApiCrPublicidadfuenteCrPublicidadfuente
 
 export interface ApiCrPublicidadtipoCrPublicidadtipo
   extends Schema.CollectionType {
-  collectionName: 'cr_publicidadtipos';
+  collectionName: 'cr_publicidadtipo';
   info: {
     displayName: 'CR_PublicidadTipo';
     pluralName: 'cr-publicidadtipos';
@@ -4150,7 +4150,7 @@ export interface ApiCrPublicidadtipoCrPublicidadtipo
 }
 
 export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
-  collectionName: 'cr_puntocontrols';
+  collectionName: 'cr_puntocontrol';
   info: {
     description: '';
     displayName: 'CR_PuntoControl';
@@ -4237,7 +4237,7 @@ export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
 
 export interface ApiCrPuntocontroltipoCrPuntocontroltipo
   extends Schema.CollectionType {
-  collectionName: 'cr_puntocontroltipos';
+  collectionName: 'cr_puntocontroltipo';
   info: {
     displayName: 'CR_PuntoControlTipo';
     pluralName: 'cr-puntocontroltipos';
@@ -4287,7 +4287,7 @@ export interface ApiCrPuntocontroltipoCrPuntocontroltipo
 }
 
 export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
-  collectionName: 'cr_puntolinderos';
+  collectionName: 'cr_puntolindero';
   info: {
     description: '';
     displayName: 'CR_PuntoLindero';
@@ -4375,7 +4375,7 @@ export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
 
 export interface ApiCrResponsabilidadCrResponsabilidad
   extends Schema.CollectionType {
-  collectionName: 'cr_responsabilidads';
+  collectionName: 'cr_responsabilidad';
   info: {
     displayName: 'CR_Responsabilidad';
     pluralName: 'cr-responsabilidads';
@@ -4453,7 +4453,7 @@ export interface ApiCrResponsabilidadCrResponsabilidad
 
 export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
   extends Schema.CollectionType {
-  collectionName: 'cr_responsabilidadtipos';
+  collectionName: 'cr_responsabilidadtipo';
   info: {
     displayName: 'CR_ResponsabilidadTipo';
     pluralName: 'cr-responsabilidadtipos';
@@ -4503,7 +4503,7 @@ export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
 }
 
 export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
-  collectionName: 'cr_restriccions';
+  collectionName: 'cr_restriccion';
   info: {
     displayName: 'CR_Restriccion';
     pluralName: 'cr-restriccions';
@@ -4581,7 +4581,7 @@ export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
 
 export interface ApiCrRestricciontipoCrRestricciontipo
   extends Schema.CollectionType {
-  collectionName: 'cr_restricciontipos';
+  collectionName: 'cr_restricciontipo';
   info: {
     displayName: 'CR_RestriccionTipo';
     pluralName: 'cr-restricciontipos';
@@ -4631,7 +4631,7 @@ export interface ApiCrRestricciontipoCrRestricciontipo
 }
 
 export interface ApiCrSexotipoCrSexotipo extends Schema.CollectionType {
-  collectionName: 'cr_sexotipos';
+  collectionName: 'cr_sexotipo';
   info: {
     displayName: 'CR_SexoTipo';
     pluralName: 'cr-sexotipos';
@@ -4681,7 +4681,7 @@ export interface ApiCrSexotipoCrSexotipo extends Schema.CollectionType {
 }
 
 export interface ApiCrTerrenoCrTerreno extends Schema.CollectionType {
-  collectionName: 'cr_terrenos';
+  collectionName: 'cr_terreno';
   info: {
     displayName: 'CR_Terreno';
     pluralName: 'cr-terrenos';
@@ -4734,7 +4734,7 @@ export interface ApiCrTerrenoCrTerreno extends Schema.CollectionType {
 
 export interface ApiCrTramitecatastralCrTramitecatastral
   extends Schema.CollectionType {
-  collectionName: 'cr_tramitecatastrals';
+  collectionName: 'cr_tramitecatastral';
   info: {
     description: '';
     displayName: 'CR_TramiteCatastral';
@@ -4778,7 +4778,7 @@ export interface ApiCrTramitecatastralCrTramitecatastral
 
 export interface ApiCrUnidadconstruccionCrUnidadconstruccion
   extends Schema.CollectionType {
-  collectionName: 'cr_unidadconstruccions';
+  collectionName: 'cr_unidadconstruccion';
   info: {
     description: '';
     displayName: 'CR_UnidadConstruccion';
@@ -4860,7 +4860,7 @@ export interface ApiCrUnidadconstruccionCrUnidadconstruccion
 
 export interface ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo
   extends Schema.CollectionType {
-  collectionName: 'cr_unidadconstrucciontipos';
+  collectionName: 'cr_unidadconstrucciontipo';
   info: {
     displayName: 'CR_UnidadConstruccionTipo';
     pluralName: 'cr-unidadconstrucciontipos';
@@ -4910,7 +4910,7 @@ export interface ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo
 }
 
 export interface ApiCrUsouconstipoCrUsouconstipo extends Schema.CollectionType {
-  collectionName: 'cr_usouconstipos';
+  collectionName: 'cr_usouconstipo';
   info: {
     description: '';
     displayName: 'CR_UsoUConsTipo';
@@ -4961,7 +4961,7 @@ export interface ApiCrUsouconstipoCrUsouconstipo extends Schema.CollectionType {
 }
 
 export interface ApiExtarchivoExtarchivo extends Schema.CollectionType {
-  collectionName: 'extarchivos';
+  collectionName: 'extarchivo';
   info: {
     displayName: 'ExtArchivo';
     pluralName: 'extarchivos';
@@ -5018,7 +5018,7 @@ export interface ApiExtarchivoExtarchivo extends Schema.CollectionType {
 
 export interface ApiExtdireccionClaseViaPrincipalExtdireccionClaseViaPrincipal
   extends Schema.CollectionType {
-  collectionName: 'extdireccion_clase_via_principals';
+  collectionName: 'extdireccion_clase_via_principal';
   info: {
     displayName: 'extdireccion_clase_via_principal';
     pluralName: 'extdireccion-clase-via-principals';
@@ -5067,7 +5067,7 @@ export interface ApiExtdireccionClaseViaPrincipalExtdireccionClaseViaPrincipal
 
 export interface ApiExtdireccionSectorCiudadExtdireccionSectorCiudad
   extends Schema.CollectionType {
-  collectionName: 'extdireccion_sector_ciudads';
+  collectionName: 'extdireccion_sector_ciudad';
   info: {
     displayName: 'extdireccion_sector_ciudad';
     pluralName: 'extdireccion-sector-ciudads';
@@ -5111,7 +5111,7 @@ export interface ApiExtdireccionSectorCiudadExtdireccionSectorCiudad
 
 export interface ApiExtdireccionSectorPredioExtdireccionSectorPredio
   extends Schema.CollectionType {
-  collectionName: 'extdireccion_sector_predios';
+  collectionName: 'extdireccion_sector_predio';
   info: {
     displayName: 'extdireccion_sector_predio';
     pluralName: 'extdireccion-sector-predios';
@@ -5160,7 +5160,7 @@ export interface ApiExtdireccionSectorPredioExtdireccionSectorPredio
 
 export interface ApiExtdireccionTipoDireccionExtdireccionTipoDireccion
   extends Schema.CollectionType {
-  collectionName: 'extdireccion_tipo_direccions';
+  collectionName: 'extdireccion_tipo_direccion';
   info: {
     displayName: 'extdireccion_tipo_direccion';
     pluralName: 'extdireccion-tipo-direccions';
@@ -5208,7 +5208,7 @@ export interface ApiExtdireccionTipoDireccionExtdireccionTipoDireccion
 }
 
 export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
-  collectionName: 'extdireccions';
+  collectionName: 'extdireccion';
   info: {
     description: '';
     displayName: 'ExtDireccion';
@@ -5313,7 +5313,7 @@ export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
 }
 
 export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
-  collectionName: 'extinteresados';
+  collectionName: 'extinteresado';
   info: {
     displayName: 'ExtInteresado';
     pluralName: 'extinteresados';

@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_puntofuentes",
+  "collectionName": "col_puntofuente",
   "info": {
     "singularName": "col-puntofuente",
     "pluralName": "col-puntofuentes",

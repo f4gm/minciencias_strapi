@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "extarchivos",
+  "collectionName": "extarchivo",
   "info": {
     "singularName": "extarchivo",
     "pluralName": "extarchivos",

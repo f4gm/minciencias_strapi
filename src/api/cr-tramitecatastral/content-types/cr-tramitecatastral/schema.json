@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_tramitecatastrals",
+  "collectionName": "cr_tramitecatastral",
   "info": {
     "singularName": "cr-tramitecatastral",
     "pluralName": "cr-tramitecatastrals",

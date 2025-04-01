@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estadotipos",
+  "collectionName": "cr_estadotipo",
   "info": {
     "singularName": "cr-estadotipo",
     "pluralName": "cr-estadotipos",

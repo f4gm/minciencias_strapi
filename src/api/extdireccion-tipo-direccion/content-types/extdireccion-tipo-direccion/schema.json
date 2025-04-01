@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "extdireccion_tipo_direccions",
+  "collectionName": "extdireccion_tipo_direccion",
   "info": {
     "singularName": "extdireccion-tipo-direccion",
     "pluralName": "extdireccion-tipo-direccions",

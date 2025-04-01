@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_construccionplantatipos",
+  "collectionName": "cr_construccionplantatipo",
   "info": {
     "singularName": "cr-construccionplantatipo",
     "pluralName": "cr-construccionplantatipos",

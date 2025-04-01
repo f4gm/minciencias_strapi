@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_puntoccls",
+  "collectionName": "col_puntoccl",
   "info": {
     "singularName": "col-puntoccl",
     "pluralName": "col-puntoccls",

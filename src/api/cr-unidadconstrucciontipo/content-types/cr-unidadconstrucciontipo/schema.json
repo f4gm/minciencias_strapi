@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_unidadconstrucciontipos",
+  "collectionName": "cr_unidadconstrucciontipo",
   "info": {
     "singularName": "cr-unidadconstrucciontipo",
     "pluralName": "cr-unidadconstrucciontipos",

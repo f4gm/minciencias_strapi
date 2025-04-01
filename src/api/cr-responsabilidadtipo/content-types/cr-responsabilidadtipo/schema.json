@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_responsabilidadtipos",
+  "collectionName": "cr_responsabilidadtipo",
   "info": {
     "singularName": "cr-responsabilidadtipo",
     "pluralName": "cr-responsabilidadtipos",

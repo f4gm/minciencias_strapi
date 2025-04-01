@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_fuenteespacialtipos",
+  "collectionName": "col_fuenteespacialtipo",
   "info": {
     "singularName": "col-fuenteespacialtipo",
     "pluralName": "col-fuenteespacialtipos",

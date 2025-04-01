@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_destinacioneconomicatipos",
+  "collectionName": "cr_destinacioneconomicatipo",
   "info": {
     "singularName": "cr-destinacioneconomicatipo",
     "pluralName": "cr-destinacioneconomicatipos",

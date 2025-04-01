@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_fuenteadministrativatipos",
+  "collectionName": "col_fuenteadministrativatipo",
   "info": {
     "singularName": "col-fuenteadministrativatipo",
     "pluralName": "col-fuenteadministrativatipos",

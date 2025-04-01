@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "extinteresados",
+  "collectionName": "extinteresado",
   "info": {
     "singularName": "extinteresado",
     "pluralName": "extinteresados",

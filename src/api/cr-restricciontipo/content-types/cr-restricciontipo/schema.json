@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_restricciontipos",
+  "collectionName": "cr_restricciontipo",
   "info": {
     "singularName": "cr-restricciontipo",
     "pluralName": "cr-restricciontipos",

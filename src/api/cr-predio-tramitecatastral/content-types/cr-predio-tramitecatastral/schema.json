@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_predio_tramitecatastrals",
+  "collectionName": "cr_predio_tramitecatastral",
   "info": {
     "singularName": "cr-predio-tramitecatastral",
     "pluralName": "cr-predio-tramitecatastrals",

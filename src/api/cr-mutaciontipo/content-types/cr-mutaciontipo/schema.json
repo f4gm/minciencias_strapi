@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_mutaciontipos",
+  "collectionName": "cr_mutaciontipo",
   "info": {
     "singularName": "cr-mutaciontipo",
     "pluralName": "cr-mutaciontipos",

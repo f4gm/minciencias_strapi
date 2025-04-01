@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_fuenteadministrativas",
+  "collectionName": "cr_fuenteadministrativa",
   "info": {
     "singularName": "cr-fuenteadministrativa",
     "pluralName": "cr-fuenteadministrativas",

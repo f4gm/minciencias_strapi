@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_puntolinderos",
+  "collectionName": "cr_puntolindero",
   "info": {
     "singularName": "cr-puntolindero",
     "pluralName": "cr-puntolinderos",

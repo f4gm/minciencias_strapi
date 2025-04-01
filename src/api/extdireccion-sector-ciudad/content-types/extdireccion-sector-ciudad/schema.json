@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "extdireccion_sector_ciudads",
+  "collectionName": "extdireccion_sector_ciudad",
   "info": {
     "singularName": "extdireccion-sector-ciudad",
     "pluralName": "extdireccion-sector-ciudads",

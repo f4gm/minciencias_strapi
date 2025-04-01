@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_baunitcomointeresados",
+  "collectionName": "col_baunitcomointeresado",
   "info": {
     "singularName": "col-baunitcomointeresado",
     "pluralName": "col-baunitcomointeresados",

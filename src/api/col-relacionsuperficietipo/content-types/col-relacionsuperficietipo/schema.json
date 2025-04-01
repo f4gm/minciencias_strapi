@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_relacionsuperficietipos",
+  "collectionName": "col_relacionsuperficietipo",
   "info": {
     "singularName": "col-relacionsuperficietipo",
     "pluralName": "col-relacionsuperficietipos",

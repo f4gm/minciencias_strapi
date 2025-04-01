@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_anotacionregistros",
+  "collectionName": "cr_anotacionregistro",
   "info": {
     "singularName": "cr-anotacionregistro",
     "pluralName": "cr-anotacionregistros",

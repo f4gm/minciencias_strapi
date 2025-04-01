@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "col_areavalors",
+  "collectionName": "col_areavalor",
   "info": {
     "singularName": "col-areavalor",
     "pluralName": "col-areavalors",

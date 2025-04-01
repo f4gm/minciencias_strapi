@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "cr_estrucmatrisegres",
+  "collectionName": "cr_estrucmatrisegre",
   "info": {
     "singularName": "cr-estrucmatrisegre",
     "pluralName": "cr-estrucmatrisegres",
