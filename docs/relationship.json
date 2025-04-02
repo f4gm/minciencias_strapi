@@ -1,13 +1,4 @@
 {
-  "admin_permissions": {
-    "model_name": null
-  },
-  "admin_roles": {
-    "model_name": null
-  },
-  "admin_users": {
-    "model_name": null
-  },
   "col_areatipo": {
     "model_name": "col_areatipo"
   },
@@ -50,5 +41,257 @@
   "col_documentotipo": {
     "model_name": "col_documentotipo"
   },
-  ""
+  "col_estadodisponibilidadtipo": {
+    "model_name": "col_estadodisponibilidadtipo"
+  },
+  "col_formatotipo": {
+    "model_name": "col_formatotipo"
+  },
+  "col_fuenteadministrativatipo": {
+    "model_name": "col_fuenteadministrativatipo"
+  },
+  "col_fuenteespacialtipo": {
+    "model_name": "col_fuenteespacialtipo"
+  },
+  "col_grupointeresadotipo": {
+    "model_name": "col_grupointeresadotipo"
+  },
+  "col_interesadotipo": {
+    "model_name": "col_interesadotipo"
+  },
+  "col_interpolaciontipo": {
+    "model_name": "col_interpolaciontipo"
+  },
+  "col_masccl": {
+    "model_name": "col_masccl"
+  },
+  "col_menosccl": {
+    "model_name": "col_menosccl"
+  },
+  "col_metodoproducciontipo": {
+    "model_name": "col_metodoproducciontipo"
+  },
+  "col_miembros?": {
+    "model_name": "col_miembros"
+  },
+  "col_puntoccl": {
+    "model_name": "col_puntoccl"
+  },
+  "col_puntofuente": {
+    "model_name": "col_puntofuente"
+  },
+  "col_puntotipo": {
+    "model_name": "col_puntotipo"
+  },
+  "col_relacionsuperficietipo": {
+    "model_name": "col_relacionsuperficietipo"
+  },
+  "col_responsablefuente": {
+    "model_name": "col_responsablefuente"
+  },
+  "col_rrrfuente": {
+    "model_name": "col_rrrfuente"
+  },
+  "col_uebaunit": {
+    "model_name": "col_uebaunit"
+  },
+  "col_uefuente": {
+    "model_name": "col_uefuente"
+  },
+  "col_unidadadministrativabasicatipo": {
+    "model_name": "col_unidadadministrativabasicatipo"
+  },
+  "col_unidadfuente": {
+    "model_name": "col_unidadfuente"
+  },
+  "cr_agrupacioninteresados": {
+    "model_name": "cr_agrupacioninteresados"
+  },
+  "cr_anotacionregistro": {
+    "model_name": "cr_anotacionregistro"
+  },
+  "cr_autoreconocimientoetnicotipo": {
+    "model_name": "cr_autoreconocimientoetnicotipo"
+  },
+  "cr_caracteristicasuc": {
+    "model_name": "cr_caracteristicasunidadconstruccion"
+  },
+  "cr_condicionprediotipo": {
+    "model_name": "cr_condicionprediotipo"
+  },
+  "cr_construccionplantatipo": {
+    "model_name": "cr_construccionplantatipo"
+  },
+  "cr_datosmatriz": {
+    "model_name": "cr_datosmatriz"
+  },
+  "cr_derecho": {
+    "model_name": "cr_derecho"
+  },
+  "cr_derechotipo": {
+    "model_name": "cr_derechotipo"
+  },
+  "cr_destinacioneconomicatipo": {
+    "model_name": "cr_destinacioneconomicatipo"
+  },
+  "cr_errsa": {
+    "model_name": "cr_estructurareferenciaregistralsistemaantiguo"
+  },
+  "cr_errsa_tipo_referencia": {
+    "model_name": "cr_estructurareferenciaregistralsistemaantiguo_tipo_refrncia"
+  },
+  "cr_estadoanotaciontipo": {
+    "model_name": "cr_estadoanotaciontipo"
+  },
+  "cr_estadofmitipo": {
+    "model_name": "cr_estadofmitipo"
+  },
+  "cr_estadotipo": {
+    "model_name": "cr_estadotipo"
+  },
+  "cr_estrucavalcarac": {
+    "model_name": "cr_estructuraavaluocaracterizacion"
+  },
+  "cr_estrucavalinter": {
+    "model_name": "cr_estructuraavaluointerseccion"
+  },
+  "cr_estrucmatrisegre": {
+    "model_name": "cr_estructuramatriculasegregados"
+  },
+  "cr_estrucpredmatrinpn": {
+    "model_name": "cr_estructuraprediomatriznpn"
+  },
+  "cr_estrucpredorinpn": {
+    "model_name": "cr_estructurapredioorigennpn"
+  },
+  "cr_estructuraalertapredio": {
+    "model_name": "cr_estructuraalertapredio"
+  },
+  "cr_estructuraavaluo": {
+    "model_name": "cr_estructuraavaluo"
+  },
+  "cr_estructuramatriculamatriz": {
+    "model_name": "cr_estructuramatriculamatriz"
+  },
+  "cr_estructuraprocedimientocr": {
+    "model_name": "cr_estructuraprocedimientocatastralregistral"
+  },
+  "cr_fotoidentificaciontipo": {
+    "model_name": "cr_fotoidentificaciontipo"
+  },
+  "cr_fuenteadministrativa": {
+    "model_name": "cr_fuenteadministrativa"
+  },
+  "cr_fuenteespacial": {
+    "model_name": "cr_fuenteespacial"
+  },
+  "cr_hipoteca": {
+    "model_name": "cr_hipoteca"
+  },
+  "cr_hipotecaderecho": {
+    "model_name": "cr_hipotecaderecho"
+  },
+  "cr_informalidad": {
+    "model_name": "cr_informalidad"
+  },
+  "cr_informalidadtipo": {
+    "model_name": "cr_informalidadtipo"
+  },
+  "cr_interesado": {
+    "_comment": "Reemplazar cr_interesado por user",
+    "model_name": "cr_interesado"
+  },
+  "cr_lindero": {
+    "model_name": "cr_lindero"
+  },
+  "cr_mutaciontipo": {
+    "model_name": "cr_mutaciontipo"
+  },
+  "cr_predio": {
+    "model_name": "cr_predio"
+  },
+  "cr_predio_copropiedad": {
+    "model_name": "cr_predio_copropiedad"
+  },
+  "cr_predio_tramitecatastral": {
+    "model_name": "cr_predio_tramitecatastral"
+  },
+  "cr_predioinformalidad": {
+    "model_name": "cr_predio_informalidad"
+  },
+  "cr_prediotipo": {
+    "model_name": "cr_prediotipo"
+  },
+  "cr_procedimientocatastralregistraltipo": {
+    "model_name": "cr_procedimientocatastralregistraltipo"
+  },
+  "cr_publicidad": {
+    "model_name": "cr_publicidad"
+  },
+  "cr_publicidadfuente": {
+    "model_name": "cr_publicidadfuente"
+  },
+  "cr_publicidadtipo": {
+    "model_name": "cr_publicidadtipo"
+  },
+  "cr_puntocontrol": {
+    "model_name": "cr_puntocontrol"
+  },
+  "cr_puntocontroltipo": {
+    "model_name": "cr_puntocontroltipo"
+  },
+  "cr_puntolindero": {
+    "model_name": "cr_puntolindero"
+  },
+  "cr_responsabilidad": {
+    "model_name": "cr_responsabilidad"
+  },
+  "cr_responsabilidadtipo": {
+    "model_name": "cr_responsabilidadtipo"
+  },
+  "cr_restriccion": {
+    "model_name": "cr_restriccion"
+  },
+  "cr_restricciontipo": {
+    "model_name": "cr_restricciontipo"
+  },
+  "cr_sexotipo": {
+    "model_name": "cr_sexotipo"
+  },
+  "cr_terreno": {
+    "model_name": "cr_terreno"
+  },
+  "cr_tramitecatastral": {
+    "model_name": "cr_tramitecatastral"
+  },
+  "cr_unidadconstruccion": {
+    "model_name": "cr_unidadconstruccion"
+  },
+  "cr_unidadconstrucciontipo": {
+    "model_name": "cr_unidadconstrucciontipo"
+  },
+  "cr_usouconstipo": {
+    "model_name": "cr_usouconstipo"
+  },
+  "extarchivo": {
+    "model_name": "extarchivo"
+  },
+  "extdireccion": {
+    "model_name": "extdireccion"
+  },
+  "extdireccion_clase_via_principal": {
+    "model_name": "extdireccion_clase_via_principal"
+  },
+  "extdireccion_sector_ciudad": {
+    "model_name": "extdireccion_sector_ciudad"
+  },
+  "extdireccion_sector_predio": {
+    "model_name": "extdireccion_sector_predio"
+  },
+  "extdireccion_tipo_direccion": {
+    "model_name": "extdireccion_tipo_direccion"
+  },
+  "extinteresado": {
+    "model_name": "extinteresado"
+  }
 }

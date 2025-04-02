@@ -841,7 +841,7 @@ export interface ApiColFuenteespacialtipoColFuenteespacialtipo
 
 export interface ApiColGrupointeresadotipoColGrupointeresadotipo
   extends Schema.CollectionType {
-  collectionName: 'colgrupo_interesadotipo';
+  collectionName: 'col_grupointeresadotipo';
   info: {
     displayName: 'COL_GrupoInteresadoTipo';
     pluralName: 'colgrupo-interesadotipos';
