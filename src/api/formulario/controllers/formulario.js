@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * form controller
+ * formulario controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::form.form', ({ strapi }) => ({
+module.exports = createCoreController('api::formulario.formulario', ({ strapi }) => ({
   async find(ctx) {
     let { data, meta } = await super.find(ctx);
     data = await middleware(data);
@@ -14,10 +14,12 @@ module.exports = createCoreController('api::form.form', ({ strapi }) => ({
   }
 }));
 
+const inputsName = "entradas";
+
 const middleware = async (data) => {
   const response = await Promise.all(
     data.map(async form => {
-      if (!("inputs" in form.attributes)) {
+      if (!(inputsName in form.attributes)) {
         console.log("Not has inputs")
         return form;
       }
@@ -25,7 +27,7 @@ const middleware = async (data) => {
       const targetInputs = ["checkbox", "radio", "select"];
   
       const new_inputs = await Promise.all(
-        form.attributes.inputs.map(async input => {
+        form.attributes[inputsName].map(async input => {
   
           if (targetInputs.includes(input.type)) {
   
@@ -49,7 +51,7 @@ const middleware = async (data) => {
         })
       );
   
-      form.attributes.inputs = new_inputs;
+      form.attributes[inputsName] = new_inputs;
   
       return form;
     })

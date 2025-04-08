@@ -5421,27 +5421,37 @@ export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
   };
 }
 
-export interface ApiFormForm extends Schema.CollectionType {
-  collectionName: 'forms';
+export interface ApiFormularioFormulario extends Schema.CollectionType {
+  collectionName: 'formulario';
   info: {
     description: '';
-    displayName: 'Form';
-    pluralName: 'forms';
-    singularName: 'form';
+    displayName: 'Formulario';
+    pluralName: 'formularios';
+    singularName: 'formulario';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
     createdAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::formulario.formulario',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    description: Attribute.Text & Attribute.Required;
-    identifier: Attribute.UID<'api::form.form', 'name'> & Attribute.Required;
-    inputs: Attribute.Component<'formulario.entrada', true>;
-    name: Attribute.String & Attribute.Required;
+    descripcion: Attribute.Text & Attribute.Required;
+    entradas: Attribute.Component<'formulario.entrada', true>;
+    identificador: Attribute.UID<'api::formulario.formulario', 'nombre'> &
+      Attribute.Required;
+    nombre: Attribute.String & Attribute.Required;
+    punto_final: Attribute.String & Attribute.Required;
     updatedAt: Attribute.DateTime;
-    updatedBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::formulario.formulario',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
     version: Attribute.String & Attribute.Required;
   };
@@ -6204,7 +6214,7 @@ declare module '@strapi/types' {
       'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion': ApiExtdireccionTipoDireccionExtdireccionTipoDireccion;
       'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
       'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
-      'api::form.form': ApiFormForm;
+      'api::formulario.formulario': ApiFormularioFormulario;
       'api::solicitud.solicitud': ApiSolicitudSolicitud;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

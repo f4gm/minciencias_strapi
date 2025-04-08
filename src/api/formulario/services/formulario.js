@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * form service
+ * formulario service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::form.form');
+module.exports = createCoreService('api::formulario.formulario');
