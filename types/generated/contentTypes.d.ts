@@ -1131,6 +1131,57 @@ export interface ApiColMetodoproducciontipoColMetodoproducciontipo
   };
 }
 
+export interface ApiColMiembroColMiembro extends Schema.CollectionType {
+  collectionName: 'col_miembros';
+  info: {
+    displayName: 'COL_Miembros';
+    pluralName: 'col-miembros';
+    singularName: 'col-miembro';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    agrupacion: Attribute.Relation<
+      'api::col-miembro.col-miembro',
+      'oneToOne',
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::col-miembro.col-miembro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    interesado_cr_agrupacioninteresados: Attribute.Relation<
+      'api::col-miembro.col-miembro',
+      'oneToOne',
+      'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
+    >;
+    interesado_cr_interesado: Attribute.Relation<
+      'api::col-miembro.col-miembro',
+      'oneToOne',
+      'api::cr-interesado.cr-interesado'
+    >;
+    participacion: Attribute.Float &
+      Attribute.SetMinMax<
+        {
+          max: 1;
+          min: 0;
+        },
+        number
+      >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::col-miembro.col-miembro',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiColPuntocclColPuntoccl extends Schema.CollectionType {
   collectionName: 'col_puntoccl';
   info: {
@@ -6079,6 +6130,7 @@ declare module '@strapi/types' {
       'api::col-masccl.col-masccl': ApiColMascclColMasccl;
       'api::col-menosccl.col-menosccl': ApiColMenoscclColMenosccl;
       'api::col-metodoproducciontipo.col-metodoproducciontipo': ApiColMetodoproducciontipoColMetodoproducciontipo;
+      'api::col-miembro.col-miembro': ApiColMiembroColMiembro;
       'api::col-puntoccl.col-puntoccl': ApiColPuntocclColPuntoccl;
       'api::col-puntofuente.col-puntofuente': ApiColPuntofuenteColPuntofuente;
       'api::col-puntotipo.col-puntotipo': ApiColPuntotipoColPuntotipo;

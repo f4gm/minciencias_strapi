@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "col_miembros",
+  "info": {
+    "singularName": "col-miembro",
+    "pluralName": "col-miembros",
+    "displayName": "COL_Miembros"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agrupacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "interesado_cr_agrupacioninteresados": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+    },
+    "interesado_cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
+    },
+    "participacion": {
+      "type": "float",
+      "max": 1,
+      "min": 0
+    }
+  }
+}
