@@ -26,13 +26,11 @@ export interface FormularioEntrada extends Schema.Component {
         'datetime',
         'email',
         'file',
-        'image',
         'radio',
         'select',
         'range',
         'password',
         'map',
-        'camera',
         'gps',
         'address'
       ]
