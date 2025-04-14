@@ -55,7 +55,7 @@
     },
     "blocked": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "configurable": false
     },
     "role": {
@@ -67,9 +67,9 @@
     },
     "tipo_documento": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::col-documentotipo.col-documentotipo"
+      "target": "api::col-documentotipo.col-documentotipo",
+      "required": true
     },
     "numero_documento": {
       "type": "string",
@@ -98,15 +98,15 @@
     },
     "sexo": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-sexotipo.cr-sexotipo"
+      "target": "api::cr-sexotipo.cr-sexotipo",
+      "required": true
     },
     "autoreconocimientoetnico": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo"
+      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo",
+      "required": true
     },
     "autoreconocimientocampesino": {
       "type": "boolean",
@@ -118,9 +118,14 @@
     },
     "tipo_interesado": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::col-interesadotipo.col-interesadotipo"
+      "target": "api::col-interesadotipo.col-interesadotipo",
+      "required": true
+    },
+    "cr_interesado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-interesado.cr-interesado"
     }
   }
 }

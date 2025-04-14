@@ -5928,9 +5928,14 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
     > &
       Attribute.Required;
-    blocked: Attribute.Boolean & Attribute.DefaultTo<false>;
+    blocked: Attribute.Boolean & Attribute.DefaultTo<true>;
     confirmationToken: Attribute.String & Attribute.Private;
     confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    cr_interesado: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToOne',
+      'api::cr-interesado.cr-interesado'
+    >;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'plugin::users-permissions.user',
