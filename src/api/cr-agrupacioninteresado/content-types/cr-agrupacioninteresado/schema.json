@@ -14,7 +14,8 @@
     "tipo": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-grupointeresadotipo.col-grupointeresadotipo"
+      "target": "api::col-grupointeresadotipo.col-grupointeresadotipo",
+      "useJoinTable": false
     },
     "nombre": {
       "type": "string",
@@ -23,12 +24,14 @@
     "tipo_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-interesadotipo.col-interesadotipo"
+      "target": "api::col-interesadotipo.col-interesadotipo",
+      "useJoinTable": false
     },
     "tipo_documento": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-documentotipo.col-documentotipo"
+      "target": "api::col-documentotipo.col-documentotipo",
+      "useJoinTable": false
     },
     "numero_documento": {
       "type": "string",

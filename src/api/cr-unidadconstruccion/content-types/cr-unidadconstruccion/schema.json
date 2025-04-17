@@ -16,7 +16,8 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-construccionplantatipo.cr-construccionplantatipo",
-      "required": true
+      "required": true,
+      "useJoinTable": false
     },
     "planta_ubicacion": {
       "type": "integer",
@@ -49,7 +50,8 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-caracteristicasuc.cr-caracteristicasuc"
+      "target": "api::cr-caracteristicasuc.cr-caracteristicasuc",
+      "useJoinTable": false
     },
     "etiqueta": {
       "type": "string",
@@ -58,7 +60,8 @@
     "relacion_superficie": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-relacionsuperficietipo.col-relacionsuperficietipo"
+      "target": "api::col-relacionsuperficietipo.col-relacionsuperficietipo",
+      "useJoinTable": false
     },
     "comienzo_vida_util_version": {
       "type": "datetime",

@@ -14,18 +14,21 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
+      "target": "api::cr-interesado.cr-interesado",
+      "useJoinTable": false
     },
     "inte_cr_agrupinte": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false
     },
     "unidad": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::col-areatipo.col-areatipo"
+      "target": "api::col-areatipo.col-areatipo",
+      "useJoinTable": false
     }
   }
 }

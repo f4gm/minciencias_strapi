@@ -34,12 +34,14 @@
     "cr_agrupacionintersdos_ext_pid": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false
     },
     "cr_interesado_ext_pid": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
+      "target": "api::cr-interesado.cr-interesado",
+      "useJoinTable": false
     }
   }
 }

@@ -29,7 +29,8 @@
     "cr_pred_infor_aval_catas_inter": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predioinformalidad.cr-predioinformalidad"
+      "target": "api::cr-predioinformalidad.cr-predioinformalidad",
+      "useJoinTable": false
     }
   }
 }

@@ -14,12 +14,14 @@
     "procedimientocr": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo"
+      "target": "api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo",
+      "useJoinTable": false
     },
     "cr_predio_procedimientocr": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     }
   }
 }

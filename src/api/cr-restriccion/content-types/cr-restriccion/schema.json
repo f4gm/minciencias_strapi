@@ -14,7 +14,8 @@
     "tipo": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-restricciontipo.cr-restricciontipo"
+      "target": "api::cr-restricciontipo.cr-restricciontipo",
+      "useJoinTable": false
     },
     "naturaleza_juridica": {
       "type": "string",
@@ -38,17 +39,20 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
+      "target": "api::cr-interesado.cr-interesado",
+      "useJoinTable": false
     },
     "interesado_cr_agrupacioninteresados": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false
     },
     "unidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     },
     "comienzo_vida_util_version": {
       "type": "datetime",

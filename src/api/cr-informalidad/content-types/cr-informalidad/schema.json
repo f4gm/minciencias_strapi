@@ -15,7 +15,8 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-informalidadtipo.cr-informalidadtipo"
+      "target": "api::cr-informalidadtipo.cr-informalidadtipo",
+      "useJoinTable": false
     },
     "descripcion": {
       "type": "string",
@@ -24,17 +25,20 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
+      "target": "api::cr-interesado.cr-interesado",
+      "useJoinTable": false
     },
     "inte_cr_agrup": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false
     },
     "unidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     },
     "comienzo_vida_util_version": {
       "type": "datetime",

@@ -14,7 +14,8 @@
     "tipo": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-areatipo.col-areatipo"
+      "target": "api::col-areatipo.col-areatipo",
+      "useJoinTable": false
     },
     "area": {
       "type": "decimal",
@@ -27,12 +28,14 @@
     "cr_terreno_area": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno"
+      "target": "api::cr-terreno.cr-terreno",
+      "useJoinTable": false
     },
     "cr_unidadconstruccion_area": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      "useJoinTable": false
     }
   }
 }

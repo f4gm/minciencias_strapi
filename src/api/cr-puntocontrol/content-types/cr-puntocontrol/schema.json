@@ -20,12 +20,14 @@
     "puntotipo": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-puntotipo.col-puntotipo"
+      "target": "api::col-puntotipo.col-puntotipo",
+      "useJoinTable": false
     },
     "tipo_punto_control": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-puntocontroltipo.cr-puntocontroltipo"
+      "target": "api::cr-puntocontroltipo.cr-puntocontroltipo",
+      "useJoinTable": false
     },
     "exactitud_horizontal": {
       "type": "float",
@@ -34,12 +36,14 @@
     "posicion_interpolacion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-interpolaciontipo.col-interpolaciontipo"
+      "target": "api::col-interpolaciontipo.col-interpolaciontipo",
+      "useJoinTable": false
     },
     "metodoproduccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-metodoproducciontipo.col-metodoproducciontipo"
+      "target": "api::col-metodoproducciontipo.col-metodoproducciontipo",
+      "useJoinTable": false
     },
     "geometria": {
       "required": true,
@@ -60,12 +64,14 @@
     "ue_cr_unidadconstruccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      "useJoinTable": false
     },
     "ue_cr_terreno": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno"
+      "target": "api::cr-terreno.cr-terreno",
+      "useJoinTable": false
     },
     "comienzo_vida_util_version": {
       "type": "datetime",

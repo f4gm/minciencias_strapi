@@ -15,32 +15,38 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
+      "useJoinTable": false
     },
     "rrr_cr_informalidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-informalidad.cr-informalidad"
+      "target": "api::cr-informalidad.cr-informalidad",
+      "useJoinTable": false
     },
     "rrr_cr_restriccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-restriccion.cr-restriccion"
+      "target": "api::cr-restriccion.cr-restriccion",
+      "useJoinTable": false
     },
     "rrr_cr_derecho": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-derecho.cr-derecho"
+      "target": "api::cr-derecho.cr-derecho",
+      "useJoinTable": false
     },
     "rrr_cr_responsabilidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-responsabilidad.cr-responsabilidad"
+      "target": "api::cr-responsabilidad.cr-responsabilidad",
+      "useJoinTable": false
     },
     "rrr_cr_hipoteca": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-hipoteca.cr-hipoteca"
+      "target": "api::cr-hipoteca.cr-hipoteca",
+      "useJoinTable": false
     }
   }
 }

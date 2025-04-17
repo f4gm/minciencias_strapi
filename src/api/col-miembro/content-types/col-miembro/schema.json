@@ -14,17 +14,20 @@
     "agrupacion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false
     },
     "interesado_cr_agrupacioninteresados": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false
     },
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
+      "target": "api::cr-interesado.cr-interesado",
+      "useJoinTable": false
     },
     "participacion": {
       "type": "float",

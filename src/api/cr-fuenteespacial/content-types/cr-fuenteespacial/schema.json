@@ -14,7 +14,8 @@
     "tipo": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-fuenteespacialtipo.col-fuenteespacialtipo"
+      "target": "api::col-fuenteespacialtipo.col-fuenteespacialtipo",
+      "useJoinTable": false
     },
     "metadato": {
       "type": "blocks"
@@ -22,12 +23,14 @@
     "estado_disponibilidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo"
+      "target": "api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo",
+      "useJoinTable": false
     },
     "tipo_formato": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-formatotipo.col-formatotipo"
+      "target": "api::col-formatotipo.col-formatotipo",
+      "useJoinTable": false
     },
     "fecha_documento_fuente": {
       "type": "date"

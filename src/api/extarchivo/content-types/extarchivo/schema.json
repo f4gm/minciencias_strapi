@@ -40,12 +40,14 @@
     "cr_fuenteespacial_ext_archivo_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial",
+      "useJoinTable": false
     },
     "cr_fuenteadministrtiva_ext_archivo_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
+      "useJoinTable": false
     }
   }
 }

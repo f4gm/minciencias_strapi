@@ -24,7 +24,8 @@
     "cr_predorinpn": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     }
   }
 }

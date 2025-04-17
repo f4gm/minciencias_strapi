@@ -68,6 +68,7 @@
     "tipo_documento": {
       "type": "relation",
       "relation": "oneToOne",
+      "useJoinTable": false,
       "target": "api::col-documentotipo.col-documentotipo",
       "required": true
     },
@@ -100,11 +101,13 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-sexotipo.cr-sexotipo",
+      "useJoinTable": false,
       "required": true
     },
     "autoreconocimientoetnico": {
       "type": "relation",
       "relation": "oneToOne",
+      "useJoinTable": false,
       "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo",
       "required": true
     },
@@ -119,13 +122,9 @@
     "tipo_interesado": {
       "type": "relation",
       "relation": "oneToOne",
+      "useJoinTable": false,
       "target": "api::col-interesadotipo.col-interesadotipo",
       "required": true
-    },
-    "cr_interesado": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
     }
   }
 }

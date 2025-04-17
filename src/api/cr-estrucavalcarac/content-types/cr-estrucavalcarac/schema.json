@@ -26,7 +26,8 @@
     "cr_crctrstcdcnstrccion_aval_caract": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-caracteristicasuc.cr-caracteristicasuc"
+      "target": "api::cr-caracteristicasuc.cr-caracteristicasuc",
+      "useJoinTable": false
     }
   }
 }

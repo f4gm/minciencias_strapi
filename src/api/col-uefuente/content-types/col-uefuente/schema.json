@@ -14,18 +14,21 @@
     "ue_cr_unidadconstruccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      "useJoinTable": false
     },
     "ue_cr_terreno": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno"
+      "target": "api::cr-terreno.cr-terreno",
+      "useJoinTable": false
     },
     "fuente_espacial": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial",
+      "useJoinTable": false
     }
   }
 }

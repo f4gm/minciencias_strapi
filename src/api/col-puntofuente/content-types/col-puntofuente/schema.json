@@ -15,17 +15,20 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-fuenteespacial.cr-fuenteespacial"
+      "target": "api::cr-fuenteespacial.cr-fuenteespacial",
+      "useJoinTable": false
     },
     "punto_cr_puntolindero": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-puntolindero.cr-puntolindero"
+      "target": "api::cr-puntolindero.cr-puntolindero",
+      "useJoinTable": false
     },
     "punto_cr_puntocontrol": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-puntocontrol.cr-puntocontrol"
+      "target": "api::cr-puntocontrol.cr-puntocontrol",
+      "useJoinTable": false
     }
   }
 }

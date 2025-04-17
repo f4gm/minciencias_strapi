@@ -16,7 +16,8 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-documentotipo.col-documentotipo",
-      "required": true
+      "required": true,
+      "useJoinTable": false
     },
     "primer_nombre": {
       "type": "string",
@@ -38,12 +39,14 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-sexotipo.cr-sexotipo",
-      "required": true
+      "required": true,
+      "useJoinTable": false
     },
     "autoreconocimientoetnico": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo"
+      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo",
+      "useJoinTable": false
     },
     "autoreconocimientocampesino": {
       "type": "boolean"
@@ -59,7 +62,8 @@
     "tipo_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-interesadotipo.col-interesadotipo"
+      "target": "api::col-interesadotipo.col-interesadotipo",
+      "useJoinTable": false
     },
     "numero_documento": {
       "type": "string",

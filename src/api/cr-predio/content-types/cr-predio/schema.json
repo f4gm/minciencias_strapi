@@ -35,7 +35,8 @@
       "type": "relation",
       "required": false,
       "relation": "oneToOne",
-      "target": "api::cr-estadofmitipo.cr-estadofmitipo"
+      "target": "api::cr-estadofmitipo.cr-estadofmitipo",
+      "useJoinTable": false
     },
     "fecha_apertura_fmi": {
       "type": "date",
@@ -64,19 +65,22 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-prediotipo.cr-prediotipo"
+      "target": "api::cr-prediotipo.cr-prediotipo",
+      "useJoinTable": false
     },
     "condicion_predio": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-condicionprediotipo.cr-condicionprediotipo"
+      "target": "api::cr-condicionprediotipo.cr-condicionprediotipo",
+      "useJoinTable": false
     },
     "destinacion_economica": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo"
+      "target": "api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo",
+      "useJoinTable": false
     },
     "area_catastral_terreno": {
       "type": "decimal",
@@ -96,7 +100,8 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-estadotipo.cr-estadotipo"
+      "target": "api::cr-estadotipo.cr-estadotipo",
+      "useJoinTable": false
     },
     "nombre": {
       "type": "string",
@@ -107,7 +112,8 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo"
+      "target": "api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo",
+      "useJoinTable": false
     },
     "comienzo_vida_util_version": {
       "type": "datetime",

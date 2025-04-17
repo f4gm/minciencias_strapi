@@ -14,7 +14,8 @@
     "tipo_referencia": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia"
+      "target": "api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia",
+      "useJoinTable": false
     },
     "oficina": {
       "type": "string",
@@ -55,7 +56,8 @@
     "cr_predio_rrsa": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     }
   }
 }

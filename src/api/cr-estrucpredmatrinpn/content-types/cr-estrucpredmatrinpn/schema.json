@@ -23,7 +23,8 @@
     "cr_predmatrinpn": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     }
   }
 }

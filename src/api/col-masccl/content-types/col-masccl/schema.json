@@ -15,17 +15,20 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-lindero.cr-lindero"
+      "target": "api::cr-lindero.cr-lindero",
+      "useJoinTable": false
     },
     "ue_mas_cr_unidadconstruccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      "useJoinTable": false
     },
     "ue_mas_cr_terreno": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno"
+      "target": "api::cr-terreno.cr-terreno",
+      "useJoinTable": false
     }
   }
 }
