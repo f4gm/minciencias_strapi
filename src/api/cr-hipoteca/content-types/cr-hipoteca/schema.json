@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-hipoteca",
     "pluralName": "cr-hipotecas",
-    "displayName": "CR_Hipoteca"
+    "displayName": "CR_Hipoteca",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -39,7 +40,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "inte_cr_agrup": {

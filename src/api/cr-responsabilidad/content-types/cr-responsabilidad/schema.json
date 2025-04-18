@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-responsabilidad",
     "pluralName": "cr-responsabilidads",
-    "displayName": "CR_Responsabilidad"
+    "displayName": "CR_Responsabilidad",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -39,7 +40,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "interesado_cr_agrupacioninteresados": {

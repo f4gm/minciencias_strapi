@@ -4,7 +4,8 @@
   "info": {
     "singularName": "extinteresado",
     "pluralName": "extinteresados",
-    "displayName": "ExtInteresado"
+    "displayName": "ExtInteresado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -40,7 +41,7 @@
     "cr_interesado_ext_pid": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     }
   }

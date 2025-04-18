@@ -14,27 +14,32 @@
     "cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado"
+      "target": "plugin::users-permissions.user",
+      "useJoinTable": false
     },
     "cr_lindero": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-lindero.cr-lindero"
+      "target": "api::cr-lindero.cr-lindero",
+      "useJoinTable": false
     },
     "cr_terreno": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno"
+      "target": "api::cr-terreno.cr-terreno",
+      "useJoinTable": false
     },
     "cr_predio": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "useJoinTable": false
     },
     "cr_unidadconstruccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      "useJoinTable": false
     },
     "identifier": {
       "type": "string",

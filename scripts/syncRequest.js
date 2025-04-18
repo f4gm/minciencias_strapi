@@ -20,60 +20,62 @@ const requestBase = {
   info: {
     singularName: "solicitud",
     pluralName: "solicitudes",
-    displayName: "Solicitud"
+    displayName: "Solicitud",
   },
   options: {
-    draftAndPublish: false
+    draftAndPublish: false,
   },
   pluginOptions: {},
   attributes: {
     cr_interesado: {
       type: "relation",
       relation: "oneToOne",
-      target: "api::cr-interesado.cr-interesado"
+      target: "plugin::users-permissions.user",
+      useJoinTable: false,
     },
     cr_lindero: {
       type: "relation",
       relation: "oneToOne",
-      target: "api::cr-lindero.cr-lindero"
+      target: "api::cr-lindero.cr-lindero",
+      useJoinTable: false
     },
     cr_terreno: {
       type: "relation",
       relation: "oneToOne",
-      target: "api::cr-terreno.cr-terreno"
+      target: "api::cr-terreno.cr-terreno",
+      useJoinTable: false
     },
     cr_predio: {
       type: "relation",
       relation: "oneToOne",
-      target: "api::cr-predio.cr-predio"
+      target: "api::cr-predio.cr-predio",
+      useJoinTable: false
     },
     cr_unidadconstruccion: {
       type: "relation",
       relation: "oneToOne",
-      target: "api::cr-unidadconstruccion.cr-unidadconstruccion"
+      target: "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      useJoinTable: false
     },
-  }
-}
+  },
+};
 
 const syncRequest = () => {
   try {
-    const inputSchema = JSON.parse(
-      fs.readFileSync(inputPath, "utf-8")
-    );
-  
+    const inputSchema = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
+
     requestBase.attributes = {
       ...requestBase.attributes,
-      ...inputSchema.attributes
+      ...inputSchema.attributes,
     };
-  
-    fs.writeFileSync(
-      requestPath,
-      JSON.stringify(requestBase, null, 2)
+
+    fs.writeFileSync(requestPath, JSON.stringify(requestBase, null, 2));
+    console.log(
+      "✅ El esquema de 'Solicitudes' se ha sincronizado con 'Entrada'"
     );
-    console.log("✅ El esquema de 'Solicitudes' se ha sincronizado con 'Entrada'");
   } catch (error) {
-    console.error("❌ Error al sincronizar esquemas:", error)
+    console.error("❌ Error al sincronizar esquemas:", error);
   }
-}
+};
 
 syncRequest();

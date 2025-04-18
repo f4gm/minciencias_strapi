@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-publicidad",
     "pluralName": "cr-publicidads",
-    "displayName": "CR_Publicidad"
+    "displayName": "CR_Publicidad",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,9 +14,9 @@
   "attributes": {
     "tipo_publicidad": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
       "target": "api::cr-publicidadtipo.cr-publicidadtipo",
+      "required": true,
       "useJoinTable": false
     },
     "naturaleza_juridica": {
@@ -36,7 +37,7 @@
     "col_interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "col_inte_cr_agrup": {
@@ -47,9 +48,9 @@
     },
     "cr_baunit": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
+      "required": true,
       "useJoinTable": false
     }
   }

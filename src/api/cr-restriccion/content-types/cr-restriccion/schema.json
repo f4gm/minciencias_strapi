@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-restriccion",
     "pluralName": "cr-restriccions",
-    "displayName": "CR_Restriccion"
+    "displayName": "CR_Restriccion",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -39,7 +40,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "interesado_cr_agrupacioninteresados": {

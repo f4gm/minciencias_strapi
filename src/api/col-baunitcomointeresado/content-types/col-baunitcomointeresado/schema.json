@@ -4,7 +4,8 @@
   "info": {
     "singularName": "col-baunitcomointeresado",
     "pluralName": "col-baunitcomointeresados",
-    "displayName": "col_baUnitComointeresado"
+    "displayName": "col_baUnitComointeresado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -14,7 +15,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "inte_cr_agrupinte": {
@@ -25,9 +26,9 @@
     },
     "unidad": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
       "target": "api::col-areatipo.col-areatipo",
+      "required": true,
       "useJoinTable": false
     }
   }

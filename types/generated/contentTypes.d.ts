@@ -459,6 +459,7 @@ export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
   extends Schema.CollectionType {
   collectionName: 'col_baunitcomointeresado';
   info: {
+    description: '';
     displayName: 'col_baUnitComointeresado';
     pluralName: 'col-baunitcomointeresados';
     singularName: 'col-baunitcomointeresado';
@@ -482,7 +483,7 @@ export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
     interesado_cr_interesado: Attribute.Relation<
       'api::col-baunitcomointeresado.col-baunitcomointeresado',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     unidad: Attribute.Relation<
       'api::col-baunitcomointeresado.col-baunitcomointeresado',
@@ -1134,6 +1135,7 @@ export interface ApiColMetodoproducciontipoColMetodoproducciontipo
 export interface ApiColMiembroColMiembro extends Schema.CollectionType {
   collectionName: 'col_miembros';
   info: {
+    description: '';
     displayName: 'COL_Miembros';
     pluralName: 'col-miembros';
     singularName: 'col-miembro';
@@ -1162,7 +1164,7 @@ export interface ApiColMiembroColMiembro extends Schema.CollectionType {
     interesado_cr_interesado: Attribute.Relation<
       'api::col-miembro.col-miembro',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     participacion: Attribute.Float &
       Attribute.SetMinMax<
@@ -1375,6 +1377,7 @@ export interface ApiColResponsablefuenteColResponsablefuente
   extends Schema.CollectionType {
   collectionName: 'col_responsablefuente';
   info: {
+    description: '';
     displayName: 'col_responsableFuente';
     pluralName: 'col-responsablefuentes';
     singularName: 'col-responsablefuente';
@@ -1404,7 +1407,7 @@ export interface ApiColResponsablefuenteColResponsablefuente
     interesado_cr_interesado: Attribute.Relation<
       'api::col-responsablefuente.col-responsablefuente',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
@@ -2106,6 +2109,7 @@ export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
 export interface ApiCrDerechoCrDerecho extends Schema.CollectionType {
   collectionName: 'cr_derecho';
   info: {
+    description: '';
     displayName: 'CR_Derecho';
     pluralName: 'cr-derechos';
     singularName: 'cr-derecho';
@@ -2154,7 +2158,7 @@ export interface ApiCrDerechoCrDerecho extends Schema.CollectionType {
     interesado_cr_interesado: Attribute.Relation<
       'api::cr-derecho.cr-derecho',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     local_id: Attribute.String &
       Attribute.Required &
@@ -3212,6 +3216,7 @@ export interface ApiCrFuenteespacialCrFuenteespacial
 export interface ApiCrHipotecaCrHipoteca extends Schema.CollectionType {
   collectionName: 'cr_hipoteca';
   info: {
+    description: '';
     displayName: 'CR_Hipoteca';
     pluralName: 'cr-hipotecas';
     singularName: 'cr-hipoteca';
@@ -3251,7 +3256,7 @@ export interface ApiCrHipotecaCrHipoteca extends Schema.CollectionType {
     interesado_cr_interesado: Attribute.Relation<
       'api::cr-hipoteca.cr-hipoteca',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     local_id: Attribute.String &
       Attribute.Required &
@@ -3330,6 +3335,7 @@ export interface ApiCrHipotecaderechoCrHipotecaderecho
 export interface ApiCrInformalidadCrInformalidad extends Schema.CollectionType {
   collectionName: 'cr_informalidad';
   info: {
+    description: '';
     displayName: 'CR_Informalidad';
     pluralName: 'cr-informalidads';
     singularName: 'cr-informalidad';
@@ -3364,7 +3370,7 @@ export interface ApiCrInformalidadCrInformalidad extends Schema.CollectionType {
     interesado_cr_interesado: Attribute.Relation<
       'api::cr-informalidad.cr-informalidad',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     local_id: Attribute.String &
       Attribute.Required &
@@ -3436,98 +3442,6 @@ export interface ApiCrInformalidadtipoCrInformalidadtipo
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-informalidadtipo.cr-informalidadtipo',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCrInteresadoCrInteresado extends Schema.CollectionType {
-  collectionName: 'cr_interesado';
-  info: {
-    description: '';
-    displayName: 'CR_Interesado';
-    pluralName: 'cr-interesados';
-    singularName: 'cr-interesado';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    autoreconocimientocampesino: Attribute.Boolean;
-    autoreconocimientoetnico: Attribute.Relation<
-      'api::cr-interesado.cr-interesado',
-      'oneToOne',
-      'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
-    >;
-    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::cr-interesado.cr-interesado',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    espacio_de_nombres: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
-    fin_vida_util_version: Attribute.DateTime;
-    local_id: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
-    nombre: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
-    numero_documento: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
-    primer_apellido: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    primer_nombre: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    razon_social: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
-    segundo_apellido: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    segundo_nombre: Attribute.String &
-      Attribute.SetMinMaxLength<{
-        maxLength: 100;
-      }>;
-    sexo: Attribute.Relation<
-      'api::cr-interesado.cr-interesado',
-      'oneToOne',
-      'api::cr-sexotipo.cr-sexotipo'
-    > &
-      Attribute.Required;
-    tipo_documento: Attribute.Relation<
-      'api::cr-interesado.cr-interesado',
-      'oneToOne',
-      'api::col-documentotipo.col-documentotipo'
-    > &
-      Attribute.Required;
-    tipo_interesado: Attribute.Relation<
-      'api::cr-interesado.cr-interesado',
-      'oneToOne',
-      'api::col-interesadotipo.col-interesadotipo'
-    >;
-    updatedAt: Attribute.DateTime;
-    updatedBy: Attribute.Relation<
-      'api::cr-interesado.cr-interesado',
       'oneToOne',
       'admin::user'
     > &
@@ -4048,6 +3962,7 @@ export interface ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastra
 export interface ApiCrPublicidadCrPublicidad extends Schema.CollectionType {
   collectionName: 'cr_publicidad';
   info: {
+    description: '';
     displayName: 'CR_Publicidad';
     pluralName: 'cr-publicidads';
     singularName: 'cr-publicidad';
@@ -4068,7 +3983,7 @@ export interface ApiCrPublicidadCrPublicidad extends Schema.CollectionType {
     col_interesado_cr_interesado: Attribute.Relation<
       'api::cr-publicidad.cr-publicidad',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     cr_baunit: Attribute.Relation<
       'api::cr-publicidad.cr-publicidad',
@@ -4428,6 +4343,7 @@ export interface ApiCrResponsabilidadCrResponsabilidad
   extends Schema.CollectionType {
   collectionName: 'cr_responsabilidad';
   info: {
+    description: '';
     displayName: 'CR_Responsabilidad';
     pluralName: 'cr-responsabilidads';
     singularName: 'cr-responsabilidad';
@@ -4467,7 +4383,7 @@ export interface ApiCrResponsabilidadCrResponsabilidad
     interesado_cr_interesado: Attribute.Relation<
       'api::cr-responsabilidad.cr-responsabilidad',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     local_id: Attribute.String &
       Attribute.Required &
@@ -4556,6 +4472,7 @@ export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
 export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
   collectionName: 'cr_restriccion';
   info: {
+    description: '';
     displayName: 'CR_Restriccion';
     pluralName: 'cr-restriccions';
     singularName: 'cr-restriccion';
@@ -4595,7 +4512,7 @@ export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
     interesado_cr_interesado: Attribute.Relation<
       'api::cr-restriccion.cr-restriccion',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     local_id: Attribute.String &
       Attribute.Required &
@@ -5366,6 +5283,7 @@ export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
 export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
   collectionName: 'extinteresado';
   info: {
+    description: '';
     displayName: 'ExtInteresado';
     pluralName: 'extinteresados';
     singularName: 'extinteresado';
@@ -5382,7 +5300,7 @@ export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
     cr_interesado_ext_pid: Attribute.Relation<
       'api::extinteresado.extinteresado',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -5472,7 +5390,7 @@ export interface ApiSolicitudSolicitud extends Schema.CollectionType {
     cr_interesado: Attribute.Relation<
       'api::solicitud.solicitud',
       'oneToOne',
-      'api::cr-interesado.cr-interesado'
+      'plugin::users-permissions.user'
     >;
     cr_lindero: Attribute.Relation<
       'api::solicitud.solicitud',
@@ -5912,7 +5830,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   collectionName: 'up_users';
   info: {
     description: '';
-    displayName: 'User';
+    displayName: 'User (CR_Interesado)';
     name: 'user';
     pluralName: 'users';
     singularName: 'user';
@@ -5921,14 +5839,14 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     draftAndPublish: false;
   };
   attributes: {
-    autoreconocimientocampesino: Attribute.Boolean & Attribute.Required;
+    autoreconocimientocampesino: Attribute.Boolean;
     autoreconocimientoetnico: Attribute.Relation<
       'plugin::users-permissions.user',
       'oneToOne',
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
-    > &
-      Attribute.Required;
+    >;
     blocked: Attribute.Boolean & Attribute.DefaultTo<true>;
+    comienzo_vida_util_version: Attribute.DateTime;
     confirmationToken: Attribute.String & Attribute.Private;
     confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
@@ -5943,8 +5861,20 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    espacio_de_nombres: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    fin_vida_util_version: Attribute.DateTime;
+    local_id: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    nombre: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
     numero_documento: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
@@ -5954,12 +5884,10 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
         minLength: 6;
       }>;
     primer_apellido: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
     primer_nombre: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
@@ -5975,12 +5903,10 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.role'
     >;
     segundo_apellido: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
     segundo_nombre: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
@@ -6000,8 +5926,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.user',
       'oneToOne',
       'api::col-interesadotipo.col-interesadotipo'
-    > &
-      Attribute.Required;
+    >;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'plugin::users-permissions.user',
@@ -6086,7 +6011,6 @@ declare module '@strapi/types' {
       'api::cr-hipotecaderecho.cr-hipotecaderecho': ApiCrHipotecaderechoCrHipotecaderecho;
       'api::cr-informalidad.cr-informalidad': ApiCrInformalidadCrInformalidad;
       'api::cr-informalidadtipo.cr-informalidadtipo': ApiCrInformalidadtipoCrInformalidadtipo;
-      'api::cr-interesado.cr-interesado': ApiCrInteresadoCrInteresado;
       'api::cr-lindero.cr-lindero': ApiCrLinderoCrLindero;
       'api::cr-mutaciontipo.cr-mutaciontipo': ApiCrMutaciontipoCrMutaciontipo;
       'api::cr-predio-copropiedad.cr-predio-copropiedad': ApiCrPredioCopropiedadCrPredioCopropiedad;

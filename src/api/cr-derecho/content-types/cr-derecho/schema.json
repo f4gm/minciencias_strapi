@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-derecho",
     "pluralName": "cr-derechos",
-    "displayName": "CR_Derecho"
+    "displayName": "CR_Derecho",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,9 +14,9 @@
   "attributes": {
     "tipo": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
       "target": "api::cr-derechotipo.cr-derechotipo",
+      "required": true,
       "useJoinTable": false
     },
     "fraccion_derecho": {
@@ -46,7 +47,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "interesado_cr_agrupacioninteresados": {

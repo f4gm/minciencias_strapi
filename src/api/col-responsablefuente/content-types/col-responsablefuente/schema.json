@@ -4,7 +4,8 @@
   "info": {
     "singularName": "col-responsablefuente",
     "pluralName": "col-responsablefuentes",
-    "displayName": "col_responsableFuente"
+    "displayName": "col_responsableFuente",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,15 +14,15 @@
   "attributes": {
     "fuente_administrativa": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
       "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
+      "required": true,
       "useJoinTable": false
     },
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "inte_cr_agrup": {

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-informalidad",
     "pluralName": "cr-informalidads",
-    "displayName": "CR_Informalidad"
+    "displayName": "CR_Informalidad",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -13,9 +14,9 @@
   "attributes": {
     "tipo": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
       "target": "api::cr-informalidadtipo.cr-informalidadtipo",
+      "required": true,
       "useJoinTable": false
     },
     "descripcion": {
@@ -25,7 +26,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "inte_cr_agrup": {

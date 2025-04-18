@@ -4,7 +4,8 @@
   "info": {
     "singularName": "col-miembro",
     "pluralName": "col-miembros",
-    "displayName": "COL_Miembros"
+    "displayName": "COL_Miembros",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -26,7 +27,7 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-interesado.cr-interesado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "participacion": {
