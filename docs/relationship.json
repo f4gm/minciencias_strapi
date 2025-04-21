@@ -255,8 +255,7 @@
     "model_name": "cr_informalidadtipo",
     "schema_name": "cr-informalidadtipo"
   },
-  "cr_interesado": {
-    "_comment": "Reemplazar cr_interesado por user",
+  "up_users": {
     "model_name": "cr_interesado",
     "schema_name": "cr-interesado"
   },
@@ -377,7 +376,7 @@
     "schema_name": "extdireccion-sector-predio"
   },
   "extdireccion_tipo_direccion": {
-    "model_name": "extdireccion_tipo_direccion",
+    "model_name": "extdireccion_tipo_direccio",
     "schema_name": "extdireccion-tipo-direccion"
   },
   "extinteresado": {
