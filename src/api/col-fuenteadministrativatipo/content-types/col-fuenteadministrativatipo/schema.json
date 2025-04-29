@@ -13,26 +13,43 @@
   "attributes": {
     "nombre": {
       "type": "string",
+      "maxLength": 250,
       "required": true,
-      "unique": true,
       "private": true,
-      "maxLength": 250
+      "unique": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [250]
+      }
     },
     "descripcion": {
-      "type": "text",
-      "required": false,
+      "type": "string",
+      "maxLength": 1024,
       "private": true,
-      "maxLength": 1024
+      "column": {
+        "type": "string",
+        "args": [1024]
+      }
     },
     "nombre_vista": {
       "type": "string",
-      "required": true,
       "maxLength": 250,
-      "unique": true
+      "required": true,
+      "unique": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [250]
+      }
     },
     "descripcion_vista": {
-      "type": "text",
-      "maxLength": 1024
+      "type": "string",
+      "maxLength": 1024,
+      "column": {
+        "type": "string",
+        "args": [1024]
+      }
     }
   }
 }

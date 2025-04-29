@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-fuenteadministrativa",
     "pluralName": "cr-fuenteadministrativas",
-    "displayName": "CR_FuenteAdministrativa"
+    "displayName": "CR_FuenteAdministrativa",
+    "description": "Clase que almacena las fuentes administrativas (escrituras, sentencias, actos administrativos, etc) que sustentan el Derecho respecto de la relación de tenencia entre el Interesado y el predio."
   },
   "options": {
     "draftAndPublish": false
@@ -15,18 +16,30 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-fuenteadministrativatipo.col-fuenteadministrativatipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "ente_emisor": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "oficina_origen": {
       "type": "integer"
     },
     "ciudad_origen": {
       "type": "string",
-      "maxLength": 60
+      "maxLength": 60,
+      "column": {
+        "type": "string",
+        "args": [60]
+      }
     },
     "fecha_fin": {
       "type": "date"
@@ -35,7 +48,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "tipo_formato": {
       "type": "relation",
@@ -48,25 +65,47 @@
     },
     "nombre": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "descripcion": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "url": {
       "type": "string",
-      "maxLength": 2000
+      "maxLength": 2000,
+      "column": {
+        "type": "string",
+        "args": [2000]
+      }
     },
     "espacio_de_nombres": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

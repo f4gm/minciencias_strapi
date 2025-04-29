@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-terreno",
     "pluralName": "cr-terrenos",
-    "displayName": "CR_Terreno"
+    "displayName": "CR_Terreno",
+    "description": "Extensión geográfica espacial del predio"
   },
   "options": {
     "draftAndPublish": false
@@ -29,7 +30,11 @@
     },
     "etiqueta": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "relacion_superficie": {
       "type": "relation",
@@ -39,7 +44,10 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fin_vida_util_version": {
       "type": "datetime"
@@ -47,12 +55,22 @@
     "espacio_de_nombres": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

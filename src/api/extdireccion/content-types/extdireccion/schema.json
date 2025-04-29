@@ -5,7 +5,7 @@
     "singularName": "extdireccion",
     "pluralName": "extdireccions",
     "displayName": "ExtDireccion",
-    "description": ""
+    "description": "Referencia a una clase externa para gestionar direcciones."
   },
   "options": {
     "draftAndPublish": false
@@ -16,7 +16,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::extdireccion-tipo-direccion.extdireccion-tipo-direccion",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "es_direccion_principal": {
       "type": "boolean"
@@ -39,7 +43,11 @@
     },
     "codigo_postal": {
       "type": "string",
-      "maxLength": 6
+      "maxLength": 6,
+      "column": {
+        "type": "string",
+        "args": [6]
+      }
     },
     "clase_via_principal": {
       "type": "relation",
@@ -49,11 +57,19 @@
     },
     "valor_via_principal": {
       "type": "string",
-      "maxLength": 100
+      "maxLength": 100,
+      "column": {
+        "type": "string",
+        "args": [100]
+      }
     },
     "letra_via_principal": {
       "type": "string",
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "type": "string",
+        "args": [20]
+      }
     },
     "sector_ciudad": {
       "type": "relation",
@@ -63,15 +79,27 @@
     },
     "valor_via_generadora": {
       "type": "string",
-      "maxLength": 100
+      "maxLength": 100,
+      "column": {
+        "type": "string",
+        "args": [100]
+      }
     },
     "letra_via_generadora": {
       "type": "string",
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "type": "string",
+        "args": [20]
+      }
     },
     "numero_predio": {
       "type": "string",
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "type": "string",
+        "args": [20]
+      }
     },
     "sector_predio": {
       "type": "relation",
@@ -81,11 +109,19 @@
     },
     "complemento": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "nombre_predio": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "extinteresado_ext_direccion_id": {
       "type": "relation",

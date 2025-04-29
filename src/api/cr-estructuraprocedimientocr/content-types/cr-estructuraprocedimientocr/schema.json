@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-estructuraprocedimientocr",
     "pluralName": "cr-estructuraprocedimientocrs",
-    "displayName": "CR_EstructuraProcedimientoCatastralRegistral"
+    "displayName": "CR_EstructuraProcedimientoCatastralRegistral",
+    "description": "Estructura que contiene los procedimientos catastrales con efectos registrales."
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +16,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "cr_predio_procedimientocr": {
       "type": "relation",

@@ -5,7 +5,7 @@
     "singularName": "cr-estructuraalertapredio",
     "pluralName": "cr-estructuraalertapredios",
     "displayName": "CR_EstructuraAlertaPredio",
-    "description": ""
+    "description": "Estructura que contiene el estado del predio en la base de datos catastral."
   },
   "options": {
     "draftAndPublish": false
@@ -15,16 +15,29 @@
     "descripcion_alerta": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "entidad_emisora_alerta": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "fecha_apertura_alerta": {
       "type": "date",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fecha_cierre_alerta": {
       "type": "date"

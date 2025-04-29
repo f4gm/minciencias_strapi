@@ -5,7 +5,7 @@
     "singularName": "cr-publicidad",
     "pluralName": "cr-publicidads",
     "displayName": "CR_Publicidad",
-    "description": ""
+    "description": "Clase que contiene la publicidad de un Predio."
   },
   "options": {
     "draftAndPublish": false
@@ -17,19 +17,34 @@
       "relation": "oneToOne",
       "target": "api::cr-publicidadtipo.cr-publicidadtipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "naturaleza_juridica": {
       "type": "string",
-      "maxLength": 100
+      "maxLength": 100,
+      "column": {
+        "type": "string",
+        "args": [100]
+      }
     },
     "codigo_naturaleza_juridica": {
       "type": "string",
-      "maxLength": 5
+      "maxLength": 5,
+      "column": {
+        "type": "string",
+        "args": [5]
+      }
     },
     "naturaleza_complemento": {
       "type": "string",
-      "maxLength": 200
+      "maxLength": 200,
+      "column": {
+        "type": "string",
+        "args": [200]
+      }
     },
     "fecha_anotacion": {
       "type": "date"
@@ -51,7 +66,10 @@
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

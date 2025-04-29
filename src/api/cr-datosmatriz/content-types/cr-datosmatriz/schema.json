@@ -14,48 +14,77 @@
   "attributes": {
     "area_total_terreno": {
       "type": "decimal",
-      "required": false,
-      "max": 100000000000000
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "area_total_terreno_privada": {
       "type": "decimal",
-      "required": false,
-      "max": 100000000000000
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "area_total_terreno_comun": {
       "type": "decimal",
-      "required": false,
-      "max": 100000000000000
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "area_total_construida": {
       "type": "decimal",
-      "required": false,
-      "max": 100000000000000
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "area_total_construida_privada": {
       "type": "decimal",
-      "required": false,
-      "max": 100000000000000
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "area_total_construida_comun": {
       "type": "decimal",
-      "required": false,
-      "max": 100000000000000
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "numero_torres": {
       "type": "integer",
-      "max": 1000
+      "max": 1000,
+      "min": 0
     },
     "total_unidades_privadas": {
       "type": "integer",
-      "max": 100000000
+      "max": 99999999,
+      "min": 0
     },
     "cr_predio": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

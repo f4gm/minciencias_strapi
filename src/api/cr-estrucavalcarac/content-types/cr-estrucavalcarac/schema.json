@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-estrucavalcarac",
     "pluralName": "cr-estrucavalcaracs",
-    "displayName": "CR_EstructuraAvaluoCaracterizacion"
+    "displayName": "CR_EstructuraAvaluoCaracterizacion",
+    "description": "Estructura que contiene los avalúos de la característica de construcción."
   },
   "options": {
     "draftAndPublish": false
@@ -12,16 +13,29 @@
   "pluginOptions": {},
   "attributes": {
     "fecha_avaluo": {
-      "type": "date"
+      "type": "date",
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "valor_comercial": {
-      "type": "integer",
-      "max": 1e+16
+      "type": "decimal",
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "avaluo_catastral": {
-      "type": "integer",
-      "max": 1e+16,
-      "required": true
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "cr_crctrstcdcnstrccion_aval_caract": {
       "type": "relation",

@@ -17,7 +17,10 @@
       "relation": "oneToOne",
       "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "interesado_cr_interesado": {
       "type": "relation",

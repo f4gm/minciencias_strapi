@@ -16,14 +16,20 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "cr_tramite_catastral": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-tramitecatastral.cr-tramitecatastral",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

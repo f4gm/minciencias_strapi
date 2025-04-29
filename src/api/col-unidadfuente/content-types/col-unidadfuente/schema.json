@@ -16,14 +16,20 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "unidad": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

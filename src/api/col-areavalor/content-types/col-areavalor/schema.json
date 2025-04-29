@@ -4,7 +4,8 @@
   "info": {
     "singularName": "col-areavalor",
     "pluralName": "col-areavalors",
-    "displayName": "COL_AreaValor"
+    "displayName": "COL_AreaValor",
+    "description": "Es el valor de la cantidad de superficie que cubre una figura de dos dimensiones."
   },
   "options": {
     "draftAndPublish": false
@@ -15,15 +16,25 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-areatipo.col-areatipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "area": {
       "type": "decimal",
-      "max": 1000000000000000,
-      "required": true
+      "max": 99999999999999.9,
+      "min": 0,
+      "required": true,
+      "column": {
+        "type": "decimal",
+        "args": [15, 1],
+        "notNullable": true
+      }
     },
     "datos_proyeccion": {
-      "type": "blocks"
+      "type": "text"
     },
     "cr_terreno_area": {
       "type": "relation",

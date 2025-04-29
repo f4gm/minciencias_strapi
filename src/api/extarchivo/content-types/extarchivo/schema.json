@@ -4,7 +4,8 @@
   "info": {
     "singularName": "extarchivo",
     "pluralName": "extarchivos",
-    "displayName": "ExtArchivo"
+    "displayName": "ExtArchivo",
+    "description": "Referencia a clase externa desde donde se gestiona el repositorio de archivos."
   },
   "options": {
     "draftAndPublish": false
@@ -16,7 +17,11 @@
     },
     "datos": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "extraccion": {
       "type": "date"
@@ -30,12 +35,22 @@
     "espacio_de_nombres": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "cr_fuenteespacial_ext_archivo_id": {
       "type": "relation",

@@ -5,7 +5,7 @@
     "singularName": "cr-tramitecatastral",
     "pluralName": "cr-tramitecatastrals",
     "displayName": "CR_TramiteCatastral",
-    "description": ""
+    "description": "Clase que contiene los cambios que se presentan en los componentes físico, jurídico o económico de un predio, una vez han sido formados."
   },
   "options": {
     "draftAndPublish": false
@@ -17,24 +17,41 @@
       "relation": "oneToOne",
       "target": "api::cr-mutaciontipo.cr-mutaciontipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "numero_resolucion": {
       "type": "string",
       "maxLength": 30,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [30]
+      }
     },
     "fecha_resolucion": {
       "type": "date",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fecha_radicacion": {
       "type": "date",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fecha_inscripcion": {
       "type": "date",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

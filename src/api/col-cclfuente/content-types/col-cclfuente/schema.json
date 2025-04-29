@@ -16,14 +16,20 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-lindero.cr-lindero",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "fuente_espacial": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-fuenteespacial.cr-fuenteespacial",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

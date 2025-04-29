@@ -16,14 +16,20 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-hipoteca.cr-hipoteca",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "cr_derecho": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-derecho.cr-derecho",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

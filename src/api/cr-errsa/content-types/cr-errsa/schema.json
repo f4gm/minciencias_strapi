@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-errsa",
     "pluralName": "cr-errsas",
-    "displayName": "CR_ERRSA"
+    "displayName": "CR_ERRSA",
+    "description": "Estructura que permite incorporar referencias registrales del sistema antiguo."
   },
   "options": {
     "draftAndPublish": false
@@ -13,45 +14,86 @@
   "attributes": {
     "tipo_referencia": {
       "type": "relation",
+      "required": true,
       "relation": "oneToOne",
       "target": "api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "oficina": {
       "type": "string",
-      "maxLength": 50
+      "maxLength": 50,
+      "column": {
+        "type": "string",
+        "args": [50]
+      }
     },
     "libro": {
       "type": "string",
-      "maxLength": 1
+      "maxLength": 1,
+      "column": {
+        "type": "string",
+        "args": [1]
+      }
     },
     "tomo": {
       "type": "string",
-      "maxLength": 2
+      "maxLength": 2,
+      "column": {
+        "type": "string",
+        "args": [2]
+      }
     },
     "pagina": {
       "type": "string",
-      "maxLength": 4
+      "maxLength": 4,
+      "column": {
+        "type": "string",
+        "args": [4]
+      }
     },
     "numero": {
       "type": "string",
-      "maxLength": 4
+      "maxLength": 4,
+      "column": {
+        "type": "string",
+        "args": [4]
+      }
     },
     "dia": {
       "type": "string",
-      "maxLength": 2
+      "maxLength": 2,
+      "column": {
+        "type": "string",
+        "args": [2]
+      }
     },
     "mes": {
       "type": "string",
-      "maxLength": 2
+      "maxLength": 2,
+      "column": {
+        "type": "string",
+        "args": [2]
+      }
     },
     "anio": {
       "type": "string",
-      "maxLength": 2
+      "maxLength": 2,
+      "column": {
+        "type": "string",
+        "args": [2]
+      }
     },
     "matricula": {
       "type": "string",
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [20]
+      }
     },
     "cr_predio_rrsa": {
       "type": "relation",

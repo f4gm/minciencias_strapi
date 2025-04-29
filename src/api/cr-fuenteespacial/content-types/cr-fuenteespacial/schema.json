@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-fuenteespacial",
     "pluralName": "cr-fuenteespacials",
-    "displayName": "CR_FuenteEspacial"
+    "displayName": "CR_FuenteEspacial",
+    "description": "Clase que hereda los atributos de la Clase COL_FuenteEspacial."
   },
   "options": {
     "draftAndPublish": false
@@ -15,16 +16,24 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-fuenteespacialtipo.col-fuenteespacialtipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "metadato": {
-      "type": "blocks"
+      "type": "text"
     },
     "estado_disponibilidad": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "tipo_formato": {
       "type": "relation",
@@ -37,25 +46,47 @@
     },
     "nombre": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "descripcion": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "url": {
       "type": "string",
-      "maxLength": 2000
+      "maxLength": 2000,
+      "column": {
+        "type": "string",
+        "args": [2000]
+      }
     },
     "espacio_de_nombres": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

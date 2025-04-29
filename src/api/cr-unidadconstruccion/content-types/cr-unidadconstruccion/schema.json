@@ -5,7 +5,7 @@
     "singularName": "cr-unidadconstruccion",
     "pluralName": "cr-unidadconstruccions",
     "displayName": "CR_UnidadConstruccion",
-    "description": ""
+    "description": "Edificación dentro de un predio, que tiene unas características específicas en cuanto a uso y elementos constitutivos físicos."
   },
   "options": {
     "draftAndPublish": false
@@ -17,18 +17,24 @@
       "relation": "oneToOne",
       "target": "api::cr-construccionplantatipo.cr-construccionplantatipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "planta_ubicacion": {
       "type": "integer",
       "required": true,
       "max": 300,
-      "min": 0
+      "min": 0,
+      "column": {
+        "notNullable": true
+      }
     },
     "altura": {
       "type": "integer",
       "max": 1000,
-      "min": 0
+      "min": 1
     },
     "geometria": {
       "required": true,
@@ -51,11 +57,18 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-caracteristicasuc.cr-caracteristicasuc",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "etiqueta": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "relacion_superficie": {
       "type": "relation",
@@ -65,19 +78,32 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fin_vida_util_version": {
       "type": "datetime"
     },
     "espacio_de_nombres": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

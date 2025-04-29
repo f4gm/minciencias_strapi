@@ -5,7 +5,7 @@
     "singularName": "cr-estructuraavaluo",
     "pluralName": "cr-estructuraavaluos",
     "displayName": "CR_EstructuraAvaluo",
-    "description": ""
+    "description": "Estructura que contiene el avalúo del predio en la base de datos catastral."
   },
   "options": {
     "draftAndPublish": false
@@ -14,41 +14,67 @@
   "attributes": {
     "fecha_avaluo": {
       "type": "date",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "valor_comercial": {
       "type": "decimal",
-      "required": false,
-      "max": 10000000000000000
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "avaluo_catastral": {
       "type": "decimal",
       "required": true,
-      "max": 10000000000000000
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "valor_comercial_terreno": {
       "type": "decimal",
-      "required": false,
-      "max": 10000000000000000
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "avaluo_catastral_terreno": {
       "type": "decimal",
-      "required": false,
-      "max": 10000000000000000
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "valor_comercial_total_unidadesconstruccion": {
       "type": "decimal",
-      "required": false,
-      "max": 10000000000000000
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "avaluo_catastral_total_unidadesconstruccion": {
       "type": "decimal",
-      "required": false,
-      "max": 10000000000000000
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "autoestimacion": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "incremento": {
       "type": "boolean"

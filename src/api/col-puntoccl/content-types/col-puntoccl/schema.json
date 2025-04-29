@@ -11,16 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "punto_cr_puntolindero": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cr-puntolindero.cr-puntolindero",
-      "useJoinTable": false
-    },
     "punto_cr_puntocontrol": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-puntocontrol.cr-puntocontrol",
+      "useJoinTable": false
+    },
+    "punto_cr_puntolindero": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-puntolindero.cr-puntolindero",
       "useJoinTable": false
     },
     "ccl": {
@@ -28,7 +28,10 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-lindero.cr-lindero",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

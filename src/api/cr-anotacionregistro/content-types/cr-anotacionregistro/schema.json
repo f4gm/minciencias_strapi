@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-anotacionregistro",
     "pluralName": "cr-anotacionregistros",
-    "displayName": "CR_AnotacionRegistro"
+    "displayName": "CR_AnotacionRegistro",
+    "description": "Es la culminación de trámite registral, luego de efectuada la inscripción y puesta la constancia de ella en el título o documento objeto de registro."
   },
   "options": {
     "draftAndPublish": false
@@ -13,14 +14,18 @@
   "attributes": {
     "numero_radicacion": {
       "type": "string",
-      "maxLength": 10
+      "maxLength": 10,
+      "column": {
+        "type": "string",
+        "args": [10]
+      }
     },
     "fecha_radicacion": {
       "type": "date"
     },
     "numero_anotacion": {
       "type": "integer",
-      "max": 10000000000,
+      "max": 9999999999,
       "min": 0
     },
     "estado_anotacion": {
@@ -31,15 +36,21 @@
     },
     "valor_transaccion": {
       "type": "decimal",
-      "max": 10000000000000000,
-      "min": 0
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "cr_fuenteadministrativa": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

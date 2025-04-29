@@ -5,7 +5,7 @@
     "singularName": "cr-informalidad",
     "pluralName": "cr-informalidads",
     "displayName": "CR_Informalidad",
-    "description": ""
+    "description": "Relación de tenencia que no corresponde a la propiedad, se presenta en los casos en los que la persona que ejerce la tenencia no es la misma que se encuentra en el registro de propiedad consignado en el folio de matrícula inmobiliaria correspondiente."
   },
   "options": {
     "draftAndPublish": false
@@ -17,11 +17,18 @@
       "relation": "oneToOne",
       "target": "api::cr-informalidadtipo.cr-informalidadtipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "descripcion": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "interesado_cr_interesado": {
       "type": "relation",
@@ -43,7 +50,10 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fin_vida_util_version": {
       "type": "datetime"
@@ -51,12 +61,22 @@
     "espacio_de_nombres": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "maxLength": 255,
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

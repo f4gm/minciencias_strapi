@@ -5,7 +5,7 @@
     "singularName": "cr-puntolindero",
     "pluralName": "cr-puntolinderos",
     "displayName": "CR_PuntoLindero",
-    "description": ""
+    "description": "Punto que define la frontera de un predio con otro. La sucesión de estos puntos forma una línea que representa el l�mite entre dos terrenos."
   },
   "options": {
     "draftAndPublish": false
@@ -15,17 +15,29 @@
     "id_punto_lindero": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "puntotipo": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-puntotipo.col-puntotipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "desacuerdo": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fotoidentificacion": {
       "type": "relation",
@@ -34,8 +46,13 @@
       "useJoinTable": false
     },
     "exactitud_horizontal": {
-      "type": "float",
-      "max": 100000
+      "type": "decimal",
+      "max": 10000,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [5, 3]
+      }
     },
     "posicion_interpolacion": {
       "type": "relation",
@@ -47,7 +64,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-metodoproducciontipo.col-metodoproducciontipo",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "geometria": {
       "required": true,
@@ -65,21 +86,24 @@
       "f_table_schema": "public",
       "geoType": "POINT"
     },
-    "ue_cr_unidadconstruccion": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
-      "useJoinTable": false
-    },
     "ue_cr_terreno": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-terreno.cr-terreno",
       "useJoinTable": false
     },
+    "ue_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
+      "useJoinTable": false
+    },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fin_vida_util_version": {
       "type": "datetime"
@@ -87,12 +111,22 @@
     "espacio_de_nombres": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

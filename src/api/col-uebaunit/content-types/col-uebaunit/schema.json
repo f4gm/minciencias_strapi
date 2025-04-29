@@ -11,16 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ue_cr_unidadconstruccion": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
-      "useJoinTable": false
-    },
     "ue_cr_terreno": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-terreno.cr-terreno",
+      "useJoinTable": false
+    },
+    "ue_cr_unidadconstruccion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
       "useJoinTable": false
     },
     "baunit": {
@@ -28,7 +28,10 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

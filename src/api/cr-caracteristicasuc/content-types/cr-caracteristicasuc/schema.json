@@ -5,7 +5,7 @@
     "singularName": "cr-caracteristicasuc",
     "pluralName": "cr-caracteristicasucs",
     "displayName": "CR_CaracteristicasUnidadConstruccion",
-    "description": ""
+    "description": "Clase que permite agrupar las unidades de construcción por identificador, uso y tipología."
   },
   "options": {
     "draftAndPublish": false
@@ -15,43 +15,71 @@
     "identificador": {
       "type": "string",
       "required": true,
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [20]
+      }
     },
     "tipo_unidad_construccion": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "total_plantas": {
       "type": "integer",
       "required": true,
-      "max": 150
+      "max": 150,
+      "min": 0,
+      "column": {
+        "notNullable": true
+      }
     },
     "uso": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-usouconstipo.cr-usouconstipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     },
     "anio_construccion": {
       "type": "integer",
       "required": true,
       "max": 2500,
-      "min": 1512
+      "min": 1512,
+      "column": {
+        "notNullable": true
+      }
     },
     "area_construida": {
       "type": "decimal",
       "required": true,
-      "max": 1000000000000000,
-      "min": 0
+      "max": 99999999999999.9,
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [15, 1]
+      }
     },
     "estado_conservacion": {
       "type": "string",
       "required": true,
-      "maxLength": 30
+      "maxLength": 30,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [30]
+      }
     },
     "observaciones": {
       "type": "text"

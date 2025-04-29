@@ -5,17 +5,17 @@
     "singularName": "col-miembro",
     "pluralName": "col-miembros",
     "displayName": "COL_Miembros",
-    "description": ""
+    "description": "Relaciona a los interesados de una agrupación de interesados a través de la proporción de su participación en el grupo."
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "agrupacion": {
+    "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "target": "plugin::users-permissions.user",
       "useJoinTable": false
     },
     "interesado_cr_agrupacioninteresados": {
@@ -24,16 +24,24 @@
       "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
       "useJoinTable": false
     },
-    "interesado_cr_interesado": {
+    "agrupacion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "useJoinTable": false
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "participacion": {
-      "type": "float",
+      "type": "decimal",
       "max": 1,
-      "min": 0
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [11, 10]
+      }
     }
   }
 }

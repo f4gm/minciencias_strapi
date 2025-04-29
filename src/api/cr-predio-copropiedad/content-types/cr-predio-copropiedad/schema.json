@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-predio-copropiedad",
     "pluralName": "cr-predio-copropiedads",
-    "displayName": "cr_predio_copropiedad"
+    "displayName": "cr_predio_copropiedad",
+    "description": "Relación entre unidades prediales y predios matrices bajo el régimen de propiedad horizontal y condominio"
   },
   "options": {
     "draftAndPublish": false
@@ -15,40 +16,70 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "matriz": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "useJoinTable": false,
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "coeficiente": {
-      "type": "float",
+      "type": "decimal",
       "required": true,
       "max": 1,
-      "min": 0
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [13, 12]
+      }
     },
     "area_catastral_terreno_coeficiente": {
       "type": "decimal",
       "required": true,
-      "max": 1e+16,
-      "min": 0
+      "max": 99999999999999.98,
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [16, 2]
+      }
     },
     "area_privada_terreno": {
       "type": "decimal",
-      "max": 1e+27,
-      "min": 0
+      "max": 1000000000000000000000000.00,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [27, 2]
+      }
     },
     "area_privada_construida": {
       "type": "decimal",
-      "max": 1e+27,
-      "min": 0
+      "max": 1000000000000000000000000.00,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [27, 2]
+      }
     },
     "area_privada_libre": {
       "type": "decimal",
-      "max": 1e+27,
-      "min": 0
+      "max": 1000000000000000000000000.00,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [27, 2]
+      }
     }
   }
 }

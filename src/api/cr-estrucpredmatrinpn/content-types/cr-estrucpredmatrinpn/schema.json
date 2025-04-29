@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-estrucpredmatrinpn",
     "pluralName": "cr-estrucpredmatrinpns",
-    "displayName": "CR_EstructuraPredioMatrizNPN"
+    "displayName": "CR_EstructuraPredioMatrizNPN",
+    "description": "Estructura que permite identificar el predio o los predios de los cuales proviene(n) nueva(s) unidad(es) predial(es) producto de segregación o agregación."
   },
   "options": {
     "draftAndPublish": false
@@ -14,11 +15,21 @@
     "numero_predial_nacional": {
       "type": "string",
       "required": true,
-      "maxLength": 30
+      "maxLength": 30,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [30]
+      }
     },
     "area_catastral_terreno": {
       "type": "decimal",
-      "max": 1e+25
+      "max": 10000000000000000000000.00,
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [25, 2]
+      }
     },
     "cr_predmatrinpn": {
       "type": "relation",

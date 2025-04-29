@@ -5,7 +5,7 @@
     "singularName": "cr-estrucavalinter",
     "pluralName": "cr-estrucavalinters",
     "displayName": "CR_EstructuraAvaluoInterseccion",
-    "description": ""
+    "description": "Estructura que define los valores de avaluos catastrales de la intersección de un predio informal con un predio formal."
   },
   "options": {
     "draftAndPublish": false
@@ -13,18 +13,32 @@
   "pluginOptions": {},
   "attributes": {
     "avaluo_catastral_interseccion_terreno": {
-      "type": "integer",
+      "type": "decimal",
       "required": true,
-      "max": 1e+16
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "avaluo_catastral_interseccion_unidades_construccion": {
-      "type": "integer",
-      "max": 1e+16
+      "type": "decimal",
+      "min": 0,
+      "column": {
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "avaluo_catastral_interseccion_total": {
-      "type": "integer",
+      "type": "decimal",
       "required": true,
-      "max": 1e+16
+      "min": 0,
+      "column": {
+        "notNullable": true,
+        "type": "decimal",
+        "args": [16, 1]
+      }
     },
     "cr_pred_infor_aval_catas_inter": {
       "type": "relation",

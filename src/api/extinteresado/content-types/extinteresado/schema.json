@@ -5,7 +5,7 @@
     "singularName": "extinteresado",
     "pluralName": "extinteresados",
     "displayName": "ExtInteresado",
-    "description": ""
+    "description": "Referencia a una clase externa para gestionar identificación del interesado."
   },
   "options": {
     "draftAndPublish": false
@@ -13,24 +13,44 @@
   "pluginOptions": {},
   "attributes": {
     "huella_dactilar": {
-      "type": "text",
-      "maxLength": 2000
+      "type": "string",
+      "maxLength": 2000,
+      "column": {
+        "type": "string",
+        "args": [2000]
+      }
     },
     "nombre": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "fotografia": {
-      "type": "text",
-      "maxLength": 2000
+      "type": "string",
+      "maxLength": 2000,
+      "column": {
+        "type": "string",
+        "args": [2000]
+      }
     },
     "firma": {
-      "type": "text",
-      "maxLength": 2000
+      "type": "string",
+      "maxLength": 2000,
+      "column": {
+        "type": "string",
+        "args": [2000]
+      }
     },
     "documento_escaneado": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "cr_agrupacionintersdos_ext_pid": {
       "type": "relation",

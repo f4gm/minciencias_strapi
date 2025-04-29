@@ -4,7 +4,8 @@
   "info": {
     "singularName": "cr-estrucmatrisegre",
     "pluralName": "cr-estrucmatrisegres",
-    "displayName": "CR_EstructuraMatriculaSegregados"
+    "displayName": "CR_EstructuraMatriculaSegregados",
+    "description": "Corresponde a la información del c�digo de la ORIP y el número de matrícula inmobiliaria de los predios que se han aperturado con base en el predio objeto de estudio."
   },
   "options": {
     "draftAndPublish": false
@@ -13,11 +14,19 @@
   "attributes": {
     "codigo_orip": {
       "type": "string",
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "type": "string",
+        "args": [20]
+      }
     },
     "matricula_inmobiliaria": {
       "type": "string",
-      "maxLength": 20
+      "maxLength": 20,
+      "column": {
+        "type": "string",
+        "args": [20]
+      }
     },
     "cr_predmatrisegre": {
       "type": "relation",

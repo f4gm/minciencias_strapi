@@ -29,7 +29,10 @@
       "relation": "oneToOne",
       "target": "api::col-areatipo.col-areatipo",
       "required": true,
-      "useJoinTable": false
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
     }
   }
 }

@@ -5,7 +5,7 @@
     "singularName": "cr-restriccion",
     "pluralName": "cr-restriccions",
     "displayName": "CR_Restriccion",
-    "description": ""
+    "description": "Restricción legalmente constituida y registrada que afecta el derecho de una persona en relación con el predio."
   },
   "options": {
     "draftAndPublish": false
@@ -20,22 +20,38 @@
     },
     "naturaleza_juridica": {
       "type": "string",
-      "maxLength": 100
+      "maxLength": 100,
+      "column": {
+        "type": "string",
+        "args": [100]
+      }
     },
     "codigo_naturaleza_juridica": {
       "type": "string",
-      "maxLength": 5
+      "maxLength": 5,
+      "column": {
+        "type": "string",
+        "args": [5]
+      }
     },
     "naturaleza_complemento": {
       "type": "string",
-      "maxLength": 200
+      "maxLength": 200,
+      "column": {
+        "type": "string",
+        "args": [200]
+      }
     },
     "fecha_anotacion": {
       "type": "date"
     },
     "descripcion": {
       "type": "string",
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "type": "string",
+        "args": [255]
+      }
     },
     "interesado_cr_interesado": {
       "type": "relation",
@@ -57,7 +73,10 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "required": true
+      "required": true,
+      "column": {
+        "notNullable": true
+      }
     },
     "fin_vida_util_version": {
       "type": "datetime"
@@ -65,12 +84,22 @@
     "espacio_de_nombres": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     },
     "local_id": {
       "type": "string",
       "required": true,
-      "maxLength": 255
+      "maxLength": 255,
+      "column": {
+        "notNullable": true,
+        "type": "string",
+        "args": [255]
+      }
     }
   }
 }

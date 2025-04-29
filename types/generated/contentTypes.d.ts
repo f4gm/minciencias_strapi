@@ -406,6 +406,7 @@ export interface ApiColAreatipoColAreatipo extends Schema.CollectionType {
 export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
   collectionName: 'col_areavalor';
   info: {
+    description: 'Es el valor de la cantidad de superficie que cubre una figura de dos dimensiones.';
     displayName: 'COL_AreaValor';
     pluralName: 'col-areavalors';
     singularName: 'col-areavalor';
@@ -418,7 +419,8 @@ export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 1000000000000000;
+          max: 99999999999999.9;
+          min: 0;
         },
         number
       >;
@@ -439,12 +441,13 @@ export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    datos_proyeccion: Attribute.Blocks;
+    datos_proyeccion: Attribute.Text;
     tipo: Attribute.Relation<
       'api::col-areavalor.col-areavalor',
       'oneToOne',
       'api::col-areatipo.col-areatipo'
-    >;
+    > &
+      Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::col-areavalor.col-areavalor',
@@ -602,12 +605,12 @@ export interface ApiColDocumentotipoColDocumentotipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -654,13 +657,12 @@ export interface ApiColEstadodisponibilidadtipoColEstadodisponibilidadtipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
-      Attribute.Required &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -706,12 +708,12 @@ export interface ApiColFormatotipoColFormatotipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -757,12 +759,12 @@ export interface ApiColFuenteadministrativatipoColFuenteadministrativatipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -808,12 +810,12 @@ export interface ApiColFuenteespacialtipoColFuenteespacialtipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -859,12 +861,12 @@ export interface ApiColGrupointeresadotipoColGrupointeresadotipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -910,12 +912,12 @@ export interface ApiColInteresadotipoColInteresadotipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -961,12 +963,12 @@ export interface ApiColInterpolaciontipoColInterpolaciontipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1100,12 +1102,12 @@ export interface ApiColMetodoproducciontipoColMetodoproducciontipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1135,7 +1137,7 @@ export interface ApiColMetodoproducciontipoColMetodoproducciontipo
 export interface ApiColMiembroColMiembro extends Schema.CollectionType {
   collectionName: 'col_miembros';
   info: {
-    description: '';
+    description: 'Relaciona a los interesados de una agrupaci\u00F3n de interesados a trav\u00E9s de la proporci\u00F3n de su participaci\u00F3n en el grupo.';
     displayName: 'COL_Miembros';
     pluralName: 'col-miembros';
     singularName: 'col-miembro';
@@ -1148,7 +1150,8 @@ export interface ApiColMiembroColMiembro extends Schema.CollectionType {
       'api::col-miembro.col-miembro',
       'oneToOne',
       'api::cr-agrupacioninteresado.cr-agrupacioninteresado'
-    >;
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::col-miembro.col-miembro',
@@ -1166,7 +1169,7 @@ export interface ApiColMiembroColMiembro extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    participacion: Attribute.Float &
+    participacion: Attribute.Decimal &
       Attribute.SetMinMax<
         {
           max: 1;
@@ -1290,12 +1293,12 @@ export interface ApiColPuntotipoColPuntotipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1341,12 +1344,12 @@ export interface ApiColRelacionsuperficietipoColRelacionsuperficietipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1585,12 +1588,12 @@ export interface ApiColUnidadadministrativabasicatipoColUnidadadministrativabasi
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1603,6 +1606,7 @@ export interface ApiColUnidadadministrativabasicatipoColUnidadadministrativabasi
       }>;
     nombre_vista: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
@@ -1661,6 +1665,7 @@ export interface ApiCrAgrupacioninteresadoCrAgrupacioninteresado
   extends Schema.CollectionType {
   collectionName: 'cr_agrupacioninteresados';
   info: {
+    description: 'Clase que hereda los atributos de la  Clase COL_AgrupacionInteresados.';
     displayName: 'CR_AgrupacionInteresados';
     pluralName: 'cr-agrupacioninteresados';
     singularName: 'cr-agrupacioninteresado';
@@ -1700,7 +1705,8 @@ export interface ApiCrAgrupacioninteresadoCrAgrupacioninteresado
       'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
       'oneToOne',
       'api::col-grupointeresadotipo.col-grupointeresadotipo'
-    >;
+    > &
+      Attribute.Required;
     tipo_documento: Attribute.Relation<
       'api::cr-agrupacioninteresado.cr-agrupacioninteresado',
       'oneToOne',
@@ -1725,6 +1731,7 @@ export interface ApiCrAnotacionregistroCrAnotacionregistro
   extends Schema.CollectionType {
   collectionName: 'cr_anotacionregistro';
   info: {
+    description: 'Es la culminaci\u00F3n de tr\u00E1mite registral, luego de efectuada la inscripci\u00F3n y puesta la constancia de ella en el t\u00EDtulo o documento objeto de registro.';
     displayName: 'CR_AnotacionRegistro';
     pluralName: 'cr-anotacionregistros';
     singularName: 'cr-anotacionregistro';
@@ -1755,7 +1762,7 @@ export interface ApiCrAnotacionregistroCrAnotacionregistro
     numero_anotacion: Attribute.Integer &
       Attribute.SetMinMax<
         {
-          max: 10000000000;
+          max: 9999999999;
           min: 0;
         },
         number
@@ -1774,7 +1781,6 @@ export interface ApiCrAnotacionregistroCrAnotacionregistro
     valor_transaccion: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
           min: 0;
         },
         number
@@ -1801,12 +1807,12 @@ export interface ApiCrAutoreconocimientoetnicotipoCrAutoreconocimientoetnicotipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1837,7 +1843,7 @@ export interface ApiCrCaracteristicasucCrCaracteristicasuc
   extends Schema.CollectionType {
   collectionName: 'cr_caracteristicasuc';
   info: {
-    description: '';
+    description: 'Clase que permite agrupar las unidades de construcci\u00F3n por identificador, uso y tipolog\u00EDa.';
     displayName: 'CR_CaracteristicasUnidadConstruccion';
     pluralName: 'cr-caracteristicasucs';
     singularName: 'cr-caracteristicasuc';
@@ -1859,7 +1865,7 @@ export interface ApiCrCaracteristicasucCrCaracteristicasuc
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 1000000000000000;
+          max: 99999999999999.9;
           min: 0;
         },
         number
@@ -1893,6 +1899,7 @@ export interface ApiCrCaracteristicasucCrCaracteristicasuc
       Attribute.SetMinMax<
         {
           max: 150;
+          min: 0;
         },
         number
       >;
@@ -1932,12 +1939,12 @@ export interface ApiCrCondicionprediotipoCrCondicionprediotipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -1983,12 +1990,12 @@ export interface ApiCrConstruccionplantatipoCrConstruccionplantatipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -2030,42 +2037,48 @@ export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
     area_total_construida: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000000000000;
+          max: 99999999999999.98;
+          min: 0;
         },
         number
       >;
     area_total_construida_comun: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000000000000;
+          max: 99999999999999.98;
+          min: 0;
         },
         number
       >;
     area_total_construida_privada: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000000000000;
+          max: 99999999999999.98;
+          min: 0;
         },
         number
       >;
     area_total_terreno: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000000000000;
+          max: 99999999999999.98;
+          min: 0;
         },
         number
       >;
     area_total_terreno_comun: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000000000000;
+          max: 99999999999999.98;
+          min: 0;
         },
         number
       >;
     area_total_terreno_privada: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000000000000;
+          max: 99999999999999.98;
+          min: 0;
         },
         number
       >;
@@ -2086,13 +2099,15 @@ export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
       Attribute.SetMinMax<
         {
           max: 1000;
+          min: 0;
         },
         number
       >;
     total_unidades_privadas: Attribute.Integer &
       Attribute.SetMinMax<
         {
-          max: 100000000;
+          max: 99999999;
+          min: 0;
         },
         number
       >;
@@ -2141,7 +2156,7 @@ export interface ApiCrDerechoCrDerecho extends Schema.CollectionType {
       }>;
     fecha_anotacion: Attribute.Date;
     fin_vida_util_version: Attribute.DateTime;
-    fraccion_derecho: Attribute.Float &
+    fraccion_derecho: Attribute.Decimal &
       Attribute.Required &
       Attribute.SetMinMax<
         {
@@ -2212,12 +2227,12 @@ export interface ApiCrDerechotipoCrDerechotipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -2263,13 +2278,12 @@ export interface ApiCrDestinacioneconomicatipoCrDestinacioneconomicatipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
-      Attribute.Required &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -2315,23 +2329,25 @@ export interface ApiCrErrsaTipoReferenciaCrErrsaTipoReferencia
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
     nombre: Attribute.String &
       Attribute.Required &
       Attribute.Private &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
     nombre_vista: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
@@ -2348,6 +2364,7 @@ export interface ApiCrErrsaTipoReferenciaCrErrsaTipoReferencia
 export interface ApiCrErrsaCrErrsa extends Schema.CollectionType {
   collectionName: 'cr_errsa';
   info: {
+    description: 'Estructura que permite incorporar referencias registrales del sistema antiguo.';
     displayName: 'CR_ERRSA';
     pluralName: 'cr-errsas';
     singularName: 'cr-errsa';
@@ -2404,7 +2421,8 @@ export interface ApiCrErrsaCrErrsa extends Schema.CollectionType {
       'api::cr-errsa.cr-errsa',
       'oneToOne',
       'api::cr-errsa-tipo-referencia.cr-errsa-tipo-referencia'
-    >;
+    > &
+      Attribute.Required;
     tomo: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 2;
@@ -2438,12 +2456,12 @@ export interface ApiCrEstadoanotaciontipoCrEstadoanotaciontipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -2489,12 +2507,12 @@ export interface ApiCrEstadofmitipoCrEstadofmitipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -2539,12 +2557,12 @@ export interface ApiCrEstadotipoCrEstadotipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -2575,6 +2593,7 @@ export interface ApiCrEstrucavalcaracCrEstrucavalcarac
   extends Schema.CollectionType {
   collectionName: 'cr_estrucavalcarac';
   info: {
+    description: 'Estructura que contiene los aval\u00FAos de la caracter\u00EDstica de construcci\u00F3n.';
     displayName: 'CR_EstructuraAvaluoCaracterizacion';
     pluralName: 'cr-estrucavalcaracs';
     singularName: 'cr-estrucavalcarac';
@@ -2583,11 +2602,11 @@ export interface ApiCrEstrucavalcaracCrEstrucavalcarac
     draftAndPublish: false;
   };
   attributes: {
-    avaluo_catastral: Attribute.Integer &
+    avaluo_catastral: Attribute.Decimal &
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
@@ -2603,7 +2622,7 @@ export interface ApiCrEstrucavalcaracCrEstrucavalcarac
       'admin::user'
     > &
       Attribute.Private;
-    fecha_avaluo: Attribute.Date;
+    fecha_avaluo: Attribute.Date & Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-estrucavalcarac.cr-estrucavalcarac',
@@ -2611,10 +2630,10 @@ export interface ApiCrEstrucavalcaracCrEstrucavalcarac
       'admin::user'
     > &
       Attribute.Private;
-    valor_comercial: Attribute.Integer &
+    valor_comercial: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
@@ -2625,7 +2644,7 @@ export interface ApiCrEstrucavalinterCrEstrucavalinter
   extends Schema.CollectionType {
   collectionName: 'cr_estrucavalinter';
   info: {
-    description: '';
+    description: 'Estructura que define los valores de avaluos catastrales de la intersecci\u00F3n de un predio informal con un predio formal.';
     displayName: 'CR_EstructuraAvaluoInterseccion';
     pluralName: 'cr-estrucavalinters';
     singularName: 'cr-estrucavalinter';
@@ -2634,26 +2653,26 @@ export interface ApiCrEstrucavalinterCrEstrucavalinter
     draftAndPublish: false;
   };
   attributes: {
-    avaluo_catastral_interseccion_terreno: Attribute.Integer &
+    avaluo_catastral_interseccion_terreno: Attribute.Decimal &
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
-    avaluo_catastral_interseccion_total: Attribute.Integer &
+    avaluo_catastral_interseccion_total: Attribute.Decimal &
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
-    avaluo_catastral_interseccion_unidades_construccion: Attribute.Integer &
+    avaluo_catastral_interseccion_unidades_construccion: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
@@ -2683,6 +2702,7 @@ export interface ApiCrEstrucmatrisegreCrEstrucmatrisegre
   extends Schema.CollectionType {
   collectionName: 'cr_estrucmatrisegre';
   info: {
+    description: 'Corresponde a la informaci\u00F3n del c\uFFFDdigo de la ORIP y el n\u00FAmero de matr\u00EDcula inmobiliaria de los predios que se han aperturado con base en el predio objeto de estudio.';
     displayName: 'CR_EstructuraMatriculaSegregados';
     pluralName: 'cr-estrucmatrisegres';
     singularName: 'cr-estrucmatrisegre';
@@ -2725,6 +2745,7 @@ export interface ApiCrEstrucpredmatrinpnCrEstrucpredmatrinpn
   extends Schema.CollectionType {
   collectionName: 'cr_estrucpredmatrinpn';
   info: {
+    description: 'Estructura que permite identificar el predio o los predios de los cuales proviene(n) nueva(s) unidad(es) predial(es) producto de segregaci\u00F3n o agregaci\u00F3n.';
     displayName: 'CR_EstructuraPredioMatrizNPN';
     pluralName: 'cr-estrucpredmatrinpns';
     singularName: 'cr-estrucpredmatrinpn';
@@ -2736,7 +2757,8 @@ export interface ApiCrEstrucpredmatrinpnCrEstrucpredmatrinpn
     area_catastral_terreno: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 1e25;
+          max: 1e22;
+          min: 0;
         },
         number
       >;
@@ -2771,7 +2793,7 @@ export interface ApiCrEstrucpredorinpnCrEstrucpredorinpn
   extends Schema.CollectionType {
   collectionName: 'cr_estrucpredorinpn';
   info: {
-    description: '';
+    description: 'Estructura que permite identificar el  n\u00FAmero predial nacional anterior a los cambios de renumeraci\u00F3n producto de la adopci\u00F3n de la estructura definida por el IGAC  y que permite mantener el historial del predio.';
     displayName: 'CR_EstructuraPredioOrigenNPN';
     pluralName: 'cr-estrucpredorinpns';
     singularName: 'cr-estrucpredorinpn';
@@ -2812,7 +2834,7 @@ export interface ApiCrEstructuraalertapredioCrEstructuraalertapredio
   extends Schema.CollectionType {
   collectionName: 'cr_estructuraalertapredio';
   info: {
-    description: '';
+    description: 'Estructura que contiene el estado del predio en la base de datos catastral.';
     displayName: 'CR_EstructuraAlertaPredio';
     pluralName: 'cr-estructuraalertapredios';
     singularName: 'cr-estructuraalertapredio';
@@ -2859,7 +2881,7 @@ export interface ApiCrEstructuraavaluoCrEstructuraavaluo
   extends Schema.CollectionType {
   collectionName: 'cr_estructuraavaluo';
   info: {
-    description: '';
+    description: 'Estructura que contiene el aval\u00FAo del predio en la base de datos catastral.';
     displayName: 'CR_EstructuraAvaluo';
     pluralName: 'cr-estructuraavaluos';
     singularName: 'cr-estructuraavaluo';
@@ -2873,21 +2895,21 @@ export interface ApiCrEstructuraavaluoCrEstructuraavaluo
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
     avaluo_catastral_terreno: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
     avaluo_catastral_total_unidadesconstruccion: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
@@ -2915,21 +2937,21 @@ export interface ApiCrEstructuraavaluoCrEstructuraavaluo
     valor_comercial: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
     valor_comercial_terreno: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
     valor_comercial_total_unidadesconstruccion: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          min: 0;
         },
         number
       >;
@@ -2940,6 +2962,7 @@ export interface ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz
   extends Schema.CollectionType {
   collectionName: 'cr_estructuramatriculamatriz';
   info: {
+    description: 'Corresponde a la informaci\u00F3n del c\u00F3digo de la ORIP y el n\u00FAmero de matr\u00EDcula inmobiliaria de los predios por los cuales naci\u00F3 el predio objeto de estudio.';
     displayName: 'CR_EstructuraMatriculaMatriz';
     pluralName: 'cr-estructuramatriculamatrizs';
     singularName: 'cr-estructuramatriculamatriz';
@@ -2982,6 +3005,7 @@ export interface ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr
   extends Schema.CollectionType {
   collectionName: 'cr_estructuraprocedimientocr';
   info: {
+    description: 'Estructura que contiene los procedimientos catastrales con efectos registrales.';
     displayName: 'CR_EstructuraProcedimientoCatastralRegistral';
     pluralName: 'cr-estructuraprocedimientocrs';
     singularName: 'cr-estructuraprocedimientocr';
@@ -3006,7 +3030,8 @@ export interface ApiCrEstructuraprocedimientocrCrEstructuraprocedimientocr
       'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr',
       'oneToOne',
       'api::cr-procedimientocatastralregistraltipo.cr-procedimientocatastralregistraltipo'
-    >;
+    > &
+      Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-estructuraprocedimientocr.cr-estructuraprocedimientocr',
@@ -3036,12 +3061,12 @@ export interface ApiCrFotoidentificaciontipoCrFotoidentificaciontipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -3072,6 +3097,7 @@ export interface ApiCrFuenteadministrativaCrFuenteadministrativa
   extends Schema.CollectionType {
   collectionName: 'cr_fuenteadministrativa';
   info: {
+    description: 'Clase que almacena las fuentes administrativas (escrituras, sentencias, actos administrativos, etc) que sustentan el Derecho respecto de la relaci\u00F3n de tenencia entre el Interesado y el predio.';
     displayName: 'CR_FuenteAdministrativa';
     pluralName: 'cr-fuenteadministrativas';
     singularName: 'cr-fuenteadministrativa';
@@ -3108,7 +3134,8 @@ export interface ApiCrFuenteadministrativaCrFuenteadministrativa
       'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
       'oneToOne',
       'api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo'
-    >;
+    > &
+      Attribute.Required;
     fecha_documento_fuente: Attribute.Date;
     fecha_fin: Attribute.Date;
     local_id: Attribute.String &
@@ -3125,7 +3152,8 @@ export interface ApiCrFuenteadministrativaCrFuenteadministrativa
       'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
       'oneToOne',
       'api::col-fuenteadministrativatipo.col-fuenteadministrativatipo'
-    >;
+    > &
+      Attribute.Required;
     tipo_formato: Attribute.Relation<
       'api::cr-fuenteadministrativa.cr-fuenteadministrativa',
       'oneToOne',
@@ -3149,6 +3177,7 @@ export interface ApiCrFuenteespacialCrFuenteespacial
   extends Schema.CollectionType {
   collectionName: 'cr_fuenteespacial';
   info: {
+    description: 'Clase que hereda los atributos de la Clase COL_FuenteEspacial.';
     displayName: 'CR_FuenteEspacial';
     pluralName: 'cr-fuenteespacials';
     singularName: 'cr-fuenteespacial';
@@ -3177,14 +3206,15 @@ export interface ApiCrFuenteespacialCrFuenteespacial
       'api::cr-fuenteespacial.cr-fuenteespacial',
       'oneToOne',
       'api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo'
-    >;
+    > &
+      Attribute.Required;
     fecha_documento_fuente: Attribute.Date;
     local_id: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    metadato: Attribute.Blocks;
+    metadato: Attribute.Text;
     nombre: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
@@ -3193,7 +3223,8 @@ export interface ApiCrFuenteespacialCrFuenteespacial
       'api::cr-fuenteespacial.cr-fuenteespacial',
       'oneToOne',
       'api::col-fuenteespacialtipo.col-fuenteespacialtipo'
-    >;
+    > &
+      Attribute.Required;
     tipo_formato: Attribute.Relation<
       'api::cr-fuenteespacial.cr-fuenteespacial',
       'oneToOne',
@@ -3216,7 +3247,7 @@ export interface ApiCrFuenteespacialCrFuenteespacial
 export interface ApiCrHipotecaCrHipoteca extends Schema.CollectionType {
   collectionName: 'cr_hipoteca';
   info: {
-    description: '';
+    description: 'Derecho real que grava bienes materiales sujet\u00E1ndolos a responder del cumplimiento de una obligaci\u00F3n dineraria.';
     displayName: 'CR_Hipoteca';
     pluralName: 'cr-hipotecas';
     singularName: 'cr-hipoteca';
@@ -3335,7 +3366,7 @@ export interface ApiCrHipotecaderechoCrHipotecaderecho
 export interface ApiCrInformalidadCrInformalidad extends Schema.CollectionType {
   collectionName: 'cr_informalidad';
   info: {
-    description: '';
+    description: 'Relaci\u00F3n de tenencia que no corresponde a la propiedad, se presenta en los casos en los que la persona que ejerce la tenencia no es la misma que se encuentra en el registro de propiedad consignado en el folio de matr\u00EDcula inmobiliaria correspondiente.';
     displayName: 'CR_Informalidad';
     pluralName: 'cr-informalidads';
     singularName: 'cr-informalidad';
@@ -3417,12 +3448,12 @@ export interface ApiCrInformalidadtipoCrInformalidadtipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -3452,7 +3483,7 @@ export interface ApiCrInformalidadtipoCrInformalidadtipo
 export interface ApiCrLinderoCrLindero extends Schema.CollectionType {
   collectionName: 'cr_lindero';
   info: {
-    description: '';
+    description: 'Linea de divisi\u00F3n que separa un bien inmueble de otro, que puede o no estar materializada f\u00EDsicamente.';
     displayName: 'CR_Lindero';
     pluralName: 'cr-linderos';
     singularName: 'cr-lindero';
@@ -3523,12 +3554,12 @@ export interface ApiCrMutaciontipoCrMutaciontipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -3559,6 +3590,7 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
   extends Schema.CollectionType {
   collectionName: 'cr_predio_copropiedad';
   info: {
+    description: 'Relaci\u00F3n entre unidades prediales y predios matrices bajo el r\u00E9gimen de propiedad horizontal y condominio';
     displayName: 'cr_predio_copropiedad';
     pluralName: 'cr-predio-copropiedads';
     singularName: 'cr-predio-copropiedad';
@@ -3571,7 +3603,7 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 10000000000000000;
+          max: 99999999999999.98;
           min: 0;
         },
         number
@@ -3579,7 +3611,7 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
     area_privada_construida: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 1e27;
+          max: 1e24;
           min: 0;
         },
         number
@@ -3587,7 +3619,7 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
     area_privada_libre: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 1e27;
+          max: 1e24;
           min: 0;
         },
         number
@@ -3595,12 +3627,12 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
     area_privada_terreno: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 1e27;
+          max: 1e24;
           min: 0;
         },
         number
       >;
-    coeficiente: Attribute.Float &
+    coeficiente: Attribute.Decimal &
       Attribute.Required &
       Attribute.SetMinMax<
         {
@@ -3620,12 +3652,14 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
       'api::cr-predio-copropiedad.cr-predio-copropiedad',
       'oneToOne',
       'api::cr-predio.cr-predio'
-    >;
+    > &
+      Attribute.Required;
     unidad_predial: Attribute.Relation<
       'api::cr-predio-copropiedad.cr-predio-copropiedad',
       'oneToOne',
       'api::cr-predio.cr-predio'
-    >;
+    > &
+      Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::cr-predio-copropiedad.cr-predio-copropiedad',
@@ -3680,7 +3714,7 @@ export interface ApiCrPredioTramitecatastralCrPredioTramitecatastral
 export interface ApiCrPredioCrPredio extends Schema.CollectionType {
   collectionName: 'cr_predio';
   info: {
-    description: '';
+    description: 'Clase especializada de BaUnit, que describe al predio como la unidad administrativa b\u00E1sica para la gesti\u00F3n catastral con enfoque multiprop\u00F3sito en Colombia. Predio: inmueble con o sin t\u00EDtulo registrado, no separado por otro predio, con o sin unidades de construcci\u00F3n y vinculado con personas naturales o jur\u00EDdicas, seg\u00FAn su relaci\u00F3n de tenencia: propietario, poseedor u ocupante.';
     displayName: 'CR_Predio';
     pluralName: 'cr-predios';
     singularName: 'cr-predio';
@@ -3694,6 +3728,7 @@ export interface ApiCrPredioCrPredio extends Schema.CollectionType {
       Attribute.SetMinMax<
         {
           max: 1e22;
+          min: 0;
         },
         number
       >;
@@ -3701,6 +3736,7 @@ export interface ApiCrPredioCrPredio extends Schema.CollectionType {
       Attribute.SetMinMax<
         {
           max: 1e22;
+          min: 0;
         },
         number
       >;
@@ -3808,6 +3844,7 @@ export interface ApiCrPredioinformalidadCrPredioinformalidad
   extends Schema.CollectionType {
   collectionName: 'cr_predioinformalidad';
   info: {
+    description: 'Atributo que permite identificar las relaciones entre los predios formales e informales.';
     displayName: 'CR_Predio_Informalidad';
     pluralName: 'cr-predioinformalidads';
     singularName: 'cr-predioinformalidad';
@@ -3819,7 +3856,8 @@ export interface ApiCrPredioinformalidadCrPredioinformalidad
     area_construida_interseccion: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 1e25;
+          max: 1e22;
+          min: 0;
         },
         number
       >;
@@ -3827,7 +3865,8 @@ export interface ApiCrPredioinformalidadCrPredioinformalidad
       Attribute.Required &
       Attribute.SetMinMax<
         {
-          max: 1e25;
+          max: 1e22;
+          min: 0;
         },
         number
       >;
@@ -3835,12 +3874,14 @@ export interface ApiCrPredioinformalidadCrPredioinformalidad
       'api::cr-predioinformalidad.cr-predioinformalidad',
       'oneToOne',
       'api::cr-predio.cr-predio'
-    >;
+    > &
+      Attribute.Required;
     cr_predio_informal: Attribute.Relation<
       'api::cr-predioinformalidad.cr-predioinformalidad',
       'oneToOne',
       'api::cr-predio.cr-predio'
-    >;
+    > &
+      Attribute.Required;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::cr-predioinformalidad.cr-predioinformalidad',
@@ -3876,12 +3917,12 @@ export interface ApiCrPrediotipoCrPrediotipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -3927,12 +3968,12 @@ export interface ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastra
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -3962,7 +4003,7 @@ export interface ApiCrProcedimientocatastralregistraltipoCrProcedimientocatastra
 export interface ApiCrPublicidadCrPublicidad extends Schema.CollectionType {
   collectionName: 'cr_publicidad';
   info: {
-    description: '';
+    description: 'Clase que contiene la publicidad de un Predio.';
     displayName: 'CR_Publicidad';
     pluralName: 'cr-publicidads';
     singularName: 'cr-publicidad';
@@ -4083,12 +4124,12 @@ export interface ApiCrPublicidadtipoCrPublicidadtipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4118,7 +4159,7 @@ export interface ApiCrPublicidadtipoCrPublicidadtipo
 export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
   collectionName: 'cr_puntocontrol';
   info: {
-    description: '';
+    description: 'Puntos topogr\u00E1ficos o geod\u00E9sicos utilizados como amarre para la ejecuci\u00F3n del levantamiento catastral.';
     displayName: 'CR_PuntoControl';
     pluralName: 'cr-puntocontrols';
     singularName: 'cr-puntocontrol';
@@ -4140,10 +4181,11 @@ export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    exactitud_horizontal: Attribute.Float &
+    exactitud_horizontal: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000;
+          max: 10000;
+          min: 0;
         },
         number
       >;
@@ -4165,7 +4207,8 @@ export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
       'api::cr-puntocontrol.cr-puntocontrol',
       'oneToOne',
       'api::col-metodoproducciontipo.col-metodoproducciontipo'
-    >;
+    > &
+      Attribute.Required;
     posicion_interpolacion: Attribute.Relation<
       'api::cr-puntocontrol.cr-puntocontrol',
       'oneToOne',
@@ -4175,7 +4218,8 @@ export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
       'api::cr-puntocontrol.cr-puntocontrol',
       'oneToOne',
       'api::col-puntotipo.col-puntotipo'
-    >;
+    > &
+      Attribute.Required;
     tipo_punto_control: Attribute.Relation<
       'api::cr-puntocontrol.cr-puntocontrol',
       'oneToOne',
@@ -4220,12 +4264,12 @@ export interface ApiCrPuntocontroltipoCrPuntocontroltipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4255,7 +4299,7 @@ export interface ApiCrPuntocontroltipoCrPuntocontroltipo
 export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
   collectionName: 'cr_puntolindero';
   info: {
-    description: '';
+    description: 'Punto que define la frontera de un predio con otro. La sucesi\u00F3n de estos puntos forma una l\u00EDnea que representa el l\uFFFDmite entre dos terrenos.';
     displayName: 'CR_PuntoLindero';
     pluralName: 'cr-puntolinderos';
     singularName: 'cr-puntolindero';
@@ -4278,10 +4322,11 @@ export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    exactitud_horizontal: Attribute.Float &
+    exactitud_horizontal: Attribute.Decimal &
       Attribute.SetMinMax<
         {
-          max: 100000;
+          max: 10000;
+          min: 0;
         },
         number
       >;
@@ -4308,7 +4353,8 @@ export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
       'api::cr-puntolindero.cr-puntolindero',
       'oneToOne',
       'api::col-metodoproducciontipo.col-metodoproducciontipo'
-    >;
+    > &
+      Attribute.Required;
     posicion_interpolacion: Attribute.Relation<
       'api::cr-puntolindero.cr-puntolindero',
       'oneToOne',
@@ -4318,7 +4364,8 @@ export interface ApiCrPuntolinderoCrPuntolindero extends Schema.CollectionType {
       'api::cr-puntolindero.cr-puntolindero',
       'oneToOne',
       'api::col-puntotipo.col-puntotipo'
-    >;
+    > &
+      Attribute.Required;
     ue_cr_terreno: Attribute.Relation<
       'api::cr-puntolindero.cr-puntolindero',
       'oneToOne',
@@ -4343,7 +4390,7 @@ export interface ApiCrResponsabilidadCrResponsabilidad
   extends Schema.CollectionType {
   collectionName: 'cr_responsabilidad';
   info: {
-    description: '';
+    description: 'Obligaci\u00F3n de hacer algo relacionado con el predio.';
     displayName: 'CR_Responsabilidad';
     pluralName: 'cr-responsabilidads';
     singularName: 'cr-responsabilidad';
@@ -4402,7 +4449,8 @@ export interface ApiCrResponsabilidadCrResponsabilidad
       'api::cr-responsabilidad.cr-responsabilidad',
       'oneToOne',
       'api::cr-responsabilidadtipo.cr-responsabilidadtipo'
-    >;
+    > &
+      Attribute.Required;
     unidad: Attribute.Relation<
       'api::cr-responsabilidad.cr-responsabilidad',
       'oneToOne',
@@ -4437,12 +4485,12 @@ export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4472,7 +4520,7 @@ export interface ApiCrResponsabilidadtipoCrResponsabilidadtipo
 export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
   collectionName: 'cr_restriccion';
   info: {
-    description: '';
+    description: 'Restricci\u00F3n legalmente constituida y registrada que afecta el derecho de una persona en relaci\u00F3n con el predio.';
     displayName: 'CR_Restriccion';
     pluralName: 'cr-restriccions';
     singularName: 'cr-restriccion';
@@ -4566,12 +4614,12 @@ export interface ApiCrRestricciontipoCrRestricciontipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4616,12 +4664,12 @@ export interface ApiCrSexotipoCrSexotipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4651,6 +4699,7 @@ export interface ApiCrSexotipoCrSexotipo extends Schema.CollectionType {
 export interface ApiCrTerrenoCrTerreno extends Schema.CollectionType {
   collectionName: 'cr_terreno';
   info: {
+    description: 'Extensi\u00F3n geogr\u00E1fica espacial del predio';
     displayName: 'CR_Terreno';
     pluralName: 'cr-terrenos';
     singularName: 'cr-terreno';
@@ -4704,7 +4753,7 @@ export interface ApiCrTramitecatastralCrTramitecatastral
   extends Schema.CollectionType {
   collectionName: 'cr_tramitecatastral';
   info: {
-    description: '';
+    description: 'Clase que contiene los cambios que se presentan en los componentes f\u00EDsico, jur\u00EDdico o econ\u00F3mico de un predio, una vez han sido formados.';
     displayName: 'CR_TramiteCatastral';
     pluralName: 'cr-tramitecatastrals';
     singularName: 'cr-tramitecatastral';
@@ -4748,7 +4797,7 @@ export interface ApiCrUnidadconstruccionCrUnidadconstruccion
   extends Schema.CollectionType {
   collectionName: 'cr_unidadconstruccion';
   info: {
-    description: '';
+    description: 'Edificaci\u00F3n dentro de un predio, que tiene unas caracter\u00EDsticas espec\u00EDficas en cuanto a uso y elementos constitutivos f\u00EDsicos.';
     displayName: 'CR_UnidadConstruccion';
     pluralName: 'cr-unidadconstruccions';
     singularName: 'cr-unidadconstruccion';
@@ -4761,7 +4810,7 @@ export interface ApiCrUnidadconstruccionCrUnidadconstruccion
       Attribute.SetMinMax<
         {
           max: 1000;
-          min: 0;
+          min: 1;
         },
         number
       >;
@@ -4845,12 +4894,12 @@ export interface ApiCrUnidadconstrucciontipoCrUnidadconstrucciontipo
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4896,12 +4945,12 @@ export interface ApiCrUsouconstipoCrUsouconstipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
@@ -4931,6 +4980,7 @@ export interface ApiCrUsouconstipoCrUsouconstipo extends Schema.CollectionType {
 export interface ApiExtarchivoExtarchivo extends Schema.CollectionType {
   collectionName: 'extarchivo';
   info: {
+    description: 'Referencia a clase externa desde donde se gestiona el repositorio de archivos.';
     displayName: 'ExtArchivo';
     pluralName: 'extarchivos';
     singularName: 'extarchivo';
@@ -5003,23 +5053,25 @@ export interface ApiExtdireccionClaseViaPrincipalExtdireccionClaseViaPrincipal
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
     nombre: Attribute.String &
       Attribute.Required &
       Attribute.Private &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
     nombre_vista: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
@@ -5052,18 +5104,25 @@ export interface ApiExtdireccionSectorCiudadExtdireccionSectorCiudad
       'admin::user'
     > &
       Attribute.Private;
-    descripcion_vista: Attribute.Text &
+    descripcion: Attribute.String &
+      Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
     nombre: Attribute.String &
       Attribute.Required &
       Attribute.Private &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
     nombre_vista: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
@@ -5096,23 +5155,25 @@ export interface ApiExtdireccionSectorPredioExtdireccionSectorPredio
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
     nombre: Attribute.String &
       Attribute.Required &
       Attribute.Private &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
     nombre_vista: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
@@ -5145,23 +5206,25 @@ export interface ApiExtdireccionTipoDireccionExtdireccionTipoDireccion
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
-    descripcion_vista: Attribute.Text &
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
     nombre: Attribute.String &
       Attribute.Required &
       Attribute.Private &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
     nombre_vista: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
@@ -5178,7 +5241,7 @@ export interface ApiExtdireccionTipoDireccionExtdireccionTipoDireccion
 export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
   collectionName: 'extdireccion';
   info: {
-    description: '';
+    description: 'Referencia a una clase externa para gestionar direcciones.';
     displayName: 'ExtDireccion';
     pluralName: 'extdireccions';
     singularName: 'extdireccion';
@@ -5261,7 +5324,8 @@ export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
       'api::extdireccion.extdireccion',
       'oneToOne',
       'api::extdireccion-tipo-direccion.extdireccion-tipo-direccion'
-    >;
+    > &
+      Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::extdireccion.extdireccion',
@@ -5283,7 +5347,7 @@ export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
 export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
   collectionName: 'extinteresado';
   info: {
-    description: '';
+    description: 'Referencia a una clase externa para gestionar identificaci\u00F3n del interesado.';
     displayName: 'ExtInteresado';
     pluralName: 'extinteresados';
     singularName: 'extinteresado';
@@ -5313,15 +5377,15 @@ export interface ApiExtinteresadoExtinteresado extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    firma: Attribute.Text &
+    firma: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 2000;
       }>;
-    fotografia: Attribute.Text &
+    fotografia: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 2000;
       }>;
-    huella_dactilar: Attribute.Text &
+    huella_dactilar: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 2000;
       }>;
@@ -5829,7 +5893,7 @@ export interface PluginUsersPermissionsRole extends Schema.CollectionType {
 export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   collectionName: 'up_users';
   info: {
-    description: '';
+    description: 'Para el desarrollo de la gesti\u00F3n catastral es la persona que frente a un inmueble ostenta la relaci\u00F3n jur\u00EDdica de propietario, poseedor u ocupante.';
     displayName: 'User (CR_Interesado)';
     name: 'user';
     pluralName: 'users';
@@ -5862,11 +5926,13 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
         minLength: 6;
       }>;
     espacio_de_nombres: Attribute.String &
+      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
     fin_vida_util_version: Attribute.DateTime;
     local_id: Attribute.String &
+      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;

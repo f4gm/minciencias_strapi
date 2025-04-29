@@ -16,18 +16,21 @@
       "required": true,
       "relation": "oneToOne",
       "target": "api::cr-lindero.cr-lindero",
+      "useJoinTable": false,
+      "column": {
+        "notNullable": true
+      }
+    },
+    "ue_menos_cr_terreno": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-terreno.cr-terreno",
       "useJoinTable": false
     },
     "ue_menos_cr_unidadconstruccion": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
-      "useJoinTable": false
-    },
-    "ue_menos_cr_terreno": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno",
       "useJoinTable": false
     }
   }
