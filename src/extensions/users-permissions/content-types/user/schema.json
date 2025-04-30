@@ -18,9 +18,7 @@
       "target": "api::col-documentotipo.col-documentotipo",
       "required": true,
       "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "column": {}
     },
     "primer_nombre": {
       "type": "string",
@@ -60,9 +58,7 @@
       "target": "api::cr-sexotipo.cr-sexotipo",
       "required": true,
       "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "column": {}
     },
     "autoreconocimientoetnico": {
       "type": "relation",
@@ -105,29 +101,23 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "column": {
-        "notNullable": true
-      }
+      "column": {}
     },
     "fin_vida_util_version": {
       "type": "datetime"
     },
     "espacio_de_nombres": {
       "type": "string",
-      "required": true,
       "maxLength": 255,
       "column": {
-        "notNullable": true,
         "type": "string",
         "args": [255]
       }
     },
     "local_id": {
       "type": "string",
-      "required": true,
       "maxLength": 255,
       "column": {
-        "notNullable": true,
         "type": "string",
         "args": [255]
       }
