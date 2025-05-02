@@ -95,6 +95,7 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
+      "required": true,
       "column": {
         "notNullable": true
       }
