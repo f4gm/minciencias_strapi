@@ -15,24 +15,18 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "useJoinTable": false
+      "target": "plugin::users-permissions.user"
     },
     "interesado_cr_agrupacioninteresados": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
-      "useJoinTable": false
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
     },
     "agrupacion": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "participacion": {
       "type": "decimal",

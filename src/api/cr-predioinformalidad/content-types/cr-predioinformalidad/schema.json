@@ -16,21 +16,13 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "cr_predio_informal": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "area_terreno_interseccion": {
       "type": "decimal",

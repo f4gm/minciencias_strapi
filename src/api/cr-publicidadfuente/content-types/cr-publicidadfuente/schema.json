@@ -15,21 +15,13 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-publicidad.cr-publicidad",
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "target": "api::cr-publicidad.cr-publicidad"
     },
     "col_fuente": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
     }
   }
 }

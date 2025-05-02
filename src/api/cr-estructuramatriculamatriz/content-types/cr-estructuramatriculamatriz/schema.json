@@ -31,8 +31,7 @@
     "cr_predmatrimatriz": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "target": "api::cr-predio.cr-predio"
     }
   }
 }

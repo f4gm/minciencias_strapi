@@ -16,11 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::extdireccion-tipo-direccion.extdireccion-tipo-direccion",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "es_direccion_principal": {
       "type": "boolean"
@@ -52,8 +48,7 @@
     "clase_via_principal": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::extdireccion-clase-via-principal.extdireccion-clase-via-principal",
-      "useJoinTable": false
+      "target": "api::extdireccion-clase-via-principal.extdireccion-clase-via-principal"
     },
     "valor_via_principal": {
       "type": "string",
@@ -74,8 +69,7 @@
     "sector_ciudad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::extdireccion-sector-ciudad.extdireccion-sector-ciudad",
-      "useJoinTable": false
+      "target": "api::extdireccion-sector-ciudad.extdireccion-sector-ciudad"
     },
     "valor_via_generadora": {
       "type": "string",
@@ -104,8 +98,7 @@
     "sector_predio": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::extdireccion-sector-predio.extdireccion-sector-predio",
-      "useJoinTable": false
+      "target": "api::extdireccion-sector-predio.extdireccion-sector-predio"
     },
     "complemento": {
       "type": "string",
@@ -126,26 +119,22 @@
     "extinteresado_ext_direccion_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::extinteresado.extinteresado",
-      "useJoinTable": false
+      "target": "api::extinteresado.extinteresado"
     },
     "cr_terreno_ext_direccion_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-terreno.cr-terreno",
-      "useJoinTable": false
+      "target": "api::cr-terreno.cr-terreno"
     },
     "cr_uc_ext_direccion_id": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion",
-      "useJoinTable": false
+      "target": "api::cr-unidadconstruccion.cr-unidadconstruccion"
     },
     "cr_predio_direccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "target": "api::cr-predio.cr-predio"
     }
   }
 }

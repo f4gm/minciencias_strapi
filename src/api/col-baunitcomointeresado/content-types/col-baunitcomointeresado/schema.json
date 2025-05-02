@@ -15,24 +15,18 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "useJoinTable": false
+      "target": "plugin::users-permissions.user"
     },
     "inte_cr_agrupinte": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
-      "useJoinTable": false
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
     },
     "unidad": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-areatipo.col-areatipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     }
   }
 }

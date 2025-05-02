@@ -16,11 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-responsabilidadtipo.cr-responsabilidadtipo",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "naturaleza_juridica": {
       "type": "string",
@@ -60,20 +56,17 @@
     "interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "useJoinTable": false
+      "target": "plugin::users-permissions.user"
     },
     "interesado_cr_agrupacioninteresados": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
-      "useJoinTable": false
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
     },
     "unidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false
+      "target": "api::cr-predio.cr-predio"
     },
     "comienzo_vida_util_version": {
       "type": "datetime",

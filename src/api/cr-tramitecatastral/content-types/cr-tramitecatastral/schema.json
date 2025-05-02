@@ -16,11 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-mutaciontipo.cr-mutaciontipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "numero_resolucion": {
       "type": "string",

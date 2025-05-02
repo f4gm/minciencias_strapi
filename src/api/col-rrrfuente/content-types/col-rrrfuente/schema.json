@@ -15,41 +15,32 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
     },
     "rrr_cr_informalidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-informalidad.cr-informalidad",
-      "useJoinTable": false
+      "target": "api::cr-informalidad.cr-informalidad"
     },
     "rrr_cr_responsabilidad": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-responsabilidad.cr-responsabilidad",
-      "useJoinTable": false
+      "target": "api::cr-responsabilidad.cr-responsabilidad"
     },
     "rrr_cr_restriccion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-restriccion.cr-restriccion",
-      "useJoinTable": false
+      "target": "api::cr-restriccion.cr-restriccion"
     },
     "rrr_cr_derecho": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-derecho.cr-derecho",
-      "useJoinTable": false
+      "target": "api::cr-derecho.cr-derecho"
     },
     "rrr_cr_hipoteca": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-hipoteca.cr-hipoteca",
-      "useJoinTable": false
+      "target": "api::cr-hipoteca.cr-hipoteca"
     }
   }
 }

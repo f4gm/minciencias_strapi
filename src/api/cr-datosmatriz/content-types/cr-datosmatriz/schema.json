@@ -80,11 +80,7 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio",
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "target": "api::cr-predio.cr-predio"
     }
   }
 }

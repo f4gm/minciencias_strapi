@@ -16,11 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-publicidadtipo.cr-publicidadtipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "naturaleza_juridica": {
       "type": "string",
@@ -52,24 +48,18 @@
     "col_interesado_cr_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "useJoinTable": false
+      "target": "plugin::users-permissions.user"
     },
     "col_inte_cr_agrup": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado",
-      "useJoinTable": false
+      "target": "api::cr-agrupacioninteresado.cr-agrupacioninteresado"
     },
     "cr_baunit": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-predio.cr-predio",
-      "required": true,
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     }
   }
 }

@@ -31,8 +31,7 @@
     "estado_anotacion": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-estadoanotaciontipo.cr-estadoanotaciontipo",
-      "useJoinTable": false
+      "target": "api::cr-estadoanotaciontipo.cr-estadoanotaciontipo"
     },
     "valor_transaccion": {
       "type": "decimal",
@@ -46,11 +45,7 @@
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa",
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "target": "api::cr-fuenteadministrativa.cr-fuenteadministrativa"
     }
   }
 }

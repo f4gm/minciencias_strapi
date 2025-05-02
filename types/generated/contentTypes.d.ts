@@ -5926,11 +5926,13 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
         minLength: 6;
       }>;
     espacio_de_nombres: Attribute.String &
+      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
     fin_vida_util_version: Attribute.DateTime;
     local_id: Attribute.String &
+      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;

@@ -26,11 +26,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-unidadconstrucciontipo.cr-unidadconstrucciontipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "total_plantas": {
       "type": "integer",
@@ -45,11 +41,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-usouconstipo.cr-usouconstipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "anio_construccion": {
       "type": "integer",

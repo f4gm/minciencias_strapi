@@ -14,24 +14,18 @@
     "punto_cr_puntocontrol": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-puntocontrol.cr-puntocontrol",
-      "useJoinTable": false
+      "target": "api::cr-puntocontrol.cr-puntocontrol"
     },
     "punto_cr_puntolindero": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-puntolindero.cr-puntolindero",
-      "useJoinTable": false
+      "target": "api::cr-puntolindero.cr-puntolindero"
     },
     "ccl": {
       "type": "relation",
       "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-lindero.cr-lindero",
-      "useJoinTable": false,
-      "column": {
-        "notNullable": true
-      }
+      "target": "api::cr-lindero.cr-lindero"
     }
   }
 }

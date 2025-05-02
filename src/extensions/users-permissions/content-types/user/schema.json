@@ -16,9 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-documentotipo.col-documentotipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {}
+      "required": true
     },
     "primer_nombre": {
       "type": "string",
@@ -56,15 +54,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::cr-sexotipo.cr-sexotipo",
-      "required": true,
-      "useJoinTable": false,
-      "column": {}
+      "required": true
     },
     "autoreconocimientoetnico": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo",
-      "useJoinTable": false
+      "target": "api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo"
     },
     "autoreconocimientocampesino": {
       "type": "boolean"
@@ -88,8 +83,7 @@
     "tipo_interesado": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-interesadotipo.col-interesadotipo",
-      "useJoinTable": false
+      "target": "api::col-interesadotipo.col-interesadotipo"
     },
     "numero_documento": {
       "type": "string",
@@ -101,23 +95,29 @@
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
-      "column": {}
+      "column": {
+        "notNullable": true
+      }
     },
     "fin_vida_util_version": {
       "type": "datetime"
     },
     "espacio_de_nombres": {
       "type": "string",
+      "required": true,
       "maxLength": 255,
       "column": {
+        "notNullable": true,
         "type": "string",
         "args": [255]
       }
     },
     "local_id": {
       "type": "string",
+      "required": true,
       "maxLength": 255,
       "column": {
+        "notNullable": true,
         "type": "string",
         "args": [255]
       }

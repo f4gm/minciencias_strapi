@@ -16,11 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-fuenteadministrativatipo.col-fuenteadministrativatipo",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "ente_emisor": {
       "type": "string",
@@ -48,17 +44,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::col-estadodisponibilidadtipo.col-estadodisponibilidadtipo",
-      "useJoinTable": false,
-      "required": true,
-      "column": {
-        "notNullable": true
-      }
+      "required": true
     },
     "tipo_formato": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-formatotipo.col-formatotipo",
-      "useJoinTable": false
+      "target": "api::col-formatotipo.col-formatotipo"
     },
     "fecha_documento_fuente": {
       "type": "date"

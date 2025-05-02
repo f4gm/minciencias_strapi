@@ -39,8 +39,7 @@
     "relacion_superficie": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::col-relacionsuperficietipo.col-relacionsuperficietipo",
-      "useJoinTable": false
+      "target": "api::col-relacionsuperficietipo.col-relacionsuperficietipo"
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
