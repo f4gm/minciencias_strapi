@@ -3,7 +3,7 @@
   "collectionName": "cr_tramitecatastral",
   "info": {
     "singularName": "cr-tramitecatastral",
-    "pluralName": "cr-tramitecatastrals",
+    "pluralName": "cr-tramitecatastrales",
     "displayName": "CR_TramiteCatastral",
     "description": "Clase que contiene los cambios que se presentan en los componentes físico, jurídico o económico de un predio, una vez han sido formados."
   },

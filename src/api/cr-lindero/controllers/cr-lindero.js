@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-lindero controller
- */
+  * cr-lindero controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

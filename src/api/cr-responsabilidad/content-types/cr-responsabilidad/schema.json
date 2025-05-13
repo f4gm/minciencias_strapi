@@ -3,7 +3,7 @@
   "collectionName": "cr_responsabilidad",
   "info": {
     "singularName": "cr-responsabilidad",
-    "pluralName": "cr-responsabilidads",
+    "pluralName": "cr-responsabilidades",
     "displayName": "CR_Responsabilidad",
     "description": "Obligación de hacer algo relacionado con el predio."
   },

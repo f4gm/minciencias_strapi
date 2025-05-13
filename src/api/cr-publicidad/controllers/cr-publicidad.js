@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-publicidad controller
- */
+  * cr-publicidad controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

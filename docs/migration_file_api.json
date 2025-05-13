@@ -1,0 +1,1262 @@
+{
+  "col_areatipo": {
+    "model_name": "col_areatipo",
+    "schema_name": "col-areatipo",
+    "schema_plural_name": "col-areatipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description"
+    }
+  },
+  "col_areavalor": {
+    "model_name": "col_areavalor",
+    "schema_name": "col-areavalor",
+    "schema_plural_name": "col-areavalores",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "area": "area",
+      "datos_proyeccion": "datos_proyeccion",
+      "cr_terreno_area": "cr_terreno_area",
+      "cr_unidadconstruccion_area": "cr_unidadconstruccion_area"
+    }
+  },
+  "col_baunitcomointeresado": {
+    "model_name": "col_baunitcomointeresado",
+    "schema_name": "col-baunitcomointeresado",
+    "schema_plural_name": "col-baunitcomointeresados",
+    "fields": {
+      "legacy_id": "t_id",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "inte_cr_agrupinte": "interesado_cr_agrupacioninteresados",
+      "unidad": "unidad"
+    }
+  },
+  "col_baunitfuente": {
+    "model_name": "col_baunitfuente",
+    "schema_name": "col-baunitfuente",
+    "schema_plural_name": "col-baunitfuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "fuente_espacial": "fuente_espacial",
+      "unidad": "unidad"
+    }
+  },
+  "col_cclfuente": {
+    "model_name": "col_cclfuente",
+    "schema_name": "col-cclfuente",
+    "schema_plural_name": "col-cclfuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "ccl": "ccl",
+      "fuente_espacial": "fuente_espacial"
+    }
+  },
+  "col_documentotipo": {
+    "model_name": "col_documentotipo",
+    "schema_name": "col-documentotipo",
+    "schema_plural_name": "col-documentotipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_estadodisponibilidadtipo": {
+    "model_name": "col_estadodisponibilidadtipo",
+    "schema_name": "col-estadodisponibilidadtipo",
+    "schema_plural_name": "col-estadodisponibilidadtipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_formatotipo": {
+    "model_name": "col_formatotipo",
+    "schema_name": "col-formatotipo",
+    "schema_plural_name": "col-formatotipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_fuenteadministrativatipo": {
+    "model_name": "col_fuenteadministrativatipo",
+    "schema_name": "col-fuenteadministrativatipo",
+    "schema_plural_name": "col-fuenteadministrativatipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_fuenteespacialtipo": {
+    "model_name": "col_fuenteespacialtipo",
+    "schema_name": "col-fuenteespacialtipo",
+    "schema_plural_name": "col-fuenteespacialtipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_grupointeresadotipo": {
+    "model_name": "col_grupointeresadotipo",
+    "schema_name": "col-grupointeresadotipo",
+    "schema_plural_name": "col-grupointeresadotipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_interesadotipo": {
+    "model_name": "col_interesadotipo",
+    "schema_name": "col-interesadotipo",
+    "schema_plural_name": "col-interesadotipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_interpolaciontipo": {
+    "model_name": "col_interpolaciontipo",
+    "schema_name": "col-interpolaciontipo",
+    "schema_plural_name": "col-interpolaciontipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_masccl": {
+    "model_name": "col_masccl",
+    "schema_name": "col-masccl",
+    "schema_plural_name": "col-masccls",
+    "fields": {
+      "legacy_id": "t_id",
+      "ccl_mas": "ccl_mas",
+      "ue_mas_cr_terreno": "ue_mas_cr_terreno",
+      "ue_mas_cr_unidadconstruccion": "ue_mas_cr_unidadconstruccion"
+    }
+  },
+  "col_menosccl": {
+    "model_name": "col_menosccl",
+    "schema_name": "col-menosccl",
+    "schema_plural_name": "col-menosccls",
+    "fields": {
+      "legacy_id": "t_id",
+      "ccl_menos": "ccl_menos",
+      "ue_menos_cr_terreno": "ue_menos_cr_terreno",
+      "ue_menos_cr_unidadconstruccion": "ue_menos_cr_unidadconstruccion"
+    }
+  },
+  "col_metodoproducciontipo": {
+    "model_name": "col_metodoproducciontipo",
+    "schema_name": "col-metodoproducciontipo",
+    "schema_plural_name": "col-metodoproducciontipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_miembros": {
+    "model_name": "col_miembros",
+    "schema_name": "col-miembro",
+    "schema_plural_name": "col-miembros",
+    "fields": {
+      "legacy_id": "t_id",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "interesado_cr_agrupacioninteresados": "interesado_cr_agrupacioninteresados",
+      "agrupacion": "agrupacion",
+      "participacion": "participacion"
+    }
+  },
+  "col_puntoccl": {
+    "model_name": "col_puntoccl",
+    "schema_name": "col-puntoccl",
+    "schema_plural_name": "col-puntoccls",
+    "fields": {
+      "legacy_id": "t_id",
+      "punto_cr_puntocontrol": "punto_cr_puntocontrol",
+      "punto_cr_puntolindero": "punto_cr_puntolindero",
+      "ccl": "ccl"
+    }
+  },
+  "col_puntofuente": {
+    "model_name": "col_puntofuente",
+    "schema_name": "col-puntofuente",
+    "schema_plural_name": "col-puntofuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "fuente_espacial": "fuente_espacial",
+      "punto_cr_puntocontrol": "punto_cr_puntocontrol",
+      "punto_cr_puntolindero": "punto_cr_puntolindero"
+    }
+  },
+  "col_puntotipo": {
+    "model_name": "col_puntotipo",
+    "schema_name": "col-puntotipo",
+    "schema_plural_name": "col-puntotipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_relacionsuperficietipo": {
+    "model_name": "col_relacionsuperficietipo",
+    "schema_name": "col-relacionsuperficietipo",
+    "schema_plural_name": "col-relacionsuperficietipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_responsablefuente": {
+    "model_name": "col_responsablefuente",
+    "schema_name": "col-responsablefuente",
+    "schema_plural_name": "col-responsablefuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "fuente_administrativa": "fuente_administrativa",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "inte_cr_agrup": "interesado_cr_agrupacioninteresados"
+    }
+  },
+  "col_rrrfuente": {
+    "model_name": "col_rrrfuente",
+    "schema_name": "col-rrrfuente",
+    "schema_plural_name": "col-rrrfuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "fuente_administrativa": "fuente_administrativa",
+      "rrr_cr_informalidad": "rrr_cr_informalidad",
+      "rrr_cr_responsabilidad": "rrr_cr_responsabilidad",
+      "rrr_cr_restriccion": "rrr_cr_restriccion",
+      "rrr_cr_derecho": "rrr_cr_derecho",
+      "rrr_cr_hipoteca": "rrr_cr_hipoteca"
+    }
+  },
+  "col_uebaunit": {
+    "model_name": "col_uebaunit",
+    "schema_name": "col-uebaunit",
+    "schema_plural_name": "col-uebaunits",
+    "fields": {
+      "legacy_id": "t_id",
+      "ue_cr_terreno": "ue_cr_terreno",
+      "ue_cr_unidadconstruccion": "ue_cr_unidadconstruccion",
+      "baunit": "baunit"
+    }
+  },
+  "col_uefuente": {
+    "model_name": "col_uefuente",
+    "schema_name": "col-uefuente",
+    "schema_plural_name": "col-uefuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "ue_cr_terreno": "ue_cr_terreno",
+      "ue_cr_unidadconstruccion": "ue_cr_unidadconstruccion",
+      "fuente_espacial": "fuente_espacial"
+    }
+  },
+  "col_unidadadministrativabasicatipo": {
+    "model_name": "col_unidadadministrativabasicatipo",
+    "schema_name": "col-unidadadministrativabasicatipo",
+    "schema_plural_name": "col-unidadadministrativabasicatipos",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    }
+  },
+  "col_unidadfuente": {
+    "model_name": "col_unidadfuente",
+    "schema_name": "col-unidadfuente",
+    "schema_plural_name": "col-unidadfuentes",
+    "fields": {
+      "legacy_id": "t_id",
+      "fuente_administrativa": "fuente_administrativa",
+      "unidad": "unidad"
+    }
+  },
+  "cr_agrupacioninteresados": {
+    "model_name": "cr_agrupacioninteresados",
+    "schema_name": "cr-agrupacioninteresado",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "nombre": "nombre",
+      "tipo_interesado": "tipo_interesado",
+      "tipo_documento": "tipo_documento",
+      "numero_documento": "numero_documento",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-agrupacioninteresados"
+  },
+  "cr_anotacionregistro": {
+    "model_name": "cr_anotacionregistro",
+    "schema_name": "cr-anotacionregistro",
+    "fields": {
+      "legacy_id": "t_id",
+      "numero_radicacion": "numero_radicacion",
+      "fecha_radicacion": "fecha_radicacion",
+      "numero_anotacion": "numero_anotacion",
+      "estado_anotacion": "estado_anotacion",
+      "valor_transaccion": "valor_transaccion",
+      "cr_fuenteadministrativa": "cr_fuenteadministrativa"
+    },
+    "schema_plural_name": "cr-anotacionregistros"
+  },
+  "cr_autoreconocimientoetnicotipo": {
+    "model_name": "cr_autoreconocimientoetnicotipo",
+    "schema_name": "cr-autoreconocimientoetnicotipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-autoreconocimientoetnicotipos"
+  },
+  "cr_caracteristicasuc": {
+    "model_name": "cr_caracteristicasunidadconstruccion",
+    "schema_name": "cr-caracteristicasuc",
+    "fields": {
+      "legacy_id": "t_id",
+      "identificador": "identificador",
+      "tipo_unidad_construccion": "tipo_unidad_construccion",
+      "total_plantas": "total_plantas",
+      "uso": "uso",
+      "anio_construccion": "anio_construccion",
+      "area_construida": "area_construida",
+      "estado_conservacion": "estado_conservacion",
+      "observaciones": "observaciones"
+    },
+    "schema_plural_name": "cr-caracteristicasucs"
+  },
+  "cr_condicionprediotipo": {
+    "model_name": "cr_condicionprediotipo",
+    "schema_name": "cr-condicionprediotipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-condicionprediotipos"
+  },
+  "cr_construccionplantatipo": {
+    "model_name": "cr_construccionplantatipo",
+    "schema_name": "cr-construccionplantatipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-construccionplantatipos"
+  },
+  "cr_datosmatriz": {
+    "model_name": "cr_datosmatriz",
+    "schema_name": "cr-datosmatriz",
+    "fields": {
+      "legacy_id": "t_id",
+      "area_total_terreno": "area_total_terreno",
+      "area_total_terreno_privada": "area_total_terreno_privada",
+      "area_total_terreno_comun": "area_total_terreno_comun",
+      "area_total_construida": "area_total_construida",
+      "area_total_construida_privada": "area_total_construida_privada",
+      "area_total_construida_comun": "area_total_construida_comun",
+      "numero_torres": "numero_torres",
+      "total_unidades_privadas": "total_unidades_privadas",
+      "cr_predio": "cr_predio"
+    },
+    "schema_plural_name": "cr-datosmatrices"
+  },
+  "cr_derecho": {
+    "model_name": "cr_derecho",
+    "schema_name": "cr-derecho",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "fraccion_derecho": "fraccion_derecho",
+      "naturaleza_juridica": "naturaleza_juridica",
+      "codigo_naturaleza_juridica": "codigo_naturaleza_juridica",
+      "naturaleza_complemento": "naturaleza_complemento",
+      "fecha_anotacion": "fecha_anotacion",
+      "descripcion": "descripcion",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "interesado_cr_agrupacioninteresados": "interesado_cr_agrupacioninteresados",
+      "unidad": "unidad",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-derechos"
+  },
+  "cr_derechotipo": {
+    "model_name": "cr_derechotipo",
+    "schema_name": "cr-derechotipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-derechotipos"
+  },
+  "cr_destinacioneconomicatipo": {
+    "model_name": "cr_destinacioneconomicatipo",
+    "schema_name": "cr-destinacioneconomicatipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-destinacioneconomicatipos"
+  },
+  "cr_errsa": {
+    "model_name": "cr_estructurareferenciaregistralsistemaantiguo",
+    "schema_name": "cr-errsa",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo_referencia": "tipo_referencia",
+      "oficina": "oficina",
+      "libro": "libro",
+      "tomo": "tomo",
+      "pagina": "pagina",
+      "numero": "numero",
+      "dia": "dia",
+      "mes": "mes",
+      "anio": "anio",
+      "matricula": "matricula",
+      "cr_predio_rrsa": "cr_predio_referencia_registral_sistema_antiguo"
+    },
+    "schema_plural_name": "cr-errsas"
+  },
+  "cr_errsa_tipo_referencia": {
+    "model_name": "cr_estructurareferenciaregistralsistemaantiguo_tipo_refrncia",
+    "schema_name": "cr-errsa-tipo-referencia",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-errsa-tipo-referencias"
+  },
+  "cr_estadoanotaciontipo": {
+    "model_name": "cr_estadoanotaciontipo",
+    "schema_name": "cr-estadoanotaciontipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-estadoanotaciontipos"
+  },
+  "cr_estadofmitipo": {
+    "model_name": "cr_estadofmitipo",
+    "schema_name": "cr-estadofmitipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-estadofmitipos"
+  },
+  "cr_estadotipo": {
+    "model_name": "cr_estadotipo",
+    "schema_name": "cr-estadotipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-estadotipos"
+  },
+  "cr_estrucavalcarac": {
+    "model_name": "cr_estructuraavaluocaracterizacion",
+    "schema_name": "cr-estrucavalcarac",
+    "fields": {
+      "legacy_id": "t_id",
+      "fecha_avaluo": "fecha_avaluo",
+      "valor_comercial": "valor_comercial",
+      "avaluo_catastral": "avaluo_catastral",
+      "cr_crctrstcdcnstrccion_aval_caract": "cr_crctrstcdcnstrccion_avaluo_caracterizacion"
+    },
+    "schema_plural_name": "cr-estrucavalcaracs"
+  },
+  "cr_estrucavalinter": {
+    "model_name": "cr_estructuraavaluointerseccion",
+    "schema_name": "cr-estrucavalinter",
+    "fields": {
+      "legacy_id": "t_id",
+      "avaluo_catastral_interseccion_terreno": "avaluo_catastral_interseccion_terreno",
+      "avaluo_catastral_interseccion_unidades_construccion": "avaluo_catastral_interseccion_unidades_construccion",
+      "avaluo_catastral_interseccion_total": "avaluo_catastral_interseccion_total",
+      "cr_pred_infor_aval_catas_inter": "cr_predio_informalidad_avaluo_catastral_interseccion"
+    },
+    "schema_plural_name": "cr-estrucavalinters"
+  },
+  "cr_estrucmatrisegre": {
+    "model_name": "cr_estructuramatriculasegregados",
+    "schema_name": "cr-estrucmatrisegre",
+    "fields": {
+      "legacy_id": "t_id",
+      "codigo_orip": "codigo_orip",
+      "matricula_inmobiliaria": "matricula_inmobiliaria",
+      "cr_predmatrisegre": "cr_predio_matricula_segregados"
+    },
+    "schema_plural_name": "cr-estrucmatrisegres"
+  },
+  "cr_estrucpredmatrinpn": {
+    "model_name": "cr_estructuraprediomatriznpn",
+    "schema_name": "cr-estrucpredmatrinpn",
+    "fields": {
+      "legacy_id": "t_id",
+      "numero_predial_nacional": "numero_predial_nacional",
+      "area_catastral_terreno": "area_catastral_terreno",
+      "cr_predmatrinpn": "cr_predio_predio_matriz_npn"
+    },
+    "schema_plural_name": "cr-estrucpredmatrinpns"
+  },
+  "cr_estrucpredorinpn": {
+    "model_name": "cr_estructurapredioorigennpn",
+    "schema_name": "cr-estrucpredorinpn",
+    "fields": {
+      "legacy_id": "t_id",
+      "numero_predial_nacional": "numero_predial_nacional",
+      "fecha_cambio_npn": "fecha_cambio_npn",
+      "cr_predorinpn": "cr_predio_predio_origen_npn"
+    },
+    "schema_plural_name": "cr-estrucpredorinpns"
+  },
+  "cr_estructuraalertapredio": {
+    "model_name": "cr_estructuraalertapredio",
+    "schema_name": "cr-estructuraalertapredio",
+    "fields": {
+      "legacy_id": "t_id",
+      "descripcion_alerta": "descripcion_alerta",
+      "entidad_emisora_alerta": "entidad_emisora_alerta",
+      "fecha_apertura_alerta": "fecha_apertura_alerta",
+      "fecha_cierre_alerta": "fecha_cierre_alerta",
+      "cr_predio_alerta_predio": "cr_predio_alerta_predio"
+    },
+    "schema_plural_name": "cr-estructuraalertapredios"
+  },
+  "cr_estructuraavaluo": {
+    "model_name": "cr_estructuraavaluo",
+    "schema_name": "cr-estructuraavaluo",
+    "fields": {
+      "legacy_id": "t_id",
+      "fecha_avaluo": "fecha_avaluo",
+      "valor_comercial": "valor_comercial",
+      "avaluo_catastral": "avaluo_catastral",
+      "valor_comercial_terreno": "valor_comercial_terreno",
+      "avaluo_catastral_terreno": "avaluo_catastral_terreno",
+      "valor_comercial_total_unidadesconstruccion": "valor_comercial_total_unidadesconstruccion",
+      "avaluo_catastral_total_unidadesconstruccion": "avaluo_catastral_total_unidadesconstruccion",
+      "autoestimacion": "autoestimacion",
+      "incremento": "incremento",
+      "cr_predio_avaluo": "cr_predio_avaluo"
+    },
+    "schema_plural_name": "cr-estructuraavaluos"
+  },
+  "cr_estructuramatriculamatriz": {
+    "model_name": "cr_estructuramatriculamatriz",
+    "schema_name": "cr-estructuramatriculamatriz",
+    "fields": {
+      "legacy_id": "t_id",
+      "codigo_orip": "codigo_orip",
+      "matricula_inmobiliaria": "matricula_inmobiliaria",
+      "cr_predmatrimatriz": "cr_predio_matricula_matriz"
+    },
+    "schema_plural_name": "cr-estructuramatriculamatrices"
+  },
+  "cr_estructuraprocedimientocr": {
+    "model_name": "cr_estructuraprocedimientocatastralregistral",
+    "schema_name": "cr-estructuraprocedimientocr",
+    "fields": {
+      "legacy_id": "t_id",
+      "procedimientocr": "procedimientocatastralregistral",
+      "cr_predio_procedimientocr": "cr_predio_procedimiento_catastral_registral"
+    },
+    "schema_plural_name": "cr-estructuraprocedimientocrs"
+  },
+  "cr_fotoidentificaciontipo": {
+    "model_name": "cr_fotoidentificaciontipo",
+    "schema_name": "cr-fotoidentificaciontipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-fotoidentificaciontipos"
+  },
+  "cr_fuenteadministrativa": {
+    "model_name": "cr_fuenteadministrativa",
+    "schema_name": "cr-fuenteadministrativa",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "ente_emisor": "ente_emisor",
+      "oficina_origen": "oficina_origen",
+      "ciudad_origen": "ciudad_origen",
+      "fecha_fin": "fecha_fin",
+      "estado_disponibilidad": "estado_disponibilidad",
+      "tipo_formato": "tipo_formato",
+      "fecha_documento_fuente": "fecha_documento_fuente",
+      "nombre": "nombre",
+      "descripcion": "descripcion",
+      "url": "url",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-fuenteadministrativas"
+  },
+  "cr_fuenteespacial": {
+    "model_name": "cr_fuenteespacial",
+    "schema_name": "cr-fuenteespacial",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "metadato": "metadato",
+      "estado_disponibilidad": "estado_disponibilidad",
+      "tipo_formato": "tipo_formato",
+      "fecha_documento_fuente": "fecha_documento_fuente",
+      "nombre": "nombre",
+      "descripcion": "descripcion",
+      "url": "url",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-fuenteespaciales"
+  },
+  "cr_hipoteca": {
+    "model_name": "cr_hipoteca",
+    "schema_name": "cr-hipoteca",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "naturaleza_juridica": "naturaleza_juridica",
+      "codigo_naturaleza_juridica": "codigo_naturaleza_juridica",
+      "naturaleza_complemento": "naturaleza_complemento",
+      "fecha_anotacion": "fecha_anotacion",
+      "descripcion": "descripcion",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "inte_cr_agrup": "interesado_cr_agrupacioninteresados",
+      "unidad": "unidad",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-hipotecas"
+  },
+  "cr_hipotecaderecho": {
+    "model_name": "cr_hipotecaderecho",
+    "schema_name": "cr-hipotecaderecho",
+    "fields": {
+      "legacy_id": "t_id",
+      "cr_hipoteca": "cr_hipoteca",
+      "cr_derecho": "cr_derecho"
+    },
+    "schema_plural_name": "cr-hipotecaderechos"
+  },
+  "cr_informalidad": {
+    "model_name": "cr_informalidad",
+    "schema_name": "cr-informalidad",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "descripcion": "descripcion",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "inte_cr_agrup": "interesado_cr_agrupacioninteresados",
+      "unidad": "unidad",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-informalidades"
+  },
+  "cr_informalidadtipo": {
+    "model_name": "cr_informalidadtipo",
+    "schema_name": "cr-informalidadtipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-informalidadtipos"
+  },
+  "up_users": {
+    "model_name": "cr_interesado",
+    "schema_name": "cr-interesado",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo_documento": "tipo_documento",
+      "primer_nombre": "primer_nombre",
+      "segundo_nombre": "segundo_nombre",
+      "primer_apellido": "primer_apellido",
+      "segundo_apellido": "segundo_apellido",
+      "sexo": "sexo",
+      "autoreconocimientoetnico": "autoreconocimientoetnico",
+      "autoreconocimientocampesino": "autoreconocimientocampesino",
+      "razon_social": "razon_social",
+      "nombre": "nombre",
+      "tipo_interesado": "tipo_interesado",
+      "numero_documento": "numero_documento",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id",
+      "username": null,
+      "email": null,
+      "provider": null,
+      "password": null,
+      "reset_password_token": null,
+      "confirmation_token": null,
+      "confirmed": null,
+      "blocked": null
+    }
+  },
+  "cr_lindero": {
+    "model_name": "cr_lindero",
+    "schema_name": "cr-lindero",
+    "geometry_fields": [
+      "geometria"
+    ],
+    "fields": {
+      "legacy_id": "t_id",
+      "longitud": "longitud",
+      "geometria": "geometria",
+      "localizacion_textual": "localizacion_textual",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-linderos"
+  },
+  "cr_mutaciontipo": {
+    "model_name": "cr_mutaciontipo",
+    "schema_name": "cr-mutaciontipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-mutaciontipos"
+  },
+  "cr_predio": {
+    "model_name": "cr_predio",
+    "schema_name": "cr-predio",
+    "fields": {
+      "legacy_id": "t_id",
+      "departamento": "departamento",
+      "municipio": "municipio",
+      "codigo_orip": "codigo_orip",
+      "matricula_inmobiliaria": "matricula_inmobiliaria",
+      "estado_fmi": "estado_fmi",
+      "fecha_apertura_fmi": "fecha_apertura_fmi",
+      "numero_predial_nacional": "numero_predial_nacional",
+      "codigo_homologado": "codigo_homologado",
+      "nupre": "nupre",
+      "fecha_inscripcion_catastral": "fecha_inscripcion_catastral",
+      "tipo_predio": "tipo_predio",
+      "condicion_predio": "condicion_predio",
+      "destinacion_economica": "destinacion_economica",
+      "area_catastral_terreno": "area_catastral_terreno",
+      "area_registral_m2": "area_registral_m2",
+      "vigencia_actualizacion_catastral": "vigencia_actualizacion_catastral",
+      "estado": "estado",
+      "nombre": "nombre",
+      "tipo": "tipo",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-predios"
+  },
+  "cr_predio_copropiedad": {
+    "model_name": "cr_predio_copropiedad",
+    "schema_name": "cr-predio-copropiedad",
+    "fields": {
+      "legacy_id": "t_id",
+      "unidad_predial": "unidad_predial",
+      "matriz": "matriz",
+      "coeficiente": "coeficiente",
+      "area_catastral_terreno_coeficiente": "area_catastral_terreno_coeficiente",
+      "area_privada_terreno": "area_privada_terreno",
+      "area_privada_construida": "area_privada_construida",
+      "area_privada_libre": "area_privada_libre"
+    },
+    "schema_plural_name": "cr-predio-copropiedades"
+  },
+  "cr_predio_tramitecatastral": {
+    "model_name": "cr_predio_tramitecatastral",
+    "schema_name": "cr-predio-tramitecatastral",
+    "fields": {
+      "legacy_id": "t_id",
+      "cr_predio": "cr_predio",
+      "cr_tramite_catastral": "cr_tramite_catastral"
+    },
+    "schema_plural_name": "cr-predio-tramitecatastrales"
+  },
+  "cr_predioinformalidad": {
+    "model_name": "cr_predio_informalidad",
+    "schema_name": "cr-predioinformalidad",
+    "fields": {
+      "legacy_id": "t_id",
+      "cr_predio_formal": "cr_predio_formal",
+      "cr_predio_informal": "cr_predio_informal",
+      "area_terreno_interseccion": "area_terreno_interseccion",
+      "area_construida_interseccion": "area_construida_interseccion"
+    },
+    "schema_plural_name": "cr-predioinformalidades"
+  },
+  "cr_prediotipo": {
+    "model_name": "cr_prediotipo",
+    "schema_name": "cr-prediotipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-prediotipos"
+  },
+  "cr_procedimientocatastralregistraltipo": {
+    "model_name": "cr_procedimientocatastralregistraltipo",
+    "schema_name": "cr-procedimientocatastralregistraltipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-procedimientocatastralregistraltipos"
+  },
+  "cr_publicidad": {
+    "model_name": "cr_publicidad",
+    "schema_name": "cr-publicidad",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo_publicidad": "tipo_publicidad",
+      "naturaleza_juridica": "naturaleza_juridica",
+      "codigo_naturaleza_juridica": "codigo_naturaleza_juridica",
+      "naturaleza_complemento": "naturaleza_complemento",
+      "fecha_anotacion": "fecha_anotacion",
+      "col_interesado_cr_interesado": "col_interesado_cr_interesado",
+      "col_inte_cr_agrup": "col_interesado_cr_agrupacioninteresados",
+      "cr_baunit": "cr_baunit"
+    },
+    "schema_plural_name": "cr-publicidades"
+  },
+  "cr_publicidadfuente": {
+    "model_name": "cr_publicidadfuente",
+    "schema_name": "cr-publicidadfuente",
+    "fields": {
+      "legacy_id": "t_id",
+      "cr_publicidad": "cr_publicidad",
+      "col_fuente": "col_fuente"
+    },
+    "schema_plural_name": "cr-publicidadfuentes"
+  },
+  "cr_publicidadtipo": {
+    "model_name": "cr_publicidadtipo",
+    "schema_name": "cr-publicidadtipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-publicidadtipos"
+  },
+  "cr_puntocontrol": {
+    "model_name": "cr_puntocontrol",
+    "schema_name": "cr-puntocontrol",
+    "geometry_fields": [
+      "geometria"
+    ],
+    "fields": {
+      "legacy_id": "t_id",
+      "id_punto_control": "id_punto_control",
+      "puntotipo": "puntotipo",
+      "tipo_punto_control": "tipo_punto_control",
+      "exactitud_horizontal": "exactitud_horizontal",
+      "posicion_interpolacion": "posicion_interpolacion",
+      "metodoproduccion": "metodoproduccion",
+      "geometria": "geometria",
+      "ue_cr_terreno": "ue_cr_terreno",
+      "ue_cr_unidadconstruccion": "ue_cr_unidadconstruccion",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-puntocontroles"
+  },
+  "cr_puntocontroltipo": {
+    "model_name": "cr_puntocontroltipo",
+    "schema_name": "cr-puntocontroltipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-puntocontroltipos"
+  },
+  "cr_puntolindero": {
+    "model_name": "cr_puntolindero",
+    "schema_name": "cr-puntolindero",
+    "geometry_fields": [
+      "geometria"
+    ],
+    "fields": {
+      "legacy_id": "t_id",
+      "id_punto_lindero": "id_punto_lindero",
+      "puntotipo": "puntotipo",
+      "desacuerdo": "desacuerdo",
+      "fotoidentificacion": "fotoidentificacion",
+      "exactitud_horizontal": "exactitud_horizontal",
+      "posicion_interpolacion": "posicion_interpolacion",
+      "metodoproduccion": "metodoproduccion",
+      "geometria": "geometria",
+      "ue_cr_terreno": "ue_cr_terreno",
+      "ue_cr_unidadconstruccion": "ue_cr_unidadconstruccion",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-puntolinderos"
+  },
+  "cr_responsabilidad": {
+    "model_name": "cr_responsabilidad",
+    "schema_name": "cr-responsabilidad",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "naturaleza_juridica": "naturaleza_juridica",
+      "codigo_naturaleza_juridica": "codigo_naturaleza_juridica",
+      "naturaleza_complemento": "naturaleza_complemento",
+      "fecha_anotacion": "fecha_anotacion",
+      "descripcion": "descripcion",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "interesado_cr_agrupacioninteresados": "interesado_cr_agrupacioninteresados",
+      "unidad": "unidad",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-responsabilidades"
+  },
+  "cr_responsabilidadtipo": {
+    "model_name": "cr_responsabilidadtipo",
+    "schema_name": "cr-responsabilidadtipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-responsabilidadtipos"
+  },
+  "cr_restriccion": {
+    "model_name": "cr_restriccion",
+    "schema_name": "cr-restriccion",
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo": "tipo",
+      "naturaleza_juridica": "naturaleza_juridica",
+      "codigo_naturaleza_juridica": "codigo_naturaleza_juridica",
+      "naturaleza_complemento": "naturaleza_complemento",
+      "fecha_anotacion": "fecha_anotacion",
+      "descripcion": "descripcion",
+      "interesado_cr_interesado": "interesado_cr_interesado",
+      "interesado_cr_agrupacioninteresados": "interesado_cr_agrupacioninteresados",
+      "unidad": "unidad",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-restricciones"
+  },
+  "cr_restricciontipo": {
+    "model_name": "cr_restricciontipo",
+    "schema_name": "cr-restricciontipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-restricciontipos"
+  },
+  "cr_sexotipo": {
+    "model_name": "cr_sexotipo",
+    "schema_name": "cr-sexotipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-sexotipos"
+  },
+  "cr_terreno": {
+    "model_name": "cr_terreno",
+    "schema_name": "cr-terreno",
+    "geometry_fields": [
+      "geometria"
+    ],
+    "fields": {
+      "legacy_id": "t_id",
+      "geometria": "geometria",
+      "etiqueta": "etiqueta",
+      "relacion_superficie": "relacion_superficie",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-terrenos"
+  },
+  "cr_tramitecatastral": {
+    "model_name": "cr_tramitecatastral",
+    "schema_name": "cr-tramitecatastral",
+    "fields": {
+      "legacy_id": "t_id",
+      "clasificacion_mutacion": "clasificacion_mutacion",
+      "numero_resolucion": "numero_resolucion",
+      "fecha_resolucion": "fecha_resolucion",
+      "fecha_radicacion": "fecha_radicacion",
+      "fecha_inscripcion": "fecha_inscripcion"
+    },
+    "schema_plural_name": "cr-tramitecatastrales"
+  },
+  "cr_unidadconstruccion": {
+    "model_name": "cr_unidadconstruccion",
+    "schema_name": "cr-unidadconstruccion",
+    "geometry_fields": [
+      "geometria"
+    ],
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo_planta": "tipo_planta",
+      "planta_ubicacion": "planta_ubicacion",
+      "altura": "altura",
+      "geometria": "geometria",
+      "cr_caracteristicasuc": "cr_caracteristicasunidadconstruccion",
+      "etiqueta": "etiqueta",
+      "relacion_superficie": "relacion_superficie",
+      "comienzo_vida_util_version": "comienzo_vida_util_version",
+      "fin_vida_util_version": "fin_vida_util_version",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id"
+    },
+    "schema_plural_name": "cr-unidadconstrucciones"
+  },
+  "cr_unidadconstrucciontipo": {
+    "model_name": "cr_unidadconstrucciontipo",
+    "schema_name": "cr-unidadconstrucciontipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-unidadconstrucciontipos"
+  },
+  "cr_usouconstipo": {
+    "model_name": "cr_usouconstipo",
+    "schema_name": "cr-usouconstipo",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "cr-usouconstipos"
+  },
+  "extarchivo": {
+    "model_name": "extarchivo",
+    "schema_name": "extarchivo",
+    "fields": {
+      "legacy_id": "t_id",
+      "fecha_aceptacion": "fecha_aceptacion",
+      "datos": "datos",
+      "extraccion": "extraccion",
+      "fecha_grabacion": "fecha_grabacion",
+      "fecha_entrega": "fecha_entrega",
+      "espacio_de_nombres": "espacio_de_nombres",
+      "local_id": "local_id",
+      "cr_fuenteadministrtiva_ext_archivo_id": "cr_fuenteadministrtiva_ext_archivo_id",
+      "cr_fuenteespacial_ext_archivo_id": "cr_fuenteespacial_ext_archivo_id"
+    },
+    "schema_plural_name": "extarchivos"
+  },
+  "extdireccion": {
+    "model_name": "extdireccion",
+    "schema_name": "extdireccion",
+    "geometry_fields": [
+      "localizacion"
+    ],
+    "fields": {
+      "legacy_id": "t_id",
+      "tipo_direccion": "tipo_direccion",
+      "es_direccion_principal": "es_direccion_principal",
+      "localizacion": "localizacion",
+      "codigo_postal": "codigo_postal",
+      "clase_via_principal": "clase_via_principal",
+      "valor_via_principal": "valor_via_principal",
+      "letra_via_principal": "letra_via_principal",
+      "sector_ciudad": "sector_ciudad",
+      "valor_via_generadora": "valor_via_generadora",
+      "letra_via_generadora": "letra_via_generadora",
+      "numero_predio": "numero_predio",
+      "sector_predio": "sector_predio",
+      "complemento": "complemento",
+      "nombre_predio": "nombre_predio",
+      "extinteresado_ext_direccion_id": "extinteresado_ext_direccion_id",
+      "cr_terreno_ext_direccion_id": "cr_terreno_ext_direccion_id",
+      "cr_uc_ext_direccion_id": "cr_unidadconstruccion_ext_direccion_id",
+      "cr_predio_direccion": "cr_predio_direccion"
+    },
+    "schema_plural_name": "extdirecciones"
+  },
+  "extdireccion_clase_via_principal": {
+    "model_name": "extdireccion_clase_via_principal",
+    "schema_name": "extdireccion-clase-via-principal",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "extdireccion-clase-via-principales"
+  },
+  "extdireccion_sector_ciudad": {
+    "model_name": "extdireccion_sector_ciudad",
+    "schema_name": "extdireccion-sector-ciudad",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "extdireccion-sector-ciudades"
+  },
+  "extdireccion_sector_predio": {
+    "model_name": "extdireccion_sector_predio",
+    "schema_name": "extdireccion-sector-predio",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "extdireccion-sector-predios"
+  },
+  "extdireccion_tipo_direccion": {
+    "model_name": "extdireccion_tipo_direccio",
+    "schema_name": "extdireccion-tipo-direccion",
+    "fields": {
+      "legacy_id": "t_id",
+      "nombre": "dispname",
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
+    },
+    "schema_plural_name": "extdireccion-tipo-direcciones"
+  },
+  "extinteresado": {
+    "model_name": "extinteresado",
+    "schema_name": "extinteresado",
+    "fields": {
+      "legacy_id": "t_id",
+      "huella_dactilar": "huella_dactilar",
+      "nombre": "nombre",
+      "fotografia": "fotografia",
+      "firma": "firma",
+      "documento_escaneado": "documento_escaneado",
+      "cr_agrupacionintersdos_ext_pid": "cr_agrupacionintersdos_ext_pid",
+      "cr_interesado_ext_pid": "cr_interesado_ext_pid"
+    },
+    "schema_plural_name": "extinteresados"
+  }
+}

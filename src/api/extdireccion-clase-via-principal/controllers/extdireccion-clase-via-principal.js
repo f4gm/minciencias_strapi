@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * extdireccion-clase-via-principal controller
- */
+  * extdireccion-clase-via-principal controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

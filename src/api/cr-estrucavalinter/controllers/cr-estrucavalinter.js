@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-estrucavalinter controller
- */
+  * cr-estrucavalinter controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

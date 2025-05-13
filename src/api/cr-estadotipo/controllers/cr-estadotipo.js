@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-estadotipo controller
- */
+  * cr-estadotipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

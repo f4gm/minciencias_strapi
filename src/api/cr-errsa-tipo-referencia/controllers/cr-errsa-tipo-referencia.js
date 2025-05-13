@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-errsa-tipo-referencia controller
- */
+  * cr-errsa-tipo-referencia controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

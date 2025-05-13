@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-puntocontroltipo controller
- */
+  * cr-puntocontroltipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

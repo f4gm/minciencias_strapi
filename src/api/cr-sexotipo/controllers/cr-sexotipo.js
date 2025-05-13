@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-sexotipo controller
- */
+  * cr-sexotipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

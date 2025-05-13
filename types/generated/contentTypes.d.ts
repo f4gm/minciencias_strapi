@@ -408,7 +408,7 @@ export interface ApiColAreavalorColAreavalor extends Schema.CollectionType {
   info: {
     description: 'Es el valor de la cantidad de superficie que cubre una figura de dos dimensiones.';
     displayName: 'COL_AreaValor';
-    pluralName: 'col-areavalors';
+    pluralName: 'col-areavalores';
     singularName: 'col-areavalor';
   };
   options: {
@@ -847,7 +847,7 @@ export interface ApiColGrupointeresadotipoColGrupointeresadotipo
   collectionName: 'col_grupointeresadotipo';
   info: {
     displayName: 'COL_GrupoInteresadoTipo';
-    pluralName: 'colgrupo-interesadotipos';
+    pluralName: 'col-grupointeresadotipos';
     singularName: 'col-grupointeresadotipo';
   };
   options: {
@@ -2027,7 +2027,7 @@ export interface ApiCrDatosmatrizCrDatosmatriz extends Schema.CollectionType {
   info: {
     description: '';
     displayName: 'CR_DatosMatriz';
-    pluralName: 'cr-datosmatrizs';
+    pluralName: 'cr-datosmatrices';
     singularName: 'cr-datosmatriz';
   };
   options: {
@@ -2964,7 +2964,7 @@ export interface ApiCrEstructuramatriculamatrizCrEstructuramatriculamatriz
   info: {
     description: 'Corresponde a la informaci\u00F3n del c\u00F3digo de la ORIP y el n\u00FAmero de matr\u00EDcula inmobiliaria de los predios por los cuales naci\u00F3 el predio objeto de estudio.';
     displayName: 'CR_EstructuraMatriculaMatriz';
-    pluralName: 'cr-estructuramatriculamatrizs';
+    pluralName: 'cr-estructuramatriculamatrices';
     singularName: 'cr-estructuramatriculamatriz';
   };
   options: {
@@ -3179,7 +3179,7 @@ export interface ApiCrFuenteespacialCrFuenteespacial
   info: {
     description: 'Clase que hereda los atributos de la Clase COL_FuenteEspacial.';
     displayName: 'CR_FuenteEspacial';
-    pluralName: 'cr-fuenteespacials';
+    pluralName: 'cr-fuenteespaciales';
     singularName: 'cr-fuenteespacial';
   };
   options: {
@@ -3368,7 +3368,7 @@ export interface ApiCrInformalidadCrInformalidad extends Schema.CollectionType {
   info: {
     description: 'Relaci\u00F3n de tenencia que no corresponde a la propiedad, se presenta en los casos en los que la persona que ejerce la tenencia no es la misma que se encuentra en el registro de propiedad consignado en el folio de matr\u00EDcula inmobiliaria correspondiente.';
     displayName: 'CR_Informalidad';
-    pluralName: 'cr-informalidads';
+    pluralName: 'cr-informalidades';
     singularName: 'cr-informalidad';
   };
   options: {
@@ -3592,7 +3592,7 @@ export interface ApiCrPredioCopropiedadCrPredioCopropiedad
   info: {
     description: 'Relaci\u00F3n entre unidades prediales y predios matrices bajo el r\u00E9gimen de propiedad horizontal y condominio';
     displayName: 'cr_predio_copropiedad';
-    pluralName: 'cr-predio-copropiedads';
+    pluralName: 'cr-predio-copropiedades';
     singularName: 'cr-predio-copropiedad';
   };
   options: {
@@ -3675,7 +3675,7 @@ export interface ApiCrPredioTramitecatastralCrPredioTramitecatastral
   collectionName: 'cr_predio_tramitecatastral';
   info: {
     displayName: 'cr_predio_tramitecatastral';
-    pluralName: 'cr-predio-tramitecatastrals';
+    pluralName: 'cr-predio-tramitecatastrales';
     singularName: 'cr-predio-tramitecatastral';
   };
   options: {
@@ -3846,7 +3846,7 @@ export interface ApiCrPredioinformalidadCrPredioinformalidad
   info: {
     description: 'Atributo que permite identificar las relaciones entre los predios formales e informales.';
     displayName: 'CR_Predio_Informalidad';
-    pluralName: 'cr-predioinformalidads';
+    pluralName: 'cr-predioinformalidades';
     singularName: 'cr-predioinformalidad';
   };
   options: {
@@ -4005,7 +4005,7 @@ export interface ApiCrPublicidadCrPublicidad extends Schema.CollectionType {
   info: {
     description: 'Clase que contiene la publicidad de un Predio.';
     displayName: 'CR_Publicidad';
-    pluralName: 'cr-publicidads';
+    pluralName: 'cr-publicidades';
     singularName: 'cr-publicidad';
   };
   options: {
@@ -4161,7 +4161,7 @@ export interface ApiCrPuntocontrolCrPuntocontrol extends Schema.CollectionType {
   info: {
     description: 'Puntos topogr\u00E1ficos o geod\u00E9sicos utilizados como amarre para la ejecuci\u00F3n del levantamiento catastral.';
     displayName: 'CR_PuntoControl';
-    pluralName: 'cr-puntocontrols';
+    pluralName: 'cr-puntocontroles';
     singularName: 'cr-puntocontrol';
   };
   options: {
@@ -4392,7 +4392,7 @@ export interface ApiCrResponsabilidadCrResponsabilidad
   info: {
     description: 'Obligaci\u00F3n de hacer algo relacionado con el predio.';
     displayName: 'CR_Responsabilidad';
-    pluralName: 'cr-responsabilidads';
+    pluralName: 'cr-responsabilidades';
     singularName: 'cr-responsabilidad';
   };
   options: {
@@ -4522,7 +4522,7 @@ export interface ApiCrRestriccionCrRestriccion extends Schema.CollectionType {
   info: {
     description: 'Restricci\u00F3n legalmente constituida y registrada que afecta el derecho de una persona en relaci\u00F3n con el predio.';
     displayName: 'CR_Restriccion';
-    pluralName: 'cr-restriccions';
+    pluralName: 'cr-restricciones';
     singularName: 'cr-restriccion';
   };
   options: {
@@ -4755,7 +4755,7 @@ export interface ApiCrTramitecatastralCrTramitecatastral
   info: {
     description: 'Clase que contiene los cambios que se presentan en los componentes f\u00EDsico, jur\u00EDdico o econ\u00F3mico de un predio, una vez han sido formados.';
     displayName: 'CR_TramiteCatastral';
-    pluralName: 'cr-tramitecatastrals';
+    pluralName: 'cr-tramitecatastrales';
     singularName: 'cr-tramitecatastral';
   };
   options: {
@@ -4799,7 +4799,7 @@ export interface ApiCrUnidadconstruccionCrUnidadconstruccion
   info: {
     description: 'Edificaci\u00F3n dentro de un predio, que tiene unas caracter\u00EDsticas espec\u00EDficas en cuanto a uso y elementos constitutivos f\u00EDsicos.';
     displayName: 'CR_UnidadConstruccion';
-    pluralName: 'cr-unidadconstruccions';
+    pluralName: 'cr-unidadconstrucciones';
     singularName: 'cr-unidadconstruccion';
   };
   options: {
@@ -5039,7 +5039,7 @@ export interface ApiExtdireccionClaseViaPrincipalExtdireccionClaseViaPrincipal
   collectionName: 'extdireccion_clase_via_principal';
   info: {
     displayName: 'extdireccion_clase_via_principal';
-    pluralName: 'extdireccion-clase-via-principals';
+    pluralName: 'extdireccion-clase-via-principales';
     singularName: 'extdireccion-clase-via-principal';
   };
   options: {
@@ -5090,7 +5090,7 @@ export interface ApiExtdireccionSectorCiudadExtdireccionSectorCiudad
   collectionName: 'extdireccion_sector_ciudad';
   info: {
     displayName: 'extdireccion_sector_ciudad';
-    pluralName: 'extdireccion-sector-ciudads';
+    pluralName: 'extdireccion-sector-ciudades';
     singularName: 'extdireccion-sector-ciudad';
   };
   options: {
@@ -5192,7 +5192,7 @@ export interface ApiExtdireccionTipoDireccionExtdireccionTipoDireccion
   collectionName: 'extdireccion_tipo_direccion';
   info: {
     displayName: 'extdireccion_tipo_direccion';
-    pluralName: 'extdireccion-tipo-direccions';
+    pluralName: 'extdireccion-tipo-direcciones';
     singularName: 'extdireccion-tipo-direccion';
   };
   options: {
@@ -5243,7 +5243,7 @@ export interface ApiExtdireccionExtdireccion extends Schema.CollectionType {
   info: {
     description: 'Referencia a una clase externa para gestionar direcciones.';
     displayName: 'ExtDireccion';
-    pluralName: 'extdireccions';
+    pluralName: 'extdirecciones';
     singularName: 'extdireccion';
   };
   options: {
@@ -5910,7 +5910,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
     >;
     blocked: Attribute.Boolean & Attribute.DefaultTo<true>;
-    comienzo_vida_util_version: Attribute.DateTime;
+    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
     confirmationToken: Attribute.String & Attribute.Private;
     confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;

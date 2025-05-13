@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * extdireccion-sector-predio controller
- */
+  * extdireccion-sector-predio controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

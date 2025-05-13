@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * col-baunitcomointeresado controller
- */
+  * col-baunitcomointeresado controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

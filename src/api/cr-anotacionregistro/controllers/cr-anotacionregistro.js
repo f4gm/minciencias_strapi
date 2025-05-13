@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-anotacionregistro controller
- */
+  * cr-anotacionregistro controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

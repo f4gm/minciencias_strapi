@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-condicionprediotipo controller
- */
+  * cr-condicionprediotipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

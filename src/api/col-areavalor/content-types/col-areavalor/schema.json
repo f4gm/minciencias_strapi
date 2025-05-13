@@ -3,7 +3,7 @@
   "collectionName": "col_areavalor",
   "info": {
     "singularName": "col-areavalor",
-    "pluralName": "col-areavalors",
+    "pluralName": "col-areavalores",
     "displayName": "COL_AreaValor",
     "description": "Es el valor de la cantidad de superficie que cubre una figura de dos dimensiones."
   },

@@ -3,7 +3,7 @@
   "collectionName": "cr_estructuramatriculamatriz",
   "info": {
     "singularName": "cr-estructuramatriculamatriz",
-    "pluralName": "cr-estructuramatriculamatrizs",
+    "pluralName": "cr-estructuramatriculamatrices",
     "displayName": "CR_EstructuraMatriculaMatriz",
     "description": "Corresponde a la información del código de la ORIP y el número de matrícula inmobiliaria de los predios por los cuales nació el predio objeto de estudio."
   },

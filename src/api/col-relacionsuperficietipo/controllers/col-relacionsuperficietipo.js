@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * col-relacionsuperficietipo controller
- */
+  * col-relacionsuperficietipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

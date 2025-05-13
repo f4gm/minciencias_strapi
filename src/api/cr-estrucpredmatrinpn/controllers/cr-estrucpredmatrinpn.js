@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-estrucpredmatrinpn controller
- */
+  * cr-estrucpredmatrinpn controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

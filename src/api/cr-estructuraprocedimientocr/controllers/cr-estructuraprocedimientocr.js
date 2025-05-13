@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-estructuraprocedimientocr controller
- */
+  * cr-estructuraprocedimientocr controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

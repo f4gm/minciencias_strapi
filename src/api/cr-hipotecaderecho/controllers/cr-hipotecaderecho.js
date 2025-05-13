@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-hipotecaderecho controller
- */
+  * cr-hipotecaderecho controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

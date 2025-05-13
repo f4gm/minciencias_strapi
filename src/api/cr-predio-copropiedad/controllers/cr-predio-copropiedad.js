@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-predio-copropiedad controller
- */
+  * cr-predio-copropiedad controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

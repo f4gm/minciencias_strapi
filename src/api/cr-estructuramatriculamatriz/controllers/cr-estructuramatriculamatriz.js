@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-estructuramatriculamatriz controller
- */
+  * cr-estructuramatriculamatriz controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

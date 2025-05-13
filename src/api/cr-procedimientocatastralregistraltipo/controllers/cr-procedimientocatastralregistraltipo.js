@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-procedimientocatastralregistraltipo controller
- */
+  * cr-procedimientocatastralregistraltipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

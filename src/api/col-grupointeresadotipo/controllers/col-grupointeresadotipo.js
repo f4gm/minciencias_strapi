@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * col-grupointeresadotipo controller
- */
+  * col-grupointeresadotipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

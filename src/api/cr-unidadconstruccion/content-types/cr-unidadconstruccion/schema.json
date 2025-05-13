@@ -3,7 +3,7 @@
   "collectionName": "cr_unidadconstruccion",
   "info": {
     "singularName": "cr-unidadconstruccion",
-    "pluralName": "cr-unidadconstruccions",
+    "pluralName": "cr-unidadconstrucciones",
     "displayName": "CR_UnidadConstruccion",
     "description": "Edificación dentro de un predio, que tiene unas características específicas en cuanto a uso y elementos constitutivos físicos."
   },

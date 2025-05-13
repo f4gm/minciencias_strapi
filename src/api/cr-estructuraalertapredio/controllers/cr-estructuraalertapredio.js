@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-estructuraalertapredio controller
- */
+  * cr-estructuraalertapredio controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

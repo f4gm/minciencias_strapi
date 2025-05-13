@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-fotoidentificaciontipo controller
- */
+  * cr-fotoidentificaciontipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

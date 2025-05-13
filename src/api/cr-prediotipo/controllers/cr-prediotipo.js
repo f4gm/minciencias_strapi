@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-prediotipo controller
- */
+  * cr-prediotipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-autoreconocimientoetnicotipo controller
- */
+  * cr-autoreconocimientoetnicotipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

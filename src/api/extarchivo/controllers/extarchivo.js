@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * extarchivo controller
- */
+  * extarchivo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

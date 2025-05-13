@@ -3,7 +3,7 @@
   "collectionName": "extdireccion",
   "info": {
     "singularName": "extdireccion",
-    "pluralName": "extdireccions",
+    "pluralName": "extdirecciones",
     "displayName": "ExtDireccion",
     "description": "Referencia a una clase externa para gestionar direcciones."
   },

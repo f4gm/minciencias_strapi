@@ -3,7 +3,7 @@
   "collectionName": "cr_informalidad",
   "info": {
     "singularName": "cr-informalidad",
-    "pluralName": "cr-informalidads",
+    "pluralName": "cr-informalidades",
     "displayName": "CR_Informalidad",
     "description": "Relación de tenencia que no corresponde a la propiedad, se presenta en los casos en los que la persona que ejerce la tenencia no es la misma que se encuentra en el registro de propiedad consignado en el folio de matrícula inmobiliaria correspondiente."
   },

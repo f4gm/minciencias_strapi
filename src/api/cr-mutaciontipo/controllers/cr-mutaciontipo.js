@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-mutaciontipo controller
- */
+  * cr-mutaciontipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

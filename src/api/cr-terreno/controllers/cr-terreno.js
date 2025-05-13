@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-terreno controller
- */
+  * cr-terreno controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-predio-tramitecatastral controller
- */
+  * cr-predio-tramitecatastral controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

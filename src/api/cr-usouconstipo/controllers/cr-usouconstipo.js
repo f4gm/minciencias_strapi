@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-usouconstipo controller
- */
+  * cr-usouconstipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

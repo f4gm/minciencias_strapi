@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * cr-destinacioneconomicatipo controller
- */
+  * cr-destinacioneconomicatipo controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

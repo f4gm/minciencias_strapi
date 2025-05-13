@@ -3,7 +3,7 @@
   "collectionName": "cr_puntocontrol",
   "info": {
     "singularName": "cr-puntocontrol",
-    "pluralName": "cr-puntocontrols",
+    "pluralName": "cr-puntocontroles",
     "displayName": "CR_PuntoControl",
     "description": "Puntos topográficos o geodésicos utilizados como amarre para la ejecución del levantamiento catastral."
   },

@@ -3,7 +3,7 @@
   "collectionName": "cr_publicidad",
   "info": {
     "singularName": "cr-publicidad",
-    "pluralName": "cr-publicidads",
+    "pluralName": "cr-publicidades",
     "displayName": "CR_Publicidad",
     "description": "Clase que contiene la publicidad de un Predio."
   },

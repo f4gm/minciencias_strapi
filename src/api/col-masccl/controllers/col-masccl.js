@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * col-masccl controller
- */
+  * col-masccl controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 

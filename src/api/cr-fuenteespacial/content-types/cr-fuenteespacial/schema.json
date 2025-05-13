@@ -3,7 +3,7 @@
   "collectionName": "cr_fuenteespacial",
   "info": {
     "singularName": "cr-fuenteespacial",
-    "pluralName": "cr-fuenteespacials",
+    "pluralName": "cr-fuenteespaciales",
     "displayName": "CR_FuenteEspacial",
     "description": "Clase que hereda los atributos de la Clase COL_FuenteEspacial."
   },

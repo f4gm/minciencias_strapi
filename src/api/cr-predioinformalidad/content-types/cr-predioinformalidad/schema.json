@@ -3,7 +3,7 @@
   "collectionName": "cr_predioinformalidad",
   "info": {
     "singularName": "cr-predioinformalidad",
-    "pluralName": "cr-predioinformalidads",
+    "pluralName": "cr-predioinformalidades",
     "displayName": "CR_Predio_Informalidad",
     "description": "Atributo que permite identificar las relaciones entre los predios formales e informales."
   },

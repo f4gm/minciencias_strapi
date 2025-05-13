@@ -3,7 +3,7 @@
   "collectionName": "cr_predio_copropiedad",
   "info": {
     "singularName": "cr-predio-copropiedad",
-    "pluralName": "cr-predio-copropiedads",
+    "pluralName": "cr-predio-copropiedades",
     "displayName": "cr_predio_copropiedad",
     "description": "Relación entre unidades prediales y predios matrices bajo el régimen de propiedad horizontal y condominio"
   },

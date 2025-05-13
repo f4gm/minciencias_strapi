@@ -1,8 +1,8 @@
 'use strict';
 
 /**
- * col-menosccl controller
- */
+  * col-menosccl controller
+  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
