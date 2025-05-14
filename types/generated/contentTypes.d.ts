@@ -491,7 +491,7 @@ export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
     unidad: Attribute.Relation<
       'api::col-baunitcomointeresado.col-baunitcomointeresado',
       'oneToOne',
-      'api::col-areatipo.col-areatipo'
+      'api::cr-predio.cr-predio'
     > &
       Attribute.Required;
     updatedAt: Attribute.DateTime;

@@ -24,9 +24,9 @@
     },
     "unidad": {
       "type": "relation",
+      "required": true,
       "relation": "oneToOne",
-      "target": "api::col-areatipo.col-areatipo",
-      "required": true
+      "target": "api::cr-predio.cr-predio"
     }
   }
 }
