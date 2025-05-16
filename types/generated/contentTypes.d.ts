@@ -381,14 +381,24 @@ export interface ApiColAreatipoColAreatipo extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    descripcion: Attribute.Text &
+    descripcion: Attribute.String &
       Attribute.Private &
+      Attribute.SetMinMaxLength<{
+        maxLength: 1024;
+      }>;
+    descripcion_vista: Attribute.String &
       Attribute.SetMinMaxLength<{
         maxLength: 1024;
       }>;
     nombre: Attribute.String &
       Attribute.Required &
       Attribute.Private &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    nombre_vista: Attribute.String &
+      Attribute.Required &
       Attribute.Unique &
       Attribute.SetMinMaxLength<{
         maxLength: 250;

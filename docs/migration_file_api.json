@@ -6,7 +6,9 @@
     "fields": {
       "legacy_id": "t_id",
       "nombre": "dispname",
-      "descripcion": "description"
+      "descripcion": "description",
+      "nombre_vista": "dispname",
+      "descripcion_vista": "description"
     }
   },
   "col_areavalor": {
@@ -1233,7 +1235,7 @@
     "schema_plural_name": "extdireccion-sector-predios"
   },
   "extdireccion_tipo_direccion": {
-    "model_name": "extdireccion_tipo_direccio",
+    "model_name": "extdireccion_tipo_direccion",
     "schema_name": "extdireccion-tipo-direccion",
     "fields": {
       "legacy_id": "t_id",
