@@ -5466,25 +5466,10 @@ export interface ApiSolicitudSolicitud extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    cr_lindero: Attribute.Relation<
-      'api::solicitud.solicitud',
-      'oneToOne',
-      'api::cr-lindero.cr-lindero'
-    >;
     cr_predio: Attribute.Relation<
       'api::solicitud.solicitud',
       'oneToOne',
       'api::cr-predio.cr-predio'
-    >;
-    cr_terreno: Attribute.Relation<
-      'api::solicitud.solicitud',
-      'oneToOne',
-      'api::cr-terreno.cr-terreno'
-    >;
-    cr_unidadconstruccion: Attribute.Relation<
-      'api::solicitud.solicitud',
-      'oneToOne',
-      'api::cr-unidadconstruccion.cr-unidadconstruccion'
     >;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -5528,6 +5513,7 @@ export interface ApiSolicitudSolicitud extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    valor: Attribute.Text & Attribute.Required;
   };
 }
 

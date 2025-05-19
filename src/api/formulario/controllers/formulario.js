@@ -61,8 +61,9 @@ const populateOptionsOne = async (form) => {
 
   const new_inputs = await Promise.all(
     form.attributes[inputsName].map(async (input) => {
-      if (targetInputs.includes(input.type)) {
+      if (targetInputs.includes(input.type) && input.context[tableSource]) {
         const collectionName = input.context[tableSource];
+        console.log(collectionName)
         const options = await strapi.entityService.findMany(
           `api::${collectionName}.${collectionName}`,
           {
