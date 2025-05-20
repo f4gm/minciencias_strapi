@@ -498,6 +498,12 @@ export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    reconocedor: Attribute.Relation<
+      'api::col-baunitcomointeresado.col-baunitcomointeresado',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
     unidad: Attribute.Relation<
       'api::col-baunitcomointeresado.col-baunitcomointeresado',
       'oneToOne',
@@ -5449,6 +5455,46 @@ export interface ApiFormularioFormulario extends Schema.CollectionType {
   };
 }
 
+export interface ApiPaquetePaquete extends Schema.CollectionType {
+  collectionName: 'paquetes';
+  info: {
+    displayName: 'Paquete';
+    pluralName: 'paquetes';
+    singularName: 'paquete';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cr_interesado: Attribute.Relation<
+      'api::paquete.paquete',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::paquete.paquete',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    estado: Attribute.Enumeration<['Pendiente', 'Revisado', 'Corregir']> &
+      Attribute.DefaultTo<'Pendiente'>;
+    reconocedor: Attribute.Relation<
+      'api::paquete.paquete',
+      'oneToOne',
+      'admin::user'
+    >;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<
+      'api::paquete.paquete',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSolicitudSolicitud extends Schema.CollectionType {
   collectionName: 'solicitudes';
   info: {
@@ -5481,6 +5527,11 @@ export interface ApiSolicitudSolicitud extends Schema.CollectionType {
     help: Attribute.RichText;
     hide: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
     identifier: Attribute.String & Attribute.Required;
+    paquete: Attribute.Relation<
+      'api::solicitud.solicitud',
+      'oneToOne',
+      'api::paquete.paquete'
+    >;
     required: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
@@ -6105,6 +6156,7 @@ declare module '@strapi/types' {
       'api::extdireccion.extdireccion': ApiExtdireccionExtdireccion;
       'api::extinteresado.extinteresado': ApiExtinteresadoExtinteresado;
       'api::formulario.formulario': ApiFormularioFormulario;
+      'api::paquete.paquete': ApiPaquetePaquete;
       'api::solicitud.solicitud': ApiSolicitudSolicitud;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

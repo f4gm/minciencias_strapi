@@ -24,9 +24,15 @@
     },
     "unidad": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-predio.cr-predio"
+      "target": "api::cr-predio.cr-predio",
+      "required": true
+    },
+    "reconocedor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user",
+      "private": true
     }
   }
 }

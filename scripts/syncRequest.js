@@ -30,7 +30,7 @@ const requestBase = {
     cr_interesado: {
       type: "relation",
       relation: "oneToOne",
-      target: "plugin::users-permissions.user"
+      target: "plugin::users-permissions.user",
     },
     // cr_lindero: {
     //   type: "relation",
@@ -45,7 +45,7 @@ const requestBase = {
     cr_predio: {
       type: "relation",
       relation: "oneToOne",
-      target: "api::cr-predio.cr-predio"
+      target: "api::cr-predio.cr-predio",
     },
     // cr_unidadconstruccion: {
     //   type: "relation",
@@ -54,8 +54,13 @@ const requestBase = {
     // },
     valor: {
       type: "text",
-      required: true
-    }
+      required: true,
+    },
+    paquete: {
+      type: "relation",
+      relation: "oneToOne",
+      target: "api::paquete.paquete",
+    },
   },
 };
 

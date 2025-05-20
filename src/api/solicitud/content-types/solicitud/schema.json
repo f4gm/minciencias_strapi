@@ -25,6 +25,11 @@
       "type": "text",
       "required": true
     },
+    "paquete": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::paquete.paquete"
+    },
     "identifier": {
       "type": "string",
       "required": true
