@@ -5,32 +5,70 @@
  */
 
 const { createCoreController } = require("@strapi/strapi").factories;
+const { GetCurrentTime } = require("../../../../utils/dateUtils")
 
-const apiRequest = "api::solicitud.solicitud";
-const apiBAIn = "api::col-baunitcomointeresado.col-baunitcomointeresado";
+const request = {
+  api: "api::solicitud.solicitud",
+  fields: {
+    interested: "cr_interesado",
+    property: "cr_predio",
+    entries: "entries",
+    package: "paquete",
+    recognizer: "reconocedor",
+  },
+};
 
-module.exports = createCoreController(apiRequest, ({ strapi }) => ({
+const baunit = {
+  api: "api::col-baunitcomointeresado.col-baunitcomointeresado",
+  fields: {
+    interested: "interesado_cr_interesado",
+    property: "unidad",
+    recognizer: "reconocedor",
+  },
+};
+
+const pack = {
+  api: "api::paquete.paquete",
+  fields: {
+    interested: "cr_interesado",
+    recognizer: "reconocedor",
+  },
+};
+
+module.exports = createCoreController(request.api, ({ strapi }) => ({
   async bulkCreate(ctx) {
-    const { cr_interesado, cr_predio, entries } = ctx.request.body.data;
+    const {
+      [request.fields.interested]: interested,
+      [request.fields.property]: property,
+      [request.fields.entries]: entries,
+    } = ctx.request.body.data;
 
-    if (!verifyIdentifier(cr_interesado) && !verifyIdentifier(cr_predio)) {
+    if (!verifyIdentifier(interested) && !verifyIdentifier(property)) {
       return ctx.badRequest(
         "'cr_interado' or 'cr_predio' are not defined or not is a natural number."
       );
     }
 
-    let recognizer = await strapi.entityService.findMany(apiBAIn, {
-      filters: {
-        interesado_cr_interesado: cr_interesado,
-        unidad: cr_predio,
+    const recognizer = await strapi.db.query(baunit.api).findOne({
+      where: {
+        [baunit.fields.interested]: interested,
+        [baunit.fields.property]: property,
       },
-      populate: "reconocedor"
+      populate: true,
     });
 
-    recognizer = recognizer[0]["reconocedor"]
+    const recognizerId = recognizer[baunit.fields.recognizer]["id"];
 
-    console.log(recognizer);
-    // TODO
+    const createdPack = await strapi.entityService.create(pack.api, {
+      data: {
+        [pack.fields.interested]: interested,
+        [pack.fields.recognizer]: recognizerId,
+      },
+    });
+
+    console.log(
+      `${GetCurrentTime()} 🧩 Package ${createdPack["id"]} created by user ${interested} for property ${property}`
+    );
 
     if (!Array.isArray(entries)) {
       return ctx.badRequest("The 'entries' must be an array.");
@@ -38,10 +76,11 @@ module.exports = createCoreController(apiRequest, ({ strapi }) => ({
 
     const results = await Promise.all(
       entries.map((entry) =>
-        strapi.entityService.create(apiRequest, {
+        strapi.entityService.create(request.api, {
           data: {
-            cr_interesado: cr_interesado,
-            cr_predio: cr_predio,
+            [request.fields.interested]: interested,
+            [request.fields.property]: property,
+            [request.fields.package]: createdPack["id"],
             ...entry,
           },
         })

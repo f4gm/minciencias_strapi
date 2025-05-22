@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const { GetCurrentTime } = require("../utils/dateUtils");
+
 const inputGroup = "formulario";
 const inputName = "entrada";
 
@@ -75,7 +77,7 @@ const syncRequest = () => {
 
     fs.writeFileSync(requestPath, JSON.stringify(requestBase, null, 2));
     console.log(
-      "✅ El esquema de 'Solicitudes' se ha sincronizado con 'Entrada'"
+      `${GetCurrentTime()} ✅ The 'solicitud' schema has been synchronized with 'entrada'`
     );
   } catch (error) {
     console.error("❌ Error al sincronizar esquemas:", error);
