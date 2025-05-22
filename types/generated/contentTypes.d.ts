@@ -5524,6 +5524,15 @@ export interface ApiSolicitudSolicitud extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    estado: Attribute.Enumeration<
+      [
+        'Pendiente',
+        'Revisado con errores',
+        'Correcto',
+        'Se requiere m\u00E1s informaci\u00F3n'
+      ]
+    > &
+      Attribute.DefaultTo<'Pendiente'>;
     help: Attribute.RichText;
     hide: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<false>;
     identifier: Attribute.String & Attribute.Required;
@@ -5535,6 +5544,7 @@ export interface ApiSolicitudSolicitud extends Schema.CollectionType {
     required: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
+    retroalimentacion: Attribute.RichText;
     title: Attribute.String & Attribute.Required;
     type: Attribute.Enumeration<
       [

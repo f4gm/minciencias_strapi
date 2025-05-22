@@ -63,6 +63,19 @@ const requestBase = {
       relation: "oneToOne",
       target: "api::paquete.paquete",
     },
+    estado: {
+      type: "enumeration",
+      enum: [
+        "Pendiente",
+        "Revisado con errores",
+        "Correcto",
+        "Se requiere más información",
+      ],
+      default: "Pendiente",
+    },
+    retroalimentacion: {
+      type: "richtext",
+    },
   },
 };
 
