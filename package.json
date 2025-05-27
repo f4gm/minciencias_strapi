@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "dev": "node scripts/syncRequest.js && strapi develop",
+    "dev": "node scripts/syncRequest.js && strapi develop --watch-admin",
     "start": "strapi start",
     "build": "node scripts/syncRequest.js && strapi build",
     "strapi": "strapi",
