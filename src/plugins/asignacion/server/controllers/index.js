@@ -1,7 +1,7 @@
 'use strict';
 
-const myController = require('./my-controller');
+const pluginController = require('./getLands');
 
 module.exports = {
-  myController,
+  pluginController,
 };

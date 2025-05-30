@@ -1,7 +1,8 @@
 import { MapOptions } from "leaflet";
 
 export const mapConfig: MapOptions = {
-  center: [3.412344449, -76.535651294],
-  zoom: 18,
-  maxZoom: 21
+  center: [4, -73],
+  zoom: 6,
+  maxZoom: 21,
+  minZoom: 5,
 };

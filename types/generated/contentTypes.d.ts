@@ -5967,7 +5967,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'api::cr-autoreconocimientoetnicotipo.cr-autoreconocimientoetnicotipo'
     >;
     blocked: Attribute.Boolean & Attribute.DefaultTo<true>;
-    comienzo_vida_util_version: Attribute.DateTime & Attribute.Required;
+    comienzo_vida_util_version: Attribute.DateTime;
     confirmationToken: Attribute.String & Attribute.Private;
     confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
@@ -5983,13 +5983,11 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
         minLength: 6;
       }>;
     espacio_de_nombres: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
     fin_vida_util_version: Attribute.DateTime;
     local_id: Attribute.String &
-      Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
