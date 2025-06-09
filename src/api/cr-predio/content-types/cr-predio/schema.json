@@ -19,7 +19,9 @@
       "column": {
         "notNullable": true,
         "type": "string",
-        "args": [2]
+        "args": [
+          2
+        ]
       }
     },
     "municipio": {
@@ -29,7 +31,9 @@
       "column": {
         "notNullable": true,
         "type": "string",
-        "args": [3]
+        "args": [
+          3
+        ]
       }
     },
     "codigo_orip": {
@@ -37,7 +41,9 @@
       "maxLength": 4,
       "column": {
         "type": "string",
-        "args": [4]
+        "args": [
+          4
+        ]
       }
     },
     "matricula_inmobiliaria": {
@@ -59,7 +65,9 @@
       "column": {
         "notNullable": true,
         "type": "string",
-        "args": [30]
+        "args": [
+          30
+        ]
       }
     },
     "codigo_homologado": {
@@ -69,7 +77,9 @@
       "column": {
         "notNullable": true,
         "type": "string",
-        "args": [11]
+        "args": [
+          11
+        ]
       }
     },
     "nupre": {
@@ -77,7 +87,9 @@
       "maxLength": 11,
       "column": {
         "type": "string",
-        "args": [11]
+        "args": [
+          11
+        ]
       }
     },
     "fecha_inscripcion_catastral": {
@@ -85,40 +97,46 @@
     },
     "tipo_predio": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-prediotipo.cr-prediotipo"
+      "target": "api::cr-prediotipo.cr-prediotipo",
+      "required": true
     },
     "condicion_predio": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-condicionprediotipo.cr-condicionprediotipo"
+      "target": "api::cr-condicionprediotipo.cr-condicionprediotipo",
+      "required": true
     },
     "destinacion_economica": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo"
+      "target": "api::cr-destinacioneconomicatipo.cr-destinacioneconomicatipo",
+      "required": true
     },
     "area_catastral_terreno": {
       "type": "decimal",
       "required": true,
-      "max": 10000000000000000000000.00,
+      "max": 1e+22,
       "min": 0,
       "column": {
         "notNullable": true,
         "type": "decimal",
-        "args": [25, 2]
+        "args": [
+          25,
+          2
+        ]
       }
     },
     "area_registral_m2": {
       "type": "decimal",
-      "max": 10000000000000000000000.00,
+      "max": 1e+22,
       "min": 0,
       "column": {
         "type": "decimal",
-        "args": [25, 2]
+        "args": [
+          25,
+          2
+        ]
       }
     },
     "vigencia_actualizacion_catastral": {
@@ -130,23 +148,25 @@
     },
     "estado": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::cr-estadotipo.cr-estadotipo"
+      "target": "api::cr-estadotipo.cr-estadotipo",
+      "required": true
     },
     "nombre": {
       "type": "string",
       "maxLength": 255,
       "column": {
         "type": "string",
-        "args": [255]
+        "args": [
+          255
+        ]
       }
     },
     "tipo": {
       "type": "relation",
-      "required": true,
       "relation": "oneToOne",
-      "target": "api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo"
+      "target": "api::col-unidadadministrativabasicatipo.col-unidadadministrativabasicatipo",
+      "required": true
     },
     "comienzo_vida_util_version": {
       "type": "datetime",
@@ -165,7 +185,9 @@
       "column": {
         "notNullable": true,
         "type": "string",
-        "args": [255]
+        "args": [
+          255
+        ]
       }
     },
     "local_id": {
@@ -175,8 +197,15 @@
       "column": {
         "notNullable": true,
         "type": "string",
-        "args": [255]
+        "args": [
+          255
+        ]
       }
+    },
+    "reconocedor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "paquete",
     "pluralName": "paquetes",
-    "displayName": "Paquete"
+    "displayName": "Paquete",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -24,6 +25,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "cr_predio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cr-predio-copropiedad.cr-predio-copropiedad"
     },
     "reconocedor": {
       "type": "relation",

@@ -498,12 +498,6 @@ export interface ApiColBaunitcomointeresadoColBaunitcomointeresado
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    reconocedor: Attribute.Relation<
-      'api::col-baunitcomointeresado.col-baunitcomointeresado',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
     unidad: Attribute.Relation<
       'api::col-baunitcomointeresado.col-baunitcomointeresado',
       'oneToOne',
@@ -3833,6 +3827,11 @@ export interface ApiCrPredioCrPredio extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 11;
       }>;
+    reconocedor: Attribute.Relation<
+      'api::cr-predio.cr-predio',
+      'oneToOne',
+      'admin::user'
+    >;
     tipo: Attribute.Relation<
       'api::cr-predio.cr-predio',
       'oneToOne',
@@ -5458,6 +5457,7 @@ export interface ApiFormularioFormulario extends Schema.CollectionType {
 export interface ApiPaquetePaquete extends Schema.CollectionType {
   collectionName: 'paquetes';
   info: {
+    description: '';
     displayName: 'Paquete';
     pluralName: 'paquetes';
     singularName: 'paquete';
@@ -5470,6 +5470,11 @@ export interface ApiPaquetePaquete extends Schema.CollectionType {
       'api::paquete.paquete',
       'oneToOne',
       'plugin::users-permissions.user'
+    >;
+    cr_predio: Attribute.Relation<
+      'api::paquete.paquete',
+      'oneToOne',
+      'api::cr-predio-copropiedad.cr-predio-copropiedad'
     >;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

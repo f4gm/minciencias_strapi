@@ -5,6 +5,7 @@
  */
 
 const { createCoreController } = require("@strapi/strapi").factories;
+const api = require("../../../../config/api");
 const { GetCurrentTime } = require("../../../../utils/dateUtils")
 
 const request = {
@@ -18,19 +19,26 @@ const request = {
   },
 };
 
+const unit = {
+  api: "api::cr-predio.cr-predio",
+  fields: {
+    recognizer: "reconocedor"
+  }
+}
+
 const baunit = {
   api: "api::col-baunitcomointeresado.col-baunitcomointeresado",
   fields: {
     interested: "interesado_cr_interesado",
-    property: "unidad",
-    recognizer: "reconocedor",
-  },
-};
+    property: "unidad"
+  }
+}
 
 const pack = {
   api: "api::paquete.paquete",
   fields: {
     interested: "cr_interesado",
+    property: "cr_predio",
     recognizer: "reconocedor",
   },
 };
@@ -43,25 +51,67 @@ module.exports = createCoreController(request.api, ({ strapi }) => ({
       [request.fields.entries]: entries,
     } = ctx.request.body.data;
 
+    // Checking that identifiers are natural numbers
     if (!verifyIdentifier(interested) && !verifyIdentifier(property)) {
       return ctx.badRequest(
         "'cr_interado' or 'cr_predio' are not defined or not is a natural number."
       );
     }
 
-    const recognizer = await strapi.db.query(baunit.api).findOne({
-      where: {
-        [baunit.fields.interested]: interested,
-        [baunit.fields.property]: property,
-      },
-      populate: true,
+    // Checking that user exist
+    const checkingUser = await strapi.entityService.findOne("plugin::users-permissions.user", interested, {
+      fields: []
     });
+    if (!checkingUser) {
+      return ctx.badRequest(
+        `The 'cr_interesado' identifier (${interested}) does not exist.`
+      )
+    }
 
-    const recognizerId = recognizer[baunit.fields.recognizer]["id"];
+    // Checking that property exist. Get the recognizer associated with the property
+    const checkingProperty = await strapi.entityService.findOne(unit.api, property, {
+      fields: [],
+      populate: unit.fields.recognizer
+    });
+    if (!checkingProperty) {
+      return ctx.badRequest(
+        `The 'cr_predio' identification (${property}) does not exist.`
+      );
+    }
 
+    // Checking if that property is associated with the interested
+    const checkingUserProperty = await strapi.entityService.findMany(baunit.api, {
+      filters: {
+        $and: [
+          {
+            [baunit.fields.interested]: interested
+          },
+          {
+            [baunit.fields.property]: property
+          }
+        ]
+      }
+    });
+    if (!checkingUserProperty || checkingUserProperty.length === 0) {
+      return ctx.badRequest(
+        `The interested (${interested}) is not the owner of the property (${property}).`
+      )
+    }
+    
+    // Checking if the property has associated a recognizer
+    if (!checkingProperty[unit.fields.recognizer]) {
+      console.log(
+        `${GetCurrentTime()} ‼️ The property ${property} has not associated a recognizer.`
+      )
+      return ctx.internalServerError();
+    }
+
+    // Creating the package
+    const recognizerId = checkingProperty[unit.fields.recognizer]["id"];
     const createdPack = await strapi.entityService.create(pack.api, {
       data: {
         [pack.fields.interested]: interested,
+        [pack.fields.property]: property,
         [pack.fields.recognizer]: recognizerId,
       },
     });
