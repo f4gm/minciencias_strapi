@@ -9,24 +9,17 @@ import { selectFeatures } from "../../utils/geometryUtils/selectFeatures";
 
 const EndSelection = () => {
   const { map, lands } = useMap((state) => state);
-  const { activeEdit, deactive } = useLandEdit((state) => state);
-  const { updateSelection } = useLandSelection((state) => state);
+  const { geojson } = useLandSelection((state) => state);
 
   const clickHandler = () => {
-    deactive();
-
-    const landsGeoJSON = lands.geojson;
-    const areaGeoJSON = getGeomanMask(map);
-
-    const selectedLands = selectFeatures(landsGeoJSON, areaGeoJSON);
-
-    updateSelection(selectedLands);
-
-    console.log(selectedLands);
-  };
+    console.log(geojson);
+  }
 
   return (
-    <Button onClick={clickHandler} disabled={!activeEdit}>
+    <Button
+      onClick={clickHandler}
+      disabled={!geojson || geojson.features.length == 0}
+    >
       Seleccionar
     </Button>
   );

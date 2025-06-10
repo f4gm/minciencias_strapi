@@ -29,7 +29,7 @@
     "cr_predio": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::cr-predio-copropiedad.cr-predio-copropiedad"
+      "target": "api::cr-predio.cr-predio"
     },
     "reconocedor": {
       "type": "relation",

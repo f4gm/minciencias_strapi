@@ -5474,7 +5474,7 @@ export interface ApiPaquetePaquete extends Schema.CollectionType {
     cr_predio: Attribute.Relation<
       'api::paquete.paquete',
       'oneToOne',
-      'api::cr-predio-copropiedad.cr-predio-copropiedad'
+      'api::cr-predio.cr-predio'
     >;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
