@@ -11,7 +11,7 @@ const baunit = {
   },
 };
 
-const terreno = {
+const land = {
   api: "cr-terreno",
   fields: {
     id: "id",
@@ -19,28 +19,33 @@ const terreno = {
   },
 };
 
-const predio = {
+const property = {
   api: "cr-predio",
   fields: {
     id: "id",
     npn: "numero_predial_nacional",
+    recognizer: "reconocedor"
   },
 };
 
 module.exports = ({ strapi }) => ({
-  async index(ctx) {
+  async find(ctx) {
     const result = await strapi.entityService.findMany(
       `api::${baunit.api}.${baunit.api}`,
       {
         populate: {
-          [baunit.fields.terreno]: true,
-          [baunit.fields.predio]: true,
+          [baunit.fields.terreno]: {
+            fields: [land.fields.id, land.fields.geom]
+          },
+          [baunit.fields.predio]: {
+            fields: [property.fields.id, property.fields.npn],
+            populate: [property.fields.recognizer]
+          }
         },
       }
     );
 
     const parsed = parseGeoJSON(result);
-
     return parsed;
   },
 });
@@ -50,7 +55,7 @@ const parseGeoJSON = (data) => {
     type: "FeatureCollection",
     features: data.map((item) => {
       const geometryBuffer = Buffer.from(
-        item[baunit.fields.terreno][terreno.fields.geom],
+        item[baunit.fields.terreno][land.fields.geom],
         "hex"
       );
 
@@ -59,9 +64,14 @@ const parseGeoJSON = (data) => {
       return {
         type: "Feature",
         properties: {
-          terreno: item[baunit.fields.terreno][terreno.fields.id],
-          predio: item[baunit.fields.predio][predio.fields.id],
-          npn: item[baunit.fields.predio][predio.fields.npn],
+          "land": item[baunit.fields.terreno][land.fields.id],
+          "property": item[baunit.fields.predio][property.fields.id],
+          "npn": item[baunit.fields.predio][property.fields.npn],
+          "recognizer": item[baunit.fields.predio][property.fields.recognizer] ? (
+              item[baunit.fields.predio][property.fields.recognizer]["id"]
+            ) : (
+              null
+            )
         },
         geometry: geometry,
       };

@@ -54,7 +54,7 @@ module.exports = createCoreController(request.api, ({ strapi }) => ({
     // Checking that identifiers are natural numbers
     if (!verifyIdentifier(interested) && !verifyIdentifier(property)) {
       return ctx.badRequest(
-        "'cr_interado' or 'cr_predio' are not defined or not is a natural number."
+        "'cr_interado' or 'cr_predio' are not defined or not are a natural number."
       );
     }
 

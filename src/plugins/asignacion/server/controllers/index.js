@@ -1,7 +1,11 @@
-'use strict';
+"use strict";
 
-const pluginController = require('./getLands');
+const getLand = require("./getLand");
+const getAdmin = require("./getAdmin");
+const getRole = require("./getRole");
 
 module.exports = {
-  pluginController,
+  getLand,
+  getAdmin,
+  getRole
 };

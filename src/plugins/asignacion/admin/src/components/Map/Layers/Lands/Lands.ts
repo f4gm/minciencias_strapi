@@ -13,22 +13,27 @@ const Lands = async (map: Map) => {
   const epsg_9377 =
     "+proj=tmerc +lat_0=4.0 +lon_0=-73.0 +k=0.9992 +x_0=5000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
 
-  const response = await axios.get("/asignacion/get-lands");
-  const data = response.data;
-  const geojson = toWGS84(data, epsg_9377);
-  const layer = geoJSON(geojson, LandsConfig);
+  try {
+    const response = await axios.get("/asignacion/get-land");
+    const data = response.data;
+    const geojson = toWGS84(data, epsg_9377);
+    const layer = geoJSON(geojson, LandsConfig);
 
-  RegisterLandsEvents(layer);
+    RegisterLandsEvents(layer);
 
-  setLands(geojson, layer);
+    setLands(geojson, layer);
 
-  layer.addTo(map);
+    layer.addTo(map);
 
-  setTimeout(() => {
-    map.flyToBounds(layer.getBounds());
-  }, 1000);
+    setTimeout(() => {
+      map.flyToBounds(layer.getBounds());
+    }, 1000);
 
-  return layer;
+    return layer;
+  } catch (error) {
+    console.error(error);
+    return undefined;
+  }
 };
 
 export default Lands;

@@ -1,4 +1,6 @@
-import { Button } from "@strapi/design-system";
+import { BiSolidPencil } from "react-icons/bi";
+
+import Button from "../UI/Button/Button";
 
 import { useLandEdit } from "../../store/useLandEdit";
 import { useLandSelection } from "../../store/useLandSelection";
@@ -13,14 +15,12 @@ const EndSelection = () => {
 
   const clickHandler = () => {
     console.log(geojson);
-  }
+  };
 
   return (
-    <Button
-      onClick={clickHandler}
-      disabled={!geojson || geojson.features.length == 0}
-    >
-      Seleccionar
+    <Button>
+      <BiSolidPencil style={{fontSize: "large"}} />
+      Asignar
     </Button>
   );
 };
