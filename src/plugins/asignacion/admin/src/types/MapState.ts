@@ -1,5 +1,5 @@
 import { Map, Layer } from "leaflet";
-import { FeatureCollection } from "@types/geojson";
+import type { FeatureCollection } from "geojson";
 
 export interface MapState {
   map: Map;

@@ -1,0 +1,30 @@
+@media (prefers-color-scheme: dark) {
+  [data-ui="dialog"] {
+    background-color: #212134;
+    color: white;
+  }
+}
+
+[data-ui="dialog"] {
+  position: fixed;
+  max-width: none;
+  max-height: none;
+  width: fit-content;
+  height: fit-content;
+  border-width: 0;
+  border-radius: .75rem;
+}
+
+[data-ui="dialog-body"] {
+  width: 100%;
+  padding: calc(0.5 * 4px);
+  display: flex;
+  flex-direction: column;
+  gap: calc(2 * 4px);
+}
+
+[data-ui="dialog-header"] {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}

@@ -9,19 +9,26 @@ import { useMap } from "../../store/useMap";
 import { getGeomanMask } from "../../utils/geometryUtils/getGeomanMask";
 import { selectFeatures } from "../../utils/geometryUtils/selectFeatures";
 
+import EndSelectionModal from "./EndSelectionModal";
+
 const EndSelection = () => {
   const { map, lands } = useMap((state) => state);
   const { geojson } = useLandSelection((state) => state);
 
+  const modalId = "modal-selection"
+
   const clickHandler = () => {
-    console.log(geojson);
+    (document.getElementById(modalId) as HTMLDialogElement).showModal();
   };
 
   return (
-    <Button>
-      <BiSolidPencil style={{fontSize: "large"}} />
-      Asignar
-    </Button>
+    <>
+      <Button onClick={clickHandler} disabled={!geojson}>
+        <BiSolidPencil style={{ fontSize: "large" }} />
+        Asignar
+      </Button>
+      <EndSelectionModal modalId={modalId} />
+    </>
   );
 };
 
