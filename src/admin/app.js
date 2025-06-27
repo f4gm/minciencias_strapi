@@ -30,23 +30,24 @@ const config = {
   theme: {
     light: {
       colors: {
-        primary700: '#006AB3',
-        primary600: '#007acb',
-        primary500: '#0a9bed',
-        primary200: '#b9e2fe',
-        primary100: '#dff0ff',
-        secondary700: '#247145',
-        secondary600: '#2a8f55',
-        secondary500: '#38a968',
-        secondary200: '#c4eed5',
-        secondary100: '#e1f7e9',
-        alternative700: '#bb6802',
-        alternative600: '#e29300',
-        alternative500: '#fabb00',
-        alternative200: '#fff885',
-        alternative100: '#fffbc5',
-        buttonPrimary600: '#007acb',
-        buttonPrimary500: '#0a9bed',
+        primary700: '#1d4ed8',
+        primary600: '#2563eb',
+        primary500: '#3b82f6',
+        primary200: '#bfdbfe',
+        primary100: '#dbeafe',
+        buttonPrimary600: '#2563eb',
+        buttonPrimary500: '#3b82f6',
+      }
+    },
+    dark: {
+      colors: {
+        primary700: '#172554',
+        primary600: '#1e3a8a',
+        primary500: '#ffffff',
+        primary200: '#172554',
+        primary100: '#3b82f6',
+        buttonPrimary600: '#2563eb',
+        buttonPrimary500: '#3b82f6',
       }
     }
   }
