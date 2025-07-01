@@ -1,5 +1,7 @@
-import { geoJSON, Map, GeoJSONOptions } from "leaflet";
+import { geoJSON, Map, GeoJSONOptions, marker, divIcon } from "leaflet";
 import { toWGS84 } from "reproject-crs-geojson";
+
+import { centroid } from "@turf/turf";
 
 import { useMap } from "../../../../store/useMap";
 
@@ -7,6 +9,9 @@ import ReadLands from "../../../../services/Lands/ReadLands";
 
 // @ts-ignore
 import RegisterLandsEvents from "./Events/RegisterLandsEvents";
+import { LandsPropertiesAPI } from "../../../../types/api";
+
+import "./Lands.css";
 
 const Lands = async (map: Map) => {
   const { setLands } = useMap.getState();
@@ -24,7 +29,7 @@ const Lands = async (map: Map) => {
         })
       }
       const geojson = toWGS84(lands, epsg_9377);
-      const layer = geoJSON(geojson, LandsConfig);
+      const layer = geoJSON(geojson, LandsConfig(map));
 
       RegisterLandsEvents(layer);
 
@@ -57,6 +62,15 @@ const LandDefaultStyle = {
   opacity: 1.0,
 };
 
+const LandRecognizerStyle = {
+  fillColor: "#0B1D51",
+  fillOpacity: 1,
+  stroke: true,
+  weight: 0.5,
+  color: "#555879",
+  opacity: 1.0,
+}
+
 export const LandHighlightFeatureStyle = {
   fillColor: "#FCDE70",
   fillOpacity: 1,
@@ -66,13 +80,30 @@ export const LandHighlightFeatureStyle = {
   opacity: 1.0,
 };
 
-export const LandsConfig: GeoJSONOptions = {
-  style: (feature) => LandDefaultStyle,
+export const LandsConfig = (map: Map): GeoJSONOptions => ({
+  style: (feature) => {
+    const properties = feature.properties as LandsPropertiesAPI;
+
+    if (properties.recognizer) {
+      return LandRecognizerStyle;
+    } else {
+      return LandDefaultStyle;
+    }
+  },
   pmIgnore: true,
-  // onEachFeature: (feature, layer) => {
-  //   layer.on({
-  //     mouseover: highlightFeature,
-  //     mouseout: resetHighlight
-  //   })
-  // }
-};
+  onEachFeature: (feature, layer) => {
+    const center = centroid(feature);
+    const [lng, lat] = center.geometry.coordinates;
+
+    const properties = feature.properties as LandsPropertiesAPI;
+
+    const label = marker([lat, lng], {
+      icon: divIcon({
+        className: "polygon-label",
+        html: `<div>${properties.recognizer ? properties.recognizer : ""}</div>`
+      }),
+      interactive: false
+    });
+    label.addTo(map)
+  },
+});
