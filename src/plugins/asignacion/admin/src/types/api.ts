@@ -1,3 +1,5 @@
+import { Feature, MultiPolygon } from "geojson";
+
 export interface ResponseAPI<T> {
   data: T[]
 }
@@ -14,4 +16,16 @@ export interface AdminAPI {
   firstname: string;
   lastname: string;
   email: string;
+}
+
+export interface LandsPropertiesAPI {
+  id: number;
+  land: number;
+  npn: string;
+  property: number;
+  recognizer: number;
+}
+
+export interface LandsAPI extends LandsPropertiesAPI {
+  feature: Feature<MultiPolygon, LandsPropertiesAPI>;
 }

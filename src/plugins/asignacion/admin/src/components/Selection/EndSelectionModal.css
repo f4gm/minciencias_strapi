@@ -1,0 +1,23 @@
+.selection-modal-body {
+  min-height: calc(40*4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.selection-modal-content {
+  display: flex;
+  gap: 1rem
+}
+
+.selection-modal-field-wraper {
+  width: calc(64*4px);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.selection-modal-help {
+  font-size: small;
+  color: gray;
+}

@@ -1,13 +1,17 @@
 import { ChangeEvent, useEffect, useState } from "react";
 
-import axios from "axios";
-
 import { BiSolidSave } from "react-icons/bi";
 
-import type { AdminAPI, ResponseAPI, RoleAPI } from "../../types/api";
+import type { AdminAPI, RoleAPI } from "../../types/api";
+
+import ReadAdmins from "../../services/Admins/ReadAdmins";
+import ReadRoles from "../../services/Roles/ReadRoles";
 
 import Modal from "../UI/Modal/Modal";
 import Button from "../UI/Button/Button";
+import Select from "../UI/Input/Select";
+
+import "./EndSelectionModal.css";
 
 const EndSelectionModal = ({ modalId }: { modalId: string }) => {
   const [roles, setRoles] = useState<RoleAPI[]>();
@@ -16,8 +20,8 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
   const [admins, setAdmins] = useState<AdminAPI[]>();
   const [admin, setAdmin] = useState<string>();
 
-  const roleInfo = roles?.filter(item => item.id.toString() === role);
-  const adminInfo = admins?.filter(item => item.id.toString() === admin);
+  const roleInfo = roles?.filter((item) => item.id.toString() === role);
+  const adminInfo = admins?.filter((item) => item.id.toString() === admin);
 
   const handlerRoleChange = async (e: ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
@@ -30,10 +34,8 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
 
     setRole(value);
     try {
-      const result = await axios.get(
-        `/asignacion/get-admin?role=${e.target.value}`
-      );
-      const data = result.data as ResponseAPI<AdminAPI>;
+      const data = await ReadAdmins(parseInt(e.target.value));
+
       if (data.data.length >= 1) {
         setAdmins(data.data);
         setAdmin(data.data[0].id.toString());
@@ -54,9 +56,7 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
   useEffect(() => {
     const render = async () => {
       try {
-        const result = await axios.get("/asignacion/get-role");
-        const data = result.data as ResponseAPI<RoleAPI>;
-
+        const data = await ReadRoles();
         setRoles(data.data);
       } catch (error) {
         console.error(error);
@@ -64,20 +64,14 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
     };
     render();
   }, []);
+
   return (
     <Modal id={modalId}>
-      <div style={{ minHeight: "calc(32*4px)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <div
-            style={{
-              width: "calc(64*4px)",
-              display: "flex",
-              flexDirection: "column",
-              gap: ".5rem",
-            }}
-          >
+      <div className="selection-modal-body">
+        <div className="selection-modal-content">
+          <div className="selection-modal-field-wraper">
             <label htmlFor="asignacion-role">Seleccione el rol:</label>
-            <select
+            <Select
               id="asignacion-role"
               onChange={handlerRoleChange}
               value={role}
@@ -91,21 +85,16 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
                     </option>
                   );
                 })}
-            </select>
-            <span style={{ fontSize: "small", color: "gray" }}>
-              {role ? roleInfo[0].description : "No ha seleccionado ningún rol."}
+            </Select>
+            <span className="selection-modal-help">
+              {role
+                ? roleInfo[0].description
+                : "No ha seleccionado ningún rol."}
             </span>
           </div>
-          <div
-            style={{
-              width: "calc(64*4px)",
-              display: "flex",
-              flexDirection: "column",
-              gap: ".5rem",
-            }}
-          >
+          <div className="selection-modal-field-wraper">
             <label htmlFor="asignacion-admin">Seleccione el usuario:</label>
-            <select
+            <Select
               id="asignacion-admin"
               disabled={!admins}
               onChange={handlerAdminChange}
@@ -119,9 +108,11 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
                     </option>
                   );
                 })}
-            </select>
-            <span style={{ fontSize: "small", color: "gray" }}>
-              {admin ? adminInfo[0].email : "No ha seleccionado ningún usuario."}
+            </Select>
+            <span className="selection-modal-help">
+              {admin
+                ? adminInfo[0].email
+                : "No ha seleccionado ningún usuario."}
             </span>
           </div>
         </div>

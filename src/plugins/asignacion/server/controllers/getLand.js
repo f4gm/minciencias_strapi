@@ -24,7 +24,7 @@ const property = {
   fields: {
     id: "id",
     npn: "numero_predial_nacional",
-    recognizer: "reconocedor"
+    recognizer: "reconocedor",
   },
 };
 
@@ -35,48 +35,55 @@ module.exports = ({ strapi }) => ({
       {
         populate: {
           [baunit.fields.terreno]: {
-            fields: [land.fields.id, land.fields.geom]
+            fields: [land.fields.id, land.fields.geom],
           },
           [baunit.fields.predio]: {
             fields: [property.fields.id, property.fields.npn],
-            populate: [property.fields.recognizer]
-          }
+            populate: [property.fields.recognizer],
+          },
         },
       }
     );
 
     const parsed = parseGeoJSON(result);
-    return parsed;
+
+    return {
+      data: parsed,
+    };
   },
 });
 
 const parseGeoJSON = (data) => {
-  const geojson = {
-    type: "FeatureCollection",
-    features: data.map((item) => {
-      const geometryBuffer = Buffer.from(
-        item[baunit.fields.terreno][land.fields.geom],
-        "hex"
-      );
+  const parsed = data.map((item) => {
+    const geometryBuffer = Buffer.from(
+      item[baunit.fields.terreno][land.fields.geom],
+      "hex"
+    );
 
-      const geometry = wkx.Geometry.parse(geometryBuffer).toGeoJSON();
+    const geometry = wkx.Geometry.parse(geometryBuffer).toGeoJSON();
 
-      return {
+    return {
+      id: item[baunit.fields.id],
+      land: item[baunit.fields.terreno][land.fields.id],
+      property: item[baunit.fields.predio][property.fields.id],
+      npn: item[baunit.fields.predio][property.fields.npn],
+      recognizer: item[baunit.fields.predio][property.fields.recognizer]
+        ? item[baunit.fields.predio][property.fields.recognizer]["id"]
+        : null,
+      feature: {
         type: "Feature",
         properties: {
-          "land": item[baunit.fields.terreno][land.fields.id],
-          "property": item[baunit.fields.predio][property.fields.id],
-          "npn": item[baunit.fields.predio][property.fields.npn],
-          "recognizer": item[baunit.fields.predio][property.fields.recognizer] ? (
-              item[baunit.fields.predio][property.fields.recognizer]["id"]
-            ) : (
-              null
-            )
+          land: item[baunit.fields.terreno][land.fields.id],
+          property: item[baunit.fields.predio][property.fields.id],
+          npn: item[baunit.fields.predio][property.fields.npn],
+          recognizer: item[baunit.fields.predio][property.fields.recognizer]
+            ? item[baunit.fields.predio][property.fields.recognizer]["id"]
+            : null,
         },
         geometry: geometry,
-      };
-    }),
-  };
+      },
+    };
+  });
 
-  return geojson;
+  return parsed;
 };

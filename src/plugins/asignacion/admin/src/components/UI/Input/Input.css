@@ -1,0 +1,12 @@
+[data-ui="input"] {
+  border: none;
+  padding: .5rem;
+  font-size: 1rem;
+  min-width: 13em;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+[data-ui="input"]:focus {
+  outline-color: #2563eb;
+}

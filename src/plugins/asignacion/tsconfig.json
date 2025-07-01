@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
+    "lib": ["DOM", "ES2015"], 
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "ES6",
+    "allowJs": true,
+    "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types", "./@types"]
   }
 }

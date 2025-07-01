@@ -1,9 +1,9 @@
-import axios from "axios";
-
 import { geoJSON, Map, GeoJSONOptions } from "leaflet";
 import { toWGS84 } from "reproject-crs-geojson";
 
 import { useMap } from "../../../../store/useMap";
+
+import ReadLands from "../../../../services/Lands/ReadLands";
 
 // @ts-ignore
 import RegisterLandsEvents from "./Events/RegisterLandsEvents";
@@ -14,22 +14,32 @@ const Lands = async (map: Map) => {
     "+proj=tmerc +lat_0=4.0 +lon_0=-73.0 +k=0.9992 +x_0=5000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs";
 
   try {
-    const response = await axios.get("/asignacion/get-land");
-    const data = response.data;
-    const geojson = toWGS84(data, epsg_9377);
-    const layer = geoJSON(geojson, LandsConfig);
+    const landsResponse = await ReadLands();
 
-    RegisterLandsEvents(layer);
+    if (landsResponse) {
+      const lands = {
+        "type": "FeatureCollection",
+        "features": landsResponse.data.map((item) => {
+          return item.feature
+        })
+      }
+      const geojson = toWGS84(lands, epsg_9377);
+      const layer = geoJSON(geojson, LandsConfig);
 
-    setLands(geojson, layer);
+      RegisterLandsEvents(layer);
 
-    layer.addTo(map);
+      setLands(geojson, layer);
 
-    setTimeout(() => {
-      map.flyToBounds(layer.getBounds());
-    }, 1000);
+      layer.addTo(map);
 
-    return layer;
+      setTimeout(() => {
+        map.flyToBounds(layer.getBounds());
+      }, 1000);
+
+      return layer;
+    } else {
+      return null;
+    }
   } catch (error) {
     console.error(error);
     return undefined;
@@ -39,11 +49,11 @@ const Lands = async (map: Map) => {
 export default Lands;
 
 const LandDefaultStyle = {
-  fillColor: "#F2EFE7",
+  fillColor: "#E14434",
   fillOpacity: 1,
   stroke: true,
   weight: 0.5,
-  color: "#727D73",
+  color: "#722323",
   opacity: 1.0,
 };
 
