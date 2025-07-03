@@ -91,19 +91,19 @@ export const LandsConfig = (map: Map): GeoJSONOptions => ({
     }
   },
   pmIgnore: true,
-  onEachFeature: (feature, layer) => {
-    const center = centroid(feature);
-    const [lng, lat] = center.geometry.coordinates;
+  // onEachFeature: (feature, layer) => {
+  //   const center = centroid(feature);
+  //   const [lng, lat] = center.geometry.coordinates;
 
-    const properties = feature.properties as LandsPropertiesAPI;
+  //   const properties = feature.properties as LandsPropertiesAPI;
 
-    const label = marker([lat, lng], {
-      icon: divIcon({
-        className: "polygon-label",
-        html: `<div>${properties.recognizer ? properties.recognizer : ""}</div>`
-      }),
-      interactive: false
-    });
-    label.addTo(map)
-  },
+  //   const label = marker([lat, lng], {
+  //     icon: divIcon({
+  //       className: "polygon-label",
+  //       html: `<div>${properties.recognizer ? properties.recognizer : ""}</div>`
+  //     }),
+  //     interactive: false
+  //   });
+  //   label.addTo(map)
+  // },
 });

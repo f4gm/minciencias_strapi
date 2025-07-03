@@ -4,8 +4,14 @@ import { BiSolidSave } from "react-icons/bi";
 
 import type { AdminAPI, RoleAPI } from "../../types/api";
 
+import { useLandSelection } from "../../store/useLandSelection";
+import { useMap } from "../../store/useMap";
+
+import Lands from "../Map/Layers/Lands/Lands";
+
 import ReadAdmins from "../../services/Admins/ReadAdmins";
 import ReadRoles from "../../services/Roles/ReadRoles";
+import AssignLands from "../../services/Lands/AssignLands";
 
 import Modal from "../UI/Modal/Modal";
 import Button from "../UI/Button/Button";
@@ -14,6 +20,9 @@ import Select from "../UI/Input/Select";
 import "./EndSelectionModal.css";
 
 const EndSelectionModal = ({ modalId }: { modalId: string }) => {
+  const { geojson, clearSelection } = useLandSelection((state) => state);
+  const { map, clearLands } = useMap((state) => state);
+
   const [roles, setRoles] = useState<RoleAPI[]>();
   const [role, setRole] = useState<string>();
 
@@ -52,6 +61,16 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
   const handlerAdminChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setAdmin(e.target.value);
   };
+
+  const handlerAssign = async () => {
+    await AssignLands(geojson, parseInt(admin));
+    clearLands();
+    clearSelection();
+    (document.getElementById(modalId) as HTMLDialogElement).close();
+    setTimeout(async () => {
+      await Lands(map);
+    }, 100);
+  }
 
   useEffect(() => {
     const render = async () => {
@@ -116,7 +135,7 @@ const EndSelectionModal = ({ modalId }: { modalId: string }) => {
             </span>
           </div>
         </div>
-        <Button disabled={!admin}>
+        <Button disabled={!admin} onClick={handlerAssign}>
           <BiSolidSave style={{ fontSize: "large" }} />
           Guardar cambios
         </Button>

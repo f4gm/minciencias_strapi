@@ -11,6 +11,15 @@ module.exports = {
           auth: false,
         },
       },
+      {
+        method: "POST",
+        path: "/assign-lands",
+        handler: "postAssign.assign",
+        config: {
+          policies: [],
+          auth: false,
+        },
+      },
     ],
   },
   "admin-user": {

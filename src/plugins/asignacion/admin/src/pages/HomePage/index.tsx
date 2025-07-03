@@ -10,8 +10,8 @@ import { CSSProperties } from "react";
 import pluginId from "../../pluginId";
 
 import Map from "../../components/Map/Map";
-import EndSelection from "../../components/Selection/EndSelection";
-import ClearSelection from "../../components/Selection/ClearSelection";
+import EndSelectionButton from "../../components/Selection/EndSelectionButton";
+import ClearSelectionButton from "../../components/Selection/ClearSelectionButton";
 import FeatureInfo from "../../components/FeatureInfo/FeatureInfo";
 
 import { useControlKeyListener } from "../../hooks/useControlKeyListener";
@@ -33,8 +33,8 @@ const HomePage = () => {
     <>
       <Map />
       <div style={ControlStyle}>
-        <EndSelection />
-        <ClearSelection />
+        <EndSelectionButton />
+        <ClearSelectionButton />
       </div>
     </>
   );

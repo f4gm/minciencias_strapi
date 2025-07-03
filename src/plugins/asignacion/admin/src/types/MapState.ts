@@ -9,4 +9,5 @@ export interface MapState {
     layer: Layer;
   };
   setLands: (geojson: FeatureCollection, layer: Layer) => void;
+  clearLands: () => void;
 }

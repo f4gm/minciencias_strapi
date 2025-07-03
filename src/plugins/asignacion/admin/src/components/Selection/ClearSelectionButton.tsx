@@ -4,7 +4,7 @@ import Button from "../UI/Button/Button";
 
 import { useLandSelection } from "../../store/useLandSelection";
 
-const ClearSelection = () => {
+const ClearSelectionButton = () => {
   const { geojson, clearSelection } = useLandSelection((state) => state);
 
   const disabled = geojson == undefined;
@@ -17,4 +17,4 @@ const ClearSelection = () => {
   );
 };
 
-export default ClearSelection;
+export default ClearSelectionButton;
